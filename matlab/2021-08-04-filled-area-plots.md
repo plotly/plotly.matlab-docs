@@ -56,7 +56,7 @@ Set the tick marks along the x-axis to correspond to the values in `x`.
 
 ```{matlab}
 ax = gca; % current axes
-ax.XTick = x;
+ax.XTick = [10 11 12];
 
 fig2plotly(gcf)
 ```

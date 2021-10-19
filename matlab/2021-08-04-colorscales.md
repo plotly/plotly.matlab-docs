@@ -117,6 +117,14 @@ fig2plotly(gcf)
 Add a colorbar, and move it to the east tile.
 
 ```{matlab}
+Z1 = peaks;
+Z2 = membrane;
+tiledlayout(2,1);
+nexttile
+contourf(Z1)
+nexttile
+contourf(Z2)
+
 cb = colorbar;
 cb.Layout.Tile = 'east';
 

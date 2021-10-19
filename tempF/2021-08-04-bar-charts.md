@@ -3,7 +3,7 @@ description: How to make Bar Charts plots in MATLAB<sup>&reg;</sup> with Plotly.
 name: Bar Charts
 display_as: basic
 order: 3
-permalink: matlab/bar-charts-test/
+permalink: matlab/bar-charts/
 thumnail_github: thumbnail/bar.jpg
 layout: base
 language: matlab
@@ -16,12 +16,27 @@ page_type: u-guide
 y = [75 91 105 123.5 131 150 179 203 226 249 281.5];
 bar(y)
 
-fig2plotly(gcf);
+fig2plotly(gcf)
 ```
-{% capture plot_359025902357 %}
+```
+pf = 
+
+  <a href="matlab:helpPopup plotlyfig" style="font-weight:bold">plotlyfig</a> with properties:
+
+           data: {[1×1 struct]}
+         layout: [1×1 struct]
+         frames: {}
+            url: ''
+          error: []
+        warning: []
+        message: []
+       UserData: [1×1 struct]
+    PlotOptions: [1×1 struct]
+```
+{% capture plot_949303911850 %}
 {% raw %}{"data": {"xaxis": "x1", "yaxis": "y1", "type": "bar", "name": "", "visible": true, "orientation": "v", "x": [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11], "y": [75, 91, 105, 123.5, 131, 150, 179, 203, 226, 249, 281.5], "marker": {"color": "rgb(0,113.985,188.955)", "line": {"color": "rgb(0,0,0)", "width": 0.5, "dash": "solid"}}, "showlegend": true}, "layout": {"autosize": false, "margin": {"pad": 0, "l": 0, "r": 0, "b": 0, "t": 0}, "showlegend": false, "width": 840, "height": 630, "paper_bgcolor": "rgb(255,255,255)", "hovermode": "closest", "xaxis1": {"side": "bottom", "zeroline": false, "autorange": false, "linecolor": "rgb(38.250000,38.250000,38.250000)", "linewidth": 1, "exponentformat": "none", "tickfont": {"size": 10, "family": "Arial, sans-serif", "color": "rgb(38.250000,38.250000,38.250000)"}, "ticklen": 6.51, "tickcolor": "rgb(38.250000,38.250000,38.250000)", "tickwidth": 1, "tickangle": -0, "ticks": "inside", "showgrid": false, "gridcolor": "rgba(38.250000,,38.250000,38.250000,0.150000)", "type": "linear", "showticklabels": true, "tickmode": "array", "tickvals": [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11], "range": [-0.2, 12.2], "mirror": "ticks", "ticktext": ["1", "2", "3", "4", "5", "6", "7", "8", "9", "10", "11"], "titlefont": {"color": "rgb(38.250000,38.250000,38.250000)", "size": 11, "family": "Arial, sans-serif"}, "showline": true, "domain": [0.13, 0.905], "anchor": "y1"}, "scene1": {"domain": {"x": [0.13, 0.905], "y": [0.11, 0.925]}}, "yaxis1": {"side": "left", "zeroline": false, "autorange": false, "linecolor": "rgb(38.250000,38.250000,38.250000)", "linewidth": 1, "exponentformat": "none", "tickfont": {"size": 10, "family": "Arial, sans-serif", "color": "rgb(38.250000,38.250000,38.250000)"}, "ticklen": 6.51, "tickcolor": "rgb(38.250000,38.250000,38.250000)", "tickwidth": 1, "tickangle": -0, "ticks": "inside", "showgrid": false, "gridcolor": "rgba(38.250000,,38.250000,38.250000,0.150000)", "type": "linear", "showticklabels": true, "tickmode": "array", "tickvals": [0, 50, 100, 150, 200, 250, 300], "range": [0, 300], "mirror": "ticks", "ticktext": ["0", "50", "100", "150", "200", "250", "300"], "titlefont": {"color": "rgb(38.250000,38.250000,38.250000)", "size": 11, "family": "Arial, sans-serif"}, "showline": true, "domain": [0.11, 0.925], "anchor": "x1"}, "bargroupgap": 0.2, "bargap": 0.0625, "barmode": "group", "annotations": [{"showarrow": false, "xref": "paper", "yref": "paper", "xanchor": "center", "align": "center", "yanchor": "bottom", "text": "<b><b><\/b><\/b>", "x": 0.5175, "y": 0.935, "font": {"color": "rgb(0,0,0)", "family": "Arial, sans-serif", "size": 11}, "bordercolor": "rgba(0,0,0,0)", "textangle": 0, "borderwidth": 0.5, "borderpad": 3}]}, "frames": []}{% endraw %}
 {% endcapture %}
-{% include posts/ssim_frame.html raw_json_file=plot_359025902357 index=359025902357 %}
+{% include posts/ssim_frame.html raw_json_file=plot_949303911850 index=949303911850 %}
 
 
 <!--------------------- EXAMPLE BREAK ------------------------->
@@ -35,12 +50,27 @@ x = 1900:10:2000;
 y = [75 91 105 123.5 131 150 179 203 226 249 281.5];
 bar(x,y)
 
-fig2plotly(gcf);
+fig2plotly(gcf)
 ```
-{% capture plot_60937864318 %}
+```
+pf = 
+
+  <a href="matlab:helpPopup plotlyfig" style="font-weight:bold">plotlyfig</a> with properties:
+
+           data: {[1×1 struct]}
+         layout: [1×1 struct]
+         frames: {}
+            url: ''
+          error: []
+        warning: []
+        message: []
+       UserData: [1×1 struct]
+    PlotOptions: [1×1 struct]
+```
+{% capture plot_327565434075 %}
 {% raw %}{"data": {"xaxis": "x1", "yaxis": "y1", "type": "bar", "name": "", "visible": true, "orientation": "v", "x": [1900, 1910, 1920, 1930, 1940, 1950, 1960, 1970, 1980, 1990, 2000], "y": [75, 91, 105, 123.5, 131, 150, 179, 203, 226, 249, 281.5], "marker": {"color": "rgb(0,113.985,188.955)", "line": {"color": "rgb(0,0,0)", "width": 0.5, "dash": "solid"}}, "showlegend": true}, "layout": {"autosize": false, "margin": {"pad": 0, "l": 0, "r": 0, "b": 0, "t": 0}, "showlegend": false, "width": 840, "height": 630, "paper_bgcolor": "rgb(255,255,255)", "hovermode": "closest", "xaxis1": {"side": "bottom", "zeroline": false, "autorange": false, "linecolor": "rgb(38.250000,38.250000,38.250000)", "linewidth": 1, "exponentformat": "none", "tickfont": {"size": 10, "family": "Arial, sans-serif", "color": "rgb(38.250000,38.250000,38.250000)"}, "ticklen": 6.51, "tickcolor": "rgb(38.250000,38.250000,38.250000)", "tickwidth": 1, "tickangle": -0, "ticks": "inside", "showgrid": false, "gridcolor": "rgba(38.250000,,38.250000,38.250000,0.150000)", "type": "linear", "showticklabels": true, "tickmode": "array", "tickvals": [1900, 1910, 1920, 1930, 1940, 1950, 1960, 1970, 1980, 1990, 2000], "range": [1888, 2012], "mirror": "ticks", "ticktext": ["1900", "1910", "1920", "1930", "1940", "1950", "1960", "1970", "1980", "1990", "2000"], "titlefont": {"color": "rgb(38.250000,38.250000,38.250000)", "size": 11, "family": "Arial, sans-serif"}, "showline": true, "domain": [0.13, 0.905], "anchor": "y1"}, "scene1": {"domain": {"x": [0.13, 0.905], "y": [0.11, 0.925]}}, "yaxis1": {"side": "left", "zeroline": false, "autorange": false, "linecolor": "rgb(38.250000,38.250000,38.250000)", "linewidth": 1, "exponentformat": "none", "tickfont": {"size": 10, "family": "Arial, sans-serif", "color": "rgb(38.250000,38.250000,38.250000)"}, "ticklen": 6.51, "tickcolor": "rgb(38.250000,38.250000,38.250000)", "tickwidth": 1, "tickangle": -0, "ticks": "inside", "showgrid": false, "gridcolor": "rgba(38.250000,,38.250000,38.250000,0.150000)", "type": "linear", "showticklabels": true, "tickmode": "array", "tickvals": [0, 50, 100, 150, 200, 250, 300], "range": [0, 300], "mirror": "ticks", "ticktext": ["0", "50", "100", "150", "200", "250", "300"], "titlefont": {"color": "rgb(38.250000,38.250000,38.250000)", "size": 11, "family": "Arial, sans-serif"}, "showline": true, "domain": [0.11, 0.925], "anchor": "x1"}, "bargroupgap": 0.2, "bargap": 0.0625, "barmode": "group", "annotations": [{"showarrow": false, "xref": "paper", "yref": "paper", "xanchor": "center", "align": "center", "yanchor": "bottom", "text": "<b><b><\/b><\/b>", "x": 0.5175, "y": 0.935, "font": {"color": "rgb(0,0,0)", "family": "Arial, sans-serif", "size": 11}, "bordercolor": "rgba(0,0,0,0)", "textangle": 0, "borderwidth": 0.5, "borderpad": 3}]}, "frames": []}{% endraw %}
 {% endcapture %}
-{% include posts/ssim_frame.html raw_json_file=plot_60937864318 index=60937864318 %}
+{% include posts/ssim_frame.html raw_json_file=plot_327565434075 index=327565434075 %}
 
 
 
@@ -55,12 +85,27 @@ Set the width of each bar to 40 percent of the total space available for each ba
 y = [75 91 105 123.5 131 150 179 203 226 249 281.5];
 bar(y,0.4)
 
-fig2plotly(gcf);
+fig2plotly(gcf)
 ```
-{% capture plot_892332026639 %}
+```
+pf = 
+
+  <a href="matlab:helpPopup plotlyfig" style="font-weight:bold">plotlyfig</a> with properties:
+
+           data: {[1×1 struct]}
+         layout: [1×1 struct]
+         frames: {}
+            url: ''
+          error: []
+        warning: []
+        message: []
+       UserData: [1×1 struct]
+    PlotOptions: [1×1 struct]
+```
+{% capture plot_671264370452 %}
 {% raw %}{"data": {"xaxis": "x1", "yaxis": "y1", "type": "bar", "name": "", "visible": true, "orientation": "v", "x": [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11], "y": [75, 91, 105, 123.5, 131, 150, 179, 203, 226, 249, 281.5], "marker": {"color": "rgb(0,113.985,188.955)", "line": {"color": "rgb(0,0,0)", "width": 0.5, "dash": "solid"}}, "showlegend": true}, "layout": {"autosize": false, "margin": {"pad": 0, "l": 0, "r": 0, "b": 0, "t": 0}, "showlegend": false, "width": 840, "height": 630, "paper_bgcolor": "rgb(255,255,255)", "hovermode": "closest", "xaxis1": {"side": "bottom", "zeroline": false, "autorange": false, "linecolor": "rgb(38.250000,38.250000,38.250000)", "linewidth": 1, "exponentformat": "none", "tickfont": {"size": 10, "family": "Arial, sans-serif", "color": "rgb(38.250000,38.250000,38.250000)"}, "ticklen": 6.51, "tickcolor": "rgb(38.250000,38.250000,38.250000)", "tickwidth": 1, "tickangle": -0, "ticks": "inside", "showgrid": false, "gridcolor": "rgba(38.250000,,38.250000,38.250000,0.150000)", "type": "linear", "showticklabels": true, "tickmode": "array", "tickvals": [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11], "range": [0, 12], "mirror": "ticks", "ticktext": ["1", "2", "3", "4", "5", "6", "7", "8", "9", "10", "11"], "titlefont": {"color": "rgb(38.250000,38.250000,38.250000)", "size": 11, "family": "Arial, sans-serif"}, "showline": true, "domain": [0.13, 0.905], "anchor": "y1"}, "scene1": {"domain": {"x": [0.13, 0.905], "y": [0.11, 0.925]}}, "yaxis1": {"side": "left", "zeroline": false, "autorange": false, "linecolor": "rgb(38.250000,38.250000,38.250000)", "linewidth": 1, "exponentformat": "none", "tickfont": {"size": 10, "family": "Arial, sans-serif", "color": "rgb(38.250000,38.250000,38.250000)"}, "ticklen": 6.51, "tickcolor": "rgb(38.250000,38.250000,38.250000)", "tickwidth": 1, "tickangle": -0, "ticks": "inside", "showgrid": false, "gridcolor": "rgba(38.250000,,38.250000,38.250000,0.150000)", "type": "linear", "showticklabels": true, "tickmode": "array", "tickvals": [0, 50, 100, 150, 200, 250, 300], "range": [0, 300], "mirror": "ticks", "ticktext": ["0", "50", "100", "150", "200", "250", "300"], "titlefont": {"color": "rgb(38.250000,38.250000,38.250000)", "size": 11, "family": "Arial, sans-serif"}, "showline": true, "domain": [0.11, 0.925], "anchor": "x1"}, "bargroupgap": 0.6, "bargap": 0.0625, "barmode": "group", "annotations": [{"showarrow": false, "xref": "paper", "yref": "paper", "xanchor": "center", "align": "center", "yanchor": "bottom", "text": "<b><b><\/b><\/b>", "x": 0.5175, "y": 0.935, "font": {"color": "rgb(0,0,0)", "family": "Arial, sans-serif", "size": 11}, "bordercolor": "rgba(0,0,0,0)", "textangle": 0, "borderwidth": 0.5, "borderpad": 3}]}, "frames": []}{% endraw %}
 {% endcapture %}
-{% include posts/ssim_frame.html raw_json_file=plot_892332026639 index=892332026639 %}
+{% include posts/ssim_frame.html raw_json_file=plot_671264370452 index=671264370452 %}
 
 
 
@@ -74,12 +119,27 @@ Display four groups of three bars.
 y = [2 2 3; 2 5 6; 2 8 9; 2 11 12];
 bar(y)
 
-fig2plotly(gcf);
+fig2plotly(gcf)
 ```
-{% capture plot_405532091540 %}
+```
+pf = 
+
+  <a href="matlab:helpPopup plotlyfig" style="font-weight:bold">plotlyfig</a> with properties:
+
+           data: {[1×1 struct]  [1×1 struct]  [1×1 struct]}
+         layout: [1×1 struct]
+         frames: {}
+            url: ''
+          error: []
+        warning: []
+        message: []
+       UserData: [1×1 struct]
+    PlotOptions: [1×1 struct]
+```
+{% capture plot_438644982587 %}
 {% raw %}{"data": {"xaxis": "x1", "yaxis": "y1", "type": "bar", "name": "", "visible": true, "orientation": "v", "x": [1, 2, 3, 4], "y": [2, 2, 2, 2], "marker": {"color": "rgb(0,113.985,188.955)", "line": {"color": "rgb(0,0,0)", "width": 0.5, "dash": "solid"}}, "showlegend": true}, "layout": {"autosize": false, "margin": {"pad": 0, "l": 0, "r": 0, "b": 0, "t": 0}, "showlegend": false, "width": 840, "height": 630, "paper_bgcolor": "rgb(255,255,255)", "hovermode": "closest", "xaxis1": {"side": "bottom", "zeroline": false, "autorange": false, "linecolor": "rgb(38.250000,38.250000,38.250000)", "linewidth": 1, "exponentformat": "none", "tickfont": {"size": 10, "family": "Arial, sans-serif", "color": "rgb(38.250000,38.250000,38.250000)"}, "ticklen": 6.51, "tickcolor": "rgb(38.250000,38.250000,38.250000)", "tickwidth": 1, "tickangle": -0, "ticks": "inside", "showgrid": false, "gridcolor": "rgba(38.250000,,38.250000,38.250000,0.150000)", "type": "linear", "showticklabels": true, "tickmode": "array", "tickvals": [1, 2, 3, 4], "range": [0.511111111111111, 4.48888888888889], "mirror": "ticks", "ticktext": ["1", "2", "3", "4"], "titlefont": {"color": "rgb(38.250000,38.250000,38.250000)", "size": 11, "family": "Arial, sans-serif"}, "showline": true, "domain": [0.13, 0.905], "anchor": "y1"}, "scene1": {"domain": {"x": [0.13, 0.905], "y": [0.11, 0.925]}}, "yaxis1": {"side": "left", "zeroline": false, "autorange": false, "linecolor": "rgb(38.250000,38.250000,38.250000)", "linewidth": 1, "exponentformat": "none", "tickfont": {"size": 10, "family": "Arial, sans-serif", "color": "rgb(38.250000,38.250000,38.250000)"}, "ticklen": 6.51, "tickcolor": "rgb(38.250000,38.250000,38.250000)", "tickwidth": 1, "tickangle": -0, "ticks": "inside", "showgrid": false, "gridcolor": "rgba(38.250000,,38.250000,38.250000,0.150000)", "type": "linear", "showticklabels": true, "tickmode": "array", "tickvals": [0, 2, 4, 6, 8, 10, 12], "range": [0, 12], "mirror": "ticks", "ticktext": ["0", "2", "4", "6", "8", "10", "12"], "titlefont": {"color": "rgb(38.250000,38.250000,38.250000)", "size": 11, "family": "Arial, sans-serif"}, "showline": true, "domain": [0.11, 0.925], "anchor": "x1"}, "bargroupgap": 0.2, "bargap": 0.1875, "barmode": "group", "annotations": [{"showarrow": false, "xref": "paper", "yref": "paper", "xanchor": "center", "align": "center", "yanchor": "bottom", "text": "<b><b><\/b><\/b>", "x": 0.5175, "y": 0.935, "font": {"color": "rgb(0,0,0)", "family": "Arial, sans-serif", "size": 11}, "bordercolor": "rgba(0,0,0,0)", "textangle": 0, "borderwidth": 0.5, "borderpad": 3}]}, "frames": []}{% endraw %}
 {% endcapture %}
-{% include posts/ssim_frame.html raw_json_file=plot_405532091540 index=405532091540 %}
+{% include posts/ssim_frame.html raw_json_file=plot_438644982587 index=438644982587 %}
 
 
 
@@ -93,12 +153,27 @@ Display one bar for each row of the matrix. The height of each bar is the sum of
 y = [2 2 3; 2 5 6; 2 8 9; 2 11 12];
 bar(y,'stacked')
 
-fig2plotly(gcf);
+fig2plotly(gcf)
 ```
-{% capture plot_492065859893 %}
+```
+pf = 
+
+  <a href="matlab:helpPopup plotlyfig" style="font-weight:bold">plotlyfig</a> with properties:
+
+           data: {[1×1 struct]  [1×1 struct]  [1×1 struct]}
+         layout: [1×1 struct]
+         frames: {}
+            url: ''
+          error: []
+        warning: []
+        message: []
+       UserData: [1×1 struct]
+    PlotOptions: [1×1 struct]
+```
+{% capture plot_833500595589 %}
 {% raw %}{"data": {"xaxis": "x1", "yaxis": "y1", "type": "bar", "name": "", "visible": true, "orientation": "v", "x": [1, 2, 3, 4], "y": [2, 2, 2, 2], "marker": {"color": "rgb(0,113.985,188.955)", "line": {"color": "rgb(0,0,0)", "width": 0.5, "dash": "solid"}}, "showlegend": true}, "layout": {"autosize": false, "margin": {"pad": 0, "l": 0, "r": 0, "b": 0, "t": 0}, "showlegend": false, "width": 840, "height": 630, "paper_bgcolor": "rgb(255,255,255)", "hovermode": "closest", "xaxis1": {"side": "bottom", "zeroline": false, "autorange": false, "linecolor": "rgb(38.250000,38.250000,38.250000)", "linewidth": 1, "exponentformat": "none", "tickfont": {"size": 10, "family": "Arial, sans-serif", "color": "rgb(38.250000,38.250000,38.250000)"}, "ticklen": 6.51, "tickcolor": "rgb(38.250000,38.250000,38.250000)", "tickwidth": 1, "tickangle": -0, "ticks": "inside", "showgrid": false, "gridcolor": "rgba(38.250000,,38.250000,38.250000,0.150000)", "type": "linear", "showticklabels": true, "tickmode": "array", "tickvals": [1, 2, 3, 4], "range": [-0.2, 5.2], "mirror": "ticks", "ticktext": ["1", "2", "3", "4"], "titlefont": {"color": "rgb(38.250000,38.250000,38.250000)", "size": 11, "family": "Arial, sans-serif"}, "showline": true, "domain": [0.13, 0.905], "anchor": "y1"}, "scene1": {"domain": {"x": [0.13, 0.905], "y": [0.11, 0.925]}}, "yaxis1": {"side": "left", "zeroline": false, "autorange": false, "linecolor": "rgb(38.250000,38.250000,38.250000)", "linewidth": 1, "exponentformat": "none", "tickfont": {"size": 10, "family": "Arial, sans-serif", "color": "rgb(38.250000,38.250000,38.250000)"}, "ticklen": 6.51, "tickcolor": "rgb(38.250000,38.250000,38.250000)", "tickwidth": 1, "tickangle": -0, "ticks": "inside", "showgrid": false, "gridcolor": "rgba(38.250000,,38.250000,38.250000,0.150000)", "type": "linear", "showticklabels": true, "tickmode": "array", "tickvals": [0, 5, 10, 15, 20, 25], "range": [0, 25], "mirror": "ticks", "ticktext": ["0", "5", "10", "15", "20", "25"], "titlefont": {"color": "rgb(38.250000,38.250000,38.250000)", "size": 11, "family": "Arial, sans-serif"}, "showline": true, "domain": [0.11, 0.925], "anchor": "x1"}, "bargroupgap": 0.2, "bargap": 0.1875, "barmode": "relative", "annotations": [{"showarrow": false, "xref": "paper", "yref": "paper", "xanchor": "center", "align": "center", "yanchor": "bottom", "text": "<b><b><\/b><\/b>", "x": 0.5175, "y": 0.935, "font": {"color": "rgb(0,0,0)", "family": "Arial, sans-serif", "size": 11}, "bordercolor": "rgba(0,0,0,0)", "textangle": 0, "borderwidth": 0.5, "borderpad": 3}]}, "frames": []}{% endraw %}
 {% endcapture %}
-{% include posts/ssim_frame.html raw_json_file=plot_492065859893 index=492065859893 %}
+{% include posts/ssim_frame.html raw_json_file=plot_833500595589 index=833500595589 %}
 
 
 
@@ -118,10 +193,10 @@ legend('Measles', 'Mumps', 'Chicken pox');
 
 fig2plotly(gcf);
 ```
-{% capture plot_631020651060 %}
+{% capture plot_768854252430 %}
 {% raw %}{"data": {"xaxis": "x1", "yaxis": "y1", "type": "bar", "name": "Measles", "visible": true, "orientation": "v", "x": [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12], "y": [38556, 24472, 14556, 18060, 19549, 8122, 28541, 7880, 3283, 4135, 7953, 1884], "marker": {"color": "rgb(0,113.985,188.955)", "line": {"color": "rgb(0,0,0)", "width": 0.5, "dash": "solid"}}, "showlegend": true}, "layout": {"autosize": false, "margin": {"pad": 0, "l": 0, "r": 0, "b": 0, "t": 0}, "showlegend": true, "width": 840, "height": 630, "paper_bgcolor": "rgb(255,255,255)", "hovermode": "closest", "annotations": [{"showarrow": false, "xref": "paper", "yref": "paper", "xanchor": "center", "align": "center", "yanchor": "bottom", "text": "<b>Childhood diseases by month<\/b>", "x": 0.5175, "y": 0.935, "font": {"color": "rgb(0,0,0)", "family": "Arial, sans-serif", "size": 11}, "bordercolor": "rgba(0,0,0,0)", "textangle": 0, "borderwidth": 0.5, "borderpad": 3}, {"text": "x10^4", "xref": "x1", "yref": "y1", "xanchor": "left", "yanchor": "bottom", "font": {"size": 10, "color": "rgb(38.250000,38.250000,38.250000)", "family": "Arial, sans-serif"}, "showarrow": false, "x": 0, "y": 100000}], "xaxis1": {"side": "bottom", "zeroline": false, "autorange": false, "linecolor": "rgb(38.250000,38.250000,38.250000)", "linewidth": 1, "exponentformat": "none", "tickfont": {"size": 10, "family": "Arial, sans-serif", "color": "rgb(38.250000,38.250000,38.250000)"}, "ticklen": 6.51, "tickcolor": "rgb(38.250000,38.250000,38.250000)", "tickwidth": 1, "tickangle": -0, "ticks": "inside", "showgrid": false, "gridcolor": "rgba(38.250000,,38.250000,38.250000,0.150000)", "type": "linear", "showticklabels": true, "tickmode": "array", "tickvals": [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12], "range": [0, 13], "mirror": "ticks", "ticktext": ["1", "2", "3", "4", "5", "6", "7", "8", "9", "10", "11", "12"], "title": "Month", "titlefont": {"color": "rgb(38.250000,38.250000,38.250000)", "size": 11, "family": "Arial, sans-serif"}, "showline": true, "domain": [0.13, 0.905], "anchor": "y1"}, "scene1": {"domain": {"x": [0.13, 0.905], "y": [0.11, 0.925]}}, "yaxis1": {"side": "left", "zeroline": false, "autorange": false, "linecolor": "rgb(38.250000,38.250000,38.250000)", "linewidth": 1, "exponentformat": "none", "tickfont": {"size": 10, "family": "Arial, sans-serif", "color": "rgb(38.250000,38.250000,38.250000)"}, "ticklen": 6.51, "tickcolor": "rgb(38.250000,38.250000,38.250000)", "tickwidth": 1, "tickangle": -0, "ticks": "inside", "showgrid": false, "gridcolor": "rgba(38.250000,,38.250000,38.250000,0.150000)", "type": "linear", "showticklabels": true, "tickmode": "array", "tickvals": [0, 10000, 20000, 30000, 40000, 50000, 60000, 70000, 80000, 90000, 100000], "range": [0, 100000], "mirror": "ticks", "ticktext": ["0", "1", "2", "3", "4", "5", "6", "7", "8", "9", "10"], "title": "Cases (in thousands)", "titlefont": {"color": "rgb(38.250000,38.250000,38.250000)", "size": 11, "family": "Arial, sans-serif"}, "showline": true, "domain": [0.11, 0.925], "anchor": "x1"}, "bargroupgap": 0.5, "bargap": 0.1875, "barmode": "relative", "legend": {"x": 0.676388888888889, "xref": "paper", "xanchor": "left", "y": 0.77962962962963, "yref": "paper", "yanchor": "bottom", "traceorder": "normal", "borderwidth": 0.5, "bordercolor": "rgb(38.25,38.25,38.25)", "bgcolor": "rgb(255,255,255)", "font": {"size": 9, "family": "Arial, sans-serif", "color": "rgb(0,0,0_)"}}}, "frames": []}{% endraw %}
 {% endcapture %}
-{% include posts/ssim_frame.html raw_json_file=plot_631020651060 index=631020651060 %}
+{% include posts/ssim_frame.html raw_json_file=plot_768854252430 index=768854252430 %}
 
 
 <!--------------------- EXAMPLE BREAK ------------------------->
@@ -135,12 +210,27 @@ x = [1980 1990 2000];
 y = [15 20 -5; 10 -17 21; -10 5 15];
 bar(x,y,'stacked')
 
-fig2plotly(gcf);
+fig2plotly(gcf)
 ```
-{% capture plot_126650736256 %}
+```
+pf = 
+
+  <a href="matlab:helpPopup plotlyfig" style="font-weight:bold">plotlyfig</a> with properties:
+
+           data: {[1×1 struct]  [1×1 struct]  [1×1 struct]}
+         layout: [1×1 struct]
+         frames: {}
+            url: ''
+          error: []
+        warning: []
+        message: []
+       UserData: [1×1 struct]
+    PlotOptions: [1×1 struct]
+```
+{% capture plot_167253545495 %}
 {% raw %}{"data": {"xaxis": "x1", "yaxis": "y1", "type": "bar", "name": "", "visible": true, "orientation": "v", "x": [1980, 1990, 2000], "y": [15, 10, -10], "marker": {"color": "rgb(0,113.985,188.955)", "line": {"color": "rgb(0,0,0)", "width": 0.5, "dash": "solid"}}, "showlegend": true}, "layout": {"autosize": false, "margin": {"pad": 0, "l": 0, "r": 0, "b": 0, "t": 0}, "showlegend": false, "width": 840, "height": 630, "paper_bgcolor": "rgb(255,255,255)", "hovermode": "closest", "xaxis1": {"side": "bottom", "zeroline": false, "autorange": false, "linecolor": "rgb(38.250000,38.250000,38.250000)", "linewidth": 1, "exponentformat": "none", "tickfont": {"size": 10, "family": "Arial, sans-serif", "color": "rgb(38.250000,38.250000,38.250000)"}, "ticklen": 6.51, "tickcolor": "rgb(38.250000,38.250000,38.250000)", "tickwidth": 1, "tickangle": -0, "ticks": "inside", "showgrid": false, "gridcolor": "rgba(38.250000,,38.250000,38.250000,0.150000)", "type": "linear", "showticklabels": true, "tickmode": "array", "tickvals": [1980, 1990, 2000], "range": [1968, 2012], "mirror": "ticks", "ticktext": ["1980", "1990", "2000"], "titlefont": {"color": "rgb(38.250000,38.250000,38.250000)", "size": 11, "family": "Arial, sans-serif"}, "showline": true, "domain": [0.13, 0.905], "anchor": "y1"}, "scene1": {"domain": {"x": [0.13, 0.905], "y": [0.11, 0.925]}}, "yaxis1": {"side": "left", "zeroline": false, "autorange": false, "linecolor": "rgb(38.250000,38.250000,38.250000)", "linewidth": 1, "exponentformat": "none", "tickfont": {"size": 10, "family": "Arial, sans-serif", "color": "rgb(38.250000,38.250000,38.250000)"}, "ticklen": 6.51, "tickcolor": "rgb(38.250000,38.250000,38.250000)", "tickwidth": 1, "tickangle": -0, "ticks": "inside", "showgrid": false, "gridcolor": "rgba(38.250000,,38.250000,38.250000,0.150000)", "type": "linear", "showticklabels": true, "tickmode": "array", "tickvals": [-20, -10, 0, 10, 20, 30, 40], "range": [-20, 40], "mirror": "ticks", "ticktext": ["-20", "-10", "0", "10", "20", "30", "40"], "titlefont": {"color": "rgb(38.250000,38.250000,38.250000)", "size": 11, "family": "Arial, sans-serif"}, "showline": true, "domain": [0.11, 0.925], "anchor": "x1"}, "bargroupgap": 0.2, "bargap": 0.1875, "barmode": "relative", "annotations": [{"showarrow": false, "xref": "paper", "yref": "paper", "xanchor": "center", "align": "center", "yanchor": "bottom", "text": "<b><b><\/b><\/b>", "x": 0.5175, "y": 0.935, "font": {"color": "rgb(0,0,0)", "family": "Arial, sans-serif", "size": 11}, "bordercolor": "rgba(0,0,0,0)", "textangle": 0, "borderwidth": 0.5, "borderpad": 3}]}, "frames": []}{% endraw %}
 {% endcapture %}
-{% include posts/ssim_frame.html raw_json_file=plot_126650736256 index=126650736256 %}
+{% include posts/ssim_frame.html raw_json_file=plot_167253545495 index=167253545495 %}
 
 
 
@@ -158,12 +248,27 @@ X = reordercats(X,{'Small','Medium','Large','Extra Large'});
 Y = [10 21 33 52];
 bar(X,Y)
 
-fig2plotly(gcf);
+fig2plotly(gcf)
 ```
-{% capture plot_959273722239 %}
+```
+pf = 
+
+  <a href="matlab:helpPopup plotlyfig" style="font-weight:bold">plotlyfig</a> with properties:
+
+           data: {[1×1 struct]}
+         layout: [1×1 struct]
+         frames: {}
+            url: ''
+          error: []
+        warning: []
+        message: []
+       UserData: [1×1 struct]
+    PlotOptions: [1×1 struct]
+```
+{% capture plot_861980478702 %}
 {% raw %}{"data": {"xaxis": "x1", "yaxis": "y1", "type": "bar", "name": "", "visible": true, "orientation": "v", "x": ["Small", "Medium", "Large", "Extra Large"], "y": [10, 21, 33, 52], "marker": {"color": "rgb(0,113.985,188.955)", "line": {"color": "rgb(0,0,0)", "width": 0.5, "dash": "solid"}}, "showlegend": true}, "layout": {"autosize": false, "margin": {"pad": 0, "l": 0, "r": 0, "b": 0, "t": 0}, "showlegend": false, "width": 840, "height": 630, "paper_bgcolor": "rgb(255,255,255)", "hovermode": "closest", "xaxis1": {"side": "bottom", "zeroline": false, "autorange": true, "linecolor": "rgb(38.250000,38.250000,38.250000)", "linewidth": 1, "exponentformat": "none", "tickfont": {"size": 10, "family": "Arial, sans-serif", "color": "rgb(38.250000,38.250000,38.250000)"}, "ticklen": 6.51, "tickcolor": "rgb(38.250000,38.250000,38.250000)", "tickwidth": 1, "tickangle": -0, "ticks": "inside", "showgrid": false, "gridcolor": "rgba(38.250000,,38.250000,38.250000,0.150000)", "type": "category", "showticklabels": true, "tickmode": "array", "mirror": "ticks", "ticktext": ["Small", "Medium", "Large", "Extra Large"], "titlefont": {"color": "rgb(38.250000,38.250000,38.250000)", "size": 11, "family": "Arial, sans-serif"}, "showline": true, "domain": [0.13, 0.905], "anchor": "y1", "autotick": true}, "scene1": {"domain": {"x": [0.13, 0.905], "y": [0.11, 0.925]}}, "yaxis1": {"side": "left", "zeroline": false, "autorange": false, "linecolor": "rgb(38.250000,38.250000,38.250000)", "linewidth": 1, "exponentformat": "none", "tickfont": {"size": 10, "family": "Arial, sans-serif", "color": "rgb(38.250000,38.250000,38.250000)"}, "ticklen": 6.51, "tickcolor": "rgb(38.250000,38.250000,38.250000)", "tickwidth": 1, "tickangle": -0, "ticks": "inside", "showgrid": false, "gridcolor": "rgba(38.250000,,38.250000,38.250000,0.150000)", "type": "linear", "showticklabels": true, "tickmode": "array", "tickvals": [0, 10, 20, 30, 40, 50, 60], "range": [0, 60], "mirror": "ticks", "ticktext": ["0", "10", "20", "30", "40", "50", "60"], "titlefont": {"color": "rgb(38.250000,38.250000,38.250000)", "size": 11, "family": "Arial, sans-serif"}, "showline": true, "domain": [0.11, 0.925], "anchor": "x1"}, "bargroupgap": 0.2, "bargap": 0.0625, "barmode": "group", "annotations": [{"showarrow": false, "xref": "paper", "yref": "paper", "xanchor": "center", "align": "center", "yanchor": "bottom", "text": "<b><b><\/b><\/b>", "x": 0.5175, "y": 0.935, "font": {"color": "rgb(0,0,0)", "family": "Arial, sans-serif", "size": 11}, "bordercolor": "rgba(0,0,0,0)", "textangle": 0, "borderwidth": 0.5, "borderpad": 3}]}, "frames": []}{% endraw %}
 {% endcapture %}
-{% include posts/ssim_frame.html raw_json_file=plot_959273722239 index=959273722239 %}
+{% include posts/ssim_frame.html raw_json_file=plot_861980478702 index=861980478702 %}
 
 
 <!--------------------- EXAMPLE BREAK ------------------------->
@@ -177,12 +282,27 @@ x = [1 2 3];
 vals = [2 3 6; 11 23 26];
 b = bar(x,vals);
 
-fig2plotly(gcf);
+fig2plotly(gcf)
 ```
-{% capture plot_343736842767 %}
+```
+pf = 
+
+  <a href="matlab:helpPopup plotlyfig" style="font-weight:bold">plotlyfig</a> with properties:
+
+           data: {[1×1 struct]  [1×1 struct]}
+         layout: [1×1 struct]
+         frames: {}
+            url: ''
+          error: []
+        warning: []
+        message: []
+       UserData: [1×1 struct]
+    PlotOptions: [1×1 struct]
+```
+{% capture plot_989872153632 %}
 {% raw %}{"data": {"xaxis": "x1", "yaxis": "y1", "type": "bar", "name": "", "visible": true, "orientation": "v", "x": [1, 2, 3], "y": [2, 3, 6], "marker": {"color": "rgb(0,113.985,188.955)", "line": {"color": "rgb(0,0,0)", "width": 0.5, "dash": "solid"}}, "showlegend": true}, "layout": {"autosize": false, "margin": {"pad": 0, "l": 0, "r": 0, "b": 0, "t": 0}, "showlegend": false, "width": 840, "height": 630, "paper_bgcolor": "rgb(255,255,255)", "hovermode": "closest", "xaxis1": {"side": "bottom", "zeroline": false, "autorange": false, "linecolor": "rgb(38.250000,38.250000,38.250000)", "linewidth": 1, "exponentformat": "none", "tickfont": {"size": 10, "family": "Arial, sans-serif", "color": "rgb(38.250000,38.250000,38.250000)"}, "ticklen": 6.51, "tickcolor": "rgb(38.250000,38.250000,38.250000)", "tickwidth": 1, "tickangle": -0, "ticks": "inside", "showgrid": false, "gridcolor": "rgba(38.250000,,38.250000,38.250000,0.150000)", "type": "linear", "showticklabels": true, "tickmode": "array", "tickvals": [1, 2, 3], "range": [0.514285714285714, 3.48571428571429], "mirror": "ticks", "ticktext": ["1", "2", "3"], "titlefont": {"color": "rgb(38.250000,38.250000,38.250000)", "size": 11, "family": "Arial, sans-serif"}, "showline": true, "domain": [0.13, 0.905], "anchor": "y1"}, "scene1": {"domain": {"x": [0.13, 0.905], "y": [0.11, 0.925]}}, "yaxis1": {"side": "left", "zeroline": false, "autorange": false, "linecolor": "rgb(38.250000,38.250000,38.250000)", "linewidth": 1, "exponentformat": "none", "tickfont": {"size": 10, "family": "Arial, sans-serif", "color": "rgb(38.250000,38.250000,38.250000)"}, "ticklen": 6.51, "tickcolor": "rgb(38.250000,38.250000,38.250000)", "tickwidth": 1, "tickangle": -0, "ticks": "inside", "showgrid": false, "gridcolor": "rgba(38.250000,,38.250000,38.250000,0.150000)", "type": "linear", "showticklabels": true, "tickmode": "array", "tickvals": [0, 5, 10, 15, 20, 25, 30], "range": [0, 30], "mirror": "ticks", "ticktext": ["0", "5", "10", "15", "20", "25", "30"], "titlefont": {"color": "rgb(38.250000,38.250000,38.250000)", "size": 11, "family": "Arial, sans-serif"}, "showline": true, "domain": [0.11, 0.925], "anchor": "x1"}, "bargroupgap": 0.2, "bargap": 0.125, "barmode": "group", "annotations": [{"showarrow": false, "xref": "paper", "yref": "paper", "xanchor": "center", "align": "center", "yanchor": "bottom", "text": "<b><b><\/b><\/b>", "x": 0.5175, "y": 0.935, "font": {"color": "rgb(0,0,0)", "family": "Arial, sans-serif", "size": 11}, "bordercolor": "rgba(0,0,0,0)", "textangle": 0, "borderwidth": 0.5, "borderpad": 3}]}, "frames": []}{% endraw %}
 {% endcapture %}
-{% include posts/ssim_frame.html raw_json_file=plot_343736842767 index=343736842767 %}
+{% include posts/ssim_frame.html raw_json_file=plot_989872153632 index=989872153632 %}
 
 
 
@@ -199,12 +319,27 @@ labels1 = string(b(1).YData);
 text(xtips1,ytips1,labels1,'HorizontalAlignment','center',...
     'VerticalAlignment','bottom')
 
-fig2plotly(gcf);
+fig2plotly(gcf)
 ```
-{% capture plot_59261588386 %}
+```
+pf = 
+
+  <a href="matlab:helpPopup plotlyfig" style="font-weight:bold">plotlyfig</a> with properties:
+
+           data: {[1×1 struct]  [1×1 struct]}
+         layout: [1×1 struct]
+         frames: {}
+            url: ''
+          error: []
+        warning: []
+        message: []
+       UserData: [1×1 struct]
+    PlotOptions: [1×1 struct]
+```
+{% capture plot_514423456506 %}
 {% raw %}{"data": {"xaxis": "x1", "yaxis": "y1", "type": "bar", "name": "", "visible": true, "orientation": "v", "x": [1, 2, 3], "y": [2, 3, 6], "marker": {"color": "rgb(0,113.985,188.955)", "line": {"color": "rgb(0,0,0)", "width": 0.5, "dash": "solid"}}, "showlegend": true}, "layout": {"autosize": false, "margin": {"pad": 0, "l": 0, "r": 0, "b": 0, "t": 0}, "showlegend": false, "width": 840, "height": 630, "paper_bgcolor": "rgb(255,255,255)", "hovermode": "closest", "xaxis1": {"side": "bottom", "zeroline": false, "autorange": false, "linecolor": "rgb(38.250000,38.250000,38.250000)", "linewidth": 1, "exponentformat": "none", "tickfont": {"size": 10, "family": "Arial, sans-serif", "color": "rgb(38.250000,38.250000,38.250000)"}, "ticklen": 6.51, "tickcolor": "rgb(38.250000,38.250000,38.250000)", "tickwidth": 1, "tickangle": -0, "ticks": "inside", "showgrid": false, "gridcolor": "rgba(38.250000,,38.250000,38.250000,0.150000)", "type": "linear", "showticklabels": true, "tickmode": "array", "tickvals": [1, 2, 3], "range": [0.514285714285714, 3.48571428571429], "mirror": "ticks", "ticktext": ["1", "2", "3"], "titlefont": {"color": "rgb(38.250000,38.250000,38.250000)", "size": 11, "family": "Arial, sans-serif"}, "showline": true, "domain": [0.13, 0.905], "anchor": "y1"}, "scene1": {"domain": {"x": [0.13, 0.905], "y": [0.11, 0.925]}}, "yaxis1": {"side": "left", "zeroline": false, "autorange": false, "linecolor": "rgb(38.250000,38.250000,38.250000)", "linewidth": 1, "exponentformat": "none", "tickfont": {"size": 10, "family": "Arial, sans-serif", "color": "rgb(38.250000,38.250000,38.250000)"}, "ticklen": 6.51, "tickcolor": "rgb(38.250000,38.250000,38.250000)", "tickwidth": 1, "tickangle": -0, "ticks": "inside", "showgrid": false, "gridcolor": "rgba(38.250000,,38.250000,38.250000,0.150000)", "type": "linear", "showticklabels": true, "tickmode": "array", "tickvals": [0, 5, 10, 15, 20, 25, 30], "range": [0, 30], "mirror": "ticks", "ticktext": ["0", "5", "10", "15", "20", "25", "30"], "titlefont": {"color": "rgb(38.250000,38.250000,38.250000)", "size": 11, "family": "Arial, sans-serif"}, "showline": true, "domain": [0.11, 0.925], "anchor": "x1"}, "bargroupgap": 0.2, "bargap": 0.125, "barmode": "group", "annotations": [{"showarrow": false, "xref": "paper", "yref": "paper", "xanchor": "center", "align": "center", "yanchor": "bottom", "text": "<b><b><\/b><\/b>", "x": 0.5175, "y": 0.935, "font": {"color": "rgb(0,0,0)", "family": "Arial, sans-serif", "size": 11}, "bordercolor": "rgba(0,0,0,0)", "textangle": 0, "borderwidth": 0.5, "borderpad": 3}, {"showarrow": false, "xref": "x1", "yref": "y1", "xanchor": "center", "align": "center", "yanchor": "bottom", "text": "6", "x": 2.85714285714286, "y": 6, "font": {"color": "rgb(0,0,0)", "family": "Arial, sans-serif", "size": 10}, "bordercolor": "rgba(0,0,0,0)", "textangle": 0, "borderwidth": 0.5, "borderpad": 3}, {"showarrow": false, "xref": "x1", "yref": "y1", "xanchor": "center", "align": "center", "yanchor": "bottom", "text": "3", "x": 1.85714285714286, "y": 3, "font": {"color": "rgb(0,0,0)", "family": "Arial, sans-serif", "size": 10}, "bordercolor": "rgba(0,0,0,0)", "textangle": 0, "borderwidth": 0.5, "borderpad": 3}, {"showarrow": false, "xref": "x1", "yref": "y1", "xanchor": "center", "align": "center", "yanchor": "bottom", "text": "2", "x": 0.857142857142857, "y": 2, "font": {"color": "rgb(0,0,0)", "family": "Arial, sans-serif", "size": 10}, "bordercolor": "rgba(0,0,0,0)", "textangle": 0, "borderwidth": 0.5, "borderpad": 3}]}, "frames": []}{% endraw %}
 {% endcapture %}
-{% include posts/ssim_frame.html raw_json_file=plot_59261588386 index=59261588386 %}
+{% include posts/ssim_frame.html raw_json_file=plot_514423456506 index=514423456506 %}
 
 
 Next, display the values above the tips of the second series of bars.
@@ -226,12 +361,27 @@ labels2 = string(b(2).YData);
 text(xtips2,ytips2,labels2,'HorizontalAlignment','center',...
     'VerticalAlignment','bottom')
 
-fig2plotly(gcf);
+fig2plotly(gcf)
 ```
-{% capture plot_839437390777 %}
+```
+pf = 
+
+  <a href="matlab:helpPopup plotlyfig" style="font-weight:bold">plotlyfig</a> with properties:
+
+           data: {[1×1 struct]  [1×1 struct]}
+         layout: [1×1 struct]
+         frames: {}
+            url: ''
+          error: []
+        warning: []
+        message: []
+       UserData: [1×1 struct]
+    PlotOptions: [1×1 struct]
+```
+{% capture plot_884281023127 %}
 {% raw %}{"data": {"xaxis": "x1", "yaxis": "y1", "type": "bar", "name": "", "visible": true, "orientation": "v", "x": [1, 2, 3], "y": [2, 3, 6], "marker": {"color": "rgb(0,113.985,188.955)", "line": {"color": "rgb(0,0,0)", "width": 0.5, "dash": "solid"}}, "showlegend": true}, "layout": {"autosize": false, "margin": {"pad": 0, "l": 0, "r": 0, "b": 0, "t": 0}, "showlegend": false, "width": 840, "height": 630, "paper_bgcolor": "rgb(255,255,255)", "hovermode": "closest", "xaxis1": {"side": "bottom", "zeroline": false, "autorange": false, "linecolor": "rgb(38.250000,38.250000,38.250000)", "linewidth": 1, "exponentformat": "none", "tickfont": {"size": 10, "family": "Arial, sans-serif", "color": "rgb(38.250000,38.250000,38.250000)"}, "ticklen": 6.51, "tickcolor": "rgb(38.250000,38.250000,38.250000)", "tickwidth": 1, "tickangle": -0, "ticks": "inside", "showgrid": false, "gridcolor": "rgba(38.250000,,38.250000,38.250000,0.150000)", "type": "linear", "showticklabels": true, "tickmode": "array", "tickvals": [1, 2, 3], "range": [0.514285714285714, 3.48571428571429], "mirror": "ticks", "ticktext": ["1", "2", "3"], "titlefont": {"color": "rgb(38.250000,38.250000,38.250000)", "size": 11, "family": "Arial, sans-serif"}, "showline": true, "domain": [0.13, 0.905], "anchor": "y1"}, "scene1": {"domain": {"x": [0.13, 0.905], "y": [0.11, 0.925]}}, "yaxis1": {"side": "left", "zeroline": false, "autorange": false, "linecolor": "rgb(38.250000,38.250000,38.250000)", "linewidth": 1, "exponentformat": "none", "tickfont": {"size": 10, "family": "Arial, sans-serif", "color": "rgb(38.250000,38.250000,38.250000)"}, "ticklen": 6.51, "tickcolor": "rgb(38.250000,38.250000,38.250000)", "tickwidth": 1, "tickangle": -0, "ticks": "inside", "showgrid": false, "gridcolor": "rgba(38.250000,,38.250000,38.250000,0.150000)", "type": "linear", "showticklabels": true, "tickmode": "array", "tickvals": [0, 5, 10, 15, 20, 25, 30], "range": [0, 30], "mirror": "ticks", "ticktext": ["0", "5", "10", "15", "20", "25", "30"], "titlefont": {"color": "rgb(38.250000,38.250000,38.250000)", "size": 11, "family": "Arial, sans-serif"}, "showline": true, "domain": [0.11, 0.925], "anchor": "x1"}, "bargroupgap": 0.2, "bargap": 0.125, "barmode": "group", "annotations": [{"showarrow": false, "xref": "paper", "yref": "paper", "xanchor": "center", "align": "center", "yanchor": "bottom", "text": "<b><b><\/b><\/b>", "x": 0.5175, "y": 0.935, "font": {"color": "rgb(0,0,0)", "family": "Arial, sans-serif", "size": 11}, "bordercolor": "rgba(0,0,0,0)", "textangle": 0, "borderwidth": 0.5, "borderpad": 3}, {"showarrow": false, "xref": "x1", "yref": "y1", "xanchor": "center", "align": "center", "yanchor": "bottom", "text": "26", "x": 3.14285714285714, "y": 26, "font": {"color": "rgb(0,0,0)", "family": "Arial, sans-serif", "size": 10}, "bordercolor": "rgba(0,0,0,0)", "textangle": 0, "borderwidth": 0.5, "borderpad": 3}, {"showarrow": false, "xref": "x1", "yref": "y1", "xanchor": "center", "align": "center", "yanchor": "bottom", "text": "23", "x": 2.14285714285714, "y": 23, "font": {"color": "rgb(0,0,0)", "family": "Arial, sans-serif", "size": 10}, "bordercolor": "rgba(0,0,0,0)", "textangle": 0, "borderwidth": 0.5, "borderpad": 3}, {"showarrow": false, "xref": "x1", "yref": "y1", "xanchor": "center", "align": "center", "yanchor": "bottom", "text": "11", "x": 1.14285714285714, "y": 11, "font": {"color": "rgb(0,0,0)", "family": "Arial, sans-serif", "size": 10}, "bordercolor": "rgba(0,0,0,0)", "textangle": 0, "borderwidth": 0.5, "borderpad": 3}, {"showarrow": false, "xref": "x1", "yref": "y1", "xanchor": "center", "align": "center", "yanchor": "bottom", "text": "6", "x": 2.85714285714286, "y": 6, "font": {"color": "rgb(0,0,0)", "family": "Arial, sans-serif", "size": 10}, "bordercolor": "rgba(0,0,0,0)", "textangle": 0, "borderwidth": 0.5, "borderpad": 3}, {"showarrow": false, "xref": "x1", "yref": "y1", "xanchor": "center", "align": "center", "yanchor": "bottom", "text": "3", "x": 1.85714285714286, "y": 3, "font": {"color": "rgb(0,0,0)", "family": "Arial, sans-serif", "size": 10}, "bordercolor": "rgba(0,0,0,0)", "textangle": 0, "borderwidth": 0.5, "borderpad": 3}, {"showarrow": false, "xref": "x1", "yref": "y1", "xanchor": "center", "align": "center", "yanchor": "bottom", "text": "2", "x": 0.857142857142857, "y": 2, "font": {"color": "rgb(0,0,0)", "family": "Arial, sans-serif", "size": 10}, "bordercolor": "rgba(0,0,0,0)", "textangle": 0, "borderwidth": 0.5, "borderpad": 3}]}, "frames": []}{% endraw %}
 {% endcapture %}
-{% include posts/ssim_frame.html raw_json_file=plot_839437390777 index=839437390777 %}
+{% include posts/ssim_frame.html raw_json_file=plot_884281023127 index=884281023127 %}
 
 
 
@@ -253,12 +403,27 @@ bar(ax1,y)
 ax2 = nexttile;
 bar(ax2,y,'stacked')
 
-fig2plotly(gcf);
+fig2plotly(gcf)
 ```
-{% capture plot_985286268056 %}
+```
+pf = 
+
+  <a href="matlab:helpPopup plotlyfig" style="font-weight:bold">plotlyfig</a> with properties:
+
+           data: {[1×1 struct]  [1×1 struct]  [1×1 struct]  [1×1 struct]  [1×1 struct]  [1×1 struct]}
+         layout: [1×1 struct]
+         frames: {}
+            url: ''
+          error: []
+        warning: []
+        message: []
+       UserData: [1×1 struct]
+    PlotOptions: [1×1 struct]
+```
+{% capture plot_588026055308 %}
 {% raw %}{"data": {"xaxis": "x1", "yaxis": "y1", "type": "bar", "name": "", "visible": true, "orientation": "v", "x": [1, 2], "y": [1, 4], "marker": {"color": "rgb(0,113.985,188.955)", "line": {"color": "rgb(0,0,0)", "width": 0.5, "dash": "solid"}}, "showlegend": true}, "layout": {"autosize": false, "margin": {"pad": 0, "l": 0, "r": 0, "b": 0, "t": 0}, "showlegend": false, "width": 840, "height": 630, "paper_bgcolor": "rgb(255,255,255)", "hovermode": "closest", "xaxis1": {"side": "bottom", "zeroline": false, "autorange": false, "linecolor": "rgb(38.250000,38.250000,38.250000)", "linewidth": 1, "exponentformat": "none", "tickfont": {"size": 9, "family": "Arial, sans-serif", "color": "rgb(38.250000,38.250000,38.250000)"}, "ticklen": 6.51, "tickcolor": "rgb(38.250000,38.250000,38.250000)", "tickwidth": 1, "tickangle": -0, "ticks": "inside", "showgrid": false, "gridcolor": "rgba(38.250000,,38.250000,38.250000,0.150000)", "type": "linear", "showticklabels": true, "tickmode": "array", "tickvals": [1, 2], "range": [0.511111111111111, 2.48888888888889], "mirror": "ticks", "ticktext": ["1", "2"], "titlefont": {"color": "rgb(38.250000,38.250000,38.250000)", "size": 9.9, "family": "Arial, sans-serif"}, "showline": true, "domain": [0.13, 0.905], "anchor": "y1"}, "scene1": {"domain": {"x": [0.13, 0.905], "y": [0.5875, 0.925]}}, "yaxis1": {"side": "left", "zeroline": false, "autorange": false, "linecolor": "rgb(38.250000,38.250000,38.250000)", "linewidth": 1, "exponentformat": "none", "tickfont": {"size": 9, "family": "Arial, sans-serif", "color": "rgb(38.250000,38.250000,38.250000)"}, "ticklen": 6.51, "tickcolor": "rgb(38.250000,38.250000,38.250000)", "tickwidth": 1, "tickangle": -0, "ticks": "inside", "showgrid": false, "gridcolor": "rgba(38.250000,,38.250000,38.250000,0.150000)", "type": "linear", "showticklabels": true, "tickmode": "array", "tickvals": [0, 2, 4, 6], "range": [0, 6], "mirror": "ticks", "ticktext": ["0", "2", "4", "6"], "titlefont": {"color": "rgb(38.250000,38.250000,38.250000)", "size": 9.9, "family": "Arial, sans-serif"}, "showline": true, "domain": [0.5875, 0.925], "anchor": "x1"}, "xaxis2": {"side": "bottom", "zeroline": false, "autorange": false, "linecolor": "rgb(38.250000,38.250000,38.250000)", "linewidth": 1, "exponentformat": "none", "tickfont": {"size": 9, "family": "Arial, sans-serif", "color": "rgb(38.250000,38.250000,38.250000)"}, "ticklen": 6.51, "tickcolor": "rgb(38.250000,38.250000,38.250000)", "tickwidth": 1, "tickangle": -0, "ticks": "inside", "showgrid": false, "gridcolor": "rgba(38.250000,,38.250000,38.250000,0.150000)", "type": "linear", "showticklabels": true, "tickmode": "array", "tickvals": [1, 2], "range": [-0.2, 3.2], "mirror": "ticks", "ticktext": ["1", "2"], "titlefont": {"color": "rgb(38.250000,38.250000,38.250000)", "size": 9.9, "family": "Arial, sans-serif"}, "showline": true, "domain": [0.13, 0.905], "anchor": "y2"}, "scene2": {"domain": {"x": [0.13, 0.905], "y": [0.11, 0.4475]}}, "yaxis2": {"side": "left", "zeroline": false, "autorange": false, "linecolor": "rgb(38.250000,38.250000,38.250000)", "linewidth": 1, "exponentformat": "none", "tickfont": {"size": 9, "family": "Arial, sans-serif", "color": "rgb(38.250000,38.250000,38.250000)"}, "ticklen": 6.51, "tickcolor": "rgb(38.250000,38.250000,38.250000)", "tickwidth": 1, "tickangle": -0, "ticks": "inside", "showgrid": false, "gridcolor": "rgba(38.250000,,38.250000,38.250000,0.150000)", "type": "linear", "showticklabels": true, "tickmode": "array", "tickvals": [0, 5, 10, 15], "range": [0, 15], "mirror": "ticks", "ticktext": ["0", "5", "10", "15"], "titlefont": {"color": "rgb(38.250000,38.250000,38.250000)", "size": 9.9, "family": "Arial, sans-serif"}, "showline": true, "domain": [0.11, 0.4475], "anchor": "x2"}, "bargroupgap": 0.2, "bargap": 0.375, "barmode": "relative", "annotations": [{"showarrow": false, "xref": "paper", "yref": "paper", "xanchor": "center", "align": "center", "yanchor": "bottom", "text": "<b><b><\/b><\/b>", "x": 0.5175, "y": 0.935, "font": {"color": "rgb(0,0,0)", "family": "Arial, sans-serif", "size": 9.9}, "bordercolor": "rgba(0,0,0,0)", "textangle": 0, "borderwidth": 0.5, "borderpad": 3}, {"showarrow": false, "xref": "paper", "yref": "paper", "xanchor": "center", "align": "center", "yanchor": "bottom", "text": "<b><b><\/b><\/b>", "x": 0.5175, "y": 0.4575, "font": {"color": "rgb(0,0,0)", "family": "Arial, sans-serif", "size": 9.9}, "bordercolor": "rgba(0,0,0,0)", "textangle": 0, "borderwidth": 0.5, "borderpad": 3}, {"showarrow": false, "xref": "paper", "yref": "paper", "align": "center", "xanchor": "center", "yanchor": "bottom", "text": "", "x": 0.5, "y": 0.95, "font": {"color": "rgb(38.250000,38.250000,38.250000)", "size": 15.6, "family": "Arial, sans-serif"}, "textangle": 0}], "title": "<b><b><\/b><\/b>", "titlefont": {"color": "rgba(0,0,0,0)"}}, "frames": []}{% endraw %}
 {% endcapture %}
-{% include posts/ssim_frame.html raw_json_file=plot_985286268056 index=985286268056 %}
+{% include posts/ssim_frame.html raw_json_file=plot_588026055308 index=588026055308 %}
 
 
 
@@ -273,12 +438,27 @@ Create a bar graph using red bars.
 y = [75 91 105 123.5 131 150 179 203 226 249 281.5];
 bar(y,'r')
 
-fig2plotly(gcf);
+fig2plotly(gcf)
 ```
-{% capture plot_128860097029 %}
+```
+pf = 
+
+  <a href="matlab:helpPopup plotlyfig" style="font-weight:bold">plotlyfig</a> with properties:
+
+           data: {[1×1 struct]}
+         layout: [1×1 struct]
+         frames: {}
+            url: ''
+          error: []
+        warning: []
+        message: []
+       UserData: [1×1 struct]
+    PlotOptions: [1×1 struct]
+```
+{% capture plot_154752348656 %}
 {% raw %}{"data": {"xaxis": "x1", "yaxis": "y1", "type": "bar", "name": "", "visible": true, "orientation": "v", "x": [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11], "y": [75, 91, 105, 123.5, 131, 150, 179, 203, 226, 249, 281.5], "marker": {"color": "rgb(255,0,0)", "line": {"color": "rgb(0,0,0)", "width": 0.5, "dash": "solid"}}, "showlegend": true}, "layout": {"autosize": false, "margin": {"pad": 0, "l": 0, "r": 0, "b": 0, "t": 0}, "showlegend": false, "width": 840, "height": 630, "paper_bgcolor": "rgb(255,255,255)", "hovermode": "closest", "xaxis1": {"side": "bottom", "zeroline": false, "autorange": false, "linecolor": "rgb(38.250000,38.250000,38.250000)", "linewidth": 1, "exponentformat": "none", "tickfont": {"size": 10, "family": "Arial, sans-serif", "color": "rgb(38.250000,38.250000,38.250000)"}, "ticklen": 6.51, "tickcolor": "rgb(38.250000,38.250000,38.250000)", "tickwidth": 1, "tickangle": -0, "ticks": "inside", "showgrid": false, "gridcolor": "rgba(38.250000,,38.250000,38.250000,0.150000)", "type": "linear", "showticklabels": true, "tickmode": "array", "tickvals": [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11], "range": [-0.2, 12.2], "mirror": "ticks", "ticktext": ["1", "2", "3", "4", "5", "6", "7", "8", "9", "10", "11"], "titlefont": {"color": "rgb(38.250000,38.250000,38.250000)", "size": 11, "family": "Arial, sans-serif"}, "showline": true, "domain": [0.13, 0.905], "anchor": "y1"}, "scene1": {"domain": {"x": [0.13, 0.905], "y": [0.11, 0.925]}}, "yaxis1": {"side": "left", "zeroline": false, "autorange": false, "linecolor": "rgb(38.250000,38.250000,38.250000)", "linewidth": 1, "exponentformat": "none", "tickfont": {"size": 10, "family": "Arial, sans-serif", "color": "rgb(38.250000,38.250000,38.250000)"}, "ticklen": 6.51, "tickcolor": "rgb(38.250000,38.250000,38.250000)", "tickwidth": 1, "tickangle": -0, "ticks": "inside", "showgrid": false, "gridcolor": "rgba(38.250000,,38.250000,38.250000,0.150000)", "type": "linear", "showticklabels": true, "tickmode": "array", "tickvals": [0, 50, 100, 150, 200, 250, 300], "range": [0, 300], "mirror": "ticks", "ticktext": ["0", "50", "100", "150", "200", "250", "300"], "titlefont": {"color": "rgb(38.250000,38.250000,38.250000)", "size": 11, "family": "Arial, sans-serif"}, "showline": true, "domain": [0.11, 0.925], "anchor": "x1"}, "bargroupgap": 0.2, "bargap": 0.0625, "barmode": "group", "annotations": [{"showarrow": false, "xref": "paper", "yref": "paper", "xanchor": "center", "align": "center", "yanchor": "bottom", "text": "<b><b><\/b><\/b>", "x": 0.5175, "y": 0.935, "font": {"color": "rgb(0,0,0)", "family": "Arial, sans-serif", "size": 11}, "bordercolor": "rgba(0,0,0,0)", "textangle": 0, "borderwidth": 0.5, "borderpad": 3}]}, "frames": []}{% endraw %}
 {% endcapture %}
-{% include posts/ssim_frame.html raw_json_file=plot_128860097029 index=128860097029 %}
+{% include posts/ssim_frame.html raw_json_file=plot_154752348656 index=154752348656 %}
 
 
 
@@ -292,12 +472,27 @@ Set the bar interior color and outline color using RGB triplets. Set the width o
 y = [75 91 105 123.5 131 150 179 203 226 249 281.5];
 bar(y,'FaceColor',[0 .5 .5],'EdgeColor',[0 .9 .9],'LineWidth',1.5)
 
-fig2plotly(gcf);
+fig2plotly(gcf)
 ```
-{% capture plot_938425931736 %}
+```
+pf = 
+
+  <a href="matlab:helpPopup plotlyfig" style="font-weight:bold">plotlyfig</a> with properties:
+
+           data: {[1×1 struct]}
+         layout: [1×1 struct]
+         frames: {}
+            url: ''
+          error: []
+        warning: []
+        message: []
+       UserData: [1×1 struct]
+    PlotOptions: [1×1 struct]
+```
+{% capture plot_199862822857 %}
 {% raw %}{"data": {"xaxis": "x1", "yaxis": "y1", "type": "bar", "name": "", "visible": true, "orientation": "v", "x": [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11], "y": [75, 91, 105, 123.5, 131, 150, 179, 203, 226, 249, 281.5], "marker": {"color": "rgb(0,127.5,127.5)", "line": {"color": "rgb(0,229.5,229.5)", "width": 1.5, "dash": "solid"}}, "showlegend": true}, "layout": {"autosize": false, "margin": {"pad": 0, "l": 0, "r": 0, "b": 0, "t": 0}, "showlegend": false, "width": 840, "height": 630, "paper_bgcolor": "rgb(255,255,255)", "hovermode": "closest", "xaxis1": {"side": "bottom", "zeroline": false, "autorange": false, "linecolor": "rgb(38.250000,38.250000,38.250000)", "linewidth": 1, "exponentformat": "none", "tickfont": {"size": 10, "family": "Arial, sans-serif", "color": "rgb(38.250000,38.250000,38.250000)"}, "ticklen": 6.51, "tickcolor": "rgb(38.250000,38.250000,38.250000)", "tickwidth": 1, "tickangle": -0, "ticks": "inside", "showgrid": false, "gridcolor": "rgba(38.250000,,38.250000,38.250000,0.150000)", "type": "linear", "showticklabels": true, "tickmode": "array", "tickvals": [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11], "range": [-0.2, 12.2], "mirror": "ticks", "ticktext": ["1", "2", "3", "4", "5", "6", "7", "8", "9", "10", "11"], "titlefont": {"color": "rgb(38.250000,38.250000,38.250000)", "size": 11, "family": "Arial, sans-serif"}, "showline": true, "domain": [0.13, 0.905], "anchor": "y1"}, "scene1": {"domain": {"x": [0.13, 0.905], "y": [0.11, 0.925]}}, "yaxis1": {"side": "left", "zeroline": false, "autorange": false, "linecolor": "rgb(38.250000,38.250000,38.250000)", "linewidth": 1, "exponentformat": "none", "tickfont": {"size": 10, "family": "Arial, sans-serif", "color": "rgb(38.250000,38.250000,38.250000)"}, "ticklen": 6.51, "tickcolor": "rgb(38.250000,38.250000,38.250000)", "tickwidth": 1, "tickangle": -0, "ticks": "inside", "showgrid": false, "gridcolor": "rgba(38.250000,,38.250000,38.250000,0.150000)", "type": "linear", "showticklabels": true, "tickmode": "array", "tickvals": [0, 50, 100, 150, 200, 250, 300], "range": [0, 300], "mirror": "ticks", "ticktext": ["0", "50", "100", "150", "200", "250", "300"], "titlefont": {"color": "rgb(38.250000,38.250000,38.250000)", "size": 11, "family": "Arial, sans-serif"}, "showline": true, "domain": [0.11, 0.925], "anchor": "x1"}, "bargroupgap": 0.2, "bargap": 0.0625, "barmode": "group", "annotations": [{"showarrow": false, "xref": "paper", "yref": "paper", "xanchor": "center", "align": "center", "yanchor": "bottom", "text": "<b><b><\/b><\/b>", "x": 0.5175, "y": 0.935, "font": {"color": "rgb(0,0,0)", "family": "Arial, sans-serif", "size": 11}, "bordercolor": "rgba(0,0,0,0)", "textangle": 0, "borderwidth": 0.5, "borderpad": 3}]}, "frames": []}{% endraw %}
 {% endcapture %}
-{% include posts/ssim_frame.html raw_json_file=plot_938425931736 index=938425931736 %}
+{% include posts/ssim_frame.html raw_json_file=plot_199862822857 index=199862822857 %}
 
 
 
@@ -314,17 +509,32 @@ b = bar(rand(10,1));
 b.FaceColor = 'flat';
 b.CData(2,:) = [.5 0 .5];
 
-fig2plotly(gcf);
+fig2plotly(gcf)
 ```
 ```
 Index in position 1 exceeds array bounds.
 We had trouble parsing the bar object.
 This trace might not render properly.
+
+
+pf = 
+
+  <a href="matlab:helpPopup plotlyfig" style="font-weight:bold">plotlyfig</a> with properties:
+
+           data: {[1×1 struct]}
+         layout: [1×1 struct]
+         frames: {}
+            url: ''
+          error: []
+        warning: []
+        message: []
+       UserData: [1×1 struct]
+    PlotOptions: [1×1 struct]
 ```
-{% capture plot_423054911846 %}
-{% raw %}{"data": {"xaxis": "x1", "yaxis": "y1", "type": "bar", "name": "", "visible": true, "orientation": "v", "x": [1, 2, 3, 4, 5, 6, 7, 8, 9, 10], "y": [0.101887986339225, 0.014223949455043, 0.702504142083755, 0.124210947688121, 0.545217869546112, 0.882642851409089, 0.325227305504464, 0.989937529229837, 0.443855204432556, 0.432153648164553]}, "layout": {"autosize": false, "margin": {"pad": 0, "l": 0, "r": 0, "b": 0, "t": 0}, "showlegend": false, "width": 840, "height": 630, "paper_bgcolor": "rgb(255,255,255)", "hovermode": "closest", "xaxis1": {"side": "bottom", "zeroline": false, "autorange": false, "linecolor": "rgb(38.250000,38.250000,38.250000)", "linewidth": 1, "exponentformat": "none", "tickfont": {"size": 10, "family": "Arial, sans-serif", "color": "rgb(38.250000,38.250000,38.250000)"}, "ticklen": 6.51, "tickcolor": "rgb(38.250000,38.250000,38.250000)", "tickwidth": 1, "tickangle": -0, "ticks": "inside", "showgrid": false, "gridcolor": "rgba(38.250000,,38.250000,38.250000,0.150000)", "type": "linear", "showticklabels": true, "tickmode": "array", "tickvals": [1, 2, 3, 4, 5, 6, 7, 8, 9, 10], "range": [-0.2, 11.2], "mirror": "ticks", "ticktext": ["1", "2", "3", "4", "5", "6", "7", "8", "9", "10"], "titlefont": {"color": "rgb(38.250000,38.250000,38.250000)", "size": 11, "family": "Arial, sans-serif"}, "showline": true, "domain": [0.13, 0.905], "anchor": "y1"}, "scene1": {"domain": {"x": [0.13, 0.905], "y": [0.11, 0.925]}}, "yaxis1": {"side": "left", "zeroline": false, "autorange": false, "linecolor": "rgb(38.250000,38.250000,38.250000)", "linewidth": 1, "exponentformat": "none", "tickfont": {"size": 10, "family": "Arial, sans-serif", "color": "rgb(38.250000,38.250000,38.250000)"}, "ticklen": 6.51, "tickcolor": "rgb(38.250000,38.250000,38.250000)", "tickwidth": 1, "tickangle": -0, "ticks": "inside", "showgrid": false, "gridcolor": "rgba(38.250000,,38.250000,38.250000,0.150000)", "type": "linear", "showticklabels": true, "tickmode": "array", "tickvals": [0, 0.1, 0.2, 0.3, 0.4, 0.5, 0.6, 0.7, 0.8, 0.9, 1], "range": [0, 1], "mirror": "ticks", "ticktext": ["0", "0.1", "0.2", "0.3", "0.4", "0.5", "0.6", "0.7", "0.8", "0.9", "1"], "titlefont": {"color": "rgb(38.250000,38.250000,38.250000)", "size": 11, "family": "Arial, sans-serif"}, "showline": true, "domain": [0.11, 0.925], "anchor": "x1"}, "annotations": [{"showarrow": false, "xref": "paper", "yref": "paper", "xanchor": "center", "align": "center", "yanchor": "bottom", "text": "<b><b><\/b><\/b>", "x": 0.5175, "y": 0.935, "font": {"color": "rgb(0,0,0)", "family": "Arial, sans-serif", "size": 11}, "bordercolor": "rgba(0,0,0,0)", "textangle": 0, "borderwidth": 0.5, "borderpad": 3}]}, "frames": []}{% endraw %}
+{% capture plot_495177019090 %}
+{% raw %}{"data": {"xaxis": "x1", "yaxis": "y1", "type": "bar", "name": "", "visible": true, "orientation": "v", "x": [1, 2, 3, 4, 5, 6, 7, 8, 9, 10], "y": [0.406954837138907, 0.748705718215691, 0.825583815786156, 0.789963029944531, 0.318524245398992, 0.534064127370726, 0.089950678770581, 0.111705744193203, 0.136292548938299, 0.678652304800188]}, "layout": {"autosize": false, "margin": {"pad": 0, "l": 0, "r": 0, "b": 0, "t": 0}, "showlegend": false, "width": 840, "height": 630, "paper_bgcolor": "rgb(255,255,255)", "hovermode": "closest", "xaxis1": {"side": "bottom", "zeroline": false, "autorange": false, "linecolor": "rgb(38.250000,38.250000,38.250000)", "linewidth": 1, "exponentformat": "none", "tickfont": {"size": 10, "family": "Arial, sans-serif", "color": "rgb(38.250000,38.250000,38.250000)"}, "ticklen": 6.51, "tickcolor": "rgb(38.250000,38.250000,38.250000)", "tickwidth": 1, "tickangle": -0, "ticks": "inside", "showgrid": false, "gridcolor": "rgba(38.250000,,38.250000,38.250000,0.150000)", "type": "linear", "showticklabels": true, "tickmode": "array", "tickvals": [1, 2, 3, 4, 5, 6, 7, 8, 9, 10], "range": [-0.2, 11.2], "mirror": "ticks", "ticktext": ["1", "2", "3", "4", "5", "6", "7", "8", "9", "10"], "titlefont": {"color": "rgb(38.250000,38.250000,38.250000)", "size": 11, "family": "Arial, sans-serif"}, "showline": true, "domain": [0.13, 0.905], "anchor": "y1"}, "scene1": {"domain": {"x": [0.13, 0.905], "y": [0.11, 0.925]}}, "yaxis1": {"side": "left", "zeroline": false, "autorange": false, "linecolor": "rgb(38.250000,38.250000,38.250000)", "linewidth": 1, "exponentformat": "none", "tickfont": {"size": 10, "family": "Arial, sans-serif", "color": "rgb(38.250000,38.250000,38.250000)"}, "ticklen": 6.51, "tickcolor": "rgb(38.250000,38.250000,38.250000)", "tickwidth": 1, "tickangle": -0, "ticks": "inside", "showgrid": false, "gridcolor": "rgba(38.250000,,38.250000,38.250000,0.150000)", "type": "linear", "showticklabels": true, "tickmode": "array", "tickvals": [0, 0.1, 0.2, 0.3, 0.4, 0.5, 0.6, 0.7, 0.8, 0.9], "range": [0, 0.9], "mirror": "ticks", "ticktext": ["0", "0.1", "0.2", "0.3", "0.4", "0.5", "0.6", "0.7", "0.8", "0.9"], "titlefont": {"color": "rgb(38.250000,38.250000,38.250000)", "size": 11, "family": "Arial, sans-serif"}, "showline": true, "domain": [0.11, 0.925], "anchor": "x1"}, "annotations": [{"showarrow": false, "xref": "paper", "yref": "paper", "xanchor": "center", "align": "center", "yanchor": "bottom", "text": "<b><b><\/b><\/b>", "x": 0.5175, "y": 0.935, "font": {"color": "rgb(0,0,0)", "family": "Arial, sans-serif", "size": 11}, "bordercolor": "rgba(0,0,0,0)", "textangle": 0, "borderwidth": 0.5, "borderpad": 3}]}, "frames": []}{% endraw %}
 {% endcapture %}
-{% include posts/ssim_frame.html raw_json_file=plot_423054911846 index=423054911846 %}
+{% include posts/ssim_frame.html raw_json_file=plot_495177019090 index=495177019090 %}
 
 
 <!--------------------- EXAMPLE BREAK ------------------------->
@@ -340,12 +550,27 @@ for k = 1:size(y,2)
     b(k).CData = k;
 end
 
-fig2plotly(gcf);
+fig2plotly(gcf)
 ```
-{% capture plot_667130261469 %}
+```
+pf = 
+
+  <a href="matlab:helpPopup plotlyfig" style="font-weight:bold">plotlyfig</a> with properties:
+
+           data: {[1×1 struct]  [1×1 struct]  [1×1 struct]}
+         layout: [1×1 struct]
+         frames: {}
+            url: ''
+          error: []
+        warning: []
+        message: []
+       UserData: [1×1 struct]
+    PlotOptions: [1×1 struct]
+```
+{% capture plot_189710406018 %}
 {% raw %}{"data": {"xaxis": "x1", "yaxis": "y1", "type": "bar", "name": "", "visible": true, "orientation": "v", "x": [1, 2, 3], "y": [1, 3, 3], "marker": {"color": "rgb(61.761,38.352,168.3765)", "line": {"color": "rgb(0,0,0)", "width": 0.5, "dash": "solid"}}, "showlegend": true}, "layout": {"autosize": false, "margin": {"pad": 0, "l": 0, "r": 0, "b": 0, "t": 0}, "showlegend": false, "width": 840, "height": 630, "paper_bgcolor": "rgb(255,255,255)", "hovermode": "closest", "xaxis1": {"side": "bottom", "zeroline": false, "autorange": false, "linecolor": "rgb(38.250000,38.250000,38.250000)", "linewidth": 1, "exponentformat": "none", "tickfont": {"size": 10, "family": "Arial, sans-serif", "color": "rgb(38.250000,38.250000,38.250000)"}, "ticklen": 6.51, "tickcolor": "rgb(38.250000,38.250000,38.250000)", "tickwidth": 1, "tickangle": -0, "ticks": "inside", "showgrid": false, "gridcolor": "rgba(38.250000,,38.250000,38.250000,0.150000)", "type": "linear", "showticklabels": true, "tickmode": "array", "tickvals": [1, 2, 3], "range": [0.511111111111111, 3.48888888888889], "mirror": "ticks", "ticktext": ["1", "2", "3"], "titlefont": {"color": "rgb(38.250000,38.250000,38.250000)", "size": 11, "family": "Arial, sans-serif"}, "showline": true, "domain": [0.13, 0.905], "anchor": "y1"}, "scene1": {"domain": {"x": [0.13, 0.905], "y": [0.11, 0.925]}}, "yaxis1": {"side": "left", "zeroline": false, "autorange": false, "linecolor": "rgb(38.250000,38.250000,38.250000)", "linewidth": 1, "exponentformat": "none", "tickfont": {"size": 10, "family": "Arial, sans-serif", "color": "rgb(38.250000,38.250000,38.250000)"}, "ticklen": 6.51, "tickcolor": "rgb(38.250000,38.250000,38.250000)", "tickwidth": 1, "tickangle": -0, "ticks": "inside", "showgrid": false, "gridcolor": "rgba(38.250000,,38.250000,38.250000,0.150000)", "type": "linear", "showticklabels": true, "tickmode": "array", "tickvals": [0, 1, 2, 3, 4, 5, 6, 7], "range": [0, 7], "mirror": "ticks", "ticktext": ["0", "1", "2", "3", "4", "5", "6", "7"], "titlefont": {"color": "rgb(38.250000,38.250000,38.250000)", "size": 11, "family": "Arial, sans-serif"}, "showline": true, "domain": [0.11, 0.925], "anchor": "x1"}, "bargroupgap": 0.2, "bargap": 0.1875, "barmode": "group", "annotations": [{"showarrow": false, "xref": "paper", "yref": "paper", "xanchor": "center", "align": "center", "yanchor": "bottom", "text": "<b><b><\/b><\/b>", "x": 0.5175, "y": 0.935, "font": {"color": "rgb(0,0,0)", "family": "Arial, sans-serif", "size": 11}, "bordercolor": "rgba(0,0,0,0)", "textangle": 0, "borderwidth": 0.5, "borderpad": 3}]}, "frames": []}{% endraw %}
 {% endcapture %}
-{% include posts/ssim_frame.html raw_json_file=plot_667130261469 index=667130261469 %}
+{% include posts/ssim_frame.html raw_json_file=plot_189710406018 index=189710406018 %}
 
 
 <!--------------------- EXAMPLE BREAK ------------------------->
@@ -358,12 +583,27 @@ Create matrix `y`, where each column is a series of data. Call the `bar` functio
 y = [10 15 20; 30 35 40; 50 55 62];
 b = bar(y);
 
-fig2plotly(gcf);
+fig2plotly(gcf)
 ```
-{% capture plot_29904416754 %}
+```
+pf = 
+
+  <a href="matlab:helpPopup plotlyfig" style="font-weight:bold">plotlyfig</a> with properties:
+
+           data: {[1×1 struct]  [1×1 struct]  [1×1 struct]}
+         layout: [1×1 struct]
+         frames: {}
+            url: ''
+          error: []
+        warning: []
+        message: []
+       UserData: [1×1 struct]
+    PlotOptions: [1×1 struct]
+```
+{% capture plot_495005824990 %}
 {% raw %}{"data": {"xaxis": "x1", "yaxis": "y1", "type": "bar", "name": "", "visible": true, "orientation": "v", "x": [1, 2, 3], "y": [10, 30, 50], "marker": {"color": "rgb(0,113.985,188.955)", "line": {"color": "rgb(0,0,0)", "width": 0.5, "dash": "solid"}}, "showlegend": true}, "layout": {"autosize": false, "margin": {"pad": 0, "l": 0, "r": 0, "b": 0, "t": 0}, "showlegend": false, "width": 840, "height": 630, "paper_bgcolor": "rgb(255,255,255)", "hovermode": "closest", "xaxis1": {"side": "bottom", "zeroline": false, "autorange": false, "linecolor": "rgb(38.250000,38.250000,38.250000)", "linewidth": 1, "exponentformat": "none", "tickfont": {"size": 10, "family": "Arial, sans-serif", "color": "rgb(38.250000,38.250000,38.250000)"}, "ticklen": 6.51, "tickcolor": "rgb(38.250000,38.250000,38.250000)", "tickwidth": 1, "tickangle": -0, "ticks": "inside", "showgrid": false, "gridcolor": "rgba(38.250000,,38.250000,38.250000,0.150000)", "type": "linear", "showticklabels": true, "tickmode": "array", "tickvals": [1, 2, 3], "range": [0.511111111111111, 3.48888888888889], "mirror": "ticks", "ticktext": ["1", "2", "3"], "titlefont": {"color": "rgb(38.250000,38.250000,38.250000)", "size": 11, "family": "Arial, sans-serif"}, "showline": true, "domain": [0.13, 0.905], "anchor": "y1"}, "scene1": {"domain": {"x": [0.13, 0.905], "y": [0.11, 0.925]}}, "yaxis1": {"side": "left", "zeroline": false, "autorange": false, "linecolor": "rgb(38.250000,38.250000,38.250000)", "linewidth": 1, "exponentformat": "none", "tickfont": {"size": 10, "family": "Arial, sans-serif", "color": "rgb(38.250000,38.250000,38.250000)"}, "ticklen": 6.51, "tickcolor": "rgb(38.250000,38.250000,38.250000)", "tickwidth": 1, "tickangle": -0, "ticks": "inside", "showgrid": false, "gridcolor": "rgba(38.250000,,38.250000,38.250000,0.150000)", "type": "linear", "showticklabels": true, "tickmode": "array", "tickvals": [0, 10, 20, 30, 40, 50, 60, 70], "range": [0, 70], "mirror": "ticks", "ticktext": ["0", "10", "20", "30", "40", "50", "60", "70"], "titlefont": {"color": "rgb(38.250000,38.250000,38.250000)", "size": 11, "family": "Arial, sans-serif"}, "showline": true, "domain": [0.11, 0.925], "anchor": "x1"}, "bargroupgap": 0.2, "bargap": 0.1875, "barmode": "group", "annotations": [{"showarrow": false, "xref": "paper", "yref": "paper", "xanchor": "center", "align": "center", "yanchor": "bottom", "text": "<b><b><\/b><\/b>", "x": 0.5175, "y": 0.935, "font": {"color": "rgb(0,0,0)", "family": "Arial, sans-serif", "size": 11}, "bordercolor": "rgba(0,0,0,0)", "textangle": 0, "borderwidth": 0.5, "borderpad": 3}]}, "frames": []}{% endraw %}
 {% endcapture %}
-{% include posts/ssim_frame.html raw_json_file=plot_29904416754 index=29904416754 %}
+{% include posts/ssim_frame.html raw_json_file=plot_495005824990 index=495005824990 %}
 
 
 Make the third series of bars green.
@@ -374,12 +614,27 @@ b = bar(y);
 
 b(3).FaceColor = [.2 .6 .5];
 
-fig2plotly(gcf);
+fig2plotly(gcf)
 ```
-{% capture plot_189997033943 %}
+```
+pf = 
+
+  <a href="matlab:helpPopup plotlyfig" style="font-weight:bold">plotlyfig</a> with properties:
+
+           data: {[1×1 struct]  [1×1 struct]  [1×1 struct]}
+         layout: [1×1 struct]
+         frames: {}
+            url: ''
+          error: []
+        warning: []
+        message: []
+       UserData: [1×1 struct]
+    PlotOptions: [1×1 struct]
+```
+{% capture plot_147608221977 %}
 {% raw %}{"data": {"xaxis": "x1", "yaxis": "y1", "type": "bar", "name": "", "visible": true, "orientation": "v", "x": [1, 2, 3], "y": [10, 30, 50], "marker": {"color": "rgb(0,113.985,188.955)", "line": {"color": "rgb(0,0,0)", "width": 0.5, "dash": "solid"}}, "showlegend": true}, "layout": {"autosize": false, "margin": {"pad": 0, "l": 0, "r": 0, "b": 0, "t": 0}, "showlegend": false, "width": 840, "height": 630, "paper_bgcolor": "rgb(255,255,255)", "hovermode": "closest", "xaxis1": {"side": "bottom", "zeroline": false, "autorange": false, "linecolor": "rgb(38.250000,38.250000,38.250000)", "linewidth": 1, "exponentformat": "none", "tickfont": {"size": 10, "family": "Arial, sans-serif", "color": "rgb(38.250000,38.250000,38.250000)"}, "ticklen": 6.51, "tickcolor": "rgb(38.250000,38.250000,38.250000)", "tickwidth": 1, "tickangle": -0, "ticks": "inside", "showgrid": false, "gridcolor": "rgba(38.250000,,38.250000,38.250000,0.150000)", "type": "linear", "showticklabels": true, "tickmode": "array", "tickvals": [1, 2, 3], "range": [0.511111111111111, 3.48888888888889], "mirror": "ticks", "ticktext": ["1", "2", "3"], "titlefont": {"color": "rgb(38.250000,38.250000,38.250000)", "size": 11, "family": "Arial, sans-serif"}, "showline": true, "domain": [0.13, 0.905], "anchor": "y1"}, "scene1": {"domain": {"x": [0.13, 0.905], "y": [0.11, 0.925]}}, "yaxis1": {"side": "left", "zeroline": false, "autorange": false, "linecolor": "rgb(38.250000,38.250000,38.250000)", "linewidth": 1, "exponentformat": "none", "tickfont": {"size": 10, "family": "Arial, sans-serif", "color": "rgb(38.250000,38.250000,38.250000)"}, "ticklen": 6.51, "tickcolor": "rgb(38.250000,38.250000,38.250000)", "tickwidth": 1, "tickangle": -0, "ticks": "inside", "showgrid": false, "gridcolor": "rgba(38.250000,,38.250000,38.250000,0.150000)", "type": "linear", "showticklabels": true, "tickmode": "array", "tickvals": [0, 10, 20, 30, 40, 50, 60, 70], "range": [0, 70], "mirror": "ticks", "ticktext": ["0", "10", "20", "30", "40", "50", "60", "70"], "titlefont": {"color": "rgb(38.250000,38.250000,38.250000)", "size": 11, "family": "Arial, sans-serif"}, "showline": true, "domain": [0.11, 0.925], "anchor": "x1"}, "bargroupgap": 0.2, "bargap": 0.1875, "barmode": "group", "annotations": [{"showarrow": false, "xref": "paper", "yref": "paper", "xanchor": "center", "align": "center", "yanchor": "bottom", "text": "<b><b><\/b><\/b>", "x": 0.5175, "y": 0.935, "font": {"color": "rgb(0,0,0)", "family": "Arial, sans-serif", "size": 11}, "bordercolor": "rgba(0,0,0,0)", "textangle": 0, "borderwidth": 0.5, "borderpad": 3}]}, "frames": []}{% endraw %}
 {% endcapture %}
-{% include posts/ssim_frame.html raw_json_file=plot_189997033943 index=189997033943 %}
+{% include posts/ssim_frame.html raw_json_file=plot_147608221977 index=147608221977 %}
 
 
 
@@ -409,10 +664,10 @@ set(gca,'box','off');
 
 fig2plotly(gcf);
 ```
-{% capture plot_335818839560 %}
+{% capture plot_54974146906 %}
 {% raw %}{"data": {"xaxis": "x1", "yaxis": "y1", "type": "bar", "name": "", "visible": true, "orientation": "v", "x": [1900, 1910, 1920, 1930, 1940, 1950, 1960, 1970, 1980, 1990, 2000], "y": [75.99, 91.92, 105.71, 123.23, 131.69, 150.67, 179.33, 203.12, 226.55, 249.63, 281.42], "marker": {"color": "rgb(145,25,206)", "line": {"color": "rgb(0,0,0)", "width": 0.5, "dash": "solid"}}, "showlegend": true}, "layout": {"autosize": false, "margin": {"pad": 0, "l": 0, "r": 0, "b": 0, "t": 0}, "showlegend": false, "width": 840, "height": 630, "paper_bgcolor": "rgb(255,255,255)", "hovermode": "closest", "xaxis1": {"side": "bottom", "zeroline": false, "autorange": false, "linecolor": "rgb(38.250000,38.250000,38.250000)", "linewidth": 1, "exponentformat": "none", "tickfont": {"size": 10, "family": "Arial, sans-serif", "color": "rgb(38.250000,38.250000,38.250000)"}, "ticklen": 6.51, "tickcolor": "rgb(38.250000,38.250000,38.250000)", "tickwidth": 1, "tickangle": -0, "ticks": "inside", "showgrid": false, "gridcolor": "rgba(38.250000,,38.250000,38.250000,0.150000)", "type": "linear", "showticklabels": true, "tickmode": "array", "tickvals": [1900, 1910, 1920, 1930, 1940, 1950, 1960, 1970, 1980, 1990, 2000], "range": [1893.42857142857, 2006.57142857143], "mirror": false, "ticktext": ["1900", "1910", "1920", "1930", "1940", "1950", "1960", "1970", "1980", "1990", "2000"], "titlefont": {"color": "rgb(38.250000,38.250000,38.250000)", "size": 11, "family": "Arial, sans-serif"}, "showline": true, "domain": [0.13, 0.905], "anchor": "y1"}, "scene1": {"domain": {"x": [0.13, 0.905], "y": [0.11, 0.925]}}, "yaxis1": {"side": "left", "zeroline": false, "autorange": false, "linecolor": "rgb(38.250000,38.250000,38.250000)", "linewidth": 1, "exponentformat": "none", "tickfont": {"size": 10, "family": "Arial, sans-serif", "color": "rgb(38.250000,38.250000,38.250000)"}, "ticklen": 6.51, "tickcolor": "rgb(38.250000,38.250000,38.250000)", "tickwidth": 1, "tickangle": -0, "ticks": "inside", "showgrid": false, "gridcolor": "rgba(38.250000,,38.250000,38.250000,0.150000)", "type": "linear", "showticklabels": true, "tickmode": "array", "tickvals": [0, 50, 100, 150, 200, 250, 300], "range": [0, 300], "mirror": false, "ticktext": ["0", "50", "100", "150", "200", "250", "300"], "titlefont": {"color": "rgb(38.250000,38.250000,38.250000)", "size": 11, "family": "Arial, sans-serif"}, "showline": true, "domain": [0.11, 0.925], "anchor": "x1"}, "bargroupgap": -1, "bargap": 0.125, "barmode": "group", "annotations": [{"showarrow": false, "xref": "paper", "yref": "paper", "xanchor": "center", "align": "center", "yanchor": "bottom", "text": "<b><b><\/b><\/b>", "x": 0.5175, "y": 0.935, "font": {"color": "rgb(0,0,0)", "family": "Arial, sans-serif", "size": 11}, "bordercolor": "rgba(0,0,0,0)", "textangle": 0, "borderwidth": 0.5, "borderpad": 3}]}, "frames": []}{% endraw %}
 {% endcapture %}
-{% include posts/ssim_frame.html raw_json_file=plot_335818839560 index=335818839560 %}
+{% include posts/ssim_frame.html raw_json_file=plot_54974146906 index=54974146906 %}
 
 
 <!--------------------- EXAMPLE BREAK ------------------------->
