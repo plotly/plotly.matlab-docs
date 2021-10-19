@@ -3,13 +3,9 @@ fclose all; clc;
 % Setup Plotly in Offline Mode
 % addpath(genpath('D:/Matlab_code/plotly_matlab-master/plotly'));
 addpath(genpath('../plotly_matlab/plotly'));
-% jsonErr = loadjson('977.json');
 
 % Let list of md files
 fileList = dir('matlab/*.md');
-
-% Animated Line --> MATLAB crashes for some reason... under investigation.
-fileList(17)=[];
 
 % Loop over all files
 for i = 1:length(fileList)

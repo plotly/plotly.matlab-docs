@@ -119,7 +119,7 @@ Use a loop to add 100,000 points to an animated line. Since the number of points
 h = animatedline;
 axis([0,4*pi,-1,1])
 
-numpoints = 100000;
+numpoints = 1000;
 x = linspace(0,4*pi,numpoints);
 y = sin(x);
 for k = 1:100:numpoints-99
@@ -145,7 +145,7 @@ Use a loop to add 100,000 points to an animated line. Since the number of points
 h = animatedline;
 axis([0,4*pi,-1,1])
 
-numpoints = 100000;
+numpoints = 1000;
 x = linspace(0,4*pi,numpoints);
 y = sin(x);
 for k = 1:numpoints
@@ -168,7 +168,7 @@ For example, update the screen every 1/30 seconds. Use the `tic` and `toc` comma
 ```{matlab}
 h = animatedline;
 axis([0,4*pi,-1,1])
-numpoints = 10000;
+numpoints = 1000;
 x = linspace(0,4*pi,numpoints);
 y = sin(x);
 a = tic; % start timer
@@ -257,7 +257,7 @@ fig2plotly(gcf)
 Create a comet plot of the data in `z` versus the data in `x` and `y`. Use the `peaks` function to load `x`, `y`, and `z` data in matrix forms. Convert the data into vector arrays. Then, plot the data.
 
 ```{matlab}
-[xmat,ymat,zmat] = peaks(100); 
+[xmat,ymat,zmat] = peaks(30); 
 xvec = xmat(:);
 yvec = ymat(:);
 zvec = zmat(:);
@@ -275,7 +275,7 @@ Create a comet plot and specify the comet body length by setting the scale facto
 Use the `peaks` function to load `x`, `y`, and `z` data in matrix forms. Convert the data into vector arrays. Specify `p` as `0.5` so that the body length is `0.5*length(y)`. Then, plot the data.
 
 ```{matlab}
-[xmat,ymat,zmat] = peaks(100); 
+[xmat,ymat,zmat] = peaks(30); 
 xvec = xmat(:);
 yvec = ymat(:);
 zvec = zmat(:);
@@ -294,7 +294,7 @@ Create two comet plots in a tiled chart layout by specifying the target axes for
 Use the `peaks` function to load `x`, `y`, and `z` data in matrix forms. Convert the data into vector arrays. Specify the body length scale factor `p` as `0.25` so that the body length is `0.5*length(y)`.
 
 ```{matlab}
-[xmat,ymat,zmat] = peaks(50); 
+[xmat,ymat,zmat] = peaks(30); 
 xvec = xmat(:);
 yvec = ymat(:);
 zvec = zmat(:);
@@ -304,7 +304,7 @@ p = 0.25;
 Store the two `Axes` objects as `ax1` and `ax2`. Specify the target axes for each comet plot by including the `Axes` object as the first input argument to `comet`.
 
 ```{matlab}
-[xmat,ymat,zmat] = peaks(50); 
+[xmat,ymat,zmat] = peaks(30); 
 xvec = xmat(:);
 yvec = ymat(:);
 zvec = zmat(:);
@@ -341,7 +341,7 @@ streamparticles(iverts, 200, ...
     'Animate',15,'FrameRate',40, ...
     'MarkerSize',10,'MarkerFaceColor',[0 .5 0])
 
-fig2plotly(gcf)
+% fig2plotly(gcf)
 ```
 
 <!--------------------- EXAMPLE BREAK ------------------------->
