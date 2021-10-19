@@ -312,6 +312,7 @@ fig2plotly(gcf);
 Use the `findobj` function to locate the correct object handle from the figure handle. This allows you to continue manipulating the original histogram object used to generate the figure.
 
 ```{matlab}
+h = openfig('histogram2.fig');
 y = findobj(h,'type','histogram2')
 
 fig2plotly(gcf);

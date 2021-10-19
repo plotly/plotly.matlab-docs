@@ -2,14 +2,15 @@ function mdContents = evalMD()
 
 % Setup Plotly in Offline Mode
 % addpath(genpath('D:/Matlab_code/plotly_matlab-master/plotly'));
-addpath(genpath('../plotly_matlab/plotly'));
+% addpath(genpath('../plotly_matlab/plotly'));
+% jsonErr = loadjson('977.json');
 
 % Let list of md files
 fileList = dir('matlab/2021*.md');
 
 % Loop over all files
 for i = 1:length(fileList)
-    fileName = fullfile(fileList(i).folder,fileList(i).name);
+    fileName = fullfile(fileList(i).folder,fileList(i).name)
     mdContents = readlines(fileName);
     mdContents = arrayfun(@(x) replace(x,"```{matlab}","&&&S"), mdContents);
     mdContents = arrayfun(@(x) replace(x,"```","&&&E"), mdContents);
@@ -49,11 +50,11 @@ end
 flag=0;
 for i = 1:length(st)
     tempStr = txtIn((st(i)+1):(ed(i)-1));
-    tempStr = arrayfun(@(x) replace(x,"fig2plotly","pf = fig2plotly"), tempStr);
+    tempStr = arrayfun(@(x) replace(x,"fig2plotly","try; pf = fig2plotly"), tempStr);
     tempStr = arrayfun(@(x) regexprep(x,"fig2plotly *\( *\)","fig2plotly(gcf,'writeFile',false,'open',false)"), tempStr);
     tempStr = arrayfun(@(x) regexprep(x,"fig2plotly *\( *gcf *","fig2plotly(gcf,'writeFile',false,'open',false"), tempStr);
     tempStr = arrayfun(@(x) regexprep(x,"fig2plotly *\( *'","fig2plotly(gcf,'writeFile',false,'open',false,'"), tempStr);
-    tempStr = arrayfun(@(x) regexprep(x,"^plotly *\( *data *\)","pf=plotly(data,struct('writeFile',false))"), tempStr);
+    tempStr = arrayfun(@(x) regexprep(x,"^plotly *\( *data *\)","try; pf=plotly(data,struct('writeFile',false))"), tempStr);
     
     tempStr(end+1) = "addpath(genpath('..\plotly_matlab\plotly'));";
     tempStr = circshift(tempStr,1);
@@ -61,9 +62,7 @@ for i = 1:length(st)
     ss = strfind(tempStr,'plotly(','ForceCellOutput',true);
     ss = find(cellfun(@(x) ~isempty(x), ss, 'UniformOutput', true), 1);
     
-    tempStr(ss)
-    
-    insTxt = "json = m2json(struct('data',pf.data,'layout',pf.layout)); fprintf('%s\n',json);";
+    insTxt = "json = m2json(struct('data',pf.data,'layout',pf.layout,'frames',{pf.frames})); fprintf('%s\n',json); catch; jsonErr=loadjson('977.json'); fprintf('%s\n',jsonencode(jsonErr)); end; close all;";
     if ~isempty(ss)
         for j = 1:length(ss)
             if j>1
