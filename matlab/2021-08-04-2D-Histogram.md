@@ -3,7 +3,7 @@ description: How to make 2D Histogram plots in MATLAB<sup>&reg;</sup> with Plotl
 name: 2D Histograms
 display_as: statistical
 order: 5
-permalink: matlab/2D-Histogram-test/
+permalink: matlab/2D-Histogram/
 thumnail_github: thumbnail/histogram2d.jpg
 layout: base
 language: matlab
@@ -21,7 +21,7 @@ load patients
 tbl = table(LastName,Age,Gender,Height,Weight);
 s = scatterhistogram(tbl,'Height','Weight');
 
-fig2plotly(gcf);
+fig2plotly(gcf)
 ```
 
 
@@ -39,7 +39,7 @@ load patients
 tbl = table(LastName,Diastolic,Systolic,Smoker);
 s = scatterhistogram(tbl,'Diastolic','Systolic','GroupVariable','Smoker');
 
-fig2plotly(gcf);
+fig2plotly(gcf)
 ```
 
 
@@ -58,7 +58,7 @@ s = scatterhistogram(Age,Smoker);
 xlabel('Age')
 ylabel('Smoker')
 
-fig2plotly(gcf);
+fig2plotly(gcf)
 ```
 
 
@@ -83,7 +83,7 @@ s.XLabel = 'Shoe Size';
 s.YLabel = 'Price';
 s.LegendTitle = 'Shoe Color';
 
-fig2plotly(gcf);
+fig2plotly(gcf)
 ```
 
 Change the colors in the scatter histogram chart to match the group labels. Change the histogram bin widths to be the same for all groups.
@@ -104,7 +104,7 @@ s.LegendTitle = 'Shoe Color';
 s.Color = {'Red','Black','Blue'};
 s.BinWidths = 1;
 
-fig2plotly(gcf);
+fig2plotly(gcf)
 ```
 
 
@@ -123,7 +123,7 @@ tbl = table(LastName,Diastolic,Systolic,SelfAssessedHealthStatus);
 s = scatterhistogram(tbl,'Diastolic','Systolic','GroupVariable','SelfAssessedHealthStatus', ...
     'NumBins',4,'LineWidth',1.5,'ScatterPlotLocation','NorthEast','LegendVisible','on');
 
-fig2plotly(gcf);
+fig2plotly(gcf)
 ```
 
 <!--------------------- EXAMPLE BREAK ------------------------->
@@ -142,7 +142,7 @@ s = scatterhistogram(Diastolic,Systolic,'GroupData',SmokerGender,'LegendVisible'
 xlabel('Diastolic')
 ylabel('Systolic')
 
-fig2plotly(gcf);
+fig2plotly(gcf)
 ```
 
 <!--------------------- EXAMPLE BREAK ------------------------->
@@ -167,7 +167,7 @@ s = scatterhistogram(tbl,'Horsepower','MPG', ...
     'GroupVariable','Cylinders','HistogramDisplayStyle','smooth', ...
     'LineStyle','-');
 
-fig2plotly(gcf);
+fig2plotly(gcf)
 ```
 
 

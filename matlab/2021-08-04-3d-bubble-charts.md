@@ -3,7 +3,7 @@ description: How to make 3D Bubble Charts plots in MATLAB<sup>&reg;</sup> with P
 name: 3D Bubble Charts
 display_as: 3d_charts
 order: 1
-permalink: matlab/3d-bubble-charts-test/
+permalink: matlab/3d-bubble-charts/
 thumnail_github: thumbnail/3dbubble.jpg
 layout: base
 language: matlab
@@ -21,7 +21,7 @@ z = rand(1,20);
 sz = rand(1,20);
 bubblechart3(x,y,z,sz);
 
-fig2plotly(gcf);
+fig2plotly(gcf)
 ```
 
 <!--------------------- EXAMPLE BREAK ------------------------->
@@ -38,7 +38,7 @@ sz = rand(1,20);
 
 bubblechart3(x,y,z,sz,'red');
 
-fig2plotly(gcf);
+fig2plotly(gcf)
 ```
 
 For a custom color, you can specify an RGB triplet or a hexadecimal color code. For example, the hexadecimal color code `'#7031BB'`, specifies a shade of purple.
@@ -51,7 +51,7 @@ sz = rand(1,20);
 
 bubblechart3(x,y,z,sz,'#7031BB');
 
-fig2plotly(gcf);
+fig2plotly(gcf)
 ```
 
 You can also specify a different color for each bubble. For example, specify a vector to select colors from the figure's colormap.
@@ -65,7 +65,7 @@ sz = rand(1,20);
 c = 1:20;
 bubblechart3(x,y,z,sz,c)
 
-fig2plotly(gcf);
+fig2plotly(gcf)
 ```
 
 <!--------------------- EXAMPLE BREAK ------------------------->
@@ -82,7 +82,7 @@ sz = rand(1,20);
 
 bubblechart3(x,y,z,sz);
 
-fig2plotly(gcf);
+fig2plotly(gcf)
 ```
 
 You can customize the opacity and the outline color by setting the `MarkerFaceAlpha` and `MarkerEdgeColor` properties, respectively. One way to set a property is by specifying a name-value pair argument when you create the chart. For example, you can specify 20% opacity by setting the `MarkerFaceAlpha` value to `0.20`.
@@ -95,7 +95,7 @@ sz = rand(1,20);
 
 bc = bubblechart3(x,y,z,sz,'MarkerFaceAlpha',0.20);
 
-fig2plotly(gcf);
+fig2plotly(gcf)
 ```
 
 If you create the chart by calling the `bubblechart3` function with a return argument, you can use the return argument to set properties on the chart after creating it. For example, you can change the outline color to purple.
@@ -109,7 +109,7 @@ sz = rand(1,20);
 bc = bubblechart3(x,y,z,sz,'MarkerFaceAlpha',0.20);
 bc.MarkerEdgeColor = [0.5 0 0.5];
 
-fig2plotly(gcf);
+fig2plotly(gcf)
 ```
 
 <!--------------------- EXAMPLE BREAK ------------------------->
@@ -146,7 +146,7 @@ zlabel('Contamination Level')
 bubblesize([5 30])
 bubblelegend('Town Population','Location','eastoutside')
 
-fig2plotly(gcf);
+fig2plotly(gcf)
 ```
 
 <!--------------------- EXAMPLE BREAK ------------------------->
@@ -201,7 +201,7 @@ xlabel('Industrial Sites')
 ylabel('Regulated Sites')
 zlabel('Contamination Level')
 
-fig2plotly(gcf);
+fig2plotly(gcf)
 ```
 
 Reduce all the bubble sizes to make it easier to see all the bubbles. In this case, change the range of diameters to be between `5` and `20` points.
@@ -237,7 +237,7 @@ zlabel('Contamination Level')
 bubblesize(ax1,[5 20])
 bubblesize(ax2,[5 20])
 
-fig2plotly(gcf);
+fig2plotly(gcf)
 ```
 
 The east side towns are three times the size of the west side towns, but the bubble sizes do not reflect this information in the preceding charts. This is because the smallest and largest bubbles map to the smallest and largest data points in each of the axes. To display the bubbles on the same scale, define a vector called `alltowns` that includes the populations from both sides of the city. The use the `bubblelim` function to reset the scaling for both charts. 
@@ -278,7 +278,7 @@ newlims = [min(alltowns) max(alltowns)];
 bubblelim(ax1,newlims)
 bubblelim(ax2,newlims)
 
-fig2plotly(gcf);
+fig2plotly(gcf)
 ```
 
 <!--------------------- EXAMPLE BREAK ------------------------->
