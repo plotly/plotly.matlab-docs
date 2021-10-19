@@ -16,7 +16,7 @@ page_type: u-guide
 y = [75 91 105 123.5 131 150 179 203 226 249 281.5];
 bar(y)
 
-fig2plotly(gcf)
+fig2plotly(gcf);
 ```
 
 <!--------------------- EXAMPLE BREAK ------------------------->
@@ -30,7 +30,7 @@ x = 1900:10:2000;
 y = [75 91 105 123.5 131 150 179 203 226 249 281.5];
 bar(x,y)
 
-fig2plotly(gcf)
+fig2plotly(gcf);
 ```
 
 
@@ -45,7 +45,7 @@ Set the width of each bar to 40 percent of the total space available for each ba
 y = [75 91 105 123.5 131 150 179 203 226 249 281.5];
 bar(y,0.4)
 
-fig2plotly(gcf)
+fig2plotly(gcf);
 ```
 
 
@@ -59,7 +59,7 @@ Display four groups of three bars.
 y = [2 2 3; 2 5 6; 2 8 9; 2 11 12];
 bar(y)
 
-fig2plotly(gcf)
+fig2plotly(gcf);
 ```
 
 
@@ -73,7 +73,7 @@ Display one bar for each row of the matrix. The height of each bar is the sum of
 y = [2 2 3; 2 5 6; 2 8 9; 2 11 12];
 bar(y,'stacked')
 
-fig2plotly(gcf)
+fig2plotly(gcf);
 ```
 
 
@@ -105,7 +105,7 @@ x = [1980 1990 2000];
 y = [15 20 -5; 10 -17 21; -10 5 15];
 bar(x,y,'stacked')
 
-fig2plotly(gcf)
+fig2plotly(gcf);
 ```
 
 
@@ -123,7 +123,7 @@ X = reordercats(X,{'Small','Medium','Large','Extra Large'});
 Y = [10 21 33 52];
 bar(X,Y)
 
-fig2plotly(gcf)
+fig2plotly(gcf);
 ```
 
 <!--------------------- EXAMPLE BREAK ------------------------->
@@ -137,7 +137,7 @@ x = [1 2 3];
 vals = [2 3 6; 11 23 26];
 b = bar(x,vals);
 
-fig2plotly(gcf)
+fig2plotly(gcf);
 ```
 
 
@@ -154,7 +154,7 @@ labels1 = string(b(1).YData);
 text(xtips1,ytips1,labels1,'HorizontalAlignment','center',...
     'VerticalAlignment','bottom')
 
-fig2plotly(gcf)
+fig2plotly(gcf);
 ```
 
 Next, display the values above the tips of the second series of bars.
@@ -176,7 +176,7 @@ labels2 = string(b(2).YData);
 text(xtips2,ytips2,labels2,'HorizontalAlignment','center',...
     'VerticalAlignment','bottom')
 
-fig2plotly(gcf)
+fig2plotly(gcf);
 ```
 
 
@@ -198,7 +198,7 @@ bar(ax1,y)
 ax2 = nexttile;
 bar(ax2,y,'stacked')
 
-fig2plotly(gcf)
+fig2plotly(gcf);
 ```
 
 
@@ -213,7 +213,7 @@ Create a bar graph using red bars.
 y = [75 91 105 123.5 131 150 179 203 226 249 281.5];
 bar(y,'r')
 
-fig2plotly(gcf)
+fig2plotly(gcf);
 ```
 
 
@@ -227,7 +227,7 @@ Set the bar interior color and outline color using RGB triplets. Set the width o
 y = [75 91 105 123.5 131 150 179 203 226 249 281.5];
 bar(y,'FaceColor',[0 .5 .5],'EdgeColor',[0 .9 .9],'LineWidth',1.5)
 
-fig2plotly(gcf)
+fig2plotly(gcf);
 ```
 
 
@@ -244,7 +244,7 @@ b = bar(rand(10,1));
 b.FaceColor = 'flat';
 b.CData(2,:) = [.5 0 .5];
 
-fig2plotly(gcf)
+fig2plotly(gcf);
 ```
 
 <!--------------------- EXAMPLE BREAK ------------------------->
@@ -260,7 +260,7 @@ for k = 1:size(y,2)
     b(k).CData = k;
 end
 
-fig2plotly(gcf)
+fig2plotly(gcf);
 ```
 
 <!--------------------- EXAMPLE BREAK ------------------------->
@@ -273,7 +273,7 @@ Create matrix `y`, where each column is a series of data. Call the `bar` functio
 y = [10 15 20; 30 35 40; 50 55 62];
 b = bar(y);
 
-fig2plotly(gcf)
+fig2plotly(gcf);
 ```
 
 Make the third series of bars green.
@@ -284,7 +284,7 @@ b = bar(y);
 
 b(3).FaceColor = [.2 .6 .5];
 
-fig2plotly(gcf)
+fig2plotly(gcf);
 ```
 
 
