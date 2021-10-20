@@ -4,7 +4,7 @@ name: Setting the Font, Title, Legend Entries, and Axis Titles
 display_as: file_settings
 order: 12
 permalink: matlab/figure-labels/
-thumnail_github: thumbnail/figure-labels.png
+thumnail_github: figure-labels.png
 layout: base
 language: matlab
 page_type: u-guide

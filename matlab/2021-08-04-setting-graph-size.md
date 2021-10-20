@@ -4,7 +4,7 @@ name: Setting Graph Size
 display_as: file_settings
 order: 10
 permalink: matlab/setting-graph-size/
-thumnail_github: thumbnail/sizing.png
+thumnail_github: setting-graph-size.png
 layout: base
 language: matlab
 page_type: u-guide

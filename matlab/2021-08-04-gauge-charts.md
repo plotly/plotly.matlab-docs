@@ -4,7 +4,7 @@ name: Gauge Plots
 display_as: financial
 order: 7
 permalink: matlab/gauge-charts/
-thumnail_github: thumbnail/gauge.jpg
+thumnail_github: gauge-charts.png
 layout: base
 language: matlab
 page_type: u-guide
@@ -16,7 +16,7 @@ page_type: u-guide
 fig = uifigure;
 cg = uigauge(fig);
 
-fig2plotly(gcf)
+fig2plotly(gcf);
 ```
 
 <!--------------------- EXAMPLE BREAK ------------------------->
@@ -27,7 +27,7 @@ fig2plotly(gcf)
 fig = uifigure;
 lg  = uigauge(fig,'linear');
 
-fig2plotly(gcf)
+fig2plotly(gcf);
 ```
 
 <!--------------------- EXAMPLE BREAK ------------------------->
@@ -41,7 +41,7 @@ fig = uifigure;
 pnl = uipanel(fig);
 lg = uigauge(pnl,'linear');
 
-fig2plotly(gcf)
+fig2plotly(gcf);
 ```
 
 
@@ -67,7 +67,7 @@ cg.MajorTicks = [0:10:100];
 cg.MajorTickLabels = {'0','10','20','30','40','50','60','70','80','90','100'};
 cg.MinorTicks = [];
 
-fig2plotly(gcf)
+fig2plotly(gcf);
 ```
 
 
@@ -80,7 +80,7 @@ fig = uifigure;
 cg = uigauge(fig,'ScaleColors',{'yellow','red'},...
                  'ScaleColorLimits', [60 80; 80 100]);
 
-fig2plotly(gcf)
+fig2plotly(gcf);
 ```
 
 

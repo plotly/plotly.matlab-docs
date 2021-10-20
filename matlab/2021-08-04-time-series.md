@@ -4,7 +4,7 @@ name: Time Series and Date Axes
 display_as: financial
 order: 1
 permalink: matlab/time-series/
-thumnail_github: thumbnail/time-series.jpg
+thumnail_github: time-series.png
 layout: base
 language: matlab
 page_type: u-guide
@@ -42,7 +42,7 @@ tbl = sortrows(tbl);
 
 stackedplot(tbl)
 
-fig2plotly(gcf)
+fig2plotly(gcf);
 ```
 
 
@@ -66,7 +66,7 @@ tbl = readtable('patients.xls');
 
 stackedplot(tbl,{'Height','Weight','Systolic','Diastolic'})
 
-fig2plotly(gcf)
+fig2plotly(gcf);
 ```
 
 
@@ -93,7 +93,7 @@ tbl = sortrows(tbl);
 
 stackedplot(tbl,{'RestorationTime','Loss','Customers'})
 
-fig2plotly(gcf)
+fig2plotly(gcf);
 ```
 
 There are also other ways to reorder the variables.
@@ -131,7 +131,7 @@ vars = [{'Systolic','Diastolic'},'Weight']
 
 stackedplot(tbl,vars)
 
-fig2plotly(gcf)
+fig2plotly(gcf);
 ```
 
 <!--------------------- EXAMPLE BREAK ------------------------->
@@ -160,7 +160,7 @@ Y = randi(100,6,3)
 
 stackedplot(X,Y)
 
-fig2plotly(gcf)
+fig2plotly(gcf);
 ```
 
 
@@ -185,7 +185,7 @@ degreeSymbol = char(176);
 newYlabels = {'RH (%)',['T (' degreeSymbol 'F)'],'P (in Hg)'};
 stackedplot(outdoors,'Title','Weather Data','DisplayLabels',newYlabels)
 
-fig2plotly(gcf)
+fig2plotly(gcf);
 ```
 
 
@@ -213,7 +213,7 @@ outdoors(1:3,:)
 
 s = stackedplot(outdoors)
 
-fig2plotly(gcf)
+fig2plotly(gcf);
 ```
 
 The object provides access to many properties that apply to all of the plots. For example, you can use `s.LineWidth` to make the lines wider.
@@ -226,7 +226,7 @@ s = stackedplot(outdoors)
 
 s.LineWidth = 2;
 
-fig2plotly(gcf)
+fig2plotly(gcf);
 ```
 
 
@@ -242,7 +242,7 @@ s.LineWidth = 2;
 
 s.LineProperties
 
-fig2plotly(gcf)
+fig2plotly(gcf);
 ```
 
 Change the second plot to a scatter plot, and the third plot to a stair plot, using the `PlotType` property.
@@ -260,7 +260,7 @@ s.LineProperties
 s.LineProperties(2).PlotType = 'scatter';
 s.LineProperties(3).PlotType = 'stairs';
 
-fig2plotly(gcf)
+fig2plotly(gcf);
 ```
 
 

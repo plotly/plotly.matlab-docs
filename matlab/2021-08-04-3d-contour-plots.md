@@ -4,7 +4,7 @@ name: 3D Contour Plots
 display_as: 3d_charts
 order: 20
 permalink: matlab/3d-contour-plots/
-thumnail_github: thumbnail/
+thumnail_github: 3d-contour-plots.png
 layout: base
 language: matlab
 page_type: u-guide
@@ -18,7 +18,7 @@ Define `Z` as a function of `X` and `Y`. In this case, call the `sphere` functio
 [X,Y,Z] = sphere(50);
 contour3(X,Y,Z);
 
-fig2plotly(gcf, 'TreatAs', 'contour3')
+fig2plotly(gcf, 'TreatAs', 'contour3');
 ```
 
 
@@ -33,7 +33,7 @@ Define `Z` as a function of two variables, `X` and `Y`. Then plot the contours o
 Z = X.^2 + Y.^2;
 contour3(Z)
 
-fig2plotly(gcf, 'TreatAs', 'contour3')
+fig2plotly(gcf, 'TreatAs', 'contour3');
 ```
 
 
@@ -44,7 +44,7 @@ Now specify `50` contour levels, and display the results within the x and y limi
 Z = X.^2 + Y.^2;
 contour3(X,Y,Z,50)
 
-fig2plotly(gcf, 'TreatAs', 'contour3')
+fig2plotly(gcf, 'TreatAs', 'contour3');
 ```
 
 <!--------------------- EXAMPLE BREAK ------------------------->
@@ -58,7 +58,7 @@ Define `Z` as a function of two variables, `X` and `Y`. Then plot the contours a
 Z = X.*exp(-X.^2-Y.^2);
 contour3(X,Y,Z,[-.2 -.1 .1 .2],'ShowText','on')
 
-fig2plotly(gcf, 'TreatAs', 'contour3')
+fig2plotly(gcf, 'TreatAs', 'contour3');
 ```
 
 <!--------------------- EXAMPLE BREAK ------------------------->
@@ -71,7 +71,7 @@ Define `Z` as a function of `X` and `Y`. In this case, call the `peaks` function
 [X,Y,Z] = peaks;
 contour3(X,Y,Z,[2 2]);
 
-fig2plotly(gcf, 'TreatAs', 'contour3')
+fig2plotly(gcf, 'TreatAs', 'contour3');
 ```
 
 
@@ -87,7 +87,7 @@ Z = X.*exp(-X.^2-Y.^2);
 [M,c] = contour3(X,Y,Z,30);
 c.LineWidth = 3;
 
-fig2plotly(gcf, 'TreatAs', 'contour3')
+fig2plotly(gcf, 'TreatAs', 'contour3');
 ```
 
 
@@ -106,7 +106,7 @@ zslice = 0;
 contourslice(X,Y,Z,V,[],[],zslice)
 grid on
 
-fig2plotly(gcf)
+fig2plotly(gcf);
 ```
 
 <!--------------------- EXAMPLE BREAK ------------------------->
@@ -128,7 +128,7 @@ contourslice(X,Y,Z,V,xslice,yslice,zslice)
 view(3)
 grid on
 
-fig2plotly(gcf)
+fig2plotly(gcf);
 ```
 
 <!--------------------- EXAMPLE BREAK ------------------------->
@@ -150,7 +150,7 @@ colorbar
 view(3)
 grid on
 
-fig2plotly(gcf)
+fig2plotly(gcf);
 ```
 
 <!--------------------- EXAMPLE BREAK ------------------------->
@@ -171,7 +171,7 @@ contourslice(X,Y,Z,V,xsurf,ysurf,zsurf,20)
 view(3)
 grid on
 
-fig2plotly(gcf)
+fig2plotly(gcf);
 ```
 
 

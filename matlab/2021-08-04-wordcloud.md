@@ -4,7 +4,7 @@ name: Wordcloud Plot
 display_as: basic
 order: 19
 permalink: matlab/wordcloud/
-thumnail_github: thumbnail/
+thumnail_github: wordcloud.png
 layout: base
 language: matlab
 page_type: u-guide
@@ -29,7 +29,7 @@ figure
 wordcloud(tbl,'Word','Count');
 title("Sonnets Word Cloud")
 
-fig2plotly(gcf)
+fig2plotly(gcf);
 ```
 
 
@@ -80,7 +80,7 @@ figure
 wordcloud(C);
 title("Sonnets Word Cloud")
 
-fig2plotly(gcf)
+fig2plotly(gcf);
 ```
 
 
@@ -126,7 +126,7 @@ figure
 wordcloud(uniqueWords,numOccurrences);
 title("Sonnets Word Cloud")
 
-fig2plotly(gcf)
+fig2plotly(gcf);
 ```
 
 <!--------------------- EXAMPLE BREAK ------------------------->
@@ -152,7 +152,7 @@ figure
 wordcloud(tbl,'Word','Count','Color',colors);
 title("Sonnets Word Cloud")
 
-fig2plotly(gcf)
+fig2plotly(gcf);
 ```
 
 <!--------------------- EXAMPLE BREAK ------------------------->
@@ -181,7 +181,7 @@ str = extractFileText("sonnets.txt");
 figure
 wordcloud(str);
 
-fig2plotly(gcf)
+fig2plotly(gcf);
 ```
 
 

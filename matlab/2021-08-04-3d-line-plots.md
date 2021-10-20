@@ -4,7 +4,7 @@ name: 3D Line Plots
 display_as: 3d_charts
 order: 1
 permalink: matlab/3d-line-plots/
-thumnail_github: thumbnail/3d-line.jpg
+thumnail_github: 3d-line-plots.png
 layout: base
 language: matlab
 page_type: u-guide
@@ -20,7 +20,7 @@ st = sin(t);
 ct = cos(t);
 plot3(st,ct,t)
 
-fig2plotly(gcf)
+fig2plotly(gcf);
 ```
 
 <!--------------------- EXAMPLE BREAK ------------------------->
@@ -54,7 +54,7 @@ zt2 = cos(t);
 
 plot3(xt1,yt1,zt1,xt2,yt2,zt2)
 
-fig2plotly(gcf)
+fig2plotly(gcf);
 ```
 
 
@@ -107,7 +107,7 @@ Z = cos(t);
 
 plot3(X,Y,Z)
 
-fig2plotly(gcf)
+fig2plotly(gcf);
 ```
 
 
@@ -138,7 +138,7 @@ xlabel('x(t)')
 ylabel('y(t)')
 zlabel('z(t)')
 
-fig2plotly(gcf)
+fig2plotly(gcf);
 ```
 
 
@@ -154,7 +154,7 @@ xt = sin(t);
 yt = cos(t);
 plot3(xt,yt,t,'o')
 
-fig2plotly(gcf)
+fig2plotly(gcf);
 ```
 
 
@@ -170,7 +170,7 @@ xt = sin(t);
 yt = cos(t);
 plot3(xt,yt,t,'-o','Color','b','MarkerSize',10,'MarkerFaceColor','#D9FFFF')
 
-fig2plotly(gcf)
+fig2plotly(gcf);
 ```
 
 <!--------------------- EXAMPLE BREAK ------------------------->
@@ -200,7 +200,7 @@ yt2 = cos(2*t);
 
 plot3(xt1,yt1,t,xt2,yt2,t,'--')
 
-fig2plotly(gcf)
+fig2plotly(gcf);
 ```
 
 
@@ -216,7 +216,7 @@ xt = exp(-t./10).*sin(5*t);
 yt = exp(-t./10).*cos(5*t);
 p = plot3(xt,yt,t);
 
-fig2plotly(gcf)
+fig2plotly(gcf);
 ```
 
 Change the line width to `3`.
@@ -229,7 +229,7 @@ p = plot3(xt,yt,t);
 
 p.LineWidth = 3;
 
-fig2plotly(gcf)
+fig2plotly(gcf);
 ```
 
 <!--------------------- EXAMPLE BREAK ------------------------->
@@ -257,7 +257,7 @@ yt2 = cos(2*t);
 plot3(ax2,xt2,yt2,t)
 title(ax2,'Helix With 10 Turns')
 
-fig2plotly(gcf)
+fig2plotly(gcf);
 ```
 
 <!--------------------- EXAMPLE BREAK ------------------------->
@@ -285,7 +285,7 @@ ylabel('Y')
 zlabel('Duration')
 grid on
 
-fig2plotly(gcf)
+fig2plotly(gcf);
 ```
 
 <!--------------------- EXAMPLE BREAK ------------------------->
@@ -301,7 +301,7 @@ yt(1,:) = sin(t).*sin(10*t);
 zt = cos(t);
 plot3(xt,yt,zt,'-o','MarkerIndices',200)
 
-fig2plotly(gcf)
+fig2plotly(gcf);
 ```
 
 

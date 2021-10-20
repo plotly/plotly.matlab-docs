@@ -4,7 +4,7 @@ name: Bubble Charts
 display_as: basic
 order: 5
 permalink: matlab/bubble-charts/
-thumnail_github: thumbnail/bubble.jpg
+thumnail_github: bubble-charts.png
 layout: base
 language: matlab
 page_type: u-guide
@@ -20,7 +20,7 @@ y = rand(1,20);
 sz = rand(1,20);
 bubblechart(x,y,sz);
 
-fig2plotly(gcf)
+fig2plotly(gcf);
 ```
 
 
@@ -36,7 +36,7 @@ y = rand(1,20);
 sz = rand(1,20);
 bubblechart(x,y,sz,'red');
 
-fig2plotly(gcf)
+fig2plotly(gcf);
 ```
 
 For a custom color, you can specify an RGB triplet or a hexadecimal color code. For example, the hexadecimal color code `'#7031BB'`, specifies a shade of purple.
@@ -48,7 +48,7 @@ sz = rand(1,20);
 
 bubblechart(x,y,sz,'#7031BB');
 
-fig2plotly(gcf)
+fig2plotly(gcf);
 ```
 
 You can also specify a different color for each bubble. For example, specify a vector to select colors from the figure's colormap.
@@ -61,7 +61,7 @@ sz = rand(1,20);
 c = 1:20;
 bubblechart(x,y,sz,c)
 
-fig2plotly(gcf)
+fig2plotly(gcf);
 ```
 
 
@@ -77,7 +77,7 @@ y = rand(1,20);
 sz = rand(1,20);
 bubblechart(x,y,sz);
 
-fig2plotly(gcf)
+fig2plotly(gcf);
 ```
 
 
@@ -90,7 +90,7 @@ sz = rand(1,20);
 
 bc = bubblechart(x,y,sz,'MarkerFaceAlpha',0.20);
 
-fig2plotly(gcf)
+fig2plotly(gcf);
 ```
 
 If you create the chart by calling the `bubblechart` function with a return argument, you can use the return argument to set properties on the chart after creating it. For example, you can change the outline color to purple.
@@ -103,7 +103,7 @@ bc = bubblechart(x,y,sz,'MarkerFaceAlpha',0.20);
 
 bc.MarkerEdgeColor = [0.5 0 0.5];
 
-fig2plotly(gcf)
+fig2plotly(gcf);
 ```
 
 
@@ -125,7 +125,7 @@ ylabel('Contamination Level')
 bubblesize([5 30])
 bubblelegend('Town Population','Location','eastoutside')
 
-fig2plotly(gcf)
+fig2plotly(gcf);
 ```
 
 
@@ -152,7 +152,7 @@ hold on
 bubblechart(x,y2,sz1)
 hold off
 
-fig2plotly(gcf)
+fig2plotly(gcf);
 ```
 
 
@@ -178,7 +178,7 @@ lgd = legend('Springfield','Fairview');
 blgd.Layout.Tile = 'east';
 lgd.Layout.Tile = 'east';
 
-fig2plotly(gcf)
+fig2plotly(gcf);
 ```
 
 
@@ -222,7 +222,7 @@ title('East Side')
 xlabel('Number of Industrial Sites')
 ylabel('Contamination Level')
 
-fig2plotly(gcf)
+fig2plotly(gcf);
 ```
 
 Reduce all the bubble sizes to make it easier to see all the bubbles. In this case, change the range of diameters to be between `5` and `30` points.
@@ -253,7 +253,7 @@ ylabel('Contamination Level')
 bubblesize(ax1,[5 30])
 bubblesize(ax2,[5 30])
 
-fig2plotly(gcf)
+fig2plotly(gcf);
 ```
 
 The west side towns are three times the size of the east side towns, but the bubble sizes do not reflect this information in the preceding charts. This is because the smallest and largest bubbles map to the smallest and largest data points in each of the axes. To display the bubbles on the same scale, define a vector called `alltowns` that includes the populations from both sides of the city. Use the `bubblelim` function to reset the scaling for both charts. Next, use the `xlim` and `ylim` functions to display the charts with the same x- and y-axis limits.
@@ -302,7 +302,7 @@ ymin = min(ally);
 ymax = max(ally);
 ylim([ax1 ax2],[ymin ymax]);
 
-fig2plotly(gcf)
+fig2plotly(gcf);
 ```
 
 

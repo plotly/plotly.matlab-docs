@@ -4,7 +4,7 @@ name: Ribbon Plots
 display_as: 3d_charts
 order: 15
 permalink: matlab/ribbon-plots/
-thumnail_github: thumbnail/ribbon-plot.jpg
+thumnail_github: ribbon-plots.png
 layout: base
 language: matlab
 page_type: u-guide
@@ -21,7 +21,7 @@ z = peaks(x,y);
 figure
 ribbon(y,z)
 
-fig2plotly(gcf)
+fig2plotly(gcf);
 ```
 
 
@@ -30,6 +30,6 @@ fig2plotly(gcf)
 z = peaks(x,y);
 figure
 ribbon(y,z)
-fig2plotly(gcf)
+fig2plotly(gcf);
 
 ```

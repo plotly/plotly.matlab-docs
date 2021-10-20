@@ -4,7 +4,7 @@ name: 3D Streamtube Plots
 display_as: 3d_charts
 order: 13
 permalink: matlab/streamtube-plot/
-thumnail_github: thumbnail/streamtube.jpg
+thumnail_github: streamtube-plot.png
 layout: base
 language: matlab
 page_type: u-guide
@@ -24,7 +24,7 @@ shading interp;
 camlight; 
 lighting gouraud
 
-fig2plotly(gcf)
+fig2plotly(gcf);
 ```
 
 
@@ -46,7 +46,7 @@ shading interp
 camlight 
 lighting gouraud
 
-fig2plotly(gcf)
+fig2plotly(gcf);
 ```
 
 

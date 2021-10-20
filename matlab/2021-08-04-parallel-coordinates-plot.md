@@ -4,7 +4,7 @@ name: Parallel Coordinates Plot
 display_as: scientific
 order: 9
 permalink: matlab/parallel-coordinates-plot/
-thumnail_github: thumbnail/parcoords.jpg
+thumnail_github: parallel-coordinates-plot.png
 layout: base
 language: matlab
 page_type: u-guide
@@ -21,7 +21,7 @@ load patients
 tbl = table(Diastolic,Smoker,Systolic);
 p = parallelplot(tbl)
 
-fig2plotly(gcf)
+fig2plotly(gcf);
 ```
 
 
@@ -36,7 +36,7 @@ p = parallelplot(tbl)
 
 p.Jitter = 0;
 
-fig2plotly(gcf)
+fig2plotly(gcf);
 ```
 
 
@@ -61,7 +61,7 @@ figure('Units','normalized','Position',[0.3 0.3 0.45 0.4])
 coordvars = {'Year','Validity','Cause','Country'};
 p = parallelplot(tsunamis,'CoordinateVariables',coordvars,'GroupVariable','Validity');
 
-fig2plotly(gcf)
+fig2plotly(gcf);
 ```
 
 
@@ -78,7 +78,7 @@ load patients
 X = [Age Height Weight];
 p = parallelplot(X)
 
-fig2plotly(gcf)
+fig2plotly(gcf);
 ```
 
 
@@ -89,7 +89,7 @@ p = parallelplot(X)
 
 p.CoordinateTickLabels = {'Age (years)','Height (inches)','Weight (pounds)'};
 
-fig2plotly(gcf)
+fig2plotly(gcf);
 ```
 
 
@@ -145,7 +145,7 @@ groupHeight = discretize(Height,binEdges,'categorical',bins);
 
 p.GroupData = groupHeight;
 
-fig2plotly(gcf)
+fig2plotly(gcf);
 ```
 
 
@@ -181,7 +181,7 @@ p = parallelplot(X,'CoordinateData',coorddata,'GroupData',Smoker)
 
 p.CoordinateTickLabels = {'Age','Weight'};
 
-fig2plotly(gcf)
+fig2plotly(gcf);
 ```
 
 Create another parallel coordinates plot using a different subset of the columns in `X`. Group the patients according to their gender. The plot indicates that the men are taller and weigh more than the women.
@@ -214,7 +214,7 @@ p2 = parallelplot(X,'CoordinateData',coorddata2,'GroupData',Gender)
 
 p2.CoordinateTickLabels = {'Height','Weight'};
 
-fig2plotly(gcf)
+fig2plotly(gcf);
 ```
 
 
@@ -252,7 +252,7 @@ outages.OutageDays = days(OutageDuration);
 coordvars = {'Loss','Customers','OutageDays'};
 p = parallelplot(outages,'CoordinateVariables',coordvars,'DataNormalization','zscore','Jitter',0);
 
-fig2plotly(gcf)
+fig2plotly(gcf);
 ```
 
 The `OutageDays` variable contains one value that is more than 30 standard deviations away from the mean `OutageDays` value and another value that is more than 10 standard deviations away from the mean. Hover over the values in the plot to display data tips. Each data tip indicates the row in the table corresponding to the line in the plot.
@@ -292,7 +292,7 @@ outages = readtable('outages.csv');
 coordvars = [1 3 4 6];
 p = parallelplot(outages,'CoordinateVariables',coordvars,'GroupVariable','Cause');
 
-fig2plotly(gcf)
+fig2plotly(gcf);
 ```
 
 
@@ -310,7 +310,7 @@ newOrder = {'attack','earthquake','energy emergency','equipment fault', ...
 orderCause = reordercats(categoricalCause,newOrder);
 p.SourceTable.Cause = orderCause;
 
-fig2plotly(gcf)
+fig2plotly(gcf);
 ```
 
 
@@ -330,7 +330,7 @@ p.SourceTable.Cause = orderCause;
 
 p.Color = parula(10);
 
-fig2plotly(gcf)
+fig2plotly(gcf);
 ```
 
 
@@ -365,7 +365,7 @@ labels = {'Sepal Length','Sepal Width','Petal Length','Petal Width'};
 
 parallelcoords(meas,'Group',species,'Labels',labels)
 
-fig2plotly(gcf)
+fig2plotly(gcf);
 ```
 
 The resulting plot contains one line for each observation (flower). The color of each line indicates the flower species.
@@ -402,7 +402,7 @@ labels = {'Sepal Length','Sepal Width','Petal Length','Petal Width'};
 parallelcoords(meas,'group',species,'labels',labels,... 
                'quantile',.25)
 
-fig2plotly(gcf)
+fig2plotly(gcf);
 ```
 
 The plot shows the median values for each group as a solid line and the quartile values as dotted lines of the same color. For example, the solid blue line shows the median value measured for each variable on `setosa` irises. The dotted blue line below the solid blue line shows the 25th percentile of measurements for each variable on `setosa` irises. The dotted blue line above the solid blue line shows the 75th percentile of measurements for each variable on `setosa` irises.
@@ -438,7 +438,7 @@ labels = {'Sepal Length','Sepal Width','Petal Length','Petal Width'};
 parallelcoords(meas,'group',species,'labels',labels,... 
                'quantile',.25,'LineWidth',2)
 
-fig2plotly(gcf)
+fig2plotly(gcf);
 ```
 
 Specifying `'LineWidth'` in this way sets the width of every line in the plot to 2.
@@ -453,7 +453,7 @@ labels = {'Sepal Length','Sepal Width','Petal Length','Petal Width'};
 h = parallelcoords(meas,'group',species,'labels',labels,... 
                'quantile',.25)
 
-fig2plotly(gcf)
+fig2plotly(gcf);
 ```
 
 The returned column vector `h` contains handles that correspond to each line object created by `parallelcoords`. For example, h(1) corresponds to the median line for the first grouping variable (`setosa`).
@@ -470,7 +470,7 @@ h = parallelcoords(meas,'group',species,'labels',labels,...
 
 h(1).LineWidth = 2;
 
-fig2plotly(gcf)
+fig2plotly(gcf);
 ```
 
 <!--------------------- EXAMPLE BREAK ------------------------->

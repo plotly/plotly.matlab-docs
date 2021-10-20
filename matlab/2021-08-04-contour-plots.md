@@ -4,7 +4,7 @@ name: Contour Plots
 display_as: scientific
 order: 1
 permalink: matlab/contour-plots/
-thumnail_github: thumbnail/contour.jpg
+thumnail_github: contour-plots.png
 layout: base
 language: matlab
 page_type: u-guide
@@ -22,7 +22,7 @@ Z = sin(X)+cos(Y);
 
 contour(X,Y,Z)
 
-fig2plotly(gcf)
+fig2plotly(gcf);
 ```
 
 
@@ -36,7 +36,7 @@ Define `Z` as a function of `X` and `Y`. In this case, call the `peaks` function
 [X,Y,Z] = peaks;
 contour(X,Y,Z,20)
 
-fig2plotly(gcf)
+fig2plotly(gcf);
 ```
 
 
@@ -51,7 +51,7 @@ Display the contours of the `peaks` function at `Z = 1`.
 v = [1,1];
 contour(X,Y,Z,v)
 
-fig2plotly(gcf)
+fig2plotly(gcf);
 ```
 
 
@@ -65,7 +65,7 @@ Create a contour plot of the `peaks` function, and specify the dashed line style
 [X,Y,Z] = peaks;
 contour(X,Y,Z,'--')
 
-fig2plotly(gcf)
+fig2plotly(gcf);
 ```
 
 
@@ -82,7 +82,7 @@ y = -2:0.2:3;
 Z = X.*exp(-X.^2-Y.^2);
 contour(X,Y,Z,'ShowText','on')
 
-fig2plotly(gcf)
+fig2plotly(gcf);
 ```
 
 <!--------------------- EXAMPLE BREAK ------------------------->
@@ -96,7 +96,7 @@ Z = peaks;
 [M,c] = contour(Z);
 c.LineWidth = 3;
 
-fig2plotly(gcf)
+fig2plotly(gcf);
 ```
 
 <!--------------------- EXAMPLE BREAK ------------------------->
@@ -112,7 +112,7 @@ Z = peaks;
 Z(:,26) = NaN;
 contour(Z)
 
-fig2plotly(gcf)
+fig2plotly(gcf);
 ```
 
 
@@ -127,7 +127,7 @@ Define `Z` as a function of two variables. In this case, call the `peaks` functi
 Z = peaks;
 contourf(Z)
 
-fig2plotly(gcf)
+fig2plotly(gcf);
 ```
 
 <!--------------------- EXAMPLE BREAK ------------------------->
@@ -143,7 +143,7 @@ y = linspace(0,4*pi);
 Z = sin(X) + cos(Y);
 contourf(X,Y,Z,10)
 
-fig2plotly(gcf)
+fig2plotly(gcf);
 ```
 
 <!--------------------- EXAMPLE BREAK ------------------------->
@@ -158,7 +158,7 @@ The white region corresponds to the heights less than `2`. The purple region cor
 [X,Y,Z] = peaks(50);
 contourf(X,Y,Z,[2 3],'ShowText','on')
 
-fig2plotly(gcf)
+fig2plotly(gcf);
 ```
 
 <!--------------------- EXAMPLE BREAK ------------------------->
@@ -171,7 +171,7 @@ Define `Z` as a function of `X` and `Y`. In this case, call the `peaks` function
 [X,Y,Z] = peaks;
 contourf(X,Y,Z,[2 2])
 
-fig2plotly(gcf)
+fig2plotly(gcf);
 ```
 
 <!--------------------- EXAMPLE BREAK ------------------------->
@@ -184,7 +184,7 @@ Create a contour plot, and specify the dashed line style.
 [X,Y,Z] = peaks;
 contourf(X,Y,Z,'--')
 
-fig2plotly(gcf)
+fig2plotly(gcf);
 ```
 
 <!--------------------- EXAMPLE BREAK ------------------------->
@@ -198,7 +198,7 @@ Z = peaks;
 [M,c] = contourf(Z);
 c.LineWidth = 3;
 
-fig2plotly(gcf)
+fig2plotly(gcf);
 ```
 
 <!--------------------- EXAMPLE BREAK ------------------------->
@@ -214,7 +214,7 @@ Z = peaks;
 Z(:,26) = NaN;
 contourf(Z)
 
-fig2plotly(gcf)
+fig2plotly(gcf);
 ```
 
 <!--------------------- EXAMPLE BREAK ------------------------->

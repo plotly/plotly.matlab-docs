@@ -4,7 +4,7 @@ name: 3D Streamline Plots
 display_as: 3d_charts
 order: 18
 permalink: matlab/3d-streamline-plots/
-thumnail_github: thumbnail/
+thumnail_github: 3d-streamline-plots.png
 layout: base
 language: matlab
 page_type: u-guide
@@ -38,7 +38,7 @@ W = w(5:10,20:25,6:10);
 quiver3(X,Y,Z,U,V,W)
 axis equal
 
-fig2plotly(gcf)
+fig2plotly(gcf);
 ```
 
 <!--------------------- EXAMPLE BREAK ------------------------->
@@ -55,7 +55,7 @@ For example, first return the x-,  y-, and z-coordinates of a unit sphere with 1
 quiver3(X,Y,Z,U,V,W,0)
 axis equal
 
-fig2plotly(gcf)
+fig2plotly(gcf);
 ```
 
 For comparison, create the plot with automatic scaling. Note that the arrows are shorter and do not overlap.
@@ -70,7 +70,7 @@ figure
 quiver3(X,Y,Z,U,V,W)
 axis equal
 
-fig2plotly(gcf)
+fig2plotly(gcf);
 ```
 
 <!--------------------- EXAMPLE BREAK ------------------------->
@@ -99,7 +99,7 @@ hold on
 surf(X,Y,Z)
 axis equal
 
-fig2plotly(gcf)
+fig2plotly(gcf);
 ```
 
 <!--------------------- EXAMPLE BREAK ------------------------->
@@ -126,7 +126,7 @@ Z = sin(X) + cos(Y);
 quiver3(X,Y,Z,U,V,W,'r')
 axis equal
 
-fig2plotly(gcf)
+fig2plotly(gcf);
 ```
 
 
@@ -157,7 +157,7 @@ quiver3(ax2,X,Y,Z2,U2,V2,W2)
 axis equal
 title(ax2,'Right Plot')
 
-fig2plotly(gcf)
+fig2plotly(gcf);
 ```
 
 
@@ -177,7 +177,7 @@ axis equal
 q.ShowArrowHead = 'off';
 q.Marker = '.';
 
-fig2plotly(gcf)
+fig2plotly(gcf);
 ```
 
 
@@ -198,7 +198,7 @@ view(3);
 camlight
 lighting gouraud
 
-fig2plotly(gcf)
+fig2plotly(gcf);
 ```
 
 
@@ -221,7 +221,7 @@ view(3);
 camlight; 
 lighting gouraud
 
-fig2plotly(gcf)
+fig2plotly(gcf);
 ```
 
 Using precalculated data enables you to use values other than those calculated from the single data source. In this case, the speed is reduced by a factor of 10 compared to the previous example.
@@ -245,7 +245,7 @@ view(3)
 camlight 
 lighting gouraud
 
-fig2plotly(gcf)
+fig2plotly(gcf);
 ```
 
 <!--------------------- EXAMPLE BREAK ------------------------->
@@ -270,7 +270,7 @@ w = 0*x+1;
 h = coneplot(x,y,z,u,v,w,cx,cy,cz,'quiver');
 set(h,'Color','k');
 
-fig2plotly(gcf)
+fig2plotly(gcf, 'TreatAs', 'coneplot');
 ```
 
 Plot two sets of stream ribbons. Then define the view and lighting.
@@ -304,7 +304,7 @@ camlookat
 camdolly(0,0,.5,'fixtarget')
 camlight
 
-fig2plotly(gcf)
+fig2plotly(gcf, 'TreatAs', 'coneplot');
 ```
 
 
@@ -320,7 +320,7 @@ load wind
 streamslice(x,y,z,u,v,w,[],[],5)
 axis tight
 
-fig2plotly(gcf)
+fig2plotly(gcf);
 ```
 
 

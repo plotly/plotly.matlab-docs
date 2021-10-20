@@ -4,7 +4,7 @@ name: Filled Area
 display_as: basic
 order: 7
 permalink: matlab/filled-area-plots/
-thumnail_github: thumbnail/area.jpg
+thumnail_github: filled-area-plots.png
 layout: base
 language: matlab
 page_type: u-guide
@@ -18,7 +18,7 @@ Create a vector of four values. Display the values in an area plot.
 y = [1 5 6 3];
 area(y)
 
-fig2plotly(gcf)
+fig2plotly(gcf);
 ```
 
 
@@ -32,7 +32,7 @@ Create matrix `Y`. Then display the values in `Y` as an area plot. Because `Y` c
 Y = [1 5 3; 3 2 7; 1 5 3; 2 6 1];
 area(Y)
 
-fig2plotly(gcf)
+fig2plotly(gcf);
 ```
 
 <!--------------------- EXAMPLE BREAK ------------------------->
@@ -49,7 +49,7 @@ xlabel('Dealership ID')
 ylabel('Sales')
 legend({'Model A','Model B'})
 
-fig2plotly(gcf)
+fig2plotly(gcf);
 ```
 
 Set the tick marks along the x-axis to correspond to the values in `x`. 
@@ -58,7 +58,7 @@ Set the tick marks along the x-axis to correspond to the values in `x`.
 ax = gca; % current axes
 ax.XTick = [10 11 12];
 
-fig2plotly(gcf)
+fig2plotly(gcf);
 ```
 
 
@@ -73,7 +73,7 @@ Y = [1 5 3; 3 2 7; 1 5 3; 2 6 1];
 basevalue = -4;
 area(Y,basevalue)
 
-fig2plotly(gcf)
+fig2plotly(gcf);
 ```
 
 <!--------------------- EXAMPLE BREAK ------------------------->
@@ -86,7 +86,7 @@ Create matrix `Y`. Display the values of `Y` in an area plot that uses a dotted 
 Y = [1 3 5; 3 2 7; 3 4 2];
 area(Y,'LineStyle',':')
 
-fig2plotly(gcf)
+fig2plotly(gcf);
 ```
 
 <!--------------------- EXAMPLE BREAK ------------------------->
@@ -101,7 +101,7 @@ ax1 = nexttile;
 Y1 = [3 6; 1 5; 7 2; 5 9];
 area(ax1,Y1)
 
-fig2plotly(gcf)
+fig2plotly(gcf);
 ```
 
 Repeat the process to create a second `Axes` object and a second area plot.
@@ -116,7 +116,7 @@ ax2 = nexttile;
 Y2 = [4 2 11; 5 6 0; 1 7 2; 9 5 9];
 area(ax2,Y2)
 
-fig2plotly(gcf)
+fig2plotly(gcf);
 ```
 
 
@@ -130,7 +130,7 @@ Create matrix `Y`. Then create an area plot, specifying an output argument when 
 Y = [2 3 4; 6 1 5; 7 4 9];
 a = area(Y);
 
-fig2plotly(gcf)
+fig2plotly(gcf);
 ```
 
 Modify the second area to be green with thick red edges.
@@ -143,7 +143,7 @@ a(2).FaceColor = [0.2 0.6 0.5];
 a(2).EdgeColor = [0.63 0.08 0.18];
 a(2).LineWidth = 2;
 
-fig2plotly(gcf)
+fig2plotly(gcf);
 ```
 
 
@@ -156,7 +156,7 @@ Display an area plot with three curves.
 ```{matlab}
 area([1 5 3; 3 2 7; 1 5 3; 2 6 1])
 
-fig2plotly(gcf)
+fig2plotly(gcf);
 ```
 
 Set the color order to blue, purple, and gray.
@@ -167,7 +167,7 @@ area([1 5 3; 3 2 7; 1 5 3; 2 6 1])
 newcolors = [0 0.5 1; 0.5 0 1; 0.7 0.7 0.7];
 colororder(newcolors)
 
-fig2plotly(gcf)
+fig2plotly(gcf);
 ```
 
 

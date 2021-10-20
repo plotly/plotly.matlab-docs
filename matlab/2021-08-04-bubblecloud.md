@@ -4,7 +4,7 @@ name: Bubblecloud Plots
 display_as: basic
 order: 21
 permalink: matlab/bubblecloud/
-thumnail_github: thumbnail/
+thumnail_github: bubblecloud.png
 layout: base
 language: matlab
 page_type: u-guide
@@ -33,7 +33,7 @@ tbl = table(n,loc,plant,'VariableNames',["Mislabeled" "State" "Manufacturing Pla
 
 bubblecloud(tbl,"Mislabeled","State")
 
-fig2plotly(gcf)
+fig2plotly(gcf);
 ```
 
 Divide the bubbles into groups by specifying the `groupvar` argument. In this case, the groups are in the variable called `"Manufacturing Plant"`.
@@ -47,7 +47,7 @@ tbl = table(n,loc,plant,'VariableNames',["Mislabeled" "State" "Manufacturing Pla
 
 bubblecloud(tbl,"Mislabeled","State","Manufacturing Plant")
 
-fig2plotly(gcf)
+fig2plotly(gcf);
 ```
 
 
@@ -64,7 +64,7 @@ flavs = ["Rum" "Pumpkin" "Mint" "Vanilla" "Chocolate" ...
     "Strawberry" "Twist" "Coffee" "Cookie"];
 bubblecloud(n,flavs)
 
-fig2plotly(gcf)
+fig2plotly(gcf);
 ```
 
 Define `ages` as a categorical vector containing the age group that prefers each flavor. Specify the order of the categories by calling the `reordercats` function. Then create a new bubble cloud with the bubbles grouped by age, and return the `BubbleCloud` object as `b`. When you specify group data, the chart displays a legend by default. Add a title to the legend by setting the `LegendTitle` property of `b`.
@@ -80,7 +80,7 @@ ages = reordercats(ages,["5-15" "16-39" "40-90+"] );
 b = bubblecloud(n,flavs,ages);
 b.LegendTitle = 'Age Range';
 
-fig2plotly(gcf)
+fig2plotly(gcf);
 ```
 
 <!--------------------- EXAMPLE BREAK ------------------------->
@@ -94,7 +94,7 @@ load patients
 b = bubblecloud(Weight(1:20),SelfAssessedHealthStatus(1:20), ...
     'FaceColor',[0.3 0.6 0.4]);
 
-fig2plotly(gcf)
+fig2plotly(gcf);
 ```
 
 Group the bubbles according to whether the patients are smokers. When you group the data, a legend automatically appears in the figure. Specify a title for the legend. Then, retain the visibility of the bubble labels by increasing the size of the figure and setting the font size to `9` points.
@@ -110,7 +110,7 @@ f = gcf;
 f.Position([3 4]) = [655 395];
 b.FontSize = 9;
 
-fig2plotly(gcf)
+fig2plotly(gcf);
 ```
 
 To visualize the groups with different colors, set the `FaceColor` property back to the default value of `'flat'`. To make the edges of the bubbles use those same colors, set the `EdgeColor` property to `'flat'`.
@@ -129,7 +129,7 @@ b.FontSize = 9;
 b.FaceColor = 'flat';
 b.EdgeColor = 'flat';
 
-fig2plotly(gcf)
+fig2plotly(gcf);
 ```
 
 To customize the group colors, set the `ColorOrder` property to a matrix containing the RGB triplets for the new colors.
@@ -150,7 +150,7 @@ b.EdgeColor = 'flat';
 
 b.ColorOrder = [0.3 0.6 0.4; 0.4 0.3 0.6];
 
-fig2plotly(gcf)
+fig2plotly(gcf);
 ```
 
 
@@ -174,7 +174,7 @@ b.ColorOrder = [0.3 0.6 0.4; 0.4 0.3 0.6];
 
 colororder(b,["#E6CC1A"; "#4D9966"])
 
-fig2plotly(gcf)
+fig2plotly(gcf);
 ```
 
 
@@ -191,7 +191,7 @@ c = categorical(["Pumpkin" "Princess" "Princess" "Princess" "Spooky Monster" ...
 [sz,labels] = histcounts(c);
 bubblecloud(sz,labels)
 
-fig2plotly(gcf)
+fig2plotly(gcf);
 ```
 
 

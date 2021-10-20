@@ -4,7 +4,7 @@ name: Styling Markers
 display_as: file_settings
 order: 19
 permalink: matlab/marker-style/
-thumnail_github: thumbnail/marker-style.gif
+thumnail_github: marker-style.png
 layout: base
 language: matlab
 page_type: u-guide
@@ -23,7 +23,7 @@ plot(t,sin(t-pi/2),'--mo')
 plot(t,sin(t-pi),':bs')
 hold off
 
-fig2plotly(gcf)
+fig2plotly(gcf);
 ```
 
 <!--------------------- EXAMPLE BREAK ------------------------->
@@ -41,7 +41,7 @@ plot(t,sin(2*t),'-mo',...
     'MarkerFaceColor',[.49 1 .63],...
     'MarkerSize',10)
 
-fig2plotly(gcf)
+fig2plotly(gcf);
 ```
 
 <!--------------------- EXAMPLE BREAK ------------------------->
@@ -64,7 +64,7 @@ fig = figure;
 plot(x, y0, 'r+', x, y1, 'go', x, y2, 'b*', x, y3, 'cx', ...
     x, y4, 'ms', x, y5, 'yd', x, y6, 'kv');
 
-fig2plotly(gcf)
+fig2plotly(gcf);
 ```
 
 <!--------------------- EXAMPLE BREAK ------------------------->
@@ -85,7 +85,7 @@ plot(x,y1,'Color',[50 204 10]/255,'LineWidth',3,'LineStyle','-.');
 plot(x,y2,'Color',[21 24 100]/255,'LineWidth',3,'LineStyle','--');
 plot(x,y3,'Color',[201 24 50]/255,'LineWidth',2,'LineStyle',':');
 
-fig2plotly(gcf)
+fig2plotly(gcf);
 ```
 
 <!--------------------- EXAMPLE BREAK ------------------------->

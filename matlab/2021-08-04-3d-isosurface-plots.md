@@ -4,7 +4,7 @@ name: 3D Isosurface Plots
 display_as: 3d_charts
 order: 10
 permalink: matlab/3d-isosurface-plots/
-thumnail_github: thumbnail/isosurface.jpg
+thumnail_github: 3d-isosurface-plots.png
 layout: base
 language: matlab
 page_type: u-guide
@@ -32,7 +32,7 @@ axis tight
 camlight 
 lighting gouraud
 
-fig2plotly(gcf)
+fig2plotly(gcf);
 ```
 
 <!--------------------- EXAMPLE BREAK ------------------------->
@@ -50,7 +50,7 @@ view(30,-15)
 axis vis3d
 colormap copper
 
-fig2plotly(gcf)
+fig2plotly(gcf);
 ```
 
 

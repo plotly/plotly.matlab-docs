@@ -4,7 +4,7 @@ name: Choropleth Maps
 display_as: maps
 order: 1
 permalink: matlab/choropleth-maps/
-thumnail_github: thumbnail/choropleth.jpg
+thumnail_github: choropleth-maps.png
 layout: base
 language: matlab
 page_type: u-guide

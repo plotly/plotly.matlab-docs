@@ -4,7 +4,7 @@ name: Formatting Ticks
 display_as: file_settings
 order: 11
 permalink: matlab/tick-formatting/
-thumnail_github: thumbnail/tick-formatting.gif
+thumnail_github: tick-formatting.png
 layout: base
 language: matlab
 page_type: u-guide
@@ -22,7 +22,7 @@ y = [88 67 98 43 45 65];
 bar(x,y)
 xtickformat('usd')
 
-fig2plotly(gcf)
+fig2plotly(gcf);
 ```
 
 Query the tick label format. MATLAB® returns the format as a character vector containing the formatting operators.
@@ -49,7 +49,7 @@ fmt = xtickformat
 
 xtickformat('$%,.0f')
 
-fig2plotly(gcf)
+fig2plotly(gcf);
 ```
 
 <!--------------------- EXAMPLE BREAK ------------------------->
@@ -64,7 +64,7 @@ y = [.17 .25 .27 .28 .3 .32 .33 .34 .345 .35];
 plot(x,y,'-V')
 xtickformat('%g GHz')
 
-fig2plotly(gcf)
+fig2plotly(gcf);
 ```
 
 
@@ -80,7 +80,7 @@ y = randn(1,100).*cos(x);
 scatter(x,y)
 xtickformat('%.2f')
 
-fig2plotly(gcf)
+fig2plotly(gcf);
 ```
 
 <!--------------------- EXAMPLE BREAK ------------------------->
@@ -95,7 +95,7 @@ y = rand(1,10);
 plot(t,y);
 xtickformat('MM-dd')
 
-fig2plotly(gcf)
+fig2plotly(gcf);
 ```
 
 
@@ -111,7 +111,7 @@ y = rand(100,1);
 scatter(x,y)
 xtickformat('eur')
 
-fig2plotly(gcf)
+fig2plotly(gcf);
 ```
 
 
@@ -140,7 +140,7 @@ ax2 = nexttile;
 plot(ax2,rand(6))
 xtickformat(ax2,'usd')
 
-fig2plotly(gcf)
+fig2plotly(gcf);
 ```
 
 <!--------------------- EXAMPLE BREAK ------------------------->

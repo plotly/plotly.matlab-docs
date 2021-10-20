@@ -4,7 +4,7 @@ name: 3D Stem Plots
 display_as: 3d_charts
 order: 19
 permalink: matlab/3d-stem-plots/
-thumnail_github: thumbnail/
+thumnail_github: 3d-stem-plots.png
 layout: base
 language: matlab
 page_type: u-guide
@@ -20,7 +20,7 @@ X = linspace(-pi/2,pi/2,40);
 Z = cos(X);
 stem3(Z)
 
-fig2plotly(gcf)
+fig2plotly(gcf);
 ```
 
 `stem3` plots elements of `Z` against the same y value at equally space x values. 
@@ -39,7 +39,7 @@ X = linspace(-pi/2,pi/2,40)';
 Z = cos(X);
 stem3(Z)
 
-fig2plotly(gcf)
+fig2plotly(gcf);
 ```
 
 `stem3` plots elements of `Z` against the same x value at equally space y values. 
@@ -58,7 +58,7 @@ X = linspace(-pi/2,pi/2,40);
 Z = [sin(X); cos(X)];
 stem3(Z)
 
-fig2plotly(gcf)
+fig2plotly(gcf);
 ```
 
 `stem3` plots each row of `Z` against the same y value at equally space x values. 
@@ -79,7 +79,7 @@ Z = X.^2;
 stem3(X,Y,Z)
 view(-8,30)
 
-fig2plotly(gcf)
+fig2plotly(gcf);
 ```
 
 `X` and `Y` determine the stem locations. `Z` determines the marker heights. 
@@ -98,7 +98,7 @@ figure
 Z = exp(X+Y);
 stem3(X,Y,Z)
 
-fig2plotly(gcf)
+fig2plotly(gcf);
 ```
 
 `X` and `Y` determine the stem locations. `Z` determines the marker heights. 
@@ -116,7 +116,7 @@ X = linspace(-pi,pi,40);
 Z = cos(X);
 stem3(Z,'filled')
 
-fig2plotly(gcf)
+fig2plotly(gcf);
 ```
 
 <!--------------------- EXAMPLE BREAK ------------------------->
@@ -131,7 +131,7 @@ X = linspace(-pi,pi,40);
 Z = cos(X);
 stem3(Z,'--*m')
 
-fig2plotly(gcf)
+fig2plotly(gcf);
 ```
 
 To specify only two of the three `LineSpec` options, omit the third option from the character vector. For example, `'*m'` sets the marker symbol and the color and uses the default line style.
@@ -152,7 +152,7 @@ Y = sin(theta);
 Z = theta;
 stem3(X,Y,Z,':*m')
 
-fig2plotly(gcf)
+fig2plotly(gcf);
 ```
 
 `X` and `Y` determine the stem locations. `Z` determines the marker heights. 
@@ -172,7 +172,7 @@ stem3(Z,'Marker','s',...
      'MarkerEdgeColor','m',...
      'MarkerFaceColor','g')
 
-fig2plotly(gcf)
+fig2plotly(gcf);
 ```
 
 <!--------------------- EXAMPLE BREAK ------------------------->
@@ -195,7 +195,7 @@ stem(ax1,X,Z)
 ax2 = nexttile;  
 stem3(ax2,X,Y,Z)
 
-fig2plotly(gcf)
+fig2plotly(gcf);
 ```
 
 <!--------------------- EXAMPLE BREAK ------------------------->
@@ -210,7 +210,7 @@ Y = X.^3;
 Z = exp(X).*cos(Y);
 h = stem3(X,Y,Z,'filled');
 
-fig2plotly(gcf)
+fig2plotly(gcf);
 ```
 
 Change the color to magenta and set the marker face color to yellow. Use `view` to adjust the angle of the axes in the figure. Use dot notation to set properties.
@@ -225,7 +225,7 @@ h.Color = 'm';
 h.MarkerFaceColor = 'y';
 view(-10,35)
 
-fig2plotly(gcf)
+fig2plotly(gcf);
 ```
 
 

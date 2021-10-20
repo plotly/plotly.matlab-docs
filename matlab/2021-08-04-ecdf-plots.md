@@ -4,7 +4,7 @@ name: Empirical Cumulative Distribution Plots
 display_as: statistical
 order: 16
 permalink: matlab/ecdf-plots/
-thumnail_github: thumbnail/figure-labels.png
+thumnail_github: ecdf-plots.png
 layout: base
 language: matlab
 page_type: u-guide
@@ -41,7 +41,7 @@ failuretime = random('wbl',3,1,15,1);
 
 ecdf(failuretime)
 
-fig2plotly(gcf)
+fig2plotly(gcf);
 ```
 
 
@@ -81,7 +81,7 @@ cens = (failuretime>T);
 ecdf(failuretime,'Function','cumulative hazard', ...
     'Censoring',cens,'Bounds','on');
 
-fig2plotly(gcf)
+fig2plotly(gcf);
 ```
 
 <!--------------------- EXAMPLE BREAK ------------------------->
@@ -163,7 +163,7 @@ figure()
 ecdf(t,'Censoring',censored,'Bounds','on');
 hold on
 
-fig2plotly(gcf)
+fig2plotly(gcf);
 ```
 
 Superimpose a plot of the known population cdf. 
@@ -192,7 +192,7 @@ legend('Empirical','LCB','UCB','Population', ...
     'Location','southeast')
 hold off
 
-fig2plotly(gcf)
+fig2plotly(gcf);
 ```
 
 
@@ -218,7 +218,7 @@ R = wblrnd(100,2,100,1);
 ecdf(R,'Function','survivor','Alpha',0.01,'Bounds','on')
 hold on
 
-fig2plotly(gcf)
+fig2plotly(gcf);
 ```
 
 Fit the Weibull survivor function. 
@@ -236,7 +236,7 @@ plot(x,wblsurv,'g-','LineWidth',2)
 legend('Empirical','LCB','UCB','Population', ...
     'Location','northeast')
 
-fig2plotly(gcf)
+fig2plotly(gcf);
 ```
 
 The survivor function based on the actual distribution is within the confidence bounds. 

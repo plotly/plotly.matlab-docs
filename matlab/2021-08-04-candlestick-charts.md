@@ -4,7 +4,7 @@ name: Candlestick Plots
 display_as: statistical
 order: 2
 permalink: matlab/candlestick-charts/
-thumnail_github: thumbnail/candlestick.jpg
+thumnail_github: candlestick-charts.png
 layout: base
 language: matlab
 page_type: u-guide
@@ -19,7 +19,7 @@ load SimulatedStock.mat;
 candle(TMW(end-20:end,:),'b');
 title('Candlestick chart for TMW')
 
-fig2plotly(gcf)
+fig2plotly(gcf);
 ```
 
 
@@ -33,7 +33,7 @@ load disney.mat
 candle(dis('3/31/98::4/30/98'))
 title('Disney 3/31/98 to 4/30/98')
 
-fig2plotly(gcf)
+fig2plotly(gcf);
 ```
 
 <!--------------------- EXAMPLE BREAK ------------------------->

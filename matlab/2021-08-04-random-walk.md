@@ -4,7 +4,7 @@ name: Random Walk
 display_as: advanced
 order: 2
 permalink: matlab/random-walk/
-thumnail_github: thumbnail/static-image
+thumnail_github: random-walk.png
 layout: base
 language: matlab
 page_type: u-guide
@@ -36,7 +36,7 @@ xlabel('Step') ;
 ylabel('Position') ;
 hold off ;
 
-fig2plotly(gcf)
+fig2plotly(gcf);
 ```
 
 <!--------------------- EXAMPLE BREAK ------------------------->
@@ -68,7 +68,7 @@ grid on;
 set(gcf, 'Units', 'Normalized', 'Outerposition', [0, 0.05, 1, 0.95]);
 axis square;
 
-fig2plotly(gcf)
+fig2plotly(gcf);
 ```
 
 

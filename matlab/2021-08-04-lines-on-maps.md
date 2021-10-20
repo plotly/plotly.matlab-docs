@@ -4,7 +4,7 @@ name: Lines on Maps
 display_as: maps
 order: 1
 permalink: matlab/lines-on-maps/
-thumnail_github: thumbnail/flight-paths.jpg
+thumnail_github: lines-on-maps.png
 layout: base
 language: matlab
 page_type: u-guide
@@ -32,7 +32,7 @@ lonAnchorage = -149.9;
 geoplot([latSeattle latAnchorage],[lonSeattle lonAnchorage],'g-*')
 geolimits([45 62],[-149 -123])
 
-fig2plotly(gcf)
+fig2plotly(gcf);
 ```
 
 <!--------------------- EXAMPLE BREAK ------------------------->
@@ -59,7 +59,7 @@ lonAnchorage = -149.9;
 geoplot([latSeattle latAnchorage],[lonSeattle lonAnchorage],'g-*')
 geolimits([45 62],[-149 -123])
 
-fig2plotly(gcf)
+fig2plotly(gcf);
 ```
 
 Identify Anchorage using the `text` function.
@@ -75,7 +75,7 @@ geolimits([45 62],[-149 -123])
 
 text(latAnchorage,lonAnchorage,'Anchorage');
 
-fig2plotly(gcf)
+fig2plotly(gcf);
 ```
 
 Identify Seattle using the `text` function. Adjust the alignment of the text label by specifying properties of the `Text` object.
@@ -95,7 +95,7 @@ text(latSeattle,lonSeattle,'Seattle',...
     'HorizontalAlignment','right',...
     'VerticalAlignment','bottom');
     
-fig2plotly(gcf)
+fig2plotly(gcf);
 ```
 
 
@@ -133,7 +133,7 @@ geoplot([latSeattle latAnchorage],[lonSeattle lonAnchorage],'y-',...
     [latSeattle latPtBarrow],[lonSeattle lonPtBarrow],'b:')
 geolimits([44 73],[-149 -123])
 
-fig2plotly(gcf)
+fig2plotly(gcf);
 ```
 
 
@@ -158,7 +158,7 @@ text(latPtBarrow,lonPtBarrow,'Point Barrow');
 text(latSeattle,lonSeattle,'Seattle',...
     'VerticalAlignment','bottom');
     
-fig2plotly(gcf)
+fig2plotly(gcf);
 ```
 
 
@@ -188,7 +188,7 @@ geoplot([latSeattle latAnchorage],[lonSeattle lonAnchorage],...
     'LineWidth',2,'Color',[.6 0 0])
 geolimits([45 62],[-149 -123])
 
-fig2plotly(gcf)
+fig2plotly(gcf);
 ```
 
 
@@ -217,7 +217,7 @@ lonAnchorage = -149.9;
 geoplot([latSeattle latAnchorage],[lonSeattle lonAnchorage])
 geolimits([45 62],[-149 -123])
 
-fig2plotly(gcf)
+fig2plotly(gcf);
 ```
 
 Change the basemap used in the plot using the `geobasemap` function.

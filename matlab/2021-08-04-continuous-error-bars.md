@@ -4,7 +4,7 @@ name: Continuous Error Bands
 display_as: statistical
 order: 15
 permalink: matlab/continuous-error-bars/
-thumnail_github: thumbnail/error-cont.jpg
+thumnail_github: continuous-error-bars.png
 layout: base
 language: matlab
 page_type: u-guide
@@ -35,7 +35,7 @@ outlinebounds(l,p);
 title('Opaque bounds, with outline');
 axis tight;
 
-fig2plotly(gcf)
+fig2plotly(gcf);
 ```
 
 
@@ -60,7 +60,7 @@ boundedline(x, [y1;y2], rand(length(y1),2,2)*.5+.5, 'alpha');
 title('Transparent bounds');
 axis tight;
 
-fig2plotly(gcf)
+fig2plotly(gcf);
 ```
 
 The bounds can also be assigned to a horizontal orientation, for a case where the x-axis represents the dependent variable.  In this case, the scalar error bound value applies to both lines and both sides of the lines.
@@ -88,7 +88,7 @@ boundedline([y1;y2], x, e1(1), 'orientation', 'horiz')
 title('Horizontal bounds');
 axis tight;
 
-fig2plotly(gcf)
+fig2plotly(gcf);
 ```
 
 Rather than use a LineSpec or the default color order, a colormap array can be used to assign colors.  In this case, increasingly-narrower bounds are added on top of the same line.
@@ -127,7 +127,7 @@ set(ax([1 2 4]), 'xlim', [0 2*pi]);
 set(ax(3), 'ylim', [0 2*pi]);
 axis tight;
 
-fig2plotly(gcf)
+fig2plotly(gcf);
 ```
 
 <!--------------------- EXAMPLE BREAK ------------------------->
@@ -149,7 +149,7 @@ b(40,:) = NaN;  % NaN in both sides of bound but not line
 ho = outlinebounds(hl,hp);
 set(ho, 'linestyle', ':', 'color', 'r', 'marker', '.');
 
-fig2plotly(gcf)
+fig2plotly(gcf);
 ```
 
 <!--------------------- EXAMPLE BREAK ------------------------->

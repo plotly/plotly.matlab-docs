@@ -4,7 +4,7 @@ name: Scatter Plots on Maps
 display_as: maps
 order: 1
 permalink: matlab/scatter-plots-on-maps/
-thumnail_github: thumbnail/scatter-plot-on-maps.jpg
+thumnail_github: scatter-plots-on-maps.png
 layout: base
 language: matlab
 page_type: u-guide
@@ -51,7 +51,7 @@ C = cosd(4*lon);
 
 geoscatter(lat,lon,A,C,'^')
 
-fig2plotly(gcf)
+fig2plotly(gcf);
 ```
 
 
@@ -98,7 +98,7 @@ C = cosd(4*lon);
 
 geoscatter(lat,lon,A,C,'^')
 
-fig2plotly(gcf)
+fig2plotly(gcf);
 ```
 
 Change the basemap of the geographic scatter plot.
@@ -115,7 +115,7 @@ geoscatter(lat,lon,A,C,'^')
 
 geobasemap colorterrain
 
-fig2plotly(gcf)
+fig2plotly(gcf);
 ```
 
 

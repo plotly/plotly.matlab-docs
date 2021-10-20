@@ -4,7 +4,7 @@ name: Polar Charts
 display_as: scientific
 order: 16
 permalink: matlab/polar-chart/
-thumnail_github: thumbnail/polar.gif
+thumnail_github: polar-chart.png
 layout: base
 language: matlab
 page_type: u-guide
@@ -19,7 +19,7 @@ theta = 0:0.01:2*pi;
 rho = sin(2*theta).*cos(2*theta);
 polarplot(theta,rho)
 
-fig2plotly(gcf, 'TreatAs', 'polarplot')
+fig2plotly(gcf, 'TreatAs', 'polarplot');
 ```
 
 
@@ -44,7 +44,7 @@ rho = 0.005*theta/10;
 theta_radians = deg2rad(theta);
 polarplot(theta_radians,rho)
 
-fig2plotly(gcf, 'TreatAs', 'polarplot')
+fig2plotly(gcf, 'TreatAs', 'polarplot');
 ```
 
 
@@ -64,7 +64,7 @@ hold on
 polarplot(theta,rho2,'--')
 hold off
 
-fig2plotly(gcf, 'TreatAs', 'polarplot')
+fig2plotly(gcf, 'TreatAs', 'polarplot');
 ```
 
 <!--------------------- EXAMPLE BREAK ------------------------->
@@ -77,7 +77,7 @@ Specify only the radius values, without specifying the angle values. `polarplot`
 rho = 10:5:70;
 polarplot(rho,'-o')
 
-fig2plotly(gcf, 'TreatAs', 'polarplot')
+fig2plotly(gcf, 'TreatAs', 'polarplot');
 ```
 
 
@@ -92,7 +92,7 @@ theta = linspace(0,2*pi);
 rho = sin(theta);
 polarplot(theta,rho)
 
-fig2plotly(gcf, 'TreatAs', 'polarplot')
+fig2plotly(gcf, 'TreatAs', 'polarplot');
 ```
 
 Change the limits of the r-axis so it ranges from -1 to 1.
@@ -104,7 +104,7 @@ polarplot(theta,rho)
 
 rlim([-1 1])
 
-fig2plotly(gcf, 'TreatAs', 'polarplot')
+fig2plotly(gcf, 'TreatAs', 'polarplot');
 ```
 
 
@@ -120,7 +120,7 @@ theta = linspace(0,2*pi,25);
 rho = 2*theta;
 polarplot(theta,rho,'r-o')
 
-fig2plotly(gcf, 'TreatAs', 'polarplot')
+fig2plotly(gcf, 'TreatAs', 'polarplot');
 ```
 
 
@@ -135,7 +135,7 @@ theta = linspace(0,2*pi,25);
 rho = 2*theta;
 p = polarplot(theta,rho);
 
-fig2plotly(gcf, 'TreatAs', 'polarplot')
+fig2plotly(gcf, 'TreatAs', 'polarplot');
 ```
 
 Change the line color and width and add markers.
@@ -149,7 +149,7 @@ p.Color = 'magenta';
 p.Marker = 'square';
 p.MarkerSize = 8;
 
-fig2plotly(gcf, 'TreatAs', 'polarplot')
+fig2plotly(gcf, 'TreatAs', 'polarplot');
 ```
 
 
@@ -164,7 +164,7 @@ Plot complex values in polar coordinates. Display markers at each point without 
 Z = [2+3i 2 -1+4i 3-4i 5+2i -4-2i -2+3i -2 -3i 3i-2i];
 polarplot(Z,'*')
 
-fig2plotly(gcf, 'TreatAs', 'polarplot')
+fig2plotly(gcf, 'TreatAs', 'polarplot');
 ```
 
 
@@ -178,7 +178,7 @@ Plot the function 1+cos(t) over the domain [0,2π].
 figure
 ezpolar('1+cos(t)')
 
-fig2plotly(gcf, 'TreatAs', 'ezpolar')
+fig2plotly(gcf, 'TreatAs', 'ezpolar');
 ```
 
 
@@ -194,7 +194,7 @@ th = pi/4:pi/4:2*pi;
 r = [19 6 12 18 16 11 15 15];
 polarscatter(th,r)
 
-fig2plotly(gcf)
+fig2plotly(gcf);
 ```
 
 
@@ -210,7 +210,7 @@ r = rand(1,20);
 sz = 75;
 polarscatter(th,r,sz,'filled')
 
-fig2plotly(gcf)
+fig2plotly(gcf);
 ```
 
 
@@ -228,7 +228,7 @@ sz = 100*[6 15 20 3 15 3 6 40];
 c = [1 2 2 2 1 1 2 1];
 polarscatter(th,r,sz,c,'filled','MarkerFaceAlpha',.5)
 
-fig2plotly(gcf)
+fig2plotly(gcf);
 ```
 
 
@@ -244,7 +244,7 @@ r = 0.005*th/10;
 th_radians = deg2rad(th);
 polarscatter(th_radians,r)
 
-fig2plotly(gcf)
+fig2plotly(gcf);
 ```
 
 <!--------------------- EXAMPLE BREAK ------------------------->
@@ -265,7 +265,7 @@ hold off
 
 legend('Series A','Series B')
 
-fig2plotly(gcf)
+fig2plotly(gcf);
 ```
 
 <!--------------------- EXAMPLE BREAK ------------------------->
@@ -279,7 +279,7 @@ th = pi/6:pi/6:2*pi;
 r = rand(12,1);
 ps = polarscatter(th,r,'filled')
 
-fig2plotly(gcf)
+fig2plotly(gcf);
 ```
 
 
@@ -295,7 +295,7 @@ ps.SizeData = 200;
 ps.MarkerFaceColor = 'red';
 ps.MarkerFaceAlpha = .5;
 
-fig2plotly(gcf)
+fig2plotly(gcf);
 ```
 
 
@@ -312,7 +312,7 @@ r = rand(1,10);
 sz = rand(1,10);
 polarbubblechart(th,r,sz);
 
-fig2plotly(gcf)
+fig2plotly(gcf);
 ```
 
 
@@ -328,7 +328,7 @@ r = rand(1,10);
 sz = rand(1,10);
 polarbubblechart(th,r,sz,'red');
 
-fig2plotly(gcf)
+fig2plotly(gcf);
 ```
 
 For a custom color, you can specify an RGB triplet or a hexadecimal color code. For example, the hexadecimal color code `'#7031BB'`, specifies a shade of purple.
@@ -340,7 +340,7 @@ sz = rand(1,10);
 
 polarbubblechart(th,r,sz,'#7031BB');
 
-fig2plotly(gcf)
+fig2plotly(gcf);
 ```
 
 You can also specify a different color for each bubble. For example, specify a vector to select colors from the figure's colormap.
@@ -353,7 +353,7 @@ sz = rand(1,10);
 c = 1:10;
 polarbubblechart(th,r,sz,c)
 
-fig2plotly(gcf)
+fig2plotly(gcf);
 ```
 
 
@@ -369,7 +369,7 @@ r = rand(1,10);
 sz = rand(1,10);
 polarbubblechart(th,r,sz);
 
-fig2plotly(gcf)
+fig2plotly(gcf);
 ```
 
 You can customize the opacity and the outline color by setting the `MarkerFaceAlpha` and `MarkerEdgeColor` properties, respectively. One way to set a property is by specifying a name-value pair argument when you create the chart. For example, you can specify 20% opacity by setting the `MarkerFaceAlpha` value to `0.20`.
@@ -381,7 +381,7 @@ sz = rand(1,10);
 
 bc = polarbubblechart(th,r,sz,'MarkerFaceAlpha',0.20);
 
-fig2plotly(gcf)
+fig2plotly(gcf);
 ```
 
 If you create the chart by calling the `polarbubblechart` function with a return argument, you can use the return argument to set properties on the chart after creating it. For example, you can change the outline color to purple.
@@ -395,7 +395,7 @@ bc = polarbubblechart(th,r,sz,'MarkerFaceAlpha',0.20);
 
 bc.MarkerEdgeColor = [0.5 0 0.5];
 
-fig2plotly(gcf)
+fig2plotly(gcf);
 ```
 
 
@@ -417,7 +417,7 @@ planesize = randi([75 500],[1 12]);
 polarbubblechart(theta,altitude,planesize)
 bubblelegend('Number of Passengers','Location','eastoutside')
 
-fig2plotly(gcf)
+fig2plotly(gcf);
 ```
 
 <!--------------------- EXAMPLE BREAK ------------------------->
@@ -459,7 +459,7 @@ pax2.Layout.Tile = 2;
 polarbubblechart(pax2,theta2,altitude2,planesize2);
 title('Airport B')
 
-fig2plotly(gcf)
+fig2plotly(gcf);
 ```
 
 Reduce all the bubble sizes to make it easier to see all the bubbles. In this case, change the range of diameters to be between `5` and `20` points.
@@ -485,7 +485,7 @@ title('Airport B')
 bubblesize(pax1,[5 20])
 bubblesize(pax2,[5 20])
 
-fig2plotly(gcf)
+fig2plotly(gcf);
 ```
 
 
@@ -517,7 +517,7 @@ newlims = [min(allsizes) max(allsizes)];
 bubblelim(pax1,newlims)
 bubblelim(pax2,newlims)
 
-fig2plotly(gcf)
+fig2plotly(gcf);
 ```
 
 <!--------------------- EXAMPLE BREAK ------------------------->

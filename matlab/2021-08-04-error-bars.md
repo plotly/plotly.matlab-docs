@@ -4,7 +4,7 @@ name: Error Bars
 display_as: statistical
 order: 1
 permalink: matlab/error-bars/
-thumnail_github: thumbnail/error-bar.jpg
+thumnail_github: error-bars.png
 layout: base
 language: matlab
 page_type: u-guide
@@ -20,7 +20,7 @@ y = [20 30 45 40 60 65 80 75 95 90];
 err = 8*ones(size(y));
 errorbar(x,y,err)
 
-fig2plotly(gcf)
+fig2plotly(gcf);
 ```
 
 
@@ -36,7 +36,7 @@ y = [20 30 45 40 60 65 80 75 95 90];
 err = [5 8 2 9 3 3 8 3 9 3];
 errorbar(x,y,err)
 
-fig2plotly(gcf)
+fig2plotly(gcf);
 ```
 
 <!--------------------- EXAMPLE BREAK ------------------------->
@@ -51,7 +51,7 @@ y = [20 30 45 40 60 65 80 75 95 90];
 err = [1 3 5 3 5 3 6 4 3 3];
 errorbar(x,y,err,'horizontal')
 
-fig2plotly(gcf)
+fig2plotly(gcf);
 ```
 
 
@@ -67,7 +67,7 @@ y = [20 30 45 40 60 65 80 75 95 90];
 err = [4 3 5 3 5 3 6 4 3 3];
 errorbar(x,y,err,'both')
 
-fig2plotly(gcf)
+fig2plotly(gcf);
 ```
 
 <!--------------------- EXAMPLE BREAK ------------------------->
@@ -82,7 +82,7 @@ y = [20 30 45 40 60 65 80 75 95 90];
 err = [4 3 5 3 5 3 6 4 3 3];
 errorbar(x,y,err,'both','o')
 
-fig2plotly(gcf)
+fig2plotly(gcf);
 ```
 
 <!--------------------- EXAMPLE BREAK ------------------------->
@@ -100,7 +100,7 @@ xneg = [1 3 5 3 5 3 6 4 3 3];
 xpos = [2 5 3 5 2 5 2 2 5 5];
 errorbar(x,y,yneg,ypos,xneg,xpos,'o')
 
-fig2plotly(gcf)
+fig2plotly(gcf);
 ```
 
 <!--------------------- EXAMPLE BREAK ------------------------->
@@ -115,7 +115,7 @@ y = datetime(2018,5,1,1:13,0,0);
 err = hours(rand(13,1));
 errorbar(x,y,err)
 
-fig2plotly(gcf)
+fig2plotly(gcf);
 ```
 
 <!--------------------- EXAMPLE BREAK ------------------------->
@@ -131,7 +131,7 @@ err = 0.3*ones(size(y));
 errorbar(x,y,err,'-s','MarkerSize',10,...
     'MarkerEdgeColor','red','MarkerFaceColor','red')
 
-fig2plotly(gcf)
+fig2plotly(gcf);
 ```
 
 
@@ -147,7 +147,7 @@ y = exp(x);
 err = 0.3*ones(size(y));
 errorbar(x,y,err,'CapSize',18)
 
-fig2plotly(gcf)
+fig2plotly(gcf);
 ```
 
 <!--------------------- EXAMPLE BREAK ------------------------->
@@ -162,7 +162,7 @@ y = sin(x/2);
 err = 0.3*ones(size(y));
 e = errorbar(x,y,err)
 
-fig2plotly(gcf)
+fig2plotly(gcf);
 ```
 
 Use `e` to access properties of the errorbar object after it is created.
@@ -178,7 +178,7 @@ e.MarkerSize = 10;
 e.Color = 'red';
 e.CapSize = 15;
 
-fig2plotly(gcf)
+fig2plotly(gcf);
 ```
 
 

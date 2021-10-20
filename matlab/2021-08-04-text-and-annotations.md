@@ -4,7 +4,7 @@ name: Text and Annotations
 display_as: file_settings
 order: 21
 permalink: matlab/text-and-annotations/
-thumnail_github: thumbnail/text-and-annotations.png
+thumnail_github: text-and-annotations.png
 layout: base
 language: matlab
 page_type: u-guide

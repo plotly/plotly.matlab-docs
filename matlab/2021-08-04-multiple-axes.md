@@ -4,7 +4,7 @@ name: Multiple Axes
 display_as: file_settings
 order: 15
 permalink: matlab/multiple-axes/
-thumnail_github: thumbnail/multiple-axes.jpg
+thumnail_github: multiple-axes.png
 layout: base
 language: matlab
 page_type: u-guide

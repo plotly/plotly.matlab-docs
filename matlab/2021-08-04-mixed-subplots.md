@@ -4,7 +4,7 @@ name: Mixed Subplots
 display_as: multiple_axes
 order: 1
 permalink: matlab/mixed-subplots/
-thumnail_github: thumbnail/mixed_subplot.JPG
+thumnail_github: mixed-subplots.png
 layout: base
 language: matlab
 page_type: u-guide
@@ -31,7 +31,7 @@ scatter(x,y3)
 
 hold off
 
-fig2plotly(gcf)
+fig2plotly(gcf);
 ```
 
 <!--------------------- EXAMPLE BREAK ------------------------->
@@ -56,7 +56,7 @@ nexttile
 scatter(x,y2)
 title('Plot 2')
 
-fig2plotly(gcf)
+fig2plotly(gcf);
 ```
 
 <!--------------------- EXAMPLE BREAK ------------------------->
@@ -82,7 +82,7 @@ nexttile([1 2])
 y2 = rand(50,1);
 plot(x,y2)
 
-fig2plotly(gcf)
+fig2plotly(gcf);
 ```
 
 <!--------------------- EXAMPLE BREAK ------------------------->
@@ -112,7 +112,7 @@ scatter(ax2,x,y2)
 title(ax2,'Plot 2')
 grid(ax2,'on')
 
-fig2plotly(gcf)
+fig2plotly(gcf);
 ```
 
 <!--------------------- EXAMPLE BREAK ------------------------->
@@ -139,7 +139,7 @@ plot(x,y3)
 nexttile
 plot(x,y4)
 
-fig2plotly(gcf)
+fig2plotly(gcf);
 ```
 
 Reduce the spacing around the perimeter of the layout and around each tile by setting the Padding and TileSpacing properties to 'compact'.
@@ -148,7 +148,7 @@ Reduce the spacing around the perimeter of the layout and around each tile by se
 t.Padding = 'compact';
 t.TileSpacing = 'compact';
 
-fig2plotly(gcf)
+fig2plotly(gcf);
 ```
 
 <!--------------------- EXAMPLE BREAK ------------------------->
@@ -173,7 +173,7 @@ stem(ax2,x2,y2)
 % Link the axes
 linkaxes([ax1,ax2],'x');
 
-fig2plotly(gcf)
+fig2plotly(gcf);
 ```
 
 Add a shared title and shared axis labels by passing t to the `title`, `xlabel`, and `ylabel` functions. Move the plots closer together by removing the x-axis tick labels from the top plot and setting the `TileSpacing` property of t to 'compact'.
@@ -186,7 +186,7 @@ ylabel(t,'y-values')
 xticklabels(ax1,{})
 t.TileSpacing = 'compact';
 
-fig2plotly(gcf)
+fig2plotly(gcf);
 ```
 
 <!--------------------- EXAMPLE BREAK ------------------------->

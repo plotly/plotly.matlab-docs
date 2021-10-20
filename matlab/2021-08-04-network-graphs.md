@@ -4,7 +4,7 @@ name: Network Graphs
 display_as: scientific
 order: 12
 permalink: matlab/network-graphs/
-thumnail_github: thumbnail/net.jpg
+thumnail_github: network-graphs.png
 layout: base
 language: matlab
 page_type: u-guide

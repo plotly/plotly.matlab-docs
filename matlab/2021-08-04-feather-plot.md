@@ -2,9 +2,9 @@
 description: How to make Feather Plot in MATLAB<sup>&reg;</sup> with Plotly.
 name: Feather Plot
 display_as: scientific
-order: 
+order: 21
 permalink: matlab/feather-plot/
-thumnail_github: thumbnail/
+thumnail_github: feather-plot.png
 layout: base
 language: matlab
 page_type: u-guide
@@ -19,7 +19,7 @@ u = [5 3 -4 -3 5];
 v = [1 5 3 -2 -6];
 compass(u,v)
 
-fig2plotly(gcf, 'TreatAs', 'compass')
+fig2plotly(gcf, 'TreatAs', 'compass');
 ```
 
 
@@ -37,7 +37,7 @@ r = linspace(5,20,10);
 [u,v] = pol2cart(th,r);
 compass(u,v)
 
-fig2plotly(gcf, 'TreatAs', 'compass')
+fig2plotly(gcf, 'TreatAs', 'compass');
 ```
 
 Note that the theta-axis and r-axis tick labels correspond to the polar coordinates.
@@ -63,7 +63,7 @@ f = fft(y,10);
 
 compass(f)
 
-fig2plotly(gcf, 'TreatAs', 'compass')
+fig2plotly(gcf, 'TreatAs', 'compass');
 ```
 
 
@@ -79,7 +79,7 @@ u = [5 3 -4 -3 5];
 v = [1 5 3 -2 -6];
 compass(u,v,'r')
 
-fig2plotly(gcf, 'TreatAs', 'compass')
+fig2plotly(gcf, 'TreatAs', 'compass');
 ```
 
 <!--------------------- EXAMPLE BREAK ------------------------->
@@ -93,7 +93,7 @@ u = [3 5 -4 -3 5];
 v = [5 1 3 -2 -6];
 c = compass(u,v);
 
-fig2plotly(gcf, 'TreatAs', 'compass')
+fig2plotly(gcf, 'TreatAs', 'compass');
 ```
 
 Assign the first arrow to a variable. The first arrow corresponds to the first elements of `u` and `v`. Then, change the line width and color.
@@ -107,7 +107,7 @@ c1 = c(1);
 c1.LineWidth = 2;
 c1.Color = 'r';
 
-fig2plotly(gcf, 'TreatAs', 'compass')
+fig2plotly(gcf, 'TreatAs', 'compass');
 ```
 
 
@@ -125,7 +125,7 @@ r = linspace(5,20,10);
 [u,v] = pol2cart(th,r);
 compass(u,v)
 
-fig2plotly(gcf, 'TreatAs', 'compass')
+fig2plotly(gcf, 'TreatAs', 'compass');
 ```
 
 Note that 0 degrees points to the right. Rotate the theta-axis 90 degrees in a counterclockwise direction by calling `view` and specifying the first argument as -`90`. Maintain the 2-D view by specifying the second argument as `90`.
@@ -133,7 +133,7 @@ Note that 0 degrees points to the right. Rotate the theta-axis 90 degrees in a c
 ```{matlab}
 view(-90,90)
 
-fig2plotly(gcf, 'TreatAs', 'compass')
+fig2plotly(gcf, 'TreatAs', 'compass');
 ```
 
 Note that 0 degrees now points up.
@@ -161,7 +161,7 @@ v2 = [-3 -4 -5 6 6];
 compass(ax2,u,v2)
 title(ax2,'Right Plot')
 
-fig2plotly(gcf, 'TreatAs', 'compass')
+fig2plotly(gcf, 'TreatAs', 'compass');
 ```
 
 
@@ -179,7 +179,7 @@ u = 10*sin(t);
 v = 10*cos(t);
 feather(u,v)
 
-fig2plotly(gcf)
+fig2plotly(gcf);
 ```
 
 <!--------------------- EXAMPLE BREAK ------------------------->
@@ -196,7 +196,7 @@ r = 10*ones(size(th));
 [u,v] = pol2cart(th,r);
 feather(u,v)
 
-fig2plotly(gcf)
+fig2plotly(gcf);
 ```
 
 
@@ -210,7 +210,7 @@ Create a vector of complex values. Then, display them using a feather plot. The 
 Z = [2+3i -1-3i -1+i 2i 3-4i -2-2i -2+4i 0.5-i -3i 1+i];
 feather(Z)
 
-fig2plotly(gcf)
+fig2plotly(gcf);
 ```
 
 
@@ -226,7 +226,7 @@ u = 10*sin(t);
 v = 10*cos(t);
 feather(u,v,'r')
 
-fig2plotly(gcf)
+fig2plotly(gcf);
 ```
 
 
@@ -242,7 +242,7 @@ u = 10*sin(t);
 v = 10*cos(t);
 f = feather(u,v);
 
-fig2plotly(gcf)
+fig2plotly(gcf);
 ```
 
 Assign the first arrow to a variable. The first arrow corresponds to the first elements of `u` and `v`. Then, change the line width and color.
@@ -257,7 +257,7 @@ f1 = f(1);
 f1.Color = 'r';
 f1.LineWidth = 2;
 
-fig2plotly(gcf)
+fig2plotly(gcf);
 ```
 
 <!--------------------- EXAMPLE BREAK ------------------------->
@@ -284,7 +284,7 @@ v2 = [1 -2 3 -4 5];
 feather(ax2,u2,v2)
 title(ax2,'Right Plot')
 
-fig2plotly(gcf)
+fig2plotly(gcf);
 ```
 
 <!--------------------- EXAMPLE BREAK ------------------------->

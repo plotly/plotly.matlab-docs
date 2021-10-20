@@ -4,7 +4,7 @@ name: Built-in Continuous Color Scales
 display_as: file_settings
 order: 27
 permalink: matlab/builtin-colorscales/
-thumnail_github: thumbnail/heatmap_colorscale.jpg
+thumnail_github: builtin-colorscales.png
 layout: base
 language: matlab
 page_type: u-guide
@@ -18,7 +18,7 @@ Create a surface plot and set the colormap to `winter`.
 surf(peaks)
 colormap winter
 
-fig2plotly(gcf)
+fig2plotly(gcf);
 ```
 
 <!--------------------- EXAMPLE BREAK ------------------------->
@@ -31,7 +31,7 @@ First, change the colormap for the current figure to `summer`.
 surf(peaks)
 colormap summer
 
-fig2plotly(gcf)
+fig2plotly(gcf);
 ```
 
 Now set the colormap back to your system's default value. If you have not specified a different default value, then the default colormap is `parula`. 
@@ -40,7 +40,7 @@ Now set the colormap back to your system's default value. If you have not specif
 surf(peaks)
 colormap default
 
-fig2plotly(gcf)
+fig2plotly(gcf);
 ```
 
 
@@ -60,7 +60,7 @@ ax2 = nexttile;
 surf(peaks)
 colormap(ax2,winter)
 
-fig2plotly(gcf)
+fig2plotly(gcf);
 ```
 
 <!--------------------- EXAMPLE BREAK ------------------------->
@@ -73,7 +73,7 @@ Specify the number of colors used in a colormap by passing an integer as an inpu
 mesh(peaks)
 colormap(parula(5))
 
-fig2plotly(gcf)
+fig2plotly(gcf);
 ```
 
 <!--------------------- EXAMPLE BREAK ------------------------->
@@ -95,7 +95,7 @@ map = [0 0 0.3
 surf(peaks)
 colormap(map)
 
-fig2plotly(gcf)
+fig2plotly(gcf);
 ```
 
 <!--------------------- EXAMPLE BREAK ------------------------->
@@ -108,7 +108,7 @@ Create a surface plot of the `peaks` function and specify a colormap.
 mesh(peaks)
 colormap(autumn(5))
 
-fig2plotly(gcf)
+fig2plotly(gcf);
 ```
 
 Return the three-column matrix of values that define the colors used in the plot. Each row is an RGB triplet color value that specifies one color of the colormap.
@@ -142,7 +142,7 @@ ax2 = nexttile;
 contourf(peaks)
 colormap(ax2,pink)
 
-fig2plotly(gcf)
+fig2plotly(gcf);
 ```
 
 Return the colormap values used in the upper plot by passing `ax1` to the `colormap` function. Each row is an RGB triplet color value that specifies one color of the colormap.
@@ -171,7 +171,7 @@ load spine
 image(X)
 colormap(map)
 
-fig2plotly(gcf)
+fig2plotly(gcf);
 ```
 
 <!--------------------- EXAMPLE BREAK ------------------------->

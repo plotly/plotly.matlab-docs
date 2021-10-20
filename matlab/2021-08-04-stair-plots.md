@@ -4,7 +4,7 @@ name: Stair Plots
 display_as: basic
 order: 20
 permalink: matlab/stair-plots/
-thumnail_github: thumbnail/
+thumnail_github: stair-plots.png
 layout: base
 language: matlab
 page_type: u-guide
@@ -21,7 +21,7 @@ Y = sin(X);
 figure
 stairs(Y)
 
-fig2plotly(gcf)
+fig2plotly(gcf);
 ```
 
 
@@ -42,7 +42,7 @@ Y = [0.5*cos(X), 2*cos(X)];
 figure
 stairs(Y)
 
-fig2plotly(gcf)
+fig2plotly(gcf);
 ```
 
 The number of rows in `Y` automatically determines and generates the x-axis scale. 
@@ -61,7 +61,7 @@ Y = sin(X);
 figure
 stairs(X,Y)
 
-fig2plotly(gcf)
+fig2plotly(gcf);
 ```
 
 The entries in `Y` are plotted against the corresponding entries in `X`. 
@@ -81,7 +81,7 @@ Y = [0.5*cos(X), 2*cos(X)];
 figure
 stairs(X,Y)
 
-fig2plotly(gcf)
+fig2plotly(gcf);
 ```
 
 The first vector input, `X`, determines the x-axis positions for both data series. 
@@ -103,7 +103,7 @@ Y = [sin(5*x1),exp(x2).*sin(5*x2)];
 figure
 stairs(X,Y)
 
-fig2plotly(gcf)
+fig2plotly(gcf);
 ```
 
 Each column of `X` is plotted against the corresponding column of `Y`. 
@@ -123,7 +123,7 @@ Y = sin(X);
 figure
 stairs(Y, '-.or')
 
-fig2plotly(gcf)
+fig2plotly(gcf);
 ```
 
 
@@ -140,7 +140,7 @@ Y = sin(X);
 figure
 stairs(Y,'LineWidth',2,'Marker','d','MarkerFaceColor','c')
 
-fig2plotly(gcf)
+fig2plotly(gcf);
 ```
 
 <!--------------------- EXAMPLE BREAK ------------------------->
@@ -163,7 +163,7 @@ stairs(ax1,x,y1)
 ax2 = nexttile;  
 stairs(ax2,x,y2)
 
-fig2plotly(gcf)
+fig2plotly(gcf);
 ```
 
 <!--------------------- EXAMPLE BREAK ------------------------->
@@ -177,7 +177,7 @@ X = linspace(0,1,30)';
 Y = [cos(10*X), exp(X).*sin(10*X)];
 h = stairs(X,Y);
 
-fig2plotly(gcf)
+fig2plotly(gcf);
 ```
 
 Use small circle markers for the first data series. Use magenta filled circles for the second series. Use dot notation to set properties.
@@ -192,7 +192,7 @@ h(1).MarkerSize = 4;
 h(2).Marker = 'o';
 h(2).MarkerFaceColor = 'm';
 
-fig2plotly(gcf)
+fig2plotly(gcf);
 ```
 
 
@@ -207,7 +207,7 @@ X = linspace(0,4*pi,50)';
 Y = [0.5*cos(X), 2*cos(X)];
 [xb,yb] = stairs(X,Y);
 
-fig2plotly(gcf)
+fig2plotly(gcf);
 ```
 
 `stairs` returns two matrices of the same size, `xb` and `yb`, but no plot. 
@@ -222,7 +222,7 @@ Y = [0.5*cos(X), 2*cos(X)];
 figure
 plot(xb,yb)
 
-fig2plotly(gcf)
+fig2plotly(gcf);
 ```
 
 

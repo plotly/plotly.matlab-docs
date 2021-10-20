@@ -4,7 +4,7 @@ name: Quiver Plots
 display_as: scientific
 order: 10
 permalink: matlab/quiver-plots/
-thumnail_github: thumbnail/quiver-plot.jpg
+thumnail_github: quiver-plots.png
 layout: base
 language: matlab
 page_type: u-guide
@@ -34,7 +34,7 @@ V = v(11:22,11:22,1);
 quiver(X,Y,U,V)
 axis equal
 
-fig2plotly(gcf)
+fig2plotly(gcf);
 ```
 
 
@@ -52,7 +52,7 @@ U = 0.25*X;
 V = 0.5*Y;
 quiver(X,Y,U,V,0)
 
-fig2plotly(gcf)
+fig2plotly(gcf);
 ```
 
 
@@ -85,7 +85,7 @@ contour(X,Y,Z)
 axis equal
 hold off
 
-fig2plotly(gcf)
+fig2plotly(gcf);
 ```
 
 
@@ -102,7 +102,7 @@ U = sin(Y);
 V = cos(X);
 quiver(X,Y,U,V,'r')
 
-fig2plotly(gcf)
+fig2plotly(gcf);
 ```
 
 
@@ -141,7 +141,7 @@ quiver(ax2,X,Y,U2,V2)
 axis equal
 title(ax2,'Right Plot')
 
-fig2plotly(gcf)
+fig2plotly(gcf);
 ```
 
 
@@ -160,7 +160,7 @@ q = quiver(X,Y,U,V);
 q.ShowArrowHead = 'off';
 q.Marker = '.';
 
-fig2plotly(gcf)
+fig2plotly(gcf);
 ```
 
 

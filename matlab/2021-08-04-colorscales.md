@@ -4,7 +4,7 @@ name: Continuous Color Scales and Color Bars
 display_as: file_settings
 order: 20
 permalink: matlab/colorscales/
-thumnail_github: thumbnail/heatmap_colorscale.jpg
+thumnail_github: colorscales.png
 layout: base
 language: matlab
 page_type: u-guide
@@ -18,7 +18,7 @@ Add a colorbar to a surface plot indicating the color scale.
 surf(peaks)
 colorbar
 
-fig2plotly(gcf)
+fig2plotly(gcf);
 ```
 
 
@@ -36,7 +36,7 @@ Add a horizontal colorbar below a plot by specifying the colorbar location as `'
 contourf(peaks)
 colorbar('southoutside')
 
-fig2plotly(gcf)
+fig2plotly(gcf);
 ```
 
 
@@ -50,7 +50,7 @@ Reverse the direction of values in a colorbar on a graph by setting the `'Direct
 surf(peaks)
 colorbar('Direction','reverse')
 
-fig2plotly(gcf)
+fig2plotly(gcf);
 ```
 
 The colorbar values ascend from top to bottom instead of ascending from bottom to top.
@@ -67,7 +67,7 @@ Display the colorbar tick marks and tick labels on the side of a colorbar facing
 surf(peaks)
 colorbar('AxisLocation','in')
 
-fig2plotly(gcf)
+fig2plotly(gcf);
 ```
 
 <!--------------------- EXAMPLE BREAK ------------------------->
@@ -89,7 +89,7 @@ nexttile
 mesh(peaks)
 colorbar
 
-fig2plotly(gcf)
+fig2plotly(gcf);
 ```
 
 
@@ -110,7 +110,7 @@ contourf(Z1)
 nexttile
 contourf(Z2)
 
-fig2plotly(gcf)
+fig2plotly(gcf);
 ```
 
 
@@ -128,7 +128,7 @@ contourf(Z2)
 cb = colorbar;
 cb.Layout.Tile = 'east';
 
-fig2plotly(gcf)
+fig2plotly(gcf);
 ```
 
 <!--------------------- EXAMPLE BREAK ------------------------->
@@ -142,7 +142,7 @@ contourf(peaks)
 colorbar('Ticks',[-5,-2,1,4,7],...
          'TickLabels',{'Cold','Cool','Neutral','Warm','Hot'})
 
-fig2plotly(gcf)
+fig2plotly(gcf);
 ```
 
 
@@ -157,7 +157,7 @@ surf(peaks)
 c = colorbar;
 c.Label.String = 'Elevation (ft in 1000s)';
 
-fig2plotly(gcf)
+fig2plotly(gcf);
 ```
 
 <!--------------------- EXAMPLE BREAK ------------------------->
@@ -170,7 +170,7 @@ Add a colorbar to a surface plot.
 surf(peaks)
 colorbar
 
-fig2plotly(gcf)
+fig2plotly(gcf);
 ```
 
 Delete the colorbar from the surface plot.
@@ -180,7 +180,7 @@ surf(peaks)
 colorbar
 colorbar('off')
 
-fig2plotly(gcf)
+fig2plotly(gcf);
 ```
 
 
@@ -211,7 +211,7 @@ hold on
 caxis('manual');
 surf(X,Y,Z2);
 
-fig2plotly(gcf)
+fig2plotly(gcf);
 ```
 
 <!--------------------- EXAMPLE BREAK ------------------------->

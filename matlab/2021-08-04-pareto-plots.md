@@ -4,7 +4,7 @@ name: Pareto Plots
 display_as: financial
 order: 4
 permalink: matlab/pareto-plots/
-thumnail_github: thumbnail/
+thumnail_github: pareto-plots.png
 layout: base
 language: matlab
 page_type: u-guide
@@ -19,7 +19,7 @@ y = [90,75,30,60,5,40,40,5];
 figure
 pareto(y)
 
-fig2plotly(gcf)
+fig2plotly(gcf);
 ```
 
 `pareto` displays the elements in `y` as bars in descending order and labels each bar with its index in `y`. Since `pareto` displays only the first 95% of the cumulative distribution, some elements in `y` are not displayed. 
@@ -40,7 +40,7 @@ figure
 pareto(codelines, coders)
 title('Lines of Code by Programmer')
 
-fig2plotly(gcf)
+fig2plotly(gcf);
 ```
 
 
@@ -56,7 +56,7 @@ votes = [35 50 30 5 80];
 pareto(votes,pies,1)
 ylabel('Votes')
 
-fig2plotly(gcf)
+fig2plotly(gcf);
 ```
 
 

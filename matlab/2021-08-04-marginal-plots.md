@@ -4,7 +4,7 @@ name: Marginal Distribution Plots
 display_as: statistical
 order: 13
 permalink: matlab/marginal-plots/
-thumnail_github: thumbnail/figure-labels.png
+thumnail_github: marginal-plots.png
 layout: base
 language: matlab
 page_type: u-guide
@@ -33,7 +33,7 @@ y = meas(:,2);
 
 scatterhist(x,y)
 
-fig2plotly(gcf)
+fig2plotly(gcf);
 ```
 
 
@@ -65,7 +65,7 @@ y = meas(:,2);
 
 scatterhist(x,y,'Group',species,'Kernel','on')
 
-fig2plotly(gcf)
+fig2plotly(gcf);
 ```
 
 The plot shows that the relationship between sepal length and width varies depending on the flower species. 
@@ -95,7 +95,7 @@ scatterhist(x,y,'Group',species,'Kernel','on','Location','SouthEast',...
     'Direction','out','Color','kbr','LineStyle',{'-','-.',':'},...
     'LineWidth',[2,2,2],'Marker','+od','MarkerSize',[4,5,6]);
     
-fig2plotly(gcf)
+fig2plotly(gcf);
 ```
 
 <!--------------------- EXAMPLE BREAK ------------------------->
@@ -130,7 +130,7 @@ view(h(3),[270,90]);  % Rotate the Y plot
 axis(h(1),'auto');  % Sync axes
 hold off;
 
-fig2plotly(gcf)
+fig2plotly(gcf);
 ```
 
 <!--------------------- EXAMPLE BREAK ------------------------->
@@ -159,7 +159,7 @@ scatterhist(x,y,'Group',species,'Kernel','on','Parent',hp1);
 axes('Parent',hp2);
 hist(x);
 
-fig2plotly(gcf)
+fig2plotly(gcf);
 ```
 
 <!--------------------- EXAMPLE BREAK ------------------------->

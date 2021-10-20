@@ -4,7 +4,7 @@ name: PCA Visualization
 display_as: ai_ml
 order: 4
 permalink: matlab/pca-visualization/
-thumnail_github: thumbnail/ml-pca.png
+thumnail_github: pca-visualization.png
 layout: base
 language: matlab
 page_type: u-guide
@@ -291,7 +291,7 @@ Visualize both the orthonormal principal component coefficients for each variabl
 ```{matlab}
 biplot(coeff(:,1:2),'scores',score(:,1:2),'varlabels',{'v_1','v_2','v_3','v_4'});
 
-fig2plotly(gcf)
+fig2plotly(gcf);
 ```
 
 
@@ -386,7 +386,7 @@ xlabel('1st Principal Component')
 ylabel('2nd Principal Component')
 zlabel('3rd Principal Component')
 
-fig2plotly(gcf)
+fig2plotly(gcf);
 ```
 
 The data shows the largest variability along the first principal component axis. This is the largest possible variance among all possible choices of the first axis. The variability along the second principal component axis is the largest among all possible remaining choices of the second axis. The third principal component axis has the third largest variability, which is significantly smaller than the variability along the second principal component axis. The fourth through thirteenth principal component axes are not worth inspecting, because they explain only 0.05% of all variability in the data.

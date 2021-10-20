@@ -4,7 +4,7 @@ name: Animated Line
 display_as: animations
 order: 1
 permalink: matlab/animated-line/
-thumnail_github: thumbnail/
+thumnail_github: animated-line.png
 layout: base
 language: matlab
 page_type: u-guide
@@ -25,7 +25,7 @@ for k = 1:length(x)
     drawnow
 end
 
-fig2plotly(gcf)
+fig2plotly(gcf);
 ```
 
 
@@ -47,7 +47,7 @@ end
 
 [xdata,ydata] = getpoints(h);
 
-fig2plotly(gcf)
+fig2plotly(gcf);
 ```
 
 Clear the points from the line.
@@ -68,7 +68,7 @@ end
 clearpoints(h)
 drawnow
 
-fig2plotly(gcf)
+fig2plotly(gcf);
 ```
 
 
@@ -83,7 +83,7 @@ x = [1 2];
 y = [1 2];
 h = animatedline(x,y,'Color','r','LineWidth',3);
 
-fig2plotly(gcf)
+fig2plotly(gcf);
 ```
 
 
@@ -104,7 +104,7 @@ for k = 1:length(x)
     drawnow
 end
 
-fig2plotly(gcf)
+fig2plotly(gcf);
 ```
 
 
@@ -129,7 +129,7 @@ for k = 1:100:numpoints-99
     drawnow
 end
 
-fig2plotly(gcf)
+fig2plotly(gcf);
 ```
 
 Another technique for creating faster animations is to use `drawnow limitrate` instead of `drawnow`.
@@ -153,7 +153,7 @@ for k = 1:numpoints
     drawnow limitrate
 end
 
-fig2plotly(gcf)
+fig2plotly(gcf);
 ```
 
 
@@ -182,7 +182,7 @@ for k = 1:numpoints
 end
 drawnow % draw final frame
 
-fig2plotly(gcf)
+fig2plotly(gcf);
 ```
 
 A smaller interval updates the screen more often and results in a slower animation. For example, use `b > (1/1000)` to slow down the animation.
@@ -200,7 +200,7 @@ y = sin(t);
 x = cos(t);
 comet(x,y)
 
-fig2plotly(gcf)
+fig2plotly(gcf);
 ```
 
 
@@ -219,7 +219,7 @@ y = -cos(t) + cos(t/2);
 p = 0.5;
 comet(x,y,p)
 
-fig2plotly(gcf)
+fig2plotly(gcf);
 ```
 
 <!--------------------- EXAMPLE BREAK ------------------------->
@@ -247,7 +247,7 @@ ax2 = nexttile;
 comet(ax1,x1,y1,p)
 comet(ax2,x2,y2,p)
 
-fig2plotly(gcf)
+fig2plotly(gcf);
 ```
 
 <!--------------------- EXAMPLE BREAK ------------------------->
@@ -263,7 +263,7 @@ yvec = ymat(:);
 zvec = zmat(:);
 comet3(xvec,yvec,zvec)
 
-fig2plotly(gcf)
+fig2plotly(gcf);
 ```
 
 <!--------------------- EXAMPLE BREAK ------------------------->
@@ -282,7 +282,7 @@ zvec = zmat(:);
 p = 0.5;
 comet3(xvec,yvec,zvec,p)
 
-fig2plotly(gcf)
+fig2plotly(gcf);
 ```
 
 <!--------------------- EXAMPLE BREAK ------------------------->
@@ -317,7 +317,7 @@ ax2 = nexttile;
 comet3(ax1,xvec,yvec,zvec,p)
 comet3(ax2,yvec,xvec,zvec,p)
 
-fig2plotly(gcf)
+fig2plotly(gcf);
 ```
 
 <!--------------------- EXAMPLE BREAK ------------------------->
@@ -341,7 +341,7 @@ streamparticles(iverts, 200, ...
     'Animate',15,'FrameRate',40, ...
     'MarkerSize',10,'MarkerFaceColor',[0 .5 0])
 
-% fig2plotly(gcf)
+% fig2plotly(gcf);
 ```
 
 <!--------------------- EXAMPLE BREAK ------------------------->

@@ -4,7 +4,7 @@ name: Scatter Plots
 display_as: basic
 order: 1
 permalink: matlab/line-and-scatter/
-thumnail_github: thumbnail/line-and-scatter.jpg
+thumnail_github: line-and-scatter.png
 layout: base
 language: matlab
 page_type: u-guide
@@ -19,7 +19,7 @@ x = linspace(0,3*pi,200);
 y = cos(x) + rand(1,200);  
 scatter(x,y)
 
-fig2plotly(gcf)
+fig2plotly(gcf);
 ```
 
 
@@ -35,7 +35,7 @@ y = cos(x) + rand(1,200);
 sz = linspace(1,100,200);
 scatter(x,y,sz)
 
-fig2plotly(gcf)
+fig2plotly(gcf);
 ```
 
 Corresponding elements in `x`, `y`, and `sz` determine the location and size of each circle. To plot all circles with the equal area, specify `sz` as a numeric scalar.
@@ -54,7 +54,7 @@ y = cos(x) + rand(1,200);
 c = linspace(1,10,length(x));
 scatter(x,y,[],c)
 
-fig2plotly(gcf)
+fig2plotly(gcf);
 ```
 
 Corresponding elements in `x`, `y`, and `c` determine the location and color of each circle. The `scatter` function maps the elements in `c` to colors in the current colormap.
@@ -74,7 +74,7 @@ sz = 25;
 c = linspace(1,10,length(x));
 scatter(x,y,sz,c,'filled')
 
-fig2plotly(gcf)
+fig2plotly(gcf);
 ```
 
 
@@ -91,7 +91,7 @@ y = cos(theta) + 0.75*rand(1,150);
 sz = 140;
 scatter(x,y,sz,'d')
 
-fig2plotly(gcf)
+fig2plotly(gcf);
 ```
 
 <!--------------------- EXAMPLE BREAK ------------------------->
@@ -109,7 +109,7 @@ scatter(x,y,sz,'MarkerEdgeColor',[0 .5 .5],...
               'MarkerFaceColor',[0 .7 .7],...
               'LineWidth',1.5)
 
-fig2plotly(gcf)
+fig2plotly(gcf);
 ```
 
 <!--------------------- EXAMPLE BREAK ------------------------->
@@ -125,7 +125,7 @@ x = randn(1000,1);
 y = randn(1000,1);
 s = scatter(x,y,'filled');
 
-fig2plotly(gcf)
+fig2plotly(gcf);
 ```
 
 Set the opacity of each point according to its distance from zero.
@@ -139,7 +139,7 @@ distfromzero = sqrt(x.^2 + y.^2);
 s.AlphaData = distfromzero;
 s.MarkerFaceAlpha = 'flat';
 
-fig2plotly(gcf)
+fig2plotly(gcf);
 ```
 
 
@@ -163,7 +163,7 @@ scatter(ax1,x,y)
 ax2 = nexttile;
 scatter(ax2,x,y,'filled','d')
 
-fig2plotly(gcf)
+fig2plotly(gcf);
 ```
 
 
@@ -179,7 +179,7 @@ x = exp(theta).*sin(100*theta);
 y = exp(theta).*cos(100*theta);
 s = scatter(x,y);
 
-fig2plotly(gcf)
+fig2plotly(gcf);
 ```
 
 Use `s` to query and set properties of the scatter series after it has been created. Set the line width to `0.6` point. Set the marker edge color to blue. Set the marker face color using an RGB triplet color.
@@ -194,7 +194,7 @@ s.LineWidth = 0.6;
 s.MarkerEdgeColor = 'b';
 s.MarkerFaceColor = [0 0.5 0.5];
 
-fig2plotly(gcf)
+fig2plotly(gcf);
 ```
 
 
@@ -211,7 +211,7 @@ title('Undersea Elevation');
 xlabel('Longitude');
 ylabel('Latitude');
 
-fig2plotly(gcf)
+fig2plotly(gcf);
 ```
 
 <!--------------------- EXAMPLE BREAK ------------------------->
@@ -232,7 +232,7 @@ imag_z2 = imag(z2);
 plot(real_z1,imag_z1,'g*',real_z2,imag_z2,'bo');
 title('Plotting Complex Data');
 
-fig2plotly(gcf)
+fig2plotly(gcf);
 ```
 
 

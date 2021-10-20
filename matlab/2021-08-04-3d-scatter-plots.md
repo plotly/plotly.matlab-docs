@@ -4,7 +4,7 @@ name: 3D Scatter Plots
 display_as: 3d_charts
 order: 2
 permalink: matlab/3d-scatter-plots/
-thumnail_github: thumbnail/3d-scatter.jpg
+thumnail_github: 3d-scatter-plots.png
 layout: base
 language: matlab
 page_type: u-guide
@@ -22,7 +22,7 @@ y = [0.5*Y(:); 0.75*Y(:); Y(:)];
 z = [0.5*Z(:); 0.75*Z(:); Z(:)];
 scatter3(x,y,z)
 
-fig2plotly(gcf)
+fig2plotly(gcf);
 ```
 
 
@@ -66,7 +66,7 @@ figure
 scatter3(x,y,z,s)
 view(40,35)
 
-fig2plotly(gcf)
+fig2plotly(gcf);
 ```
 
 Corresponding entries in `x`, `y`, `z`, and `s` determine the location and size of each marker. 
@@ -117,7 +117,7 @@ figure
 scatter3(x,y,z,s,c)
 view(40,35)
 
-fig2plotly(gcf)
+fig2plotly(gcf);
 ```
 
 Corresponding entries in `x`, `y`, `z`, and `c` determine the location and color of each marker. 
@@ -146,7 +146,7 @@ y = 2*sin(z) + rand(1,250);
 scatter3(x,y,z,'filled')
 view(-30,10)
 
-fig2plotly(gcf)
+fig2plotly(gcf);
 ```
 
 <!--------------------- EXAMPLE BREAK ------------------------->
@@ -174,7 +174,7 @@ figure
 scatter3(x,y,z,'*')
 view(-30,10)
 
-fig2plotly(gcf)
+fig2plotly(gcf);
 ```
 
 
@@ -205,7 +205,7 @@ scatter3(x,y,z,...
         'MarkerFaceColor',[0 .75 .75])
 view(-30,10)
 
-fig2plotly(gcf)
+fig2plotly(gcf);
 ```
 
 <!--------------------- EXAMPLE BREAK ------------------------->
@@ -224,7 +224,7 @@ ax2 = nexttile;
 scatter3(ax1,x,y,z,'MarkerFaceColor',[0 .75 .75])
 scatter3(ax2,x,y,z,'*')
 
-fig2plotly(gcf)
+fig2plotly(gcf);
 ```
 
 
@@ -270,7 +270,7 @@ c = C(:);
 
 h = scatter3(x,y,z,s,c);
 
-fig2plotly(gcf)
+fig2plotly(gcf);
 ```
 
 Use an RGB triplet color value to set the marker face color. Use dot notation to set properties.
@@ -290,7 +290,7 @@ h = scatter3(x,y,z,s,c);
 
 h.MarkerFaceColor = [0 0.5 0.5];
 
-fig2plotly(gcf)
+fig2plotly(gcf);
 ```
 
 <!--------------------- EXAMPLE BREAK ------------------------->

@@ -4,7 +4,7 @@ name: Streamline Plots
 display_as: scientific
 order: 11
 permalink: matlab/streamline-plots/
-thumnail_github: thumbnail/streamline.jpg
+thumnail_github: streamline-plots.png
 layout: base
 language: matlab
 page_type: u-guide
@@ -34,7 +34,7 @@ startx = 0.1:0.1:1;
 starty = ones(size(startx));
 streamline(x,y,u,v,startx,starty)
 
-fig2plotly(gcf)
+fig2plotly(gcf);
 ```
 
 ```{matlab}

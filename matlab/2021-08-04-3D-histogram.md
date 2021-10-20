@@ -4,7 +4,7 @@ name: 3D Histograms
 display_as: 3d_charts
 order: 14
 permalink: matlab/3D-histogram/
-thumnail_github: thumbnail/
+thumnail_github: 3D-histogram.png
 layout: base
 language: matlab
 page_type: u-guide
@@ -19,7 +19,7 @@ x = randn(10000,1);
 y = randn(10000,1);
 h = histogram2(x,y)
 
-fig2plotly(gcf)
+fig2plotly(gcf);
 ```
 
 
@@ -32,7 +32,7 @@ h = histogram2(x,y)
 xlabel('x')
 ylabel('y')
 
-fig2plotly(gcf)
+fig2plotly(gcf);
 ```
 
 
@@ -64,7 +64,7 @@ y = randn(1000,1);
 nbins = 5;
 h = histogram2(x,y,nbins)
 
-fig2plotly(gcf)
+fig2plotly(gcf);
 ```
 
 
@@ -79,7 +79,7 @@ h = histogram2(x,y,nbins)
 
 counts = h.Values
 
-fig2plotly(gcf)
+fig2plotly(gcf);
 ```
 
 
@@ -94,7 +94,7 @@ x = randn(1000,1);
 y = randn(1000,1);
 h = histogram2(x,y)
 
-fig2plotly(gcf)
+fig2plotly(gcf);
 ```
 
 Use the `morebins` function to coarsely adjust the number of bins in the x dimension.
@@ -107,7 +107,7 @@ h = histogram2(x,y)
 nbins = morebins(h,'x');
 nbins = morebins(h,'x')
 
-fig2plotly(gcf)
+fig2plotly(gcf);
 ```
 
 
@@ -124,7 +124,7 @@ nbins = morebins(h,'x')
 nbins = fewerbins(h,'y');
 nbins = fewerbins(h,'y')
 
-fig2plotly(gcf)
+fig2plotly(gcf);
 ```
 
 Adjust the number of bins at a fine grain level by explicitly setting the number of bins.
@@ -136,7 +136,7 @@ h = histogram2(x,y)
 
 h.NumBins = [20 10];
 
-fig2plotly(gcf)
+fig2plotly(gcf);
 ```
 
 <!--------------------- EXAMPLE BREAK ------------------------->
@@ -149,7 +149,7 @@ Create a bivariate histogram using 1,000 normally distributed random numbers wit
 h = histogram2(randn(1000,1),randn(1000,1),[12 12],'FaceColor','flat');
 colorbar
 
-fig2plotly(gcf)
+fig2plotly(gcf);
 ```
 
 
@@ -164,7 +164,7 @@ x = 2*randn(1000,1)+2;
 y = 5*randn(1000,1)+3;
 h = histogram2(x,y,'DisplayStyle','tile','ShowEmptyBins','on');
 
-fig2plotly(gcf)
+fig2plotly(gcf);
 ```
 
 
@@ -181,7 +181,7 @@ Xedges = [-Inf -2:0.4:2 Inf];
 Yedges = [-Inf -2:0.4:2 Inf];
 h = histogram2(x,y,Xedges,Yedges)
 
-fig2plotly(gcf)
+fig2plotly(gcf);
 ```
 
 
@@ -198,7 +198,7 @@ h = histogram2(x,y,Xedges,Yedges)
 
 h.Normalization = 'countdensity';
 
-fig2plotly(gcf)
+fig2plotly(gcf);
 ```
 
 <!--------------------- EXAMPLE BREAK ------------------------->
@@ -212,7 +212,7 @@ x = randn(1000,1);
 y = randn(1000,1);
 h = histogram2(x,y,'Normalization','probability')
 
-fig2plotly(gcf)
+fig2plotly(gcf);
 ```
 
 
@@ -225,7 +225,7 @@ h = histogram2(x,y,'Normalization','probability')
 
 S = sum(h.Values(:))
 
-fig2plotly(gcf)
+fig2plotly(gcf);
 ```
 
 
@@ -240,7 +240,7 @@ x = randn(1000,1);
 y = randn(1000,1);
 h = histogram2(x,y)
 
-fig2plotly(gcf)
+fig2plotly(gcf);
 ```
 
 
@@ -253,7 +253,7 @@ h = histogram2(x,y)
 
 h.FaceColor = 'flat';
 
-fig2plotly(gcf)
+fig2plotly(gcf);
 ```
 
 Change the number of bins in each direction.
@@ -267,7 +267,7 @@ h.FaceColor = 'flat';
 
 h.NumBins = [10 25];
 
-fig2plotly(gcf)
+fig2plotly(gcf);
 ```
 
 
@@ -285,7 +285,7 @@ h.NumBins = [10 25];
 h.DisplayStyle = 'tile';
 view(2)
 
-fig2plotly(gcf)
+fig2plotly(gcf);
 ```
 
 
@@ -313,7 +313,7 @@ Use the `findobj` function to locate the correct object handle from the figure h
 h = openfig('histogram2.fig');
 y = findobj(h,'type','histogram2')
 
-fig2plotly(gcf)
+fig2plotly(gcf);
 ```
 
 <!--------------------- EXAMPLE BREAK ------------------------->

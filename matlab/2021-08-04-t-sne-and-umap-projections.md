@@ -4,7 +4,7 @@ name: t-SNE projections
 display_as: ai_ml
 order: 5
 permalink: matlab/t-sne-and-umap-projections/
-thumnail_github: thumbnail/tsne-umap-projections.png
+thumnail_github: t-sne-and-umap-projections.png
 layout: base
 language: matlab
 page_type: u-guide
@@ -20,7 +20,7 @@ rng default % for reproducibility
 Y = tsne(meas);
 gscatter(Y(:,1),Y(:,2),species)
 
-fig2plotly(gcf)
+fig2plotly(gcf);
 ```
 
 
@@ -57,7 +57,7 @@ subplot(2,2,4)
 gscatter(Y(:,1),Y(:,2),species)
 title('Euclidean')
 
-fig2plotly(gcf)
+fig2plotly(gcf);
 ```
 
 In this case, the cosine, Chebychev, and Euclidean distance metrics give reasonably good separation of clusters. But the Mahalanobis distance metric does not give a good separation.
@@ -123,7 +123,7 @@ goodrows = not(any(isnan(meas),2));
 
 gscatter(Y(:,1),Y(:,2),species(goodrows))
 
-fig2plotly(gcf)
+fig2plotly(gcf);
 ```
 
 <!--------------------- EXAMPLE BREAK ------------------------->
@@ -178,7 +178,7 @@ scatter3(Y2(:,1),Y2(:,2),Y2(:,3),15,c,'filled')
 title('3-D Embedding')
 view(-50,8)
 
-fig2plotly(gcf)
+fig2plotly(gcf);
 ```
 
 <!--------------------- EXAMPLE BREAK ------------------------->

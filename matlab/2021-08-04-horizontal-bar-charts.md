@@ -4,7 +4,7 @@ name: Horizontal Bar
 display_as: basic
 order: 8
 permalink: matlab/horizontal-bar-charts/
-thumnail_github: thumbnail/horizontal-bar.jpg
+thumnail_github: horizontal-bar-charts.png
 layout: base
 language: matlab
 page_type: u-guide
@@ -18,7 +18,7 @@ Create a vector of four values. Display the values in a bar graph with one horiz
 y = [10 20 30 41];
 barh(y)
 
-fig2plotly(gcf)
+fig2plotly(gcf);
 ```
 
 <!--------------------- EXAMPLE BREAK ------------------------->
@@ -35,7 +35,7 @@ xlabel('Snowfall')
 ylabel('Year')
 legend({'Springfield','Fairview','Bristol','Jamesville'})
 
-fig2plotly(gcf)
+fig2plotly(gcf);
 ```
 
 
@@ -49,7 +49,7 @@ Create matrix `y`. Then display the values of `y` in a bar graph with a baseline
 y = [8 15 33; 30 35 40; 50 55 62];
 barh(y,'BaseValue',25)
 
-fig2plotly(gcf)
+fig2plotly(gcf);
 ```
 
 
@@ -64,7 +64,7 @@ x = [1980 1990 2000];
 y = [15 20 -5; 10 -17 21; -10 5 15];
 barh(x,y,'stacked')
 
-fig2plotly(gcf)
+fig2plotly(gcf);
 ```
 
 <!--------------------- EXAMPLE BREAK ------------------------->
@@ -78,7 +78,7 @@ y = [10 20 30 41];
 barh(y)
 yticklabels({'April','May','June','July'})
 
-fig2plotly(gcf)
+fig2plotly(gcf);
 ```
 
 <!--------------------- EXAMPLE BREAK ------------------------->
@@ -95,7 +95,7 @@ X = reordercats(X,{'Small','Medium','Large','Extra Large'});
 Y = [10 21 33 52];
 barh(X,Y)
 
-fig2plotly(gcf)
+fig2plotly(gcf);
 ```
 
 
@@ -110,7 +110,7 @@ x = [1 2 3];
 vals = [2 3 6; 11 23 26];
 b = barh(x,vals);
 
-fig2plotly(gcf)
+fig2plotly(gcf);
 ```
 
 Display the values as labels at the tips of the first series of bars. To do this, get the coordinates of the tips of the bars by getting the `XEndPoints` and `YEndPoints` properties of the first `Bar` object. Since horizontal bar graphs have rotated axes, you must switch the values of `XEndPoints` and `YEndPoints` before passing them to the `text` function. Add a padding value of `0.3` to `YEndpoints` so that the text does not touch the edges of the bars. Then call the `text` function to display the labels.
@@ -125,7 +125,7 @@ ytips1 = b(1).XEndPoints;
 labels1 = string(b(1).YData);
 text(xtips1,ytips1,labels1,'VerticalAlignment','middle')
 
-fig2plotly(gcf)
+fig2plotly(gcf);
 ```
 
 
@@ -146,7 +146,7 @@ ytips2 = b(2).XEndPoints;
 labels2 = string(b(2).YData);
 text(xtips2,ytips2,labels2,'VerticalAlignment','middle')
 
-fig2plotly(gcf)
+fig2plotly(gcf);
 ```
 
 
@@ -161,7 +161,7 @@ y = [10 22 30 42];
 width = 0.4;
 barh(y,width,'red');
 
-fig2plotly(gcf)
+fig2plotly(gcf);
 ```
 
 
@@ -175,7 +175,7 @@ Create matrix `y` in which each column is a series of data. Then display the dat
 y = [10 15 20; 30 35 40; 50 55 62];
 b = barh(y);
 
-fig2plotly(gcf)
+fig2plotly(gcf);
 ```
 
 Modify the second series of bars to be green with thick red edges.
@@ -188,7 +188,7 @@ b(2).FaceColor = [.2 .6 .5];
 b(2).EdgeColor = [.63 .08 .18];
 b(2).LineWidth = 2;
 
-fig2plotly(gcf)
+fig2plotly(gcf);
 ```
 
 
@@ -213,7 +213,7 @@ ax2 = nexttile;
 barh(ax2,x,y,'stacked')
 title('Stacked Style')
 
-fig2plotly(gcf)
+fig2plotly(gcf);
 ```
 
 

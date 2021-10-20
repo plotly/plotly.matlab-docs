@@ -4,7 +4,7 @@ name: Wind Rose and Polar Bar Charts
 display_as: scientific
 order: 19
 permalink: matlab/wind-rose-charts/
-thumnail_github: thumbnail/wind-rose.jpg
+thumnail_github: wind-rose-charts.png
 layout: base
 language: matlab
 page_type: u-guide
@@ -18,7 +18,7 @@ Create a vector of values between 0 and 2π. Create a histogram chart that shows
 theta = [0.1 1.1 5.4 3.4 2.3 4.5 3.2 3.4 5.6 2.3 2.1 3.5 0.6 6.1];
 polarhistogram(theta,6)
 
-fig2plotly(gcf, 'TreatAs', 'polarhistogram')
+fig2plotly(gcf, 'TreatAs', 'polarhistogram');
 ```
 
 
@@ -32,7 +32,7 @@ Create a histogram plot from 100,000 values between -π and π, and sort the dat
 theta = atan2(rand(100000,1)-0.5,2*(rand(100000,1)-0.5));
 polarhistogram(theta,25);
 
-fig2plotly(gcf, 'TreatAs', 'polarhistogram')
+fig2plotly(gcf, 'TreatAs', 'polarhistogram');
 ```
 
 <!--------------------- EXAMPLE BREAK ------------------------->
@@ -45,7 +45,7 @@ Create a histogram chart in polar coordinates, and then change its appearance. S
 theta = atan2(rand(100000,1)-0.5,2*(rand(100000,1)-0.5));
 polarhistogram(theta,25,'FaceColor','red','FaceAlpha',.3);
 
-fig2plotly(gcf, 'TreatAs', 'polarhistogram')
+fig2plotly(gcf, 'TreatAs', 'polarhistogram');
 ```
 
 <!--------------------- EXAMPLE BREAK ------------------------->
@@ -58,7 +58,7 @@ Create a histogram chart in polar coordinates. Assign the histogram object to th
 theta = atan2(rand(100000,1)-0.5,2*(rand(100000,1)-0.5));
 h = polarhistogram(theta,25)
 
-fig2plotly(gcf, 'TreatAs', 'polarhistogram')
+fig2plotly(gcf, 'TreatAs', 'polarhistogram');
 ```
 
 
@@ -70,7 +70,7 @@ h = polarhistogram(theta,25)
 
 h.DisplayStyle = 'stairs';
 
-fig2plotly(gcf, 'TreatAs', 'polarhistogram')
+fig2plotly(gcf, 'TreatAs', 'polarhistogram');
 ```
 
 

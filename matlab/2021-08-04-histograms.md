@@ -4,7 +4,7 @@ name: Histograms
 display_as: statistical
 order: 3
 permalink: matlab/histograms/
-thumnail_github: thumbnail/histogram.jpg
+thumnail_github: histograms.png
 layout: base
 language: matlab
 page_type: u-guide
@@ -18,7 +18,7 @@ Generate 10,000 random numbers and create a histogram. The `histogram` function 
 x = randn(10000,1);
 h = histogram(x)
 
-fig2plotly(gcf)
+fig2plotly(gcf);
 ```
 
 
@@ -46,7 +46,7 @@ x = randn(1000,1);
 nbins = 25;
 h = histogram(x,nbins)
 
-fig2plotly(gcf)
+fig2plotly(gcf);
 ```
 
 
@@ -71,7 +71,7 @@ Generate 1,000 random numbers and create a histogram.
 X = randn(1000,1);
 h = histogram(X)
 
-fig2plotly(gcf)
+fig2plotly(gcf);
 ```
 
 Use the `morebins` function to coarsely adjust the number of bins.
@@ -82,7 +82,7 @@ h = histogram(X)
 
 Nbins = morebins(h);
 
-fig2plotly(gcf)
+fig2plotly(gcf);
 ```
 
 
@@ -96,7 +96,7 @@ Nbins = morebins(h);
 
 h.NumBins = 31;
 
-fig2plotly(gcf)
+fig2plotly(gcf);
 ```
 
 
@@ -111,7 +111,7 @@ x = randn(1000,1);
 edges = [-10 -2:0.25:2 10];
 h = histogram(x,edges);
 
-fig2plotly(gcf)
+fig2plotly(gcf);
 ```
 
 
@@ -124,7 +124,7 @@ h = histogram(x,edges);
 
 h.Normalization = 'countdensity';
 
-fig2plotly(gcf)
+fig2plotly(gcf);
 ```
 
 
@@ -149,7 +149,7 @@ C = categorical(A,[1 0 NaN],{'yes','no','undecided'})
 
 h = histogram(C,'BarWidth',0.5)
 
-fig2plotly(gcf)
+fig2plotly(gcf);
 ```
 
 
@@ -163,7 +163,7 @@ Generate 1,000 random numbers and create a histogram using the `'probability'` n
 x = randn(1000,1);
 h = histogram(x,'Normalization','probability')
 
-fig2plotly(gcf)
+fig2plotly(gcf);
 ```
 
 
@@ -175,7 +175,7 @@ h = histogram(x,'Normalization','probability')
 
 S = sum(h.Values)
 
-fig2plotly(gcf)
+fig2plotly(gcf);
 ```
 
 
@@ -192,7 +192,7 @@ h1 = histogram(x);
 hold on
 h2 = histogram(y);
 
-fig2plotly(gcf)
+fig2plotly(gcf);
 ```
 
 Since the sample size and bin width of the histograms are different, it is difficult to compare them. Normalize the histograms so that all of the bar heights add to 1, and use a uniform bin width.
@@ -209,7 +209,7 @@ h1.BinWidth = 0.25;
 h2.Normalization = 'probability';
 h2.BinWidth = 0.25;
 
-fig2plotly(gcf)
+fig2plotly(gcf);
 ```
 
 <!--------------------- EXAMPLE BREAK ------------------------->
@@ -222,7 +222,7 @@ Generate 1,000 random numbers and create a histogram. Return the histogram objec
 x = randn(1000,1);
 h = histogram(x)
 
-fig2plotly(gcf)
+fig2plotly(gcf);
 ```
 
 Specify exactly how many bins to use.
@@ -233,7 +233,7 @@ h = histogram(x)
 
 h.NumBins = 15;
 
-fig2plotly(gcf)
+fig2plotly(gcf);
 ```
 
 Specify the edges of the bins with a vector. The first value in the vector is the left edge of the first bin. The last value is the right edge of the last bin.
@@ -246,7 +246,7 @@ h.NumBins = 15;
 
 h.BinEdges = [-3:3];
 
-fig2plotly(gcf)
+fig2plotly(gcf);
 ```
 
 Change the color of the histogram bars.
@@ -262,7 +262,7 @@ h.BinEdges = [-3:3];
 h.FaceColor = [0 0.5 0.5];
 h.EdgeColor = 'r';
 
-fig2plotly(gcf)
+fig2plotly(gcf);
 ```
 
 
@@ -276,7 +276,7 @@ Generate 5,000 normally distributed random numbers with a mean of 5 and a standa
 x = 2*randn(5000,1) + 5;
 histogram(x,'Normalization','pdf')
 
-fig2plotly(gcf)
+fig2plotly(gcf);
 ```
 
 In this example, the underlying distribution for the normally distributed data is known. You can, however, use the `'pdf'` histogram plot to determine the underlying probability distribution of the data by comparing it against a known probability density function.
@@ -306,7 +306,7 @@ sigma = 2;
 f = exp(-(y-mu).^2./(2*sigma^2))./(sigma*sqrt(2*pi));
 plot(y,f,'LineWidth',1.5)
 
-fig2plotly(gcf)
+fig2plotly(gcf);
 ```
 
 
@@ -327,7 +327,7 @@ Use `openfig` to load the histogram figure back into MATLAB. `openfig` also retu
 ```{matlab}
 h = openfig('histogram.fig');
 
-fig2plotly(gcf)
+fig2plotly(gcf);
 ```
 
 Use the `findobj` function to locate the correct object handle from the figure handle. This allows you to continue manipulating the original histogram object used to generate the figure.
@@ -337,7 +337,7 @@ h = openfig('histogram.fig');
 
 y = findobj(h,'type','histogram')
 
-fig2plotly(gcf)
+fig2plotly(gcf);
 ```
 
 

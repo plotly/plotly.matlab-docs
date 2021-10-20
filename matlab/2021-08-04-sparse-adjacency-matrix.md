@@ -2,9 +2,9 @@
 description: How to make Sparse Adjacency Matrixes in MATLAB<sup>&reg;</sup> with Plotly.
 name: Sparse Adjacency Matrix
 display_as: scientific
-order: 
+order: 22
 permalink: matlab/sparse-adjacency-matrix/
-thumnail_github: thumbnail/
+thumnail_github: sparse-adjacency-matrix.png
 layout: base
 language: matlab
 page_type: u-guide
@@ -18,7 +18,7 @@ Plot the 60-by-60 sparse adjacency matrix of the connectivity graph of the Buckm
 B = bucky;
 spy(B)
 
-fig2plotly(gcf)
+fig2plotly(gcf);
 ```
 
 
@@ -28,7 +28,7 @@ Specify the color and marker.
 B = bucky;
 spy(B,'ro')
 
-fig2plotly(gcf)
+fig2plotly(gcf);
 ```
 
 Also specify the marker size.
@@ -37,7 +37,7 @@ Also specify the marker size.
 B = bucky;
 spy(B,'ro',2)
 
-fig2plotly(gcf)
+fig2plotly(gcf);
 ```
 
 

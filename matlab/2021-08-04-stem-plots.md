@@ -4,7 +4,7 @@ name: Stem Plots
 display_as: statistical
 order: 17
 permalink: matlab/stem-plots/
-thumnail_github: thumbnail/
+thumnail_github: stem-plots.png
 layout: base
 language: matlab
 page_type: u-guide
@@ -19,7 +19,7 @@ figure
 Y = linspace(-2*pi,2*pi,50);
 stem(Y)
 
-fig2plotly(gcf)
+fig2plotly(gcf);
 ```
 
 Data values are plotted as stems extending from the baseline and terminating at the data value. The length of `Y` automatically determines the position of each stem on the x-axis. 
@@ -38,7 +38,7 @@ X = linspace(0,2*pi,50)';
 Y = [cos(X), 0.5*sin(X)];
 stem(Y)
 
-fig2plotly(gcf)
+fig2plotly(gcf);
 ```
 
 Each column of `Y` is plotted as a separate series, and entries in the same row of `Y` are plotted against the same x value. The number of rows in `Y` automatically generates the position of each stem on the x-axis.
@@ -57,7 +57,7 @@ X = linspace(0,2*pi,50)';
 Y = cos(X);
 stem(X,Y)
 
-fig2plotly(gcf)
+fig2plotly(gcf);
 ```
 
 The first vector input determines the position of each stem on the x-axis. 
@@ -76,7 +76,7 @@ X = linspace(0,2*pi,50)';
 Y = [cos(X), 0.5*sin(X)];
 stem(X,Y)
 
-fig2plotly(gcf)
+fig2plotly(gcf);
 ```
 
 The vector input determines the x-axis positions for both data series. 
@@ -97,7 +97,7 @@ X = [x1, x2];
 Y = [cos(x1), 0.5*sin(x2)];
 stem(X,Y)
 
-fig2plotly(gcf)
+fig2plotly(gcf);
 ```
 
 Each column of `X` is plotted against the corresponding column of `Y`. 
@@ -115,7 +115,7 @@ X = linspace(0,10,20)';
 Y = (exp(0.25*X));
 stem(X,Y,'filled')
 
-fig2plotly(gcf)
+fig2plotly(gcf);
 ```
 
 <!--------------------- EXAMPLE BREAK ------------------------->
@@ -130,7 +130,7 @@ X = linspace(0,2*pi,50)';
 Y = (exp(X).*sin(X));
 stem(X,Y,':diamondr')
 
-fig2plotly(gcf)
+fig2plotly(gcf);
 ```
 
 To color the inside of the diamonds, use the `'fill'` option. 
@@ -151,7 +151,7 @@ stem(X,Y,'LineStyle','-.',...
      'MarkerFaceColor','red',...
      'MarkerEdgeColor','green')
 
-fig2plotly(gcf)
+fig2plotly(gcf);
 ```
 
 The stem remains the default color. 
@@ -178,7 +178,7 @@ stem(ax1,x,y1)
 ax2 = nexttile;
 stem(ax2,x,y2)
 
-fig2plotly(gcf)
+fig2plotly(gcf);
 ```
 
 
@@ -194,7 +194,7 @@ Y = X.^3;
 Z = exp(X).*cos(Y);
 h = stem3(X,Y,Z,'filled');
 
-fig2plotly(gcf)
+fig2plotly(gcf);
 ```
 
 Change the color to magenta and set the marker face color to yellow. Use `view` to adjust the angle of the axes in the figure. Use dot notation to set properties.
@@ -209,7 +209,7 @@ h.Color = 'm';
 h.MarkerFaceColor = 'y';
 view(-10,35)
 
-fig2plotly(gcf)
+fig2plotly(gcf);
 ```
 
 
@@ -225,7 +225,7 @@ X = linspace(0,2*pi,50);
 Y = exp(0.3*X).*sin(3*X);
 h = stem(X,Y);
 
-fig2plotly(gcf)
+fig2plotly(gcf);
 ```
 
 Change the line style of the baseline. Use dot notation to set properties.
@@ -238,7 +238,7 @@ h = stem(X,Y);
 hbase = h.BaseLine; 
 hbase.LineStyle = '--';
 
-fig2plotly(gcf)
+fig2plotly(gcf);
 ```
 
 Hide the baseline by setting its `Visible` property to `'off'` . 
@@ -253,7 +253,7 @@ hbase.LineStyle = '--';
 
 hbase.Visible = 'off';
 
-fig2plotly(gcf)
+fig2plotly(gcf);
 ```
 
 
@@ -269,7 +269,7 @@ X = linspace(0,2*pi,50)';
 Y = (exp(0.3*X).*sin(3*X));
 stem(X,Y,'BaseValue',2);
 
-fig2plotly(gcf)
+fig2plotly(gcf);
 ```
 
 

@@ -4,7 +4,7 @@ name: Annotated Heatmaps
 display_as: scientific
 order: 7
 permalink: matlab/annotated-heatmap/
-thumnail_github: thumbnail/ann_heat.jpg
+thumnail_github: annotated-heatmap.png
 layout: base
 language: matlab
 page_type: u-guide
@@ -22,7 +22,7 @@ tbl = table(LastName,Age,Gender,SelfAssessedHealthStatus,...
     Smoker,Weight,Location);
 h = heatmap(tbl,'Smoker','SelfAssessedHealthStatus');
 
-fig2plotly(gcf)
+fig2plotly(gcf);
 ```
 
 <!--------------------- EXAMPLE BREAK ------------------------->
@@ -39,7 +39,7 @@ tbl = table(LastName,Age,Gender,SelfAssessedHealthStatus,...
     Smoker,Weight,Location);
 h = heatmap(tbl,'Smoker','SelfAssessedHealthStatus');
 
-fig2plotly(gcf)
+fig2plotly(gcf);
 ```
 
 Reorder the labels along the y-axis. 
@@ -52,7 +52,7 @@ h = heatmap(tbl,'Smoker','SelfAssessedHealthStatus');
 
 h.YDisplayData = {'Excellent','Good','Fair','Poor'};
 
-fig2plotly(gcf)
+fig2plotly(gcf);
 ```
 
 Alternatively, you can reorder the labels by changing the data to categorical data and then reordering the categories using the `reordercats` function. Similarly, you can add, remove, or rename the heatmap labels using the `addcats`, `removecats`, or `renamecats` functions, respectively.
@@ -72,7 +72,7 @@ tbl = table(LastName,Age,Gender,SelfAssessedHealthStatus,...
     Smoker,Weight,Location);
 h = heatmap(tbl,'Smoker','SelfAssessedHealthStatus','ColorVariable','Age');
 
-fig2plotly(gcf)
+fig2plotly(gcf);
 ```
 
 <!--------------------- EXAMPLE BREAK ------------------------->
@@ -89,7 +89,7 @@ tbl = table(LastName,Age,Gender,SelfAssessedHealthStatus,...
     Smoker,Weight,Location);
 h = heatmap(tbl,'Smoker','SelfAssessedHealthStatus','ColorVariable','Age','ColorMethod','median');
 
-fig2plotly(gcf)
+fig2plotly(gcf);
 ```
 
 
@@ -103,7 +103,7 @@ Create a matrix of data. Then create a heatmap of the matrix values. The default
 cdata = [45 60 32; 43 54 76; 32 94 68; 23 95 58];
 h = heatmap(cdata);
 
-fig2plotly(gcf)
+fig2plotly(gcf);
 ```
 
 <!--------------------- EXAMPLE BREAK ------------------------->
@@ -122,7 +122,7 @@ h.Title = 'T-Shirt Orders';
 h.XLabel = 'Sizes';
 h.YLabel = 'Colors';
 
-fig2plotly(gcf)
+fig2plotly(gcf);
 ```
 
 <!--------------------- EXAMPLE BREAK ------------------------->
@@ -145,7 +145,7 @@ T = readtable('outages.csv');
 
 h = heatmap(T,'Region','Cause');
 
-fig2plotly(gcf)
+fig2plotly(gcf);
 ```
 
 Normalize the colors along each column. The smallest value in each column maps to the first color in the colormap and the largest value maps to the last color. The last color indicates the cause that caused the most power outages for each region.
@@ -157,7 +157,7 @@ h = heatmap(T,'Region','Cause');
 
 h.ColorScaling = 'scaledcolumns';
 
-fig2plotly(gcf)
+fig2plotly(gcf);
 ```
 
 Normalize the colors along each row instead. The smallest value in each row maps to the first color in the colormap and the largest value maps to the last color. The last color indicates the region that experienced the most power outages due to each cause.
@@ -169,7 +169,7 @@ h = heatmap(T,'Region','Cause');
 
 h.ColorScaling = 'scaledrows';
 
-fig2plotly(gcf)
+fig2plotly(gcf);
 ```
 
 <!--------------------- EXAMPLE BREAK ------------------------->
@@ -208,7 +208,7 @@ ylabels = categories(years);
 nummonths = numel(xlabels);
 numyears = numel(ylabels);
 
-fig2plotly(gcf)
+fig2plotly(gcf);
 ```
 
 Convert the categorical `months` and `years` arrays into numeric indices to use with the `accumarray` function. Compute the color data as the maximum temperature for each month and year combination using the `accumarray` function. Use `NaN` for missing month and year combinations.
@@ -250,7 +250,7 @@ cdata = accumarray([y,x],temps,[numyears,nummonths],@max,NaN);
 
 h = heatmap(xlabels,ylabels,cdata);
 
-fig2plotly(gcf)
+fig2plotly(gcf);
 ```
 
 Note: You can use the `reordercats` function for categorical arrays to reorder the axis labels.

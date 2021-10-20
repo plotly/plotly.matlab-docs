@@ -4,7 +4,7 @@ name: Multiple Chart Types
 display_as: file_settings
 order: 17
 permalink: matlab/graphing-multiple-chart-types/
-thumnail_github: thumbnail/multiple-chart-type.jpg
+thumnail_github: graphing-multiple-chart-types.png
 layout: base
 language: matlab
 page_type: u-guide

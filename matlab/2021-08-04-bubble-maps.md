@@ -4,7 +4,7 @@ name: Bubble Maps
 display_as: maps
 order: 4
 permalink: matlab/bubble-maps/
-thumnail_github: thumbnail/bubble-map.jpg
+thumnail_github: bubble-maps.png
 layout: base
 language: matlab
 page_type: u-guide
@@ -36,7 +36,7 @@ tsunamis.Cause = categorical(tsunamis.Cause);
 geobubble(tsunamis,'Latitude','Longitude', ...
     'SizeVariable','MaxHeight','ColorVariable','Cause')
 
-fig2plotly(gcf)
+fig2plotly(gcf);
 ```
 
 
@@ -57,7 +57,7 @@ tsunamis = readtable('tsunamis.xlsx');
 
 geobubble(tsunamis.Latitude,tsunamis.Longitude,tsunamis.MaxHeight)
 
-fig2plotly(gcf)
+fig2plotly(gcf);
 ```
 
 
@@ -88,7 +88,7 @@ cause = categorical(tsunamis.Cause);
 
 geobubble(tsunamis.Latitude,tsunamis.Longitude,tsunamis.MaxHeight,cause)
 
-fig2plotly(gcf)
+fig2plotly(gcf);
 ```
 
 
@@ -119,7 +119,7 @@ colordata = categorical(tsunamis.Cause);
 
 gb = geobubble(tsunamis.Latitude,tsunamis.Longitude,tsunamis.MaxHeight,colordata,'Title','Tsunamis');
 
-fig2plotly(gcf)
+fig2plotly(gcf);
 ```
 
 Use properties of the geographic bubble chart to modify the chart. For example, add titles to the size and color legends. (If you specify the table as an argument, `geobubble` adds legend titles automatically, using the names of table variables.)
@@ -134,7 +134,7 @@ gb = geobubble(tsunamis.Latitude,tsunamis.Longitude,tsunamis.MaxHeight,colordata
 gb.SizeLegendTitle = 'Max Height';
 gb.ColorLegendTitle = 'Cause';
 
-fig2plotly(gcf)
+fig2plotly(gcf);
 ```
 
 

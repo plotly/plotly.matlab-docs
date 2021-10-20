@@ -4,7 +4,7 @@ name: ML Regression
 display_as: ai_ml
 order: 1
 permalink: matlab/ml-regression/
-thumnail_github: thumbnail/ml-regression.png
+thumnail_github: ml-regression.png
 layout: base
 language: matlab
 page_type: u-guide
@@ -52,7 +52,7 @@ ylabel('Fatal traffic accidents per state')
 title('Linear Regression Relation Between Accidents & Population')
 grid on
 
-fig2plotly(gcf)
+fig2plotly(gcf);
 ```
 
 
@@ -85,5 +85,5 @@ yCalc2 = X*b;
 plot(x,yCalc2,'--')
 legend('Data','Slope','Slope & Intercept','Location','best');
 
-fig2plotly(gcf)
+fig2plotly(gcf);
 ```

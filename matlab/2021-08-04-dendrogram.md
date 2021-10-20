@@ -4,7 +4,7 @@ name: Dendrograms
 display_as: scientific
 order: 6
 permalink: matlab/dendrogram/
-thumnail_github: thumbnail/dendrogram.jpg
+thumnail_github: dendrogram.png
 layout: base
 language: matlab
 page_type: u-guide
@@ -29,7 +29,7 @@ tree = linkage(X,'average');
 
 dendrogram(tree)
 
-fig2plotly(gcf)
+fig2plotly(gcf);
 ```
 
 <!--------------------- EXAMPLE BREAK ------------------------->
@@ -69,7 +69,7 @@ leafOrder = optimalleaforder(tree,D)
 
 dendrogram(tree,'Reorder',leafOrder)
 
-fig2plotly(gcf)
+fig2plotly(gcf);
 ```
 
 The order of the leaf nodes in the dendrogram plot corresponds - from left to right - to the permutation in `leafOrder`.
@@ -108,7 +108,7 @@ dendrogram(tree,0)
 
 [~,T] = dendrogram(tree,25);
 
-fig2plotly(gcf)
+fig2plotly(gcf);
 ```
 
 
@@ -148,7 +148,7 @@ tree = linkage(X,'average');
 H = dendrogram(tree,'Orientation','left','ColorThreshold','default');
 set(H,'LineWidth',2)
 
-fig2plotly(gcf)
+fig2plotly(gcf);
 ```
 
 <!--------------------- EXAMPLE BREAK ------------------------->

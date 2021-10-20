@@ -4,7 +4,7 @@ name: Waterfall Plots
 display_as: financial
 order: 3
 permalink: matlab/waterfall-charts/
-thumnail_github: thumbnail/waterfall-charts.jpg
+thumnail_github: waterfall-charts.png
 layout: base
 language: matlab
 page_type: u-guide
@@ -36,7 +36,7 @@ CouponRate, Settle, Maturity, Period, Basis)
 
 cfplot(CFlowDates, CFlowAmounts, 'ShowAmnt', [1 2])
 
-fig2plotly(gcf)
+fig2plotly(gcf);
 ```
 
 Group the second and third cash flows. 
@@ -52,7 +52,7 @@ CouponRate, Settle, Maturity, Period, Basis)
 figure;
 cfplot(CFlowDates, CFlowAmounts, 'Groups', {[2 3]}, 'ShowAmnt', 1);
 
-fig2plotly(gcf)
+fig2plotly(gcf);
 ```
 
 Format the date axis and place ticks on actual cash flow dates. 
@@ -69,7 +69,7 @@ figure;
 cfplot(CFlowDates, CFlowAmounts, 'Groups', {[2 3]}, 'ShowAmnt', 1, ...
 'DateFormat', 6, 'DateSpacing', 100);
 
-fig2plotly(gcf)
+fig2plotly(gcf);
 ```
 
 Stack the cash flow arrows occurring on the same dates. 
@@ -86,7 +86,7 @@ figure;
 cfplot(CFlowDates, CFlowAmounts, 'Groups', {[2 3]}, 'ShowAmnt', 1, ...
 'DateFormat', 6, 'DateSpacing', 100, 'Stacked', 1);
 
-fig2plotly(gcf)
+fig2plotly(gcf);
 ```
 
 Form subplots of multiple groups and add titles using axes handles. 
@@ -106,7 +106,7 @@ figure;
 title(axes_handle(1), 'Group 1', 'FontWeight', 'bold');
 title(axes_handle(2), 'Group 2', 'FontWeight', 'bold');
 
-fig2plotly(gcf)
+fig2plotly(gcf);
 ```
 
 <!--------------------- EXAMPLE BREAK ------------------------->
@@ -124,7 +124,7 @@ Period = [1; 2; 2];  Basis = [1; 0; 0];
 CouponRate, Settle, Maturity, Period, Basis);
 cfplot(datetime(CFlowDates,'ConvertFrom','datenum','Locale','en_US'), CFlowAmounts, 'ShowAmnt', [1 2])
 
-fig2plotly(gcf)
+fig2plotly(gcf);
 ```
 
 <!--------------------- EXAMPLE BREAK ------------------------->
@@ -156,7 +156,7 @@ CFlowAmounts = [-PayCF;RecCF];
 cfplot(CFlowDates, CFlowAmounts, 'Groups', {[1 2]});
 xlabel('Numeric Cash Flow Dates');
 
-fig2plotly(gcf)
+fig2plotly(gcf);
 ```
 
 <!--------------------- EXAMPLE BREAK ------------------------->

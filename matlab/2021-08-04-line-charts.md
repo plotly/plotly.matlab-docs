@@ -4,7 +4,7 @@ name: Line Charts
 display_as: basic
 order: 2
 permalink: matlab/line-charts/
-thumnail_github: thumbnail/line-plot.jpg
+thumnail_github: line-charts.png
 layout: base
 language: matlab
 page_type: u-guide
@@ -19,7 +19,7 @@ x = 0:pi/100:2*pi;
 y = sin(x);
 plot(x,y)
 
-fig2plotly(gcf)
+fig2plotly(gcf);
 ```
 
 
@@ -37,7 +37,7 @@ y2 = cos(x);
 figure
 plot(x,y1,x,y2)
 
-fig2plotly(gcf)
+fig2plotly(gcf);
 ```
 
 
@@ -60,7 +60,7 @@ Y = magic(4)
 figure
 plot(Y)
 
-fig2plotly(gcf)
+fig2plotly(gcf);
 ```
 
 
@@ -80,7 +80,7 @@ y3 = sin(x-0.5);
 figure
 plot(x,y1,x,y2,'--',x,y3,':')
 
-fig2plotly(gcf)
+fig2plotly(gcf);
 ```
 
 MATLAB® cycles the line color through the default color order.
@@ -101,7 +101,7 @@ y3 = sin(x-0.5);
 figure
 plot(x,y1,'g',x,y2,'b--o',x,y3,'c*')
 
-fig2plotly(gcf)
+fig2plotly(gcf);
 ```
 
 <!--------------------- EXAMPLE BREAK ------------------------->
@@ -115,7 +115,7 @@ x = linspace(0,10);
 y = sin(x);
 plot(x,y,'-o','MarkerIndices',1:5:length(y))
 
-fig2plotly(gcf)
+fig2plotly(gcf);
 ```
 
 <!--------------------- EXAMPLE BREAK ------------------------->
@@ -135,7 +135,7 @@ plot(x,y,'--gs',...
     'MarkerEdgeColor','b',...
     'MarkerFaceColor',[0.5,0.5,0.5])
 
-fig2plotly(gcf)
+fig2plotly(gcf);
 ```
 
 <!--------------------- EXAMPLE BREAK ------------------------->
@@ -162,7 +162,7 @@ title('2-D Line Plot')
 xlabel('x')
 ylabel('cos(5x)')
 
-fig2plotly(gcf)
+fig2plotly(gcf);
 ```
 
 <!--------------------- EXAMPLE BREAK ------------------------->
@@ -177,7 +177,7 @@ y = rand(1,7);
 
 plot(t,y,'DurationTickFormat','mm:ss')
 
-fig2plotly(gcf)
+fig2plotly(gcf);
 ```
 
 
@@ -206,7 +206,7 @@ plot(ax2,x,y2)
 title(ax2,'Bottom Plot')
 ylabel(ax2,'sin(15x)')
 
-fig2plotly(gcf)
+fig2plotly(gcf);
 ```
 
 <!--------------------- EXAMPLE BREAK ------------------------->
@@ -221,7 +221,7 @@ y1 = sin(x);
 y2 = cos(x);
 p = plot(x,y1,x,y2);
 
-fig2plotly(gcf)
+fig2plotly(gcf);
 ```
 
 Change the line width of the first line to 2. Add star markers to the second line. Use dot notation to set properties.
@@ -235,7 +235,7 @@ p = plot(x,y1,x,y2);
 p(1).LineWidth = 2;
 p(2).Marker = '*';
 
-fig2plotly(gcf)
+fig2plotly(gcf);
 ```
 
 
@@ -256,7 +256,7 @@ y = r*sin(theta) + yc;
 plot(x,y)
 axis equal
 
-fig2plotly(gcf)
+fig2plotly(gcf);
 ```
 
 <!--------------------- EXAMPLE BREAK ------------------------->

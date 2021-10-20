@@ -4,7 +4,7 @@ name: 3D Horizontal Bar Plots
 display_as: 3d_charts
 order: 16
 permalink: matlab/3d-horizontal-bar-plots/
-thumnail_github: thumbnail/
+thumnail_github: 3d-horizontal-bar-plots.png
 layout: base
 language: matlab
 page_type: u-guide
@@ -28,7 +28,7 @@ Y = count(1:10,:);
 figure
 bar3h(Y)
 
-fig2plotly(gcf, 'TreatAs', 'bar3h')
+fig2plotly(gcf, 'TreatAs', 'bar3h');
 ```
 
 
@@ -55,7 +55,7 @@ figure
 bar3h(Y,width)
 title('Width of 0.5')
 
-fig2plotly(gcf, 'TreatAs', 'bar3h')
+fig2plotly(gcf, 'TreatAs', 'bar3h');
 ```
 
 <!--------------------- EXAMPLE BREAK ------------------------->
@@ -79,7 +79,7 @@ figure
 bar3h(Y,'grouped')
 title('Grouped Style Option')
 
-fig2plotly(gcf, 'TreatAs', 'bar3h')
+fig2plotly(gcf, 'TreatAs', 'bar3h');
 ```
 
 
@@ -104,7 +104,7 @@ figure
 bar3h(Y,'stacked')
 title('Stacked Style Option')
 
-fig2plotly(gcf, 'TreatAs', 'bar3h')
+fig2plotly(gcf, 'TreatAs', 'bar3h');
 ```
 
 

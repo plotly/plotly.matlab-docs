@@ -4,7 +4,7 @@ name: Static Image Export
 display_as: file_settings
 order: 5
 permalink: matlab/static-image-export/
-thumnail_github: thumbnail/static-image-export.png
+thumnail_github: static-image-export.png
 layout: base
 language: matlab
 page_type: u-guide

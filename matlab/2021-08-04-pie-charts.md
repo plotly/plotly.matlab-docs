@@ -4,7 +4,7 @@ name: Pie Charts
 display_as: basic
 order: 4
 permalink: matlab/pie-charts/
-thumnail_github: thumbnail/pie-chart.jpg
+thumnail_github: pie-charts.png
 layout: base
 language: matlab
 page_type: u-guide
@@ -18,7 +18,7 @@ Create a pie chart of vector `X`.
 X = [1 3 0.5 2.5 2];
 pie(X)
 
-fig2plotly(gcf)
+fig2plotly(gcf);
 ```
 
 Offset the second and fourth pie slices by setting the corresponding `explode` elements to 1.
@@ -29,7 +29,7 @@ X = [1 3 0.5 2.5 2];
 explode = [0 1 0 1 0];
 pie(X,explode)
 
-fig2plotly(gcf)
+fig2plotly(gcf);
 ```
 
 
@@ -45,7 +45,7 @@ X = 1:3;
 labels = {'Taxes','Expenses','Profit'};
 pie(X,labels)
 
-fig2plotly(gcf)
+fig2plotly(gcf);
 ```
 
 
@@ -60,7 +60,7 @@ X = 1:3;
 labels = {'Taxes','Expenses','Profit'};
 p = pie(X,labels)
 
-fig2plotly(gcf)
+fig2plotly(gcf);
 ```
 
 
@@ -76,7 +76,7 @@ t.BackgroundColor = 'cyan';
 t.EdgeColor = 'red';
 t.FontSize = 14;
 
-fig2plotly(gcf)
+fig2plotly(gcf);
 ```
 
 
@@ -90,7 +90,7 @@ Create a pie chart, and specify a format expression to display each label with t
 X = [1/3 2/3];
 pie(X,'%.3f%%')
 
-fig2plotly(gcf)
+fig2plotly(gcf);
 ```
 
 <!--------------------- EXAMPLE BREAK ------------------------->
@@ -103,7 +103,7 @@ Create a pie chart of vector `X` where the sum of the elements is less than 1.
 X = [0.19 0.22 0.41];
 pie(X)
 
-fig2plotly(gcf)
+fig2plotly(gcf);
 ```
 
 `pie` draws a partial pie because the sum of the elements is less than 1.
@@ -143,7 +143,7 @@ title('2011')
 lgd = legend(labels);
 lgd.Layout.Tile = 'east';
 
-fig2plotly(gcf)
+fig2plotly(gcf);
 ```
 
 
@@ -158,7 +158,7 @@ X = categorical({'North','South','North','East','South','West'});
 explode = {'North','South'};
 pie(X,explode)
 
-fig2plotly(gcf)
+fig2plotly(gcf);
 ```
 
 Now, use a logical vector to offset the same slices.
@@ -169,7 +169,7 @@ X = categorical({'North','South','North','East','South','West'});
 explode = [0 1 1 0];
 pie(X,explode)
 
-fig2plotly(gcf)
+fig2plotly(gcf);
 ```
 
 
@@ -186,7 +186,7 @@ explode = {};
 labels = {'E','N','S','W'};
 pie(X,explode,labels)
 
-fig2plotly(gcf)
+fig2plotly(gcf);
 ```
 
 Now, offset a slice and label all slices.
@@ -197,7 +197,7 @@ explode = {'West'};
 labels = {'E','N','S','W'};
 pie(X,explode,labels)
 
-fig2plotly(gcf)
+fig2plotly(gcf);
 ```
 
 

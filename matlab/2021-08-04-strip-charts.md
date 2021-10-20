@@ -4,7 +4,7 @@ name: Strip Plots
 display_as: statistical
 order: 14
 permalink: matlab/strip-charts/
-thumnail_github: thumbnail/figure-labels.png
+thumnail_github: strip-charts.png
 layout: base
 language: matlab
 page_type: u-guide
@@ -21,7 +21,7 @@ x = vco(sin(2*pi*t),[10 490],fs);
 
 strips(x,0.25,fs)
 
-fig2plotly(gcf)
+fig2plotly(gcf);
 ```
 
 <!--------------------- EXAMPLE BREAK ------------------------->
@@ -41,7 +41,7 @@ load mtlb
 
 strips(mtlb,0.18,Fs,1.25)
 
-fig2plotly(gcf)
+fig2plotly(gcf);
 ```
 
 <!--------------------- EXAMPLE BREAK ------------------------->
