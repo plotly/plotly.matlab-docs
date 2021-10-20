@@ -4,7 +4,7 @@ name: Sending Data to Chart Studio Graphs
 display_as: chart_studio
 order: 1
 permalink: matlab/sending-data-to-charts/
-thumnail_github: thumbnail/ff-subplots.jpg
+thumnail_github: sending-data-to-charts.png
 layout: base
 language: matlab
 page_type: u-guide

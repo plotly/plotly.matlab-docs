@@ -4,7 +4,7 @@ name: Setting Graph Size
 display_as: file_settings
 order: 10
 permalink: matlab/setting-graph-size/
-thumnail_github: thumbnail/sizing.png
+thumnail_github: setting-graph-size.png
 layout: base
 language: matlab
 page_type: u-guide
@@ -38,7 +38,7 @@ layout = struct(...
 plotly(data, struct('layout', layout));
 ```
 {% capture plot_316767199016 %}
-{% raw %}{"data": {"x": [0, 1, 2, 3, 4, 5, 6, 7, 8], "y": [0, 1, 2, 3, 4, 5, 6, 7, 8], "type": "scatter"}, "layout": {"autosize": false, "width": 840, "height": 630, "margin": {"l": 50, "r": 50, "b": 100, "t": 100, "pad": 4}, "paper_bgcolor": "#7f7f7f", "plot_bgcolor": "#c7c7c7"}, "frames": []}{% endraw %}
+{% raw %}{"data": [{"x": [0, 1, 2, 3, 4, 5, 6, 7, 8], "y": [0, 1, 2, 3, 4, 5, 6, 7, 8], "type": "scatter"}], "layout": {"autosize": false, "width": 840, "height": 630, "margin": {"l": 50, "r": 50, "b": 100, "t": 100, "pad": 4}, "paper_bgcolor": "#7f7f7f", "plot_bgcolor": "#c7c7c7"}, "frames": []}{% endraw %}
 {% endcapture %}
 {% include posts/ssim_frame.html raw_json_file=plot_316767199016 index=316767199016 %}
 

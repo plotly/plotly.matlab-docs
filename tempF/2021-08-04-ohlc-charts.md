@@ -4,7 +4,7 @@ name: OHLC Plots
 display_as: financial
 order: 4
 permalink: matlab/ohlc-charts/
-thumnail_github: thumbnail/ohlc.jpg
+thumnail_github: ohlc-charts.png
 layout: base
 language: matlab
 page_type: u-guide

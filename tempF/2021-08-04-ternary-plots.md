@@ -4,7 +4,7 @@ name: Ternary Plots
 display_as: scientific
 order: 4
 permalink: matlab/ternary-plots/
-thumnail_github: thumbnail/v4-migration.png
+thumnail_github: ternary-plots.png
 layout: base
 language: matlab
 page_type: u-guide

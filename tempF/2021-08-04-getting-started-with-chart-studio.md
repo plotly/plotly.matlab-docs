@@ -4,7 +4,7 @@ name: Getting Started with Plotly and Chart Studio
 display_as: chart_studio
 order: 1
 permalink: matlab/getting-started-with-chart-studio/
-thumnail_github: thumbnail/bubble.jpg
+thumnail_github: getting-started-with-chart-studio.png
 layout: base
 language: matlab
 page_type: u-guide
@@ -73,7 +73,7 @@ plotlysetup_online('DemoAccount', 'lr1c37zw81')</code></pre>
     <h2 >Start Plotting <b>Online</b>!</h2>
     <div class="content-box">
         <p >
-            Now you can convert your MATLAB<sup>&reg;</sup> figures into beautiful, interactive, online graphs with <code class="no-padding">fig2plotly(gcf)</code>:
+            Now you can convert your MATLAB<sup>&reg;</sup> figures into beautiful, interactive, online graphs with <code class="no-padding">fig2plotly(gcf);</code>:
         </p>
 
         <pre><code>[X,Y,Z] = peaks;
@@ -82,7 +82,7 @@ contour(X,Y,Z,20);
 fig2plotly(gcf, 'offline', false)</code></pre>
 
         <p >
-                Note: <code class="no-padding">fig2plotly(gcf)</code> will render your plot using Plotly's own color and styling by default. To preserve your original MATLAB<sup>&reg;</sup> color and styling, use: <code class="no-padding">fig2plotly(gcf,'strip',false)</code>.
+                Note: <code class="no-padding">fig2plotly(gcf);</code> will render your plot using Plotly's own color and styling by default. To preserve your original MATLAB<sup>&reg;</sup> color and styling, use: <code class="no-padding">fig2plotly(gcf,'strip',false)</code>.
         </p>
 
         <p >
