@@ -4,7 +4,7 @@ name: 3D Surface Plots
 display_as: 3d_charts
 order: 3
 permalink: matlab/3d-surface-plots/
-thumnail_github: thumbnail/3d-surface.jpg
+thumnail_github: 3d-surface-plots.png
 layout: base
 language: matlab
 page_type: u-guide
@@ -90,7 +90,7 @@ Create three matrices of the same size. Then plot them as a surface using colorm
 Z = sin(X) + cos(Y);
 surfl(X,Y,Z)
 
-fig2plotly(gcf)
+fig2plotly(gcf, 'TreatAs', 'surfl');
 ```
 
 <!--------------------- EXAMPLE BREAK ------------------------->
@@ -104,7 +104,7 @@ Create three matrices of the same size. Then plot them as a surface with highlig
 Z = sin(X) + cos(Y);
 sl = surfl(X,Y,Z,'light');
 
-fig2plotly(gcf)
+fig2plotly(gcf, 'TreatAs', 'surfl');
 ```
 
 Index into `sl` to access and modify properties of the surface object and the light object after they are created. The surface plot is accessible as `sl(1)` and the light object as `sl(2)`. For example, change the color of the light by setting the `Color` property of the light object.
@@ -116,7 +116,7 @@ sl = surfl(X,Y,Z,'light');
 
 sl(2).Color = 'r';
 
-fig2plotly(gcf)
+fig2plotly(gcf, 'TreatAs', 'surfl');
 ```
 
 
@@ -143,7 +143,7 @@ k = [.65 .4 .3 10];
 
 sl = surfl(X,Y,Z,s,k);
 
-fig2plotly(gcf)
+fig2plotly(gcf, 'TreatAs', 'surfl');
 ```
 
 Use `sl` to access and modify properties of the surface object after it is created. For example, hide the edges by setting the `EdgeColor` property.
@@ -158,7 +158,7 @@ sl = surfl(X,Y,Z,s,k);
 
 sl.EdgeColor = 'none';
 
-fig2plotly(gcf)
+fig2plotly(gcf, 'TreatAs', 'surfl');
 ```
 
 <!--------------------- EXAMPLE BREAK ------------------------->
@@ -175,7 +175,7 @@ Y = sin(Z).*sin(T);
 
 surf(X,Y,Z)
 
-fig2plotly(gcf)
+fig2plotly(gcf);
 ```
 
 <!--------------------- EXAMPLE BREAK ------------------------->
