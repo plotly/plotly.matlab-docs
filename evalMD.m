@@ -8,7 +8,7 @@ addpath(genpath('../plotly_matlab/plotly'));
 fileList = dir('matlab/*.md');
 
 % Loop over all files
-for i = 1:length(fileList)
+for i = 1 %:length(fileList)
     fileName = fullfile(fileList(i).folder,fileList(i).name);
     fprintf('Evaluating (%03d): %s\n',i,['matlab/',fileList(i).name]);
     mdContents = readlines(fileName);
@@ -55,7 +55,7 @@ for i = 1:length(st)
     tempStr = arrayfun(@(x) regexprep(x,"fig2plotly *\( *gcf *","fig2plotly(gcf,'writeFile',false,'open',false"), tempStr);
     tempStr = arrayfun(@(x) regexprep(x,"fig2plotly *\( *fig *","fig2plotly(fig,'writeFile',false,'open',false"), tempStr);
     tempStr = arrayfun(@(x) regexprep(x,"fig2plotly *\( *'","fig2plotly(gcf,'writeFile',false,'open',false,'"), tempStr);
-    tempStr = arrayfun(@(x) regexprep(x,"^plotly *\( *data *\)","try; pf=plotly(data,struct('writeFile',false))"), tempStr);
+    tempStr = arrayfun(@(x) regexprep(x,"^plotly *\( *data *\)","pf=plotly(data,struct('writeFile',false))"), tempStr);
     tempStr = arrayfun(@(x) regexprep(x,"^plotly *\( *data *, *struct *\(","pf=plotly(data,struct('writeFile',false,"), tempStr);
     tempStr = arrayfun(@(x) regexprep(x,"p *= *plotlyfig *\( *gcf *","p=plotlyfig(gcf,'writeFile',false,'open',false"), tempStr);
     
@@ -66,9 +66,9 @@ for i = 1:length(st)
     ss2 = find(cellfun(@(x) ~isempty(x), ss2, 'UniformOutput', true), 1);
     
     if isempty(ss) && ~isempty(ss2)
-        insTxt = "json = m2json(struct('data',p.data,'layout',p.layout,'frames',{p.frames})); fprintf('%s\n',json); close all force;";
+        insTxt = "json = m2json(struct('data',{p.data},'layout',p.layout,'frames',{p.frames})); fprintf('%s\n',json); close all force;";
     else
-        insTxt = "json = m2json(struct('data',pf.data,'layout',pf.layout,'frames',{pf.frames})); fprintf('%s\n',json); close all force;";
+        insTxt = "json = m2json(struct('data',{pf.data},'layout',pf.layout,'frames',{pf.frames})); fprintf('%s\n',json); close all force;";
     end
     
     ss=[ss,ss2];
