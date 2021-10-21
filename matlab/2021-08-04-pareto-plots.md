@@ -26,7 +26,7 @@ fig2plotly(gcf);
 
 
 
-<!--------------------- EXAMPLE BREAK ------------------------->
+<!--------------------- EXAMPLE  BREAK ------------------------->
 
 ## Label Bars in Pareto Chart
 

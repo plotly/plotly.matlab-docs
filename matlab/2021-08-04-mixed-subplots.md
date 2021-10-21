@@ -145,6 +145,23 @@ fig2plotly(gcf);
 Reduce the spacing around the perimeter of the layout and around each tile by setting the Padding and TileSpacing properties to 'compact'.
 
 ```{matlab}
+x = linspace(0,30);
+y1 = sin(x);
+y2 = sin(x/2);
+y3 = sin(x/3);
+y4 = sin(x/4);
+
+% Create plots
+t = tiledlayout(2,2); % Requires R2019b or later
+nexttile
+plot(x,y1)
+nexttile
+plot(x,y2)
+nexttile
+plot(x,y3)
+nexttile
+plot(x,y4)
+
 t.Padding = 'compact';
 t.TileSpacing = 'compact';
 
@@ -179,6 +196,21 @@ fig2plotly(gcf);
 Add a shared title and shared axis labels by passing t to the `title`, `xlabel`, and `ylabel` functions. Move the plots closer together by removing the x-axis tick labels from the top plot and setting the `TileSpacing` property of t to 'compact'.
 
 ```{matlab}
+x1 = linspace(0,20,100);
+y1 = sin(x1);
+x2 = 3:17;
+y2 = rand(1,15);
+
+% Create plots.
+t = tiledlayout(2,1); % Requires R2019b or later
+ax1 = nexttile;
+plot(ax1,x1,y1)
+ax2 = nexttile;
+stem(ax2,x2,y2)
+
+% Link the axes
+linkaxes([ax1,ax2],'x');
+
 title(t,'My Title')
 xlabel(t,'x-values')
 ylabel(t,'y-values')

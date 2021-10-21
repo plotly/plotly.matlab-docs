@@ -19,8 +19,7 @@ CouponRate = [0.06; 0.05; 0.03];
 Settle = '03-Jun-1999';
 Maturity = ['15-Aug-2000';'15-Dec-2000';'15-Jun-2000'];
 Period = [1; 2; 2];  Basis = [1; 0; 0];
-[CFlowAmounts, CFlowDates] = cfamounts(...
-CouponRate, Settle, Maturity, Period, Basis)
+[CFlowAmounts, CFlowDates] = cfamounts(CouponRate, Settle, Maturity, Period, Basis);
 ```
 
 
@@ -31,8 +30,7 @@ CouponRate = [0.06; 0.05; 0.03];
 Settle = '03-Jun-1999';
 Maturity = ['15-Aug-2000';'15-Dec-2000';'15-Jun-2000'];
 Period = [1; 2; 2];  Basis = [1; 0; 0];
-[CFlowAmounts, CFlowDates] = cfamounts(...
-CouponRate, Settle, Maturity, Period, Basis)
+[CFlowAmounts, CFlowDates] = cfamounts(CouponRate, Settle, Maturity, Period, Basis);
 
 cfplot(CFlowDates, CFlowAmounts, 'ShowAmnt', [1 2])
 
@@ -46,8 +44,7 @@ CouponRate = [0.06; 0.05; 0.03];
 Settle = '03-Jun-1999';
 Maturity = ['15-Aug-2000';'15-Dec-2000';'15-Jun-2000'];
 Period = [1; 2; 2];  Basis = [1; 0; 0];
-[CFlowAmounts, CFlowDates] = cfamounts(...
-CouponRate, Settle, Maturity, Period, Basis)
+[CFlowAmounts, CFlowDates] = cfamounts(CouponRate, Settle, Maturity, Period, Basis);
 
 figure;
 cfplot(CFlowDates, CFlowAmounts, 'Groups', {[2 3]}, 'ShowAmnt', 1);
@@ -62,12 +59,10 @@ CouponRate = [0.06; 0.05; 0.03];
 Settle = '03-Jun-1999';
 Maturity = ['15-Aug-2000';'15-Dec-2000';'15-Jun-2000'];
 Period = [1; 2; 2];  Basis = [1; 0; 0];
-[CFlowAmounts, CFlowDates] = cfamounts(...
-CouponRate, Settle, Maturity, Period, Basis)
+[CFlowAmounts, CFlowDates] = cfamounts(CouponRate, Settle, Maturity, Period, Basis);
 
 figure;
-cfplot(CFlowDates, CFlowAmounts, 'Groups', {[2 3]}, 'ShowAmnt', 1, ...
-'DateFormat', 6, 'DateSpacing', 100);
+cfplot(CFlowDates, CFlowAmounts, 'Groups', {[2 3]}, 'ShowAmnt', 1, 'DateFormat', 6, 'DateSpacing', 100);
 
 fig2plotly(gcf);
 ```
@@ -79,12 +74,10 @@ CouponRate = [0.06; 0.05; 0.03];
 Settle = '03-Jun-1999';
 Maturity = ['15-Aug-2000';'15-Dec-2000';'15-Jun-2000'];
 Period = [1; 2; 2];  Basis = [1; 0; 0];
-[CFlowAmounts, CFlowDates] = cfamounts(...
-CouponRate, Settle, Maturity, Period, Basis)
+[CFlowAmounts, CFlowDates] = cfamounts(CouponRate, Settle, Maturity, Period, Basis);
 
 figure;
-cfplot(CFlowDates, CFlowAmounts, 'Groups', {[2 3]}, 'ShowAmnt', 1, ...
-'DateFormat', 6, 'DateSpacing', 100, 'Stacked', 1);
+cfplot(CFlowDates, CFlowAmounts, 'Groups', {[2 3]}, 'ShowAmnt', 1, 'DateFormat', 6, 'DateSpacing', 100, 'Stacked', 1);
 
 fig2plotly(gcf);
 ```
@@ -97,12 +90,10 @@ Settle = '03-Jun-1999';
 Maturity = ['15-Aug-2000';'15-Dec-2000';'15-Jun-2000'];
 Period = [1; 2; 2];  Basis = [1; 0; 0];
 [CFlowAmounts, CFlowDates] = cfamounts(...
-CouponRate, Settle, Maturity, Period, Basis)
+CouponRate, Settle, Maturity, Period, Basis);
 
 figure;
-[h, axes_handle] = cfplot(CFlowDates, CFlowAmounts, ...
-'Groups', {[1] [2 3]}, 'ShowAmnt', 1, 'Stacked', 2, ...
-'DateSpacing', [1 60 2 100], 'DateFormat', [1 12 2 6]);
+[h, axes_handle] = cfplot(CFlowDates, CFlowAmounts, 'Groups', {[1] [2 3]}, 'ShowAmnt', 1, 'Stacked', 2, 'DateSpacing', [1 60 2 100], 'DateFormat', [1 12 2 6]);
 title(axes_handle(1), 'Group 1', 'FontWeight', 'bold');
 title(axes_handle(2), 'Group 2', 'FontWeight', 'bold');
 
@@ -120,8 +111,7 @@ CouponRate = [0.06; 0.05; 0.03];
 Settle = '03-Jun-1999';
 Maturity = ['15-Aug-2000';'15-Dec-2000';'15-Jun-2000'];
 Period = [1; 2; 2];  Basis = [1; 0; 0];
-[CFlowAmounts, CFlowDates] = cfamounts(...
-CouponRate, Settle, Maturity, Period, Basis);
+[CFlowAmounts, CFlowDates] = cfamounts(CouponRate, Settle, Maturity, Period, Basis);
 cfplot(datetime(CFlowDates,'ConvertFrom','datenum','Locale','en_US'), CFlowAmounts, 'ShowAmnt', [1 2])
 
 fig2plotly(gcf);
@@ -135,22 +125,25 @@ Define the swap using the `swapbyzero` function.
 
 ```{matlab}
 Settle = datenum('08-Jun-2010');
-RateSpec = intenvset('Rates', [.005 .0075 .01 .014 .02 .025 .03]',...
-'StartDates',Settle, 'EndDates',{'08-Dec-2010','08-Jun-2011',...
-'08-Jun-2012','08-Jun-2013','08-Jun-2015','08-Jun-2017',...
-'08-Jun-2020'}');
+RateSpec = intenvset('Rates', [.005 .0075 .01 .014 .02 .025 .03]', 'StartDates',Settle, 'EndDates',{'08-Dec-2010','08-Jun-2011', '08-Jun-2012','08-Jun-2013','08-Jun-2015','08-Jun-2017', '08-Jun-2020'}');
 Maturity = datenum('15-Sep-2020');
 LegRate = [.025 50];
 LegType = [1 0]; % fixed/floating
 LatestFloatingRate = .005;
-[Price, SwapRate, AI, RecCF, RecCFDates, PayCF,PayCFDates] = ...
-swapbyzero(RateSpec, LegRate, Settle, Maturity,'LegType',LegType,...
-'LatestFloatingRate',LatestFloatingRate)
+[Price, SwapRate, AI, RecCF, RecCFDates, PayCF,PayCFDates] = swapbyzero(RateSpec, LegRate, Settle, Maturity,'LegType',LegType,'LatestFloatingRate',LatestFloatingRate);
 ```
 
 Define `CFlowDates` and `CFlowAmounts` for the swap and generate a cash flow plot using `cfplot`. 
 
 ```{matlab}
+Settle = datenum('08-Jun-2010');
+RateSpec = intenvset('Rates', [.005 .0075 .01 .014 .02 .025 .03]','StartDates',Settle, 'EndDates',{'08-Dec-2010','08-Jun-2011','08-Jun-2012','08-Jun-2013','08-Jun-2015','08-Jun-2017','08-Jun-2020'}');
+Maturity = datenum('15-Sep-2020');
+LegRate = [.025 50];
+LegType = [1 0]; % fixed/floating
+LatestFloatingRate = .005;
+[Price, SwapRate, AI, RecCF, RecCFDates, PayCF,PayCFDates] = swapbyzero(RateSpec, LegRate, Settle, Maturity,'LegType',LegType,'LatestFloatingRate',LatestFloatingRate);
+
 CFlowDates = [PayCFDates;RecCFDates];
 CFlowAmounts = [-PayCF;RecCF];
 cfplot(CFlowDates, CFlowAmounts, 'Groups', {[1 2]});

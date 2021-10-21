@@ -59,6 +59,6 @@ p.plotly;
 Edit, style, save, and export this streamline plot online:<br>
 <a href="https://plotly.com/~jackp/9526/">https://plotly.com/9526/~jackp/</a>
 
-<image src="https://i.imgur.com/4ZEWq9r.gif>
+<image src="https://i.imgur.com/4ZEWq9r.gif">
 
 <!--------------------- EXAMPLE BREAK ------------------------->
