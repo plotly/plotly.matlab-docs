@@ -35,7 +35,7 @@ geolimits([45 62],[-149 -123])
 fig2plotly(gcf);
 ```
 
-<!--------------------- EXAMPLE  BREAK ------------------------->
+<!--------------------- EXAMPLE BREAK ------------------------->
 
 ## Add Text to Geographic Plot
 

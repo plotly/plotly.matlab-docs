@@ -1,0 +1,79 @@
+---
+description: How to make Pareto Plots plots in MATLAB<sup>&reg;</sup> with Plotly.
+name: Pareto Plots
+display_as: financial
+order: 4
+permalink: matlab/pareto-plots/
+thumnail_github: pareto-plots.png
+layout: base
+language: matlab
+page_type: u-guide
+---
+
+## Create Pareto Chart
+
+Create a Pareto chart of vector `y`.
+
+```{matlab}
+y = [90,75,30,60,5,40,40,5];
+figure
+pareto(y)
+
+fig2plotly(gcf);
+```
+{% capture plot_64838008170 %}
+{% raw %}{"data": [{"xaxis": "x1", "yaxis": "y1", "type": "bar", "name": "", "visible": true, "orientation": "v", "x": [1, 2, 3, 4, 5, 6, 7, 8], "y": [90, 75, 60, 40, 40, 30, 5, 5], "marker": {"color": "rgb(0,113.985,188.955)", "line": {"color": "rgb(0,0,0)", "width": 0.5, "dash": "solid"}}, "showlegend": true}, {"xaxis": "x1", "yaxis": "y2", "type": "scatter", "visible": true, "x": [1, 2, 3, 4, 5, 6, 7, 8], "y": [90, 165, 225, 265, 305, 335, 340, 345], "name": "", "mode": "lines", "line": {"color": "rgb(0,113.985,188.955)", "width": 0.5, "dash": "solid"}, "marker": {"size": 6, "line": {"width": 0.5}, "color": "rgb(0,113.985,188.955)"}, "showlegend": false}], "layout": {"autosize": false, "margin": {"pad": 0, "l": 0, "r": 0, "b": 0, "t": 0}, "showlegend": false, "width": 840, "height": 630, "paper_bgcolor": "rgb(255,255,255)", "hovermode": "closest", "xaxis1": {"side": "bottom", "zeroline": false, "autorange": false, "linecolor": "rgb(38.250000,38.250000,38.250000)", "linewidth": 1, "exponentformat": "none", "tickfont": {"size": 10, "family": "Arial, sans-serif", "color": "rgb(38.250000,38.250000,38.250000)"}, "ticklen": 6.51, "tickcolor": "rgb(38.250000,38.250000,38.250000)", "tickwidth": 1, "tickangle": -0, "ticks": "inside", "showgrid": false, "gridcolor": "rgba(38.250000,,38.250000,38.250000,0.150000)", "type": "linear", "showticklabels": true, "tickmode": "array", "tickvals": [1, 2, 3, 4, 5, 6], "range": [0.5, 6.5], "mirror": "ticks", "ticktext": ["1", "2", "4", "7", "6", "3"], "titlefont": {"color": "rgb(38.250000,38.250000,38.250000)", "size": 11, "family": "Arial, sans-serif"}, "showline": true, "domain": [0.13, 0.905], "anchor": "y1"}, "scene1": {"domain": {"x": [0.13, 0.905], "y": [0.11, 0.925]}}, "yaxis1": {"side": "left", "zeroline": false, "autorange": false, "linecolor": "rgb(38.250000,38.250000,38.250000)", "linewidth": 1, "exponentformat": "none", "tickfont": {"size": 10, "family": "Arial, sans-serif", "color": "rgb(38.250000,38.250000,38.250000)"}, "ticklen": 6.51, "tickcolor": "rgb(38.250000,38.250000,38.250000)", "tickwidth": 1, "tickangle": -0, "ticks": "inside", "showgrid": false, "gridcolor": "rgba(38.250000,,38.250000,38.250000,0.150000)", "type": "linear", "showticklabels": true, "tickmode": "array", "tickvals": [0, 50, 100, 150, 200, 250, 300, 345], "range": [0, 345], "mirror": "ticks", "ticktext": ["0", "50", "100", "150", "200", "250", "300", "345"], "titlefont": {"color": "rgb(38.250000,38.250000,38.250000)", "size": 11, "family": "Arial, sans-serif"}, "showline": true, "domain": [0.11, 0.925], "anchor": "x1"}, "yaxis2": {"side": "right", "zeroline": false, "autorange": false, "linecolor": "rgb(38.250000,38.250000,38.250000)", "linewidth": 1, "exponentformat": "none", "tickfont": {"size": 10, "family": "Arial, sans-serif", "color": "rgb(38.250000,38.250000,38.250000)"}, "ticklen": 6.51, "tickcolor": "rgb(38.250000,38.250000,38.250000)", "tickwidth": 1, "tickangle": -0, "ticks": "inside", "showgrid": false, "gridcolor": "rgba(38.250000,,38.250000,38.250000,0.150000)", "type": "linear", "showticklabels": true, "tickmode": "array", "tickvals": [0, 50, 100, 150, 200, 250, 300, 345], "range": [0, 345], "mirror": false, "ticktext": ["0%", "14%", "29%", "43%", "58%", "72%", "87%", "100%"], "titlefont": {"color": "rgb(38.250000,38.250000,38.250000)", "size": 11, "family": "Arial, sans-serif"}, "showline": true, "domain": [0.11, 0.925], "anchor": "x1", "overlaying": "y1"}, "bargroupgap": 0.2, "bargap": 0.0625, "barmode": "group", "annotations": [{"showarrow": false, "xref": "paper", "yref": "paper", "xanchor": "center", "align": "center", "yanchor": "bottom", "text": "<b><b><\/b><\/b>", "x": 0.5175, "y": 0.935, "font": {"color": "rgb(0,0,0)", "family": "Arial, sans-serif", "size": 11}, "bordercolor": "rgba(0,0,0,0)", "textangle": 0, "borderwidth": 0.5, "borderpad": 3}, {"showarrow": false, "xref": "paper", "yref": "paper", "xanchor": "center", "align": "center", "yanchor": "bottom", "text": "<b><b><\/b><\/b>", "x": 0.5175, "y": 0.935, "font": {"color": "rgb(0,0,0)", "family": "Arial, sans-serif", "size": 11}, "bordercolor": "rgba(0,0,0,0)", "textangle": 0, "borderwidth": 0.5, "borderpad": 3}], "title": "<b><b><\/b><\/b>", "titlefont": {"color": "rgba(0,0,0,0)"}}, "frames": []}{% endraw %}
+{% endcapture %}
+{% include posts/ssim_frame.html raw_json_file=plot_64838008170 index=64838008170 %}
+
+
+`pareto` displays the elements in `y` as bars in descending order and labels each bar with its index in `y`. Since `pareto` displays only the first 95% of the cumulative distribution, some elements in `y` are not displayed. 
+
+
+
+<!--------------------- EXAMPLE BREAK ------------------------->
+
+## Label Bars in Pareto Chart
+
+Examine the cumulative productivity of a group of programmers to see how normal its distribution is. Label each bar with the name of the programmer.
+
+```{matlab}
+codelines = [200 120 555 608 1024 101 57 687];
+coders = {'Fred','Ginger','Norman','Max','Julia','Wally','Heidi','Pat'};
+
+figure
+pareto(codelines, coders)
+title('Lines of Code by Programmer')
+
+fig2plotly(gcf);
+```
+{% capture plot_17244219247 %}
+{% raw %}{"data": [{"xaxis": "x1", "yaxis": "y1", "type": "bar", "name": "", "visible": true, "orientation": "v", "x": [1, 2, 3, 4, 5, 6, 7, 8], "y": [1024, 687, 608, 555, 200, 120, 101, 57], "marker": {"color": "rgb(0,113.985,188.955)", "line": {"color": "rgb(0,0,0)", "width": 0.5, "dash": "solid"}}, "showlegend": true}, {"xaxis": "x1", "yaxis": "y2", "type": "scatter", "visible": true, "x": [1, 2, 3, 4, 5, 6, 7, 8], "y": [1024, 1711, 2319, 2874, 3074, 3194, 3295, 3352], "name": "", "mode": "lines", "line": {"color": "rgb(0,113.985,188.955)", "width": 0.5, "dash": "solid"}, "marker": {"size": 6, "line": {"width": 0.5}, "color": "rgb(0,113.985,188.955)"}, "showlegend": false}], "layout": {"autosize": false, "margin": {"pad": 0, "l": 0, "r": 0, "b": 0, "t": 0}, "showlegend": false, "width": 840, "height": 630, "paper_bgcolor": "rgb(255,255,255)", "hovermode": "closest", "xaxis1": {"side": "bottom", "zeroline": false, "autorange": false, "linecolor": "rgb(38.250000,38.250000,38.250000)", "linewidth": 1, "exponentformat": "none", "tickfont": {"size": 10, "family": "Arial, sans-serif", "color": "rgb(38.250000,38.250000,38.250000)"}, "ticklen": 6.51, "tickcolor": "rgb(38.250000,38.250000,38.250000)", "tickwidth": 1, "tickangle": -0, "ticks": "inside", "showgrid": false, "gridcolor": "rgba(38.250000,,38.250000,38.250000,0.150000)", "type": "linear", "showticklabels": true, "tickmode": "array", "tickvals": [1, 2, 3, 4, 5, 6], "range": [0.5, 6.5], "mirror": "ticks", "ticktext": ["Julia", "Pat", "Max", "Norman", "Fred", "Ginger"], "titlefont": {"color": "rgb(38.250000,38.250000,38.250000)", "size": 11, "family": "Arial, sans-serif"}, "showline": true, "domain": [0.13, 0.905], "anchor": "y1"}, "scene1": {"domain": {"x": [0.13, 0.905], "y": [0.11, 0.925]}}, "yaxis1": {"side": "left", "zeroline": false, "autorange": false, "linecolor": "rgb(38.250000,38.250000,38.250000)", "linewidth": 1, "exponentformat": "none", "tickfont": {"size": 10, "family": "Arial, sans-serif", "color": "rgb(38.250000,38.250000,38.250000)"}, "ticklen": 6.51, "tickcolor": "rgb(38.250000,38.250000,38.250000)", "tickwidth": 1, "tickangle": -0, "ticks": "inside", "showgrid": false, "gridcolor": "rgba(38.250000,,38.250000,38.250000,0.150000)", "type": "linear", "showticklabels": true, "tickmode": "array", "tickvals": [0, 500, 1000, 1500, 2000, 2500, 3000, 3352], "range": [0, 3352], "mirror": "ticks", "ticktext": ["0", "500", "1000", "1500", "2000", "2500", "3000", "3352"], "titlefont": {"color": "rgb(38.250000,38.250000,38.250000)", "size": 11, "family": "Arial, sans-serif"}, "showline": true, "domain": [0.11, 0.925], "anchor": "x1"}, "yaxis2": {"side": "right", "zeroline": false, "autorange": false, "linecolor": "rgb(38.250000,38.250000,38.250000)", "linewidth": 1, "exponentformat": "none", "tickfont": {"size": 10, "family": "Arial, sans-serif", "color": "rgb(38.250000,38.250000,38.250000)"}, "ticklen": 6.51, "tickcolor": "rgb(38.250000,38.250000,38.250000)", "tickwidth": 1, "tickangle": -0, "ticks": "inside", "showgrid": false, "gridcolor": "rgba(38.250000,,38.250000,38.250000,0.150000)", "type": "linear", "showticklabels": true, "tickmode": "array", "tickvals": [0, 500, 1000, 1500, 2000, 2500, 3000, 3352], "range": [0, 3352], "mirror": false, "ticktext": ["0%", "15%", "30%", "45%", "60%", "75%", "89%", "100%"], "titlefont": {"color": "rgb(38.250000,38.250000,38.250000)", "size": 11, "family": "Arial, sans-serif"}, "showline": true, "domain": [0.11, 0.925], "anchor": "x1", "overlaying": "y1"}, "bargroupgap": 0.2, "bargap": 0.0625, "barmode": "group", "annotations": [{"showarrow": false, "xref": "paper", "yref": "paper", "xanchor": "center", "align": "center", "yanchor": "bottom", "text": "<b>Lines of Code by Programmer<\/b>", "x": 0.5175, "y": 0.935, "font": {"color": "rgb(0,0,0)", "family": "Arial, sans-serif", "size": 11}, "bordercolor": "rgba(0,0,0,0)", "textangle": 0, "borderwidth": 0.5, "borderpad": 3}, {"showarrow": false, "xref": "paper", "yref": "paper", "xanchor": "center", "align": "center", "yanchor": "bottom", "text": "<b><b><\/b><\/b>", "x": 0.5175, "y": 0.935, "font": {"color": "rgb(0,0,0)", "family": "Arial, sans-serif", "size": 11}, "bordercolor": "rgba(0,0,0,0)", "textangle": 0, "borderwidth": 0.5, "borderpad": 3}], "title": "<b>Lines of Code by Programmer<\/b>", "titlefont": {"color": "rgba(0,0,0,0)"}}, "frames": []}{% endraw %}
+{% endcapture %}
+{% include posts/ssim_frame.html raw_json_file=plot_17244219247 index=17244219247 %}
+
+
+
+<!--------------------- EXAMPLE BREAK ------------------------->
+
+## Display All the Values in the Cumulative Distribution
+
+Create a Pareto chart that examines the preferred types of pie in a survey of 200 participants. Include all the values in the cumulative distribution by setting the `threshold` argument to `1`. 
+
+```{matlab}
+pies = {'Chocolate','Apple','Pecan','Cherry','Pumpkin'};
+votes = [35 50 30 5 80];
+pareto(votes,pies,1)
+ylabel('Votes')
+
+fig2plotly(gcf);
+```
+{% capture plot_931310225649 %}
+{% raw %}{"data": [{"xaxis": "x1", "yaxis": "y1", "type": "bar", "name": "", "visible": true, "orientation": "v", "x": [1, 2, 3, 4, 5], "y": [80, 50, 35, 30, 5], "marker": {"color": "rgb(0,113.985,188.955)", "line": {"color": "rgb(0,0,0)", "width": 0.5, "dash": "solid"}}, "showlegend": true}, {"xaxis": "x1", "yaxis": "y2", "type": "scatter", "visible": true, "x": [1, 2, 3, 4, 5], "y": [80, 130, 165, 195, 200], "name": "", "mode": "lines", "line": {"color": "rgb(0,113.985,188.955)", "width": 0.5, "dash": "solid"}, "marker": {"size": 6, "line": {"width": 0.5}, "color": "rgb(0,113.985,188.955)"}, "showlegend": false}], "layout": {"autosize": false, "margin": {"pad": 0, "l": 0, "r": 0, "b": 0, "t": 0}, "showlegend": false, "width": 840, "height": 630, "paper_bgcolor": "rgb(255,255,255)", "hovermode": "closest", "xaxis1": {"side": "bottom", "zeroline": false, "autorange": false, "linecolor": "rgb(38.250000,38.250000,38.250000)", "linewidth": 1, "exponentformat": "none", "tickfont": {"size": 10, "family": "Arial, sans-serif", "color": "rgb(38.250000,38.250000,38.250000)"}, "ticklen": 6.51, "tickcolor": "rgb(38.250000,38.250000,38.250000)", "tickwidth": 1, "tickangle": -0, "ticks": "inside", "showgrid": false, "gridcolor": "rgba(38.250000,,38.250000,38.250000,0.150000)", "type": "linear", "showticklabels": true, "tickmode": "array", "tickvals": [1, 2, 3, 4, 5], "range": [0.5, 5.5], "mirror": "ticks", "ticktext": ["Pumpkin", "Apple", "Chocolate", "Pecan", "Cherry"], "titlefont": {"color": "rgb(38.250000,38.250000,38.250000)", "size": 11, "family": "Arial, sans-serif"}, "showline": true, "domain": [0.13, 0.905], "anchor": "y1"}, "scene1": {"domain": {"x": [0.13, 0.905], "y": [0.11, 0.925]}}, "yaxis1": {"side": "left", "zeroline": false, "autorange": false, "linecolor": "rgb(38.250000,38.250000,38.250000)", "linewidth": 1, "exponentformat": "none", "tickfont": {"size": 10, "family": "Arial, sans-serif", "color": "rgb(38.250000,38.250000,38.250000)"}, "ticklen": 6.51, "tickcolor": "rgb(38.250000,38.250000,38.250000)", "tickwidth": 1, "tickangle": -0, "ticks": "inside", "showgrid": false, "gridcolor": "rgba(38.250000,,38.250000,38.250000,0.150000)", "type": "linear", "showticklabels": true, "tickmode": "array", "tickvals": [0, 20, 40, 60, 80, 100, 120, 140, 160, 180, 200], "range": [0, 200], "mirror": "ticks", "ticktext": ["0", "20", "40", "60", "80", "100", "120", "140", "160", "180", "200"], "title": "Votes", "titlefont": {"color": "rgb(38.250000,38.250000,38.250000)", "size": 11, "family": "Arial, sans-serif"}, "showline": true, "domain": [0.11, 0.925], "anchor": "x1"}, "yaxis2": {"side": "right", "zeroline": false, "autorange": false, "linecolor": "rgb(38.250000,38.250000,38.250000)", "linewidth": 1, "exponentformat": "none", "tickfont": {"size": 10, "family": "Arial, sans-serif", "color": "rgb(38.250000,38.250000,38.250000)"}, "ticklen": 6.51, "tickcolor": "rgb(38.250000,38.250000,38.250000)", "tickwidth": 1, "tickangle": -0, "ticks": "inside", "showgrid": false, "gridcolor": "rgba(38.250000,,38.250000,38.250000,0.150000)", "type": "linear", "showticklabels": true, "tickmode": "array", "tickvals": [0, 20, 40, 60, 80, 100, 120, 140, 160, 180, 200], "range": [0, 200], "mirror": false, "ticktext": ["0%", "10%", "20%", "30%", "40%", "50%", "60%", "70%", "80%", "90%", "100%"], "titlefont": {"color": "rgb(38.250000,38.250000,38.250000)", "size": 11, "family": "Arial, sans-serif"}, "showline": true, "domain": [0.11, 0.925], "anchor": "x1", "overlaying": "y1"}, "bargroupgap": 0.2, "bargap": 0.0625, "barmode": "group", "annotations": [{"showarrow": false, "xref": "paper", "yref": "paper", "xanchor": "center", "align": "center", "yanchor": "bottom", "text": "<b><b><\/b><\/b>", "x": 0.5175, "y": 0.935, "font": {"color": "rgb(0,0,0)", "family": "Arial, sans-serif", "size": 11}, "bordercolor": "rgba(0,0,0,0)", "textangle": 0, "borderwidth": 0.5, "borderpad": 3}, {"showarrow": false, "xref": "paper", "yref": "paper", "xanchor": "center", "align": "center", "yanchor": "bottom", "text": "<b><b><\/b><\/b>", "x": 0.5175, "y": 0.935, "font": {"color": "rgb(0,0,0)", "family": "Arial, sans-serif", "size": 11}, "bordercolor": "rgba(0,0,0,0)", "textangle": 0, "borderwidth": 0.5, "borderpad": 3}], "title": "<b><b><\/b><\/b>", "titlefont": {"color": "rgba(0,0,0,0)"}}, "frames": []}{% endraw %}
+{% endcapture %}
+{% include posts/ssim_frame.html raw_json_file=plot_931310225649 index=931310225649 %}
+
+
+
+<!--------------------- EXAMPLE BREAK ------------------------->
+

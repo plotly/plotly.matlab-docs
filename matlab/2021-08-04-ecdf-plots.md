@@ -10,7 +10,7 @@ language: matlab
 page_type: u-guide
 ---
 
-## Compute Empirical Cumulative Distribution Function 
+## Compute Empirical Cumulative Distribution Function
 
 Compute the Kaplan-Meier estimate of the cumulative distribution function (cdf) for simulated survival data. 
 

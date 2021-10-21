@@ -16,8 +16,7 @@ Use the `streamtube` function to indicate flow in the `wind` data set. The input
 
 ```{matlab}
 load wind
-[sx,sy,sz] = meshgrid(80,20:10:20,1:10:15);
-
+[sx,sy,sz] = meshgrid(80,20:10:50,0:5:15);
 streamtube(x,y,z,u,v,w,sx,sy,sz);
 view(3);
 axis tight
@@ -26,7 +25,6 @@ camlight;
 lighting gouraud
 
 fig2plotly(gcf);
-
 ```
 
 
@@ -38,10 +36,9 @@ Use vertex data returned by the `stream3` function and divergence data to visual
 
 ```{matlab}
 load wind
-[sx,sy,sz] = meshgrid(80,20:10:20,1:10:15);
+[sx,sy,sz] = meshgrid(80,20:10:50,0:5:15);
 verts = stream3(x,y,z,u,v,w,sx,sy,sz);
 div = divergence(x,y,z,u,v,w);
-
 streamtube(verts,x,y,z,-div);
 view(3);
 axis tight

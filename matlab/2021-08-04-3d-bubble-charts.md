@@ -24,7 +24,7 @@ bubblechart3(x,y,z,sz);
 fig2plotly(gcf);
 ```
 
-<!--------------------- EXAMPLE  BREAK ------------------------->
+<!--------------------- EXAMPLE BREAK ------------------------->
 
 ## Specify Bubble Colors
 

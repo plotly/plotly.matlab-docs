@@ -19,7 +19,7 @@ cg = uigauge(fig);
 fig2plotly(gcf);
 ```
 
-<!--------------------- EXAMPLE  BREAK ------------------------->
+<!--------------------- EXAMPLE BREAK ------------------------->
 
 ## Create Linear Gauge
 

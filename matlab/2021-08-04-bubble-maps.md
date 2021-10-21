@@ -40,7 +40,7 @@ fig2plotly(gcf);
 ```
 
 
-<!--------------------- EXAMPLE  BREAK ------------------------->
+<!--------------------- EXAMPLE BREAK ------------------------->
 
 ## Display Tsunami Data Using Bubble Size to Indicate Tsunami Size
 

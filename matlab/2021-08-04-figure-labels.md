@@ -25,7 +25,7 @@ fig2plotly(fig,'strip',false);
 ```
 
 
-<!--------------------- EXAMPLE  BREAK ------------------------->
+<!--------------------- EXAMPLE BREAK ------------------------->
 
 ## Changing Axis Label Size, Font and Position
 

@@ -17,7 +17,7 @@ Load the file `SimulatedStock.mat`, which provides a timetable (`TMW`) for finan
 ```{matlab}
 load SimulatedStock.mat;
 candle(TMW(end-20:end,:),'b');
-title('Candlestick chart for TMW');
+title('Candlestick chart for TMW')
 
 fig2plotly(gcf);
 ```
@@ -30,8 +30,8 @@ This example shows how to create a candle plot for Disney stock for the dates Ma
 
 ```{matlab}
 load disney.mat
-candle(dis('3/31/98::4/30/98'));
-title('Disney 3/31/98 to 4/30/98');
+candle(dis('3/31/98::4/30/98'))
+title('Disney 3/31/98 to 4/30/98')
 
 fig2plotly(gcf);
 ```

@@ -44,7 +44,7 @@ The data tip displays the probability density function estimate of the selected 
 
 
 
-<!--------------------- EXAMPLE  BREAK ------------------------->
+<!--------------------- EXAMPLE BREAK ------------------------->
 
 ## Plot Grouped Data
 

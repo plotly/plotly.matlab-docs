@@ -21,7 +21,7 @@ colormap winter
 fig2plotly(gcf);
 ```
 
-<!--------------------- EXAMPLE  BREAK ------------------------->
+<!--------------------- EXAMPLE BREAK ------------------------->
 
 ## Set Colormap Back to Default
 

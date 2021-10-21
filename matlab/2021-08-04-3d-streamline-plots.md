@@ -250,6 +250,67 @@ fig2plotly(gcf);
 
 <!--------------------- EXAMPLE BREAK ------------------------->
 
+## Combination of Cone and Stream Ribbon Plots
+
+Create 3-D arrays and a cone plot.
+
+```{matlab}
+xmin = -7; xmax = 7;
+ymin = -7; ymax = 7; 
+zmin = -7; zmax = 7; 
+x = linspace(xmin,xmax,30);
+y = linspace(ymin,ymax,20);
+z = linspace(zmin,zmax,20);
+[x,y,z] = meshgrid(x,y,z);
+u = y; 
+v = -x; 
+w = 0*x+1;
+[cx,cy,cz] = meshgrid(linspace(xmin,xmax,30),...
+   linspace(ymin,ymax,30),[-3 4]);
+h = coneplot(x,y,z,u,v,w,cx,cy,cz,'quiver');
+set(h,'Color','k');
+
+fig2plotly(gcf, 'TreatAs', 'coneplot');
+```
+
+Plot two sets of stream ribbons. Then define the view and lighting.
+
+```{matlab}
+xmin = -7; xmax = 7;
+ymin = -7; ymax = 7; 
+zmin = -7; zmax = 7; 
+x = linspace(xmin,xmax,30);
+y = linspace(ymin,ymax,20);
+z = linspace(zmin,zmax,20);
+[x,y,z] = meshgrid(x,y,z);
+u = y; 
+v = -x; 
+w = 0*x+1;
+[cx,cy,cz] = meshgrid(linspace(xmin,xmax,30),...
+   linspace(ymin,ymax,30),[-3 4]);
+h = coneplot(x,y,z,u,v,w,cx,cy,cz,'quiver');
+set(h,'Color','k');
+
+[sx,sy,sz] = meshgrid([-1 0 1],[-1 0 1],-6);
+streamribbon(x,y,z,u,v,w,sx,sy,sz);
+[sx,sy,sz] = meshgrid([1:6],[0],-6);
+streamribbon(x,y,z,u,v,w,sx,sy,sz);
+shading interp
+view(-30,10) 
+axis off tight
+camproj perspective
+camva(66)
+camlookat 
+camdolly(0,0,.5,'fixtarget')
+camlight
+
+fig2plotly(gcf, 'TreatAs', 'coneplot');
+```
+
+
+<!--------------------- EXAMPLE BREAK ------------------------->
+
+
 ## Plot Streamlines in Slice Plane
 
 Load the `wind` data set, which loads the three-dimensional arrays `u`, `v`, `w`, `x`, `y`, and `z`. Draw streamlines along the slice plane where `z = 5`.

@@ -80,8 +80,8 @@ meas(rand(size(meas)) < 0.05) = NaN;
 Embed the four-dimensional data into two dimensions using `tsne`.
 
 ```{matlab}
-load fisheriris;
-rng default; % for reproducibility
+load fisheriris
+rng default % for reproducibility
 meas(rand(size(meas)) < 0.05) = NaN;
 
 Y = tsne(meas,'Algorithm','exact');
@@ -90,8 +90,8 @@ Y = tsne(meas,'Algorithm','exact');
 Determine how many rows were eliminated from the embedding.
 
 ```{matlab}
-load fisheriris;
-rng default; % for reproducibility
+load fisheriris
+rng default % for reproducibility
 meas(rand(size(meas)) < 0.05) = NaN;
 
 Y = tsne(meas,'Algorithm','exact');
@@ -103,8 +103,8 @@ length(species)-length(Y)
 Prepare to plot the result by locating the rows of `meas` that have no `NaN` values.
 
 ```{matlab}
-load fisheriris;
-rng default; % for reproducibility
+load fisheriris
+rng default % for reproducibility
 meas(rand(size(meas)) < 0.05) = NaN;
 
 goodrows = not(any(isnan(meas),2));
@@ -113,8 +113,8 @@ goodrows = not(any(isnan(meas),2));
 Plot the results using only the rows of `species` that correspond to rows of `meas` with no `NaN` values.
 
 ```{matlab}
-load fisheriris;
-rng default; % for reproducibility
+load fisheriris
+rng default % for reproducibility
 meas(rand(size(meas)) < 0.05) = NaN;
 
 Y = tsne(meas,'Algorithm','exact');
@@ -133,8 +133,8 @@ fig2plotly(gcf);
 Find both 2-D and 3-D embeddings of the Fisher iris data, and compare the loss for each embedding. It is likely that the loss is lower for a 3-D embedding, because this embedding has more freedom to match the original data.
 
 ```{matlab}
-load fisheriris;
-rng default; % for reproducibility
+load fisheriris
+rng default % for reproducibility
 [Y,loss] = tsne(meas,'Algorithm','exact');
 rng default % for fair comparison
 [Y2,loss2] = tsne(meas,'Algorithm','exact','NumDimensions',3);
@@ -152,8 +152,8 @@ For the 3-D plot, convert the species to numeric values using the `categorical` 
 is a sparse matrix whose rows are the RGB colors of the species.
 
 ```{matlab}
-load fisheriris;
-rng default; % for reproducibility
+load fisheriris
+rng default % for reproducibility
 [Y,loss] = tsne(meas,'Algorithm','exact');
 rng default % for fair comparison
 [Y2,loss2] = tsne(meas,'Algorithm','exact','NumDimensions',3);

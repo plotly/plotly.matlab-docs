@@ -38,4 +38,4 @@ layout = struct(...
 plotly(data, struct('layout', layout));
 ```
 
-<!--------------------- EXAMPLE  BREAK ------------------------->
+<!--------------------- EXAMPLE BREAK ------------------------->
