@@ -10,29 +10,36 @@ language: matlab
 page_type: u-guide
 ---
 
-<div class="content-box">
-<p>You can save static images using the following syntax :</p><br>
+<p>You can save static images using the following syntax :</p>
+<br>
 
-<pre><code>
-saveplotlyfig(figure, 'your_image_filename.png')</code>```
+<code>
+saveplotlyfig(figure, 'your_image_filename.png')</code>
 
-<p>figure is a struct with data and layout fields.</p><br>
-<p>figure.data is a cell array of structs, containing your trace and data information.</p><br>
-<p>figure.layout is a struct containing your plot's styling information.</p></br>
+<p>figure is a struct with data and layout fields.</p>
+<br>
+<p>figure.data is a cell array of structs, containing your trace and data information.</p>
+<br>
+<p>figure.layout is a struct containing your plot's styling information.</p>
+<br>
 
 <p>Alternatively, you can exclude the layout information and simply provide the data information as follows:
 
-<pre><code>saveplotlyfig(data, 'your_image_filename.png')</code>```</br>
-<p>data is a cell array of structs, containing your trace and data information.</p><br>
+<code>saveplotlyfig(data, 'your_image_filename.png')</code>
+</br>
+<p>data is a cell array of structs, containing your trace and data information.</p>
+<br>
 
 
-<p>Combine this with a GET request on a plot you (or someone else) has already created :<p></br>
+<p>Combine this with a GET request on a plot you (or someone else) has already created :<p>
+</br>
 
-<pre><code>figure = getplotlyfig('demos', 1526)
+<code>figure = getplotlyfig('demos', 1526)
 saveplotlyfig(figure, 'your_image_filename.png')
-</code>```
+</code>
 
-<p>This will save a static image of a plot you've pulled from Plotly's Servers. Plotly supports PNG, JPEG.</p><br>
+<p>This will save a static image of a plot you've pulled from Plotly's Servers. Plotly supports PNG, JPEG.</p>
+<br>
 
 <p>Take a look at the following examples rendered using saveplotlyfig:</p><br>
 
@@ -45,4 +52,3 @@ saveplotlyfig(figure, 'your_image_filename.png')
 <img src="https://plotly.com/~Dreamshot/539.jpeg">
 
 <br>
-</div><br>

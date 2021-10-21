@@ -21,7 +21,7 @@ barh(y)
 fig2plotly(gcf);
 ```
 
-<!--------------------- EXAMPLE BREAK ------------------------->
+<!--------------------- EXAMPLE  BREAK ------------------------->
 
 ## Display Four Series of Bars with Axis Labels and Legend
 

@@ -31,7 +31,7 @@ set(get(ax(2), 'Ylabel'), 'String', 'High Frequency');
 fig2plotly(fig);
 ```
 
-<!--------------------- EXAMPLE BREAK ------------------------->
+<!--------------------- EXAMPLE  BREAK ------------------------->
 
 ##  Bar Plot Overlayed With a Line plot
 

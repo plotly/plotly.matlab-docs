@@ -25,21 +25,6 @@ fig2plotly(gcf);
 By default, the `colorbar` function adds a vertical colorbar to the right side of the graph.
 
 
-
-<!--------------------- EXAMPLE BREAK ------------------------->
-
-## Add Horizontal Colorbar to Graph
-
-Add a horizontal colorbar below a plot by specifying the colorbar location as `'southoutside'`.
-
-```{matlab}
-contourf(peaks)
-colorbar('southoutside')
-
-fig2plotly(gcf);
-```
-
-
 <!--------------------- EXAMPLE BREAK ------------------------->
 
 ## Reverse Colorbar Direction
@@ -164,16 +149,7 @@ fig2plotly(gcf);
 
 ## Delete Colorbar
 
-Add a colorbar to a surface plot.
-
-```{matlab}
-surf(peaks)
-colorbar
-
-fig2plotly(gcf);
-```
-
-Delete the colorbar from the surface plot.
+You can delete a colorbar from the surface plot.
 
 ```{matlab}
 surf(peaks)
