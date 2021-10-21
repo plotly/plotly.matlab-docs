@@ -7,10 +7,10 @@ addpath(genpath('D:\Matlab_code\plotly_matlab\plotly'));
 fileList = dir('matlab/*.md');
 
 % Loop over all files
-for i = 1 :length(fileList)
+for i = 46 %:length(fileList)
     fileName = fullfile(fileList(i).folder,fileList(i).name);
     fprintf('Evaluating (%03d): %s\n',i,['matlab/',fileList(i).name]);
-    mdContents = readlines(fileName);
+    mdContents = readlines(fileName,'Encoding','UTF-8');
     mdContents = arrayfun(@(x) replace(x,"```{matlab}","&&&S"), mdContents);
     mdContents = arrayfun(@(x) replace(x,"```","&&&E"), mdContents);
 
@@ -26,7 +26,7 @@ for i = 1 :length(fileList)
     end
 
     [~,a,b]=fileparts(fileName);
-    f = fopen(fullfile('tempF',fileList(i).name),'w');
+    f = fopen(fullfile('tempF',fileList(i).name),'w','n','UTF-8');
     fwrite(f,mdContents);
     fclose(f);
     close all force;
@@ -85,7 +85,7 @@ for i = 1:length(st)
         end
     end
 
-    f=fopen('temp.m','w');
+    f=fopen('temp.m','w','n','UTF-8');
     fwrite(f,join(tempStr,newline));
     fclose(f);
     if flag>0
@@ -100,7 +100,7 @@ for i = 1:length(st)
     end
     res=strip(res);
     if ~isempty(res)
-        out = [out(1:ed(i)); string(['```',newline,res,newline,'```']); out((ed(i)+1):end)];
+        out = [out(1:ed(i)); string(['```',newline,native2unicode(res,'UTF-8'),newline,'```']); out((ed(i)+1):end)];
         if ~isempty(json)
             ed(i)=ed(i)+1;
         end
@@ -109,9 +109,9 @@ for i = 1:length(st)
     if ~isempty(json)
         N=rand*1.e12;
         name=sprintf('plot_%.0f',N);
-        out = [out(1:ed(i)); string(['{% capture ',name,' %}',newline,...
-            '{% raw %}',json,'{% endraw %}',newline,...
-            '{% endcapture %}',newline,'{% include posts/ssim_frame.html raw_json_file=',name,...
+        out = [out(1:ed(i)); string(['{% capture ',name,' %}',...
+            '{% raw %}',json,'{% endraw %}',...
+            '{% endcapture %}','{% include posts/ssim_frame.html raw_json_file=',name,...
             ' index=',sprintf('%.0f',N),' %}',newline]); out((ed(i)+1):end)];
         flag=flag+1;
     end
