@@ -26,7 +26,7 @@ for i = 1:length(fileList)
     end
 
     [~,a,b]=fileparts(fileName);
-    f = fopen(fullfile('tempF',fileList(i).name),'w','n','UTF-8');
+    f = fopen(fullfile('tempF',fileList(i).name),'w','ieee-le','UTF-8');
     fwrite(f,mdContents);
     fclose(f);
     close all force;
@@ -85,7 +85,7 @@ for i = 1:length(st)
         end
     end
 
-    f=fopen('temp.m','w','n','UTF-8');
+    f=fopen('temp.m','w','ieee-le','UTF-8');
     fwrite(f,join(tempStr,newline));
     fclose(f);
     if flag>0
