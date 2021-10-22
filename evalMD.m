@@ -26,7 +26,7 @@ for i = 1:length(fileList)
     end
 
     [~,a,b]=fileparts(fileName);
-    f = fopen(fullfile('tempF',fileList(i).name),'w','ieee-le','UTF-8');
+    f = fopen(fullfile('tempF',fileList(i).name),'wb','ieee-le','UTF-8');
     fwrite(f,mdContents);
     fclose(f);
     close all force;
