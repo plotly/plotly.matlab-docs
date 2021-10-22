@@ -7,7 +7,7 @@ addpath(genpath('D:\Matlab_code\plotly_matlab\plotly'));
 fileList = dir('matlab/*.md');
 
 % Loop over all files
-for i = 46 %:length(fileList)
+for i = 1:length(fileList)
     fileName = fullfile(fileList(i).folder,fileList(i).name);
     fprintf('Evaluating (%03d): %s\n',i,['matlab/',fileList(i).name]);
     mdContents = readlines(fileName,'Encoding','UTF-8');
@@ -26,7 +26,7 @@ for i = 46 %:length(fileList)
     end
 
     [~,a,b]=fileparts(fileName);
-    f = fopen(fullfile('tempF',fileList(i).name),'w','n','UTF-8');
+    f = fopen(fullfile('tempF',fileList(i).name),'w','ieee-le','UTF-8');
     fwrite(f,mdContents);
     fclose(f);
     close all force;
@@ -85,7 +85,7 @@ for i = 1:length(st)
         end
     end
 
-    f=fopen('temp.m','w','n','UTF-8');
+    f=fopen('temp.m','w','ieee-le','UTF-8');
     fwrite(f,join(tempStr,newline));
     fclose(f);
     if flag>0
