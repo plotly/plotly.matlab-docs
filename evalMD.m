@@ -1,13 +1,14 @@
 function mdContents = evalMD()
 fclose all; clc;
 % Setup Plotly in Offline Mode
-addpath(genpath('D:\Matlab_code\plotly_matlab\plotly'));
+% addpath(genpath('D:\Matlab_code\plotly_matlab\plotly'));
+addpath(genpath('..\plotly_matlab\plotly'));
 
 % Let list of md files
 fileList = dir('matlab/*.md');
 
 % Loop over all files
-for i = 1: length(fileList)
+for i = 1:length(fileList)
     fileName = fullfile(fileList(i).folder,fileList(i).name);
     fprintf('Evaluating (%03d): %s\n',i,['matlab/',fileList(i).name]);
     mdContents = readlines(fileName,'Encoding','UTF-8');
@@ -92,15 +93,17 @@ for i = 1:length(st)
         ed(i)=ed(i)+flag;
     end
     json=[];
-    res = callFile();
+    res = callFile(~isempty(ss));
     if ~isempty(ss) && ~isempty(res)   % fig2plotly was called.
         [s,e] = regexp(res,' *{"data":[\s\S]+\}+');
         json = strip(res(s:e));
         res(s:e)=[];
     end
     res=strip(res);
+    res = regexprep(res,"<a.*>(.*)</a>","$1");
+    res=strip(res);
     if ~isempty(res)
-        out = [out(1:ed(i)); string(['```',newline,native2unicode(res,'UTF-8'),newline,'```']); out((ed(i)+1):end)];
+        out = [out(1:ed(i)); string(['<pre class="code-output">',newline,native2unicode(res,'UTF-8'),newline,'</pre>']); out((ed(i)+1):end)];
         if ~isempty(json)
             ed(i)=ed(i)+1;
         end
@@ -119,11 +122,15 @@ end
 
 end
 
-function res = callFile()
+function res = callFile(isFig)
 try
     res = evalc('temp');
-catch
-    jsonErr = loadjson('977.json');
-    res = sprintf('%s\n',jsonencode(jsonErr));
+catch ME
+    if isFig == true
+        jsonErr = loadjson('977.json');
+        res = sprintf('%s\n',jsonencode(jsonErr));
+    else
+        res = ['<font color="red">...ERROR...<br>',ME.message,'</font>'];
+    end
 end
 end
