@@ -5,10 +5,12 @@ orbs:
 
 jobs:
   build:
+    working_directory: ~/project
     machine:
       image: 'ubuntu-1604:201903-01'
     steps:
       - checkout
       - matlab/install
       - matlab/run-command:
-          command: evalMD
+        name: Convert raw docs to Jekyll-ready markdown
+        command: evalMD
