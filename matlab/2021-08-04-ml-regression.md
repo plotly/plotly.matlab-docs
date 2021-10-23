@@ -74,6 +74,23 @@ This result represents the relation y=β<sub>0</sub>+β<sub>1</sub>x=142.7120+0.
 Visualize the relation by plotting it on the same figure.
 
 ```{matlab}
+load accidents;
+x = hwydata(:,14); %Population of states
+y = hwydata(:,4); %Accidents per state
+
+X = [ones(length(x),1) x];
+b = X\y;
+
+yCalc2 = X*b;
+plot(x,yCalc2,'--');
+legend({'Data'},'Location','best');
+
+fig2plotly(gcf);
+```
+
+If with to plot the data alongside the slope, you can do it in the following way.
+
+```{matlab}
 load accidents
 x = hwydata(:,14); %Population of states
 y = hwydata(:,4); %Accidents per state
@@ -82,8 +99,11 @@ X = [ones(length(x),1) x];
 b = X\y;
 
 yCalc2 = X*b;
-plot(x,yCalc2,'--')
-legend('Data','Slope','Slope & Intercept','Location','best');
+plot(x,yCalc2,'--');
+legend({'Data'},'Location','best');
+
+hold on
+plot(x,y,'o');
 
 fig2plotly(gcf);
 ```
