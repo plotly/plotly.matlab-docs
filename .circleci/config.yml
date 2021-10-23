@@ -1,13 +1,22 @@
 version: 2.1
 
-jobs:
-  build:
-    machine:
-      image: 'ubuntu-1604:201903-01'
-    steps:
-      - checkout
-      - matlab/install
-      - matlab/run-command:
-          command: evalMD
 orbs:
   matlab: mathworks/matlab@0.4.0
+
+  jobs:
+    build:
+      machine:
+        image: 'ubuntu-1604:201903-01'
+      steps:
+        - run:
+          name: install MATLAB
+          - checkout
+          - matlab/install
+        - run:
+          name: install File Exchange dependancies
+          command:
+            sudo R -e 'devtools::install_github("briatte/ggnet", dependencies = TRUE)'
+        - run:
+          name: build the docs
+          - matlab/run-command:
+              command: evalMD
