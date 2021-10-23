@@ -55,7 +55,7 @@ fig2plotly(gcf);
 ```
 
 
-<!--------------------- EXAMPLE BREAK ------------------------->
+<!--------------------- EXAMPLE  BREAK ------------------------->
 
 ## Create Geographic Scatter Plot Specifying Basemap
 

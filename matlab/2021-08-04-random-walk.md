@@ -45,10 +45,8 @@ fig2plotly(gcf);
 
 
 ```{matlab}
-clc;
-clearvars;
-N = 100; % Length of the x-axis, also known as the length of the random walks.
-M = 400; % The amount of random walks.
+N = 10; % Length of the x-axis, also known as the length of the random walks.
+M = 60; % The amount of random walks.
 x_t(1) = 0;
 y_t(1) = 0;
 
@@ -62,11 +60,6 @@ for m=1:M
   plot(x_t, y_t);
   hold on
 end
-
-grid on;
-% Enlarge figure to full screen.
-set(gcf, 'Units', 'Normalized', 'Outerposition', [0, 0.05, 1, 0.95]);
-axis square;
 
 fig2plotly(gcf);
 ```

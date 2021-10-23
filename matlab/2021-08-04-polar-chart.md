@@ -277,7 +277,7 @@ Create a scatter chart and assign the scatter object to the variable `ps`.
 ```{matlab}
 th = pi/6:pi/6:2*pi;
 r = rand(12,1);
-ps = polarscatter(th,r,'filled')
+ps = polarscatter(th,r,'filled');
 
 fig2plotly(gcf);
 ```
@@ -288,7 +288,7 @@ Use `ps` to modify properties of the scatter object after it is created.
 ```{matlab}
 th = pi/6:pi/6:2*pi;
 r = rand(12,1);
-ps = polarscatter(th,r,'filled')
+ps = polarscatter(th,r,'filled');
 
 ps.Marker = 'square';
 ps.SizeData = 200;

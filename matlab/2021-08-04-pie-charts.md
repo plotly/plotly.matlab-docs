@@ -58,7 +58,7 @@ Create a labeled pie chart, and then modify the color and font size of the text 
 ```{matlab}
 X = 1:3;
 labels = {'Taxes','Expenses','Profit'};
-p = pie(X,labels)
+p = pie(X,labels);
 
 fig2plotly(gcf);
 ```
@@ -69,7 +69,7 @@ Get the text object for the label 'Profit'. Change its color and font size. Use 
 ```{matlab}
 X = 1:3;
 labels = {'Taxes','Expenses','Profit'};
-p = pie(X,labels)
+p = pie(X,labels);
 
 t = p(6);
 t.BackgroundColor = 'cyan';
@@ -93,7 +93,7 @@ pie(X,'%.3f%%')
 fig2plotly(gcf);
 ```
 
-<!--------------------- EXAMPLE BREAK ------------------------->
+<!--------------------- EXAMPLE  BREAK ------------------------->
 
 ## Plot Partial Pie Chart
 

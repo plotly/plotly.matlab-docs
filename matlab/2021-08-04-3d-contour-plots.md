@@ -22,7 +22,7 @@ fig2plotly(gcf, 'TreatAs', 'contour3');
 ```
 
 
-<!--------------------- EXAMPLE BREAK ------------------------->
+<!--------------------- EXAMPLE  BREAK ------------------------->
 
 ## Contours at Fifty Levels
 

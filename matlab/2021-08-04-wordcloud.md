@@ -33,7 +33,7 @@ fig2plotly(gcf);
 ```
 
 
-<!--------------------- EXAMPLE BREAK ------------------------->
+<!--------------------- EXAMPLE  BREAK ------------------------->
 
 ## Prepare Text Data for Word Clouds
 

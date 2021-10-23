@@ -29,7 +29,7 @@ ternlabel('A', 'B', 'C')
 fig2plotly(fig, 'strip', false);
 ```
 
-<!--------------------- EXAMPLE BREAK ------------------------->
+<!--------------------- EXAMPLE  BREAK ------------------------->
 
 ## Ternary Scatter Plot
 

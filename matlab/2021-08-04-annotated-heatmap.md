@@ -207,8 +207,6 @@ ylabels = categories(years);
 
 nummonths = numel(xlabels);
 numyears = numel(ylabels);
-
-fig2plotly(gcf);
 ```
 
 Convert the categorical `months` and `years` arrays into numeric indices to use with the `accumarray` function. Compute the color data as the maximum temperature for each month and year combination using the `accumarray` function. Use `NaN` for missing month and year combinations.

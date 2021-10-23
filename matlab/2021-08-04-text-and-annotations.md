@@ -74,12 +74,12 @@ dx = 0.1; dy = 0.1; % displacement so the text does not overlay the data points
 text(x+dx, y+dy, c);
 
 plot([1 1],[2 3])
-text(1.2,2.2,'A Line')
+text(1.2,2.2,'A Line');
 xlim([-1 5])
 ylim([-1 5])
 hold off
 
-fig2plotly(fig)
+fig2plotly(fig);
 ```
 
 <!--------------------- EXAMPLE BREAK ------------------------->

@@ -63,8 +63,6 @@ For comparison, create the plot with automatic scaling. Note that the arrows are
 ```{matlab}
 [X,Y,Z] = sphere(10);
 [U,V,W] = surfnorm(X,Y,Z);
-quiver3(X,Y,Z,U,V,W,0)
-axis equal
 
 figure
 quiver3(X,Y,Z,U,V,W)
@@ -163,6 +161,30 @@ fig2plotly(gcf);
 
 <!--------------------- EXAMPLE BREAK ------------------------->
 
+## Layered Quiver Plot
+
+```{matlab}
+[x, y, z] = meshgrid(-0.8:0.2:0.8, -0.8:0.2:0.8, -0.8:0.8:0.8);
+
+u = sin(pi*x).*cos(pi*y).*cos(pi*z);
+v = -cos(pi*x).*sin(pi*y).*cos(pi*z);
+w = sqrt(2/3)*cos(pi*x).*cos(pi*y).*sin(pi*z);
+
+figure
+quiver3(x, y, z, u, v, z)
+
+axis([-1 1 -1 1 -1 1])
+
+title('Turbulence Values')
+xlabel('x')
+ylabel('x')
+zlabel('z')
+
+fig2plotly(gcf);
+```
+
+
+<!--------------------- EXAMPLE BREAK ------------------------->
 ## Modify 3-D Quiver Plot After Creation
 
 Create a 3-D quiver plot and return the quiver object. Then, remove the arrowheads and add dot markers at the base of each arrow.
@@ -249,67 +271,6 @@ fig2plotly(gcf);
 ```
 
 <!--------------------- EXAMPLE BREAK ------------------------->
-
-## Combination of Cone and Stream Ribbon Plots
-
-Create 3-D arrays and a cone plot.
-
-```{matlab}
-xmin = -7; xmax = 7;
-ymin = -7; ymax = 7; 
-zmin = -7; zmax = 7; 
-x = linspace(xmin,xmax,30);
-y = linspace(ymin,ymax,20);
-z = linspace(zmin,zmax,20);
-[x,y,z] = meshgrid(x,y,z);
-u = y; 
-v = -x; 
-w = 0*x+1;
-[cx,cy,cz] = meshgrid(linspace(xmin,xmax,30),...
-   linspace(ymin,ymax,30),[-3 4]);
-h = coneplot(x,y,z,u,v,w,cx,cy,cz,'quiver');
-set(h,'Color','k');
-
-fig2plotly(gcf, 'TreatAs', 'coneplot');
-```
-
-Plot two sets of stream ribbons. Then define the view and lighting.
-
-```{matlab}
-xmin = -7; xmax = 7;
-ymin = -7; ymax = 7; 
-zmin = -7; zmax = 7; 
-x = linspace(xmin,xmax,30);
-y = linspace(ymin,ymax,20);
-z = linspace(zmin,zmax,20);
-[x,y,z] = meshgrid(x,y,z);
-u = y; 
-v = -x; 
-w = 0*x+1;
-[cx,cy,cz] = meshgrid(linspace(xmin,xmax,30),...
-   linspace(ymin,ymax,30),[-3 4]);
-h = coneplot(x,y,z,u,v,w,cx,cy,cz,'quiver');
-set(h,'Color','k');
-
-[sx,sy,sz] = meshgrid([-1 0 1],[-1 0 1],-6);
-streamribbon(x,y,z,u,v,w,sx,sy,sz);
-[sx,sy,sz] = meshgrid([1:6],[0],-6);
-streamribbon(x,y,z,u,v,w,sx,sy,sz);
-shading interp
-view(-30,10) 
-axis off tight
-camproj perspective
-camva(66)
-camlookat 
-camdolly(0,0,.5,'fixtarget')
-camlight
-
-fig2plotly(gcf, 'TreatAs', 'coneplot');
-```
-
-
-<!--------------------- EXAMPLE BREAK ------------------------->
-
 
 ## Plot Streamlines in Slice Plane
 

@@ -120,16 +120,16 @@ Create a stacked plot, with `Systolic` and `Diastolic` plotted using the same y-
 load patients
 tbl = table(Weight,Systolic,Diastolic);
 
-vars = [{'Systolic','Diastolic'},'Weight']
+vars = [{'Systolic','Diastolic'},'Weight'];
 ```
 
 ```{matlab}
 load patients
 tbl = table(Weight,Systolic,Diastolic);
 
-vars = [{'Systolic','Diastolic'},'Weight']
+vars = [{'Systolic','Diastolic'},'Weight'];
 
-stackedplot(tbl,vars)
+stackedplot(tbl,vars);
 
 fig2plotly(gcf);
 ```
@@ -139,17 +139,6 @@ fig2plotly(gcf);
 ## Plot Columns of Matrix
 
 Create a numeric matrix and a numeric vector.
-
-```{matlab}
-X = [0:4:20]
-```
-
-
-```{matlab}
-X = [0:4:20]
-
-Y = randi(100,6,3)
-```
 
 Create a stacked plot using `X` and `Y`.
 
@@ -172,18 +161,18 @@ Load a timetable that has a set of weather measurements. Display its first three
 
 ```{matlab}
 load outdoors
-outdoors(1:3,:)
+outdoors(1:3,:);
 ```
 
 Create a stacked plot. Specify the title and labels for the y-axes using name-value pair arguments. You can use name-values pairs to change any properties from their defaults values. (Also note that you can specify the degree symbol using `char(176)`.)
 
 ```{matlab}
 load outdoors
-outdoors(1:3,:)
+outdoors(1:3,:);
 
 degreeSymbol = char(176);
 newYlabels = {'RH (%)',['T (' degreeSymbol 'F)'],'P (in Hg)'};
-stackedplot(outdoors,'Title','Weather Data','DisplayLabels',newYlabels)
+stackedplot(outdoors,'Title','Weather Data','DisplayLabels',newYlabels);
 
 fig2plotly(gcf);
 ```
@@ -200,7 +189,7 @@ Load a timetable that has a set of weather measurements.
 
 ```{matlab}
 load outdoors
-outdoors(1:3,:)
+outdoors(1:3,:);
 ```
 
 
@@ -209,9 +198,9 @@ Create a stacked plot and return a `StackedLineChart` object.
 
 ```{matlab}
 load outdoors
-outdoors(1:3,:)
+outdoors(1:3,:);
 
-s = stackedplot(outdoors)
+s = stackedplot(outdoors);
 
 fig2plotly(gcf);
 ```
@@ -220,9 +209,9 @@ The object provides access to many properties that apply to all of the plots. Fo
 
 ```{matlab}
 load outdoors
-outdoors(1:3,:)
+outdoors(1:3,:);
 
-s = stackedplot(outdoors)
+s = stackedplot(outdoors);
 
 s.LineWidth = 2;
 
@@ -234,28 +223,24 @@ The object also provides access to arrays of objects that you can use to modify 
 
 ```{matlab}
 load outdoors
-outdoors(1:3,:)
+outdoors(1:3,:);
 
-s = stackedplot(outdoors)
+s = stackedplot(outdoors);
 
 s.LineWidth = 2;
 
 s.LineProperties
-
-fig2plotly(gcf);
 ```
 
 Change the second plot to a scatter plot, and the third plot to a stair plot, using the `PlotType` property.
 
 ```{matlab}
 load outdoors
-outdoors(1:3,:)
+outdoors(1:3,:);
 
-s = stackedplot(outdoors)
+s = stackedplot(outdoors);
 
 s.LineWidth = 2;
-
-s.LineProperties
 
 s.LineProperties(2).PlotType = 'scatter';
 s.LineProperties(3).PlotType = 'stairs';
@@ -268,13 +253,11 @@ You also can access individual y-axes through the `s.AxesProperties` property.
 
 ```{matlab}
 load outdoors
-outdoors(1:3,:)
+outdoors(1:3,:);
 
-s = stackedplot(outdoors)
+s = stackedplot(outdoors);
 
 s.LineWidth = 2;
-
-s.LineProperties
 
 s.LineProperties(2).PlotType = 'scatter';
 s.LineProperties(3).PlotType = 'stairs';

@@ -130,7 +130,7 @@ axis tight;
 fig2plotly(gcf);
 ```
 
-<!--------------------- EXAMPLE BREAK ------------------------->
+<!--------------------- EXAMPLE  BREAK ------------------------->
 
 ## Filling gaps
 

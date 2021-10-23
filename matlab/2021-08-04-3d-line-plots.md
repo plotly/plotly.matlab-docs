@@ -23,7 +23,7 @@ plot3(st,ct,t)
 fig2plotly(gcf);
 ```
 
-<!--------------------- EXAMPLE BREAK ------------------------->
+<!--------------------- EXAMPLE  BREAK ------------------------->
 
 ## Plot Multiple Lines
 

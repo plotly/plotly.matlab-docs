@@ -20,6 +20,8 @@ load SimulatedStock.mat
 TMW.Properties.VariableNames{'Close'} = 'Price';
 linebreak(TMW(end-20:end,:))
 title('Line Break Chart for TMW')
+
+fig2plotly()
 ```
 
 <!--------------------- EXAMPLE BREAK ------------------------->
@@ -33,6 +35,8 @@ load SimulatedStock.mat
 range = 1:25;
 highlow(TMW(range,:),'b');
 title('High, Low, Open, Close Chart for TMW')
+
+fig2plotly()
 ```
 
 <!--------------------- EXAMPLE BREAK ------------------------->

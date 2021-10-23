@@ -16,7 +16,7 @@ Generate 10,000 random numbers and create a histogram. The `histogram` function 
 
 ```{matlab}
 x = randn(10000,1);
-h = histogram(x)
+h = histogram(x);
 
 fig2plotly(gcf);
 ```
@@ -29,7 +29,7 @@ Find the number of histogram bins.
 
 ```{matlab}
 x = randn(10000,1);
-h = histogram(x)
+h = histogram(x);
 nbins = h.NumBins
 ```
 
@@ -44,7 +44,7 @@ Plot a histogram of 1,000 random numbers sorted into 25 equally spaced bins.
 ```{matlab}
 x = randn(1000,1);
 nbins = 25;
-h = histogram(x,nbins)
+h = histogram(x,nbins);
 
 fig2plotly(gcf);
 ```
@@ -55,7 +55,7 @@ Find the bin counts.
 ```{matlab}
 x = randn(1000,1);
 nbins = 25;
-h = histogram(x,nbins)
+h = histogram(x,nbins);
 
 counts = h.Values
 ```
@@ -69,7 +69,7 @@ Generate 1,000 random numbers and create a histogram.
 
 ```{matlab}
 X = randn(1000,1);
-h = histogram(X)
+h = histogram(X);
 
 fig2plotly(gcf);
 ```
@@ -78,7 +78,7 @@ Use the `morebins` function to coarsely adjust the number of bins.
 
 ```{matlab}
 X = randn(1000,1);
-h = histogram(X)
+h = histogram(X);
 
 Nbins = morebins(h);
 
@@ -90,7 +90,7 @@ Adjust the bins at a fine grain level by explicitly setting the number of bins.
 
 ```{matlab}
 X = randn(1000,1);
-h = histogram(X)
+h = histogram(X);
 
 Nbins = morebins(h);
 
@@ -137,7 +137,7 @@ Create a categorical vector that represents votes. The categories in the vector 
 
 ```{matlab}
 A = [0 0 1 1 1 0 0 0 0 NaN NaN 1 0 0 0 1 0 1 0 1 0 0 0 1 1 1 1];
-C = categorical(A,[1 0 NaN],{'yes','no','undecided'})
+C = categorical(A,[1 0 NaN],{'yes','no','undecided'});
 ```
 
 
@@ -145,9 +145,9 @@ Plot a categorical histogram of the votes, using a relative bar width of `0.5`.
 
 ```{matlab}
 A = [0 0 1 1 1 0 0 0 0 NaN NaN 1 0 0 0 1 0 1 0 1 0 0 0 1 1 1 1];
-C = categorical(A,[1 0 NaN],{'yes','no','undecided'})
+C = categorical(A,[1 0 NaN],{'yes','no','undecided'});
 
-h = histogram(C,'BarWidth',0.5)
+h = histogram(C,'BarWidth',0.5);
 
 fig2plotly(gcf);
 ```
@@ -161,7 +161,7 @@ Generate 1,000 random numbers and create a histogram using the `'probability'` n
 
 ```{matlab}
 x = randn(1000,1);
-h = histogram(x,'Normalization','probability')
+h = histogram(x,'Normalization','probability');
 
 fig2plotly(gcf);
 ```
@@ -171,9 +171,9 @@ Compute the sum of the bar heights. With this normalization, the height of each 
 
 ```{matlab}
 x = randn(1000,1);
-h = histogram(x,'Normalization','probability')
+h = histogram(x,'Normalization','probability');
 
-S = sum(h.Values)
+S = sum(h.Values);
 
 fig2plotly(gcf);
 ```
@@ -220,7 +220,7 @@ Generate 1,000 random numbers and create a histogram. Return the histogram objec
 
 ```{matlab}
 x = randn(1000,1);
-h = histogram(x)
+h = histogram(x);
 
 fig2plotly(gcf);
 ```
@@ -229,7 +229,7 @@ Specify exactly how many bins to use.
 
 ```{matlab}
 x = randn(1000,1);
-h = histogram(x)
+h = histogram(x);
 
 h.NumBins = 15;
 
@@ -240,7 +240,7 @@ Specify the edges of the bins with a vector. The first value in the vector is th
 
 ```{matlab}
 x = randn(1000,1);
-h = histogram(x)
+h = histogram(x);
 
 h.NumBins = 15;
 
@@ -253,7 +253,7 @@ Change the color of the histogram bars.
 
 ```{matlab}
 x = randn(1000,1);
-h = histogram(x)
+h = histogram(x);
 
 h.NumBins = 15;
 
@@ -274,7 +274,7 @@ Generate 5,000 normally distributed random numbers with a mean of 5 and a standa
 
 ```{matlab}
 x = 2*randn(5000,1) + 5;
-histogram(x,'Normalization','pdf')
+histogram(x,'Normalization','pdf');
 
 fig2plotly(gcf);
 ```
@@ -287,7 +287,7 @@ The probability density function for a normal distribution with mean μ, standar
 
 <div class="code_responsive">
 
-<span><span class="MathEquation" role="math" style="font-size: 15px;"><span class="MathRoot HBox" role="img" aria-label="f leftParenthesis x , mu , sigma rightParenthesis equals StartFraction 1 over sigma StartRoot SquareRootOf 2 pi EndRoot EndFraction exp bracketleft minus StartFraction leftParenthesis x minus mu rightParenthesis Squared baseline over 2 sigma Squared baseline EndFraction bracketright ldotp" style="display: inline-block; position: relative;"><span class="MathRow HBox" style="display: inline-block; position: relative; font-size: 15px;"><span class="MathText MathTextBox text" style="position: relative; margin-left: 0.2em; margin-right: 0.2em;">f</span><span class="MathText MathTextBox extra1" style="position: relative;">(</span><span class="MathText MathTextBox text" style="position: relative; margin-left: 0.05em;">x</span><span class="MathText MathTextBox symbol" style="position: relative;">,</span><span class="MathText MathTextBox symbol" style="position: relative; margin-left: 0.216667em; font-style: italic;">μ</span><span class="MathText MathTextBox symbol" style="position: relative;">,</span><span class="MathText MathTextBox symbol" style="position: relative; margin-left: 0.166667em; margin-right: 0.05em; font-style: italic;">σ</span><span class="MathText MathTextBox extra1" style="position: relative;">)</span><span class="MathText MathTextBox symbol" style="position: relative; margin-left: 0.277778em;">=</span><span class="MathFraction VBox" style="display: inline-block; position: relative; margin-left: 0.277778em; text-align: center; vertical-align: -13px;"><span class="MathRow HBox" style="display: block; position: relative; font-size: 15px; margin-top: 0px;"><span class="MathText MathTextBox number" style="position: relative;">1</span></span><span class="WhiteSpaceBox" style="display: none;"></span><span class="rulebox" style="display: block; border-bottom-style: solid; border-bottom-width: 1px; width: 100%; height: 0px; z-index: 1; margin-top: 0px;"></span><span class="WhiteSpaceBox" style="display: none;"></span><span class="MathRow HBox" style="display: block; position: relative; font-size: 15px; margin-top: 1px;"><span class="MathText MathTextBox symbol" style="position: relative; margin-right: 0.05em; font-style: italic;">σ</span><span class="MathRadical HBox" style="display: inline-block; position: relative; font-size: 15px; margin-left: 0.166667em;"><span class="VBox" style="display: inline-block; position: relative; text-align: center; vertical-align: 2px;"><span class="StretchyBox" style="display: inline-block; position: relative; text-align: right;"><span class="MathTextBox extra1" style="position: relative; display: inline-block;">G</span></span></span><span class="VBox" style="display: inline-block; position: relative; text-align: center; vertical-align: 0px;"><span class="rulebox" style="display: block; border-bottom-style: solid; border-bottom-width: 1px; width: 100%; height: 0px; z-index: 1; margin-top: 0px;"></span><span class="WhiteSpaceBox" style="display: none;"></span><span class="MathRow HBox" style="display: block; position: relative; font-size: 15px; margin-top: 1px;"><span class="MathText MathTextBox number" style="position: relative;">2</span><span class="MathText MathTextBox symbol" style="position: relative; margin-right: 0.1em; font-style: italic;">π</span></span></span></span></span></span><span class="MathRow HBox" style="display: inline-block; position: relative; font-size: 15px; margin-left: 0.166667em;"><span class="MathText MathTextBox mtext" style="position: relative;"> </span><span class="MathText MathTextBox mtext" style="position: relative; font-style: normal;">exp</span></span><span class="MathRow HBox" style="display: inline-block; position: relative; font-size: 15px;"><span class="MathDelimiter StretchyBox" style="display: inline-block; position: relative; text-align: center;"><span class="MathTextBox extra4" style="position: relative; display: inline-block; vertical-align: 20px; line-height: 36px; margin-top: -6px; margin-bottom: 6px;">[</span></span><span class="MathText MathTextBox symbol" style="position: relative;">−</span><span class="MathFraction VBox" style="display: inline-block; position: relative; margin-left: 0.166667em; text-align: center; vertical-align: -12px;"><span class="MathRow HBox" style="display: block; position: relative; font-size: 15px; margin-top: 0px;"><span class="MathText MathTextBox extra1" style="position: relative;">(</span><span class="MathText MathTextBox text" style="position: relative; margin-left: 0.05em;">x</span><span class="MathText MathTextBox symbol" style="position: relative; margin-left: 0.222222em;">−</span><span class="MathText MathTextBox symbol" style="position: relative; margin-left: 0.272222em; font-style: italic;">μ</span><span class="MathScript HBox" style="display: inline-block; position: relative; font-size: 15px;"><span class="MathRow HBox" style="display: inline-block; position: relative; font-size: 15px;"><span class="MathText MathTextBox extra1" style="position: relative;">)</span></span><span class="VBox" style="display: inline-block; position: relative; text-align: left; vertical-align: 5px;"><span class="MathRow HBox" style="display: block; position: relative; font-size: 10px; margin-top: 0px;"><span class="MathText MathTextBox number" style="position: relative;">2</span></span></span></span></span><span class="WhiteSpaceBox" style="display: none;"></span><span class="rulebox" style="display: block; border-bottom-style: solid; border-bottom-width: 1px; width: 100%; height: 0px; z-index: 1; margin-top: 0px;"></span><span class="WhiteSpaceBox" style="display: none;"></span><span class="MathRow HBox" style="display: block; position: relative; font-size: 15px; margin-top: 1px;"><span class="MathText MathTextBox number" style="position: relative;">2</span><span class="MathScript HBox" style="display: inline-block; position: relative; font-size: 15px;"><span class="MathRow HBox" style="display: inline-block; position: relative; font-size: 15px;"><span class="MathText MathTextBox symbol" style="position: relative; margin-right: 0.05em; font-style: italic;">σ</span></span><span class="VBox" style="display: inline-block; position: relative; text-align: left; vertical-align: 5px;"><span class="MathRow HBox" style="display: block; position: relative; font-size: 10px; margin-top: 0px;"><span class="MathText MathTextBox number" style="position: relative;">2</span></span></span></span></span></span><span class="MathDelimiter StretchyBox" style="display: inline-block; position: relative; text-align: center;"><span class="MathTextBox extra4" style="position: relative; display: inline-block; vertical-align: 20px; line-height: 36px; margin-top: -6px; margin-bottom: 6px;">]</span></span></span><span class="MathText MathTextBox symbol" style="position: relative;">.</span></span></span></span></span>
+<span><span class="MathEquation" role="math" style="font-size: 15px;"><span class="MathRoot HBox" role="img" aria-label="f leftParenthesis x , mu , sigma rightParenthesis equals StartFraction 1 over sigma StartRoot SquareRootOf 2 pi EndRoot EndFraction exp bracketleft minus StartFraction leftParenthesis x minus mu rightParenthesis Squared baseline over 2 sigma Squared baseline EndFraction bracketright ldotp" style="display: inline-block; position: relative;"><span class="MathRow HBox" style="display: inline-block; position: relative; font-size: 15px;"><span class="MathText MathTextBox text" style="position: relative; margin-left: 0.2em; margin-right: 0.2em;">f</span><span class="MathText MathTextBox extra1" style="position: relative;">(</span><span class="MathText MathTextBox text" style="position: relative; margin-left: 0.05em;">x</span><span class="MathText MathTextBox symbol" style="position: relative;">,</span><span class="MathText MathTextBox symbol" style="position: relative; margin-left: 0.216667em; font-style: italic;">μ</span><span class="MathText MathTextBox symbol" style="position: relative;">,</span><span class="MathText MathTextBox symbol" style="position: relative; margin-left: 0.166667em; margin-right: 0.05em; font-style: italic;">σ</span><span class="MathText MathTextBox extra1" style="position: relative;">)</span><span class="MathText MathTextBox symbol" style="position: relative; margin-left: 0.277778em;">=</span><span class="MathFraction VBox" style="display: inline-block; position: relative; margin-left: 0.277778em; text-align: center; vertical-align: -13px;"><span class="MathRow HBox" style="display: block; position: relative; font-size: 15px; margin-top: 0px;"><span class="MathText MathTextBox number" style="position: relative;">1</span></span><span class="WhiteSpaceBox" style="display: none;"></span><span class="rulebox" style="display: block; border-bottom-style: solid; border-bottom-width: 1px; width: 100%; height: 0px; z-index: 1; margin-top: 0px;"></span><span class="WhiteSpaceBox" style="display: none;"></span><span class="MathRow HBox" style="display: block; position: relative; font-size: 15px; margin-top: 1px;"><span class="MathText MathTextBox symbol" style="position: relative; margin-right: 0.05em; font-style: italic;">σ</span><span class="MathRadical HBox" style="display: inline-block; position: relative; font-size: 15px; margin-left: 0.166667em;"><span class="VBox" style="display: inline-block; position: relative; text-align: center; vertical-align: 2px;"><span class="StretchyBox" style="display: inline-block; position: relative; text-align: right;"><span class="MathTextBox extra1" style="position: relative; display: inline-block;">G</span></span></span><span class="VBox" style="display: inline-block; position: relative; text-align: center; vertical-align: 0px;"><span class="rulebox" style="display: block; border-bottom-style: solid; border-bottom-width: 1px; width: 100%; height: 0px; z-index: 1; margin-top: 0px;"></span><span class="WhiteSpaceBox" style="display: none;"></span><span class="MathRow HBox" style="display: block; position: relative; font-size: 15px; margin-top: 1px;"><span class="MathText MathTextBox number" style="position: relative;">2</span><span class="MathText MathTextBox symbol" style="position: relative; margin-right: 0.1em; font-style: italic;">π</span></span></span></span></span></span><span class="MathRow HBox" style="display: inline-block; position: relative; font-size: 15px; margin-left: 0.166667em;"><span class="MathText MathTextBox mtext" style="position: relative;"> </span><span class="MathText MathTextBox mtext" style="position: relative; font-style: normal;">exp</span></span><span class="MathRow HBox" style="display: inline-block; position: relative; font-size: 15px;"><span class="MathDelimiter StretchyBox" style="display: inline-block; position: relative; text-align: center;"><span class="MathTextBox extra4" style="position: relative; display: inline-block; vertical-align: 20px; line-height: 36px; margin-top: -6px; margin-bottom: 6px;">[</span></span><span class="MathText MathTextBox symbol" style="position: relative;">−</span><span class="MathFraction VBox" style="display: inline-block; position: relative; margin-left: 0.166667em; text-align: center; vertical-align: -12px;"><span class="MathRow HBox" style="display: block; position: relative; font-size: 15px; margin-top: 0px;"><span class="MathText MathTextBox extra1" style="position: relative;">(</span><span class="MathText MathTextBox text" style="position: relative; margin-left: 0.05em;">x</span><span class="MathText MathTextBox symbol" style="position: relative; margin-left: 0.222222em;">−</span><span class="MathText MathTextBox symbol" style="position: relative; margin-left: 0.272222em; font-style: italic;">μ</span><span class="MathScript HBox" style="display: inline-block; position: relative; font-size: 15px;"><span class="MathRow HBox" style="display: inline-block; position: relative; font-size: 15px;"><span class="MathText MathTextBox extra1" style="position: relative;">)</span></span><span class="VBox" style="display: inline-block; position: relative; text-align: left; vertical-align: 5px;"><span class="MathRow HBox" style="display: block; position: relative; font-size: 10px; margin-top: 0px;"><span class="MathText MathTextBox number" style="position: relative;">2</span></span></span></span></span><span class="WhiteSpaceBox" style="display: none;"></span><span class="rulebox" style="display: block; border-bottom-style: solid; border-bottom-width: 1px; width: 100%; height: 0px; z-index: 1; margin-top: 0px;"></span><span class="WhiteSpaceBox" style="display: none;"></span><span class="MathRow HBox" style="display: block; position: relative; font-size: 15px; margin-top: 1px;"><span class="MathText MathTextBox number" style="position: relative;">2</span><span class="MathScript HBox" style="display: inline-block; position: relative; font-size: 15px;"><span class="MathRow HBox" style="display: inline-block; position: relative; font-size: 15px;"><span class="MathText MathTextBox symbol" style="position: relative; margin-right: 0.05em; font-style: italic;">σ</span></span><span class="VBox" style="display: inline-block; position: relative; text-align: left; vertical-align: 5px;"><span class="MathRow HBox" style="display: block; position: relative; font-size: 10px; margin-top: 0px;"><span class="MathText MathTextBox number" style="position: relative;">2</span></span></span></span></span></span><span class="MathDelimiter StretchyBox" style="display: inline-block; position: relative; text-align: center;"><span class="MathTextBox extra4" style="position: relative; display: inline-block; vertical-align: 20px; line-height: 36px; margin-top: -6px; margin-bottom: 6px;">]</span></span></span><span class="MathText MathTextBox symbol" style="position: relative;">.</span></span></span></span></span>
 
 </div>
 
@@ -297,7 +297,7 @@ Overlay a plot of the probability density function for a normal distribution wit
 
 ```{matlab}
 x = 2*randn(5000,1) + 5;
-histogram(x,'Normalization','pdf')
+histogram(x,'Normalization','pdf');
 
 hold on
 y = -5:0.1:15;
@@ -335,11 +335,10 @@ Use the `findobj` function to locate the correct object handle from the figure h
 ```{matlab}
 h = openfig('histogram.fig');
 
-y = findobj(h,'type','histogram')
+y = findobj(h,'type','histogram');
 
 fig2plotly(gcf);
 ```
 
 
 <!--------------------- EXAMPLE BREAK ------------------------->
-

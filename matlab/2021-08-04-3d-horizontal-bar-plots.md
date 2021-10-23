@@ -32,7 +32,7 @@ fig2plotly(gcf, 'TreatAs', 'bar3h');
 ```
 
 
-<!--------------------- EXAMPLE BREAK ------------------------->
+<!--------------------- EXAMPLE  BREAK ------------------------->
 
 ## Specify Bar Width for 3-D Horizontal Bar Graph
 

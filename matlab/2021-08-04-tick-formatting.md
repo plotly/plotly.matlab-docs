@@ -45,8 +45,6 @@ y = [88 67 98 43 45 65];
 bar(x,y)
 xtickformat('usd')
 
-fmt = xtickformat
-
 xtickformat('$%,.0f')
 
 fig2plotly(gcf);

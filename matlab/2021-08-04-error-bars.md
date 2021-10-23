@@ -160,7 +160,7 @@ Create a line plot with error bars. Assign the errorbar object to the variable `
 x = linspace(0,10,10);
 y = sin(x/2);
 err = 0.3*ones(size(y));
-e = errorbar(x,y,err)
+e = errorbar(x,y,err);
 
 fig2plotly(gcf);
 ```
@@ -171,7 +171,7 @@ Use `e` to access properties of the errorbar object after it is created.
 x = linspace(0,10,10);
 y = sin(x/2);
 err = 0.3*ones(size(y));
-e = errorbar(x,y,err)
+e = errorbar(x,y,err);
 
 e.Marker = '*';
 e.MarkerSize = 10;

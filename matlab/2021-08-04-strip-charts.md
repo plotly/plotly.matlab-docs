@@ -30,10 +30,6 @@ fig2plotly(gcf);
 
 Load a speech signal sampled at Fs=7418Hz. The file contains the recording of a female voice saying the word "MATLAB®."
 
-```{matlab}
-load mtlb
-```
-
 Plot the signal in 0.18-second long strips. Scale the vertical axes to 125%.
 
 ```{matlab}

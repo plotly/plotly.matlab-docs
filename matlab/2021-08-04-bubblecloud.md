@@ -19,7 +19,7 @@ n = [58 115 81 252 180 124 40 80 50 20]';
 loc = ["NJ" "NY" "MA" "OH" "NH" "ME" "CT" "PA" "RI" "VT"]';
 plant = ["Plant A" "Plant A" "Plant A" "Plant A" ...
        "Plant A" "Plant A" "Plant A" "Plant B" "Plant B" "Plant B"]';
-tbl = table(n,loc,plant,'VariableNames',["Mislabeled" "State" "Manufacturing Plant"])
+tbl = table(n,loc,plant,'VariableNames',["Mislabeled" "State" "Manufacturing Plant"]);
 ```
 
 Create a bubble cloud to visualize the mislabeled costumes by state.
@@ -29,9 +29,9 @@ n = [58 115 81 252 180 124 40 80 50 20]';
 loc = ["NJ" "NY" "MA" "OH" "NH" "ME" "CT" "PA" "RI" "VT"]';
 plant = ["Plant A" "Plant A" "Plant A" "Plant A" ...
        "Plant A" "Plant A" "Plant A" "Plant B" "Plant B" "Plant B"]';
-tbl = table(n,loc,plant,'VariableNames',["Mislabeled" "State" "Manufacturing Plant"])
+tbl = table(n,loc,plant,'VariableNames',["Mislabeled" "State" "Manufacturing Plant"]);
 
-bubblecloud(tbl,"Mislabeled","State")
+bubblecloud(tbl,"Mislabeled","State");
 
 fig2plotly(gcf);
 ```
@@ -43,9 +43,9 @@ n = [58 115 81 252 180 124 40 80 50 20]';
 loc = ["NJ" "NY" "MA" "OH" "NH" "ME" "CT" "PA" "RI" "VT"]';
 plant = ["Plant A" "Plant A" "Plant A" "Plant A" ...
        "Plant A" "Plant A" "Plant A" "Plant B" "Plant B" "Plant B"]';
-tbl = table(n,loc,plant,'VariableNames',["Mislabeled" "State" "Manufacturing Plant"])
+tbl = table(n,loc,plant,'VariableNames',["Mislabeled" "State" "Manufacturing Plant"]);
 
-bubblecloud(tbl,"Mislabeled","State","Manufacturing Plant")
+bubblecloud(tbl,"Mislabeled","State","Manufacturing Plant");
 
 fig2plotly(gcf);
 ```
@@ -62,7 +62,7 @@ Define `n` as a vector of bubble sizes with the numbers from a survey of favorit
 n = [58 115 81 252 200 224 70 120 140];
 flavs = ["Rum" "Pumpkin" "Mint" "Vanilla" "Chocolate" ...
     "Strawberry" "Twist" "Coffee" "Cookie"];
-bubblecloud(n,flavs)
+bubblecloud(n,flavs);
 
 fig2plotly(gcf);
 ```
@@ -172,7 +172,7 @@ b.EdgeColor = 'flat';
 
 b.ColorOrder = [0.3 0.6 0.4; 0.4 0.3 0.6];
 
-colororder(b,["#E6CC1A"; "#4D9966"])
+colororder(b,["#E6CC1A"; "#4D9966"]);
 
 fig2plotly(gcf);
 ```
@@ -189,7 +189,7 @@ Define `c` as a categorical array. Use the `histounts` function to bin the categ
 c = categorical(["Pumpkin" "Princess" "Princess" "Princess" "Spooky Monster" ...
     "Spooky Monster" "Spooky Monster" "Spooky Monster" "Spooky Monster"]);
 [sz,labels] = histcounts(c);
-bubblecloud(sz,labels)
+bubblecloud(sz,labels);
 
 fig2plotly(gcf);
 ```

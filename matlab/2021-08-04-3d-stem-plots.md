@@ -27,7 +27,7 @@ fig2plotly(gcf);
 
 
 
-<!--------------------- EXAMPLE BREAK ------------------------->
+<!--------------------- EXAMPLE  BREAK ------------------------->
 
 ## Column Vector Input
 

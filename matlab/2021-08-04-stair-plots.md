@@ -206,8 +206,6 @@ Evaluate two cosine functions at 50 equally spaced values between 0 and 4π and 
 X = linspace(0,4*pi,50)';
 Y = [0.5*cos(X), 2*cos(X)];
 [xb,yb] = stairs(X,Y);
-
-fig2plotly(gcf);
 ```
 
 `stairs` returns two matrices of the same size, `xb` and `yb`, but no plot. 

@@ -28,7 +28,7 @@ load accidents
 x = hwydata(:,14); %Population of states
 y = hwydata(:,4); %Accidents per state
 format long
-b1 = x\y
+b1 = x\y;
 ```
 
 
@@ -41,7 +41,7 @@ load accidents
 x = hwydata(:,14); %Population of states
 y = hwydata(:,4); %Accidents per state
 format long
-b1 = x\y
+b1 = x\y;
 
 yCalc1 = b1*x;
 scatter(x,y)
@@ -79,7 +79,7 @@ x = hwydata(:,14); %Population of states
 y = hwydata(:,4); %Accidents per state
 
 X = [ones(length(x),1) x];
-b = X\y
+b = X\y;
 
 yCalc2 = X*b;
 plot(x,yCalc2,'--')

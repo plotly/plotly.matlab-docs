@@ -23,7 +23,9 @@ The ingredients data has 13 observations for 4 variables.
 Find the principal components for the ingredients data. 
 
 ```{matlab}
- coeff = pca(ingredients)
+load hald
+
+coeff = pca(ingredients)
 ```
 
 
@@ -54,8 +56,9 @@ are missing two values in rows 131 and 132.
 Perform principal component analysis.
 
 ```{matlab}
-coeff = pca(X(:,3:15));
+load imports-85
 
+coeff = pca(X(:,3:15));
 ```
 
 By default, `pca` performs the action specified
@@ -69,8 +72,9 @@ Use `'pairwise'` to perform the principal
 component analysis.
 
 ```{matlab}
-coeff = pca(X(:,3:15),'Rows','pairwise');
+load imports-85
 
+coeff = pca(X(:,3:15),'Rows','pairwise');
 ```
 
 In this case, `pca` computes the (i,j)
@@ -89,8 +93,9 @@ pair argument, `pca` terminates because this option
 assumes there are no missing values in the data set. 
 
 ```{matlab}
-coeff = pca(X(:,3:15),'Rows','all');
+load imports-85
 
+coeff = pca(X(:,3:15),'Rows','all');
 ```
 
 
@@ -110,8 +115,9 @@ load hald
 Perform the principal component analysis using the inverse of variances of the ingredients as variable weights. 
 
 ```{matlab}
- [wcoeff,~,latent,~,explained] = pca(ingredients,...
-'VariableWeights','variance')
+load hald
+
+[wcoeff,~,latent,~,explained] = pca(ingredients,'VariableWeights','variance');
 ```
 
 
@@ -120,6 +126,9 @@ Note that the coefficient matrix, `wcoeff`, is not orthonormal.
 Calculate the orthonormal coefficient matrix. 
 
 ```{matlab}
+load hald
+[wcoeff,~,latent,~,explained] = pca(ingredients,'VariableWeights','variance');
+
 coefforth = inv(diag(std(ingredients)))* wcoeff
 ```
 
@@ -128,10 +137,12 @@ coefforth = inv(diag(std(ingredients)))* wcoeff
 Check orthonormality of the new coefficient matrix, `coefforth`. 
 
 ```{matlab}
- coefforth*coefforth'
+load hald
+[wcoeff,~,latent,~,explained] = pca(ingredients,'VariableWeights','variance');
+coefforth = inv(diag(std(ingredients)))* wcoeff;
+
+coefforth*coefforth'
 ```
-
-
 
 
 
@@ -152,6 +163,8 @@ The ingredients data has 13 observations for 4 variables.
 Perform principal component analysis using the ALS algorithm and display the component coefficients. 
 
 ```{matlab}
+load hald
+
 [coeff,score,latent,tsquared,explained] = pca(ingredients);
 coeff
 ```
@@ -161,6 +174,9 @@ coeff
 Introduce missing values randomly. 
 
 ```{matlab}
+load hald
+[coeff,score,latent,tsquared,explained] = pca(ingredients);
+
 y = ingredients;
 rng('default'); % for reproducibility
 ix = random('unif',0,1,size(y))<0.30; 
@@ -174,8 +190,14 @@ Approximately 30% of the data has missing values now, indicated by `NaN`.
 Perform principal component analysis using the ALS algorithm and display the component coefficients. 
 
 ```{matlab}
-[coeff1,score1,latent,tsquared,explained,mu1] = pca(y,...
-'algorithm','als');
+load hald
+[coeff,score,latent,tsquared,explained] = pca(ingredients);
+y = ingredients;
+rng('default'); % for reproducibility
+ix = random('unif',0,1,size(y))<0.30; 
+y(ix) = NaN;
+
+[coeff1,score1,latent,tsquared,explained,mu1] = pca(y,'algorithm','als');
 coeff1
 ```
 
@@ -183,6 +205,14 @@ coeff1
 Display the estimated mean. 
 
 ```{matlab}
+load hald
+[coeff,score,latent,tsquared,explained] = pca(ingredients);
+y = ingredients;
+rng('default'); % for reproducibility
+ix = random('unif',0,1,size(y))<0.30; 
+y(ix) = NaN;
+
+[coeff1,score1,latent,tsquared,explained,mu1] = pca(y,'algorithm','als');
 mu1
 ```
 
@@ -191,6 +221,14 @@ mu1
 Reconstruct the observed data. 
 
 ```{matlab}
+load hald
+[coeff,score,latent,tsquared,explained] = pca(ingredients);
+y = ingredients;
+rng('default'); % for reproducibility
+ix = random('unif',0,1,size(y))<0.30; 
+y(ix) = NaN;
+
+[coeff1,score1,latent,tsquared,explained,mu1] = pca(y,'algorithm','als');
 t = score1*coeff1' + repmat(mu1,13,1)
 ```
 
@@ -201,6 +239,15 @@ The ALS algorithm estimates the missing values in the data.
 Another way to compare the results is to find the angle between the two spaces spanned by the coefficient vectors. Find the angle between the coefficients found for complete data and data with missing values using ALS. 
 
 ```{matlab}
+load hald
+[coeff,score,latent,tsquared,explained] = pca(ingredients);
+y = ingredients;
+rng('default'); % for reproducibility
+ix = random('unif',0,1,size(y))<0.30; 
+y(ix) = NaN;
+[coeff1,score1,latent,tsquared,explained,mu1] = pca(y,'algorithm','als');
+t = score1*coeff1' + repmat(mu1,13,1);
+
 subspace(coeff,coeff1)
 ```
 
@@ -210,8 +257,14 @@ This is a small value. It indicates that the results if you use `pca` with `'Row
 Perform the principal component analysis using `'Rows','complete'` name-value pair argument and display the component coefficients. 
 
 ```{matlab}
-[coeff2,score2,latent,tsquared,explained,mu2] = pca(y,...
-'Rows','complete');
+load hald
+[coeff,score,latent,tsquared,explained] = pca(ingredients);
+y = ingredients;
+rng('default'); % for reproducibility
+ix = random('unif',0,1,size(y))<0.30; 
+y(ix) = NaN;
+
+[coeff2,score2,latent,tsquared,explained,mu2] = pca(y,'Rows','complete');
 coeff2
 ```
 
@@ -222,6 +275,14 @@ In this case, `pca` removes the rows with missing values, and `y` has only four 
 Find the angle between the coefficients found for complete data and data with missing values using listwise deletion (when `'Rows','complete'`). 
 
 ```{matlab}
+load hald
+[coeff,score,latent,tsquared,explained] = pca(ingredients);
+y = ingredients;
+rng('default'); % for reproducibility
+ix = random('unif',0,1,size(y))<0.30; 
+y(ix) = NaN;
+[coeff2,score2,latent,tsquared,explained,mu2] = pca(y,'Rows','complete');
+
 subspace(coeff(:,1:3),coeff2)
 ```
 
@@ -232,6 +293,14 @@ The angle between the two spaces is substantially larger. This indicates that th
 Display the estimated mean. 
 
 ```{matlab}
+load hald
+[coeff,score,latent,tsquared,explained] = pca(ingredients);
+y = ingredients;
+rng('default'); % for reproducibility
+ix = random('unif',0,1,size(y))<0.30; 
+y(ix) = NaN;
+[coeff2,score2,latent,tsquared,explained,mu2] = pca(y,'Rows','complete');
+
 mu2
 ```
 
@@ -243,6 +312,14 @@ In this case, the mean is just the sample mean of `y`.
 Reconstruct the observed data. 
 
 ```{matlab}
+load hald
+[coeff,score,latent,tsquared,explained] = pca(ingredients);
+y = ingredients;
+rng('default'); % for reproducibility
+ix = random('unif',0,1,size(y))<0.30; 
+y(ix) = NaN;
+[coeff2,score2,latent,tsquared,explained,mu2] = pca(y,'Rows','complete');
+
 score2*coeff2'
 ```
 
@@ -270,7 +347,9 @@ The ingredients data has 13 observations for 4 variables.
 Find the principal component coefficients, scores, and variances of the components for the ingredients data. 
 
 ```{matlab}
-[coeff,score,latent] = pca(ingredients)
+load hald
+
+[coeff,score,latent] = pca(ingredients);
 ```
 
 
@@ -279,6 +358,9 @@ Each column of `score` corresponds to one principal component. The vector, `late
 Reconstruct the centered ingredients data. 
 
 ```{matlab}
+load hald
+[coeff,score,latent] = pca(ingredients);
+
 Xcentered = score*coeff'
 ```
 
@@ -289,6 +371,10 @@ The new data in `Xcentered` is the original ingredients data centered by subtrac
 Visualize both the orthonormal principal component coefficients for each variable and the principal component scores for each observation in a single plot.
 
 ```{matlab}
+load hald
+[coeff,score,latent] = pca(ingredients);
+Xcentered = score*coeff';
+
 biplot(coeff(:,1:2),'scores',score(:,1:2),'varlabels',{'v_1','v_2','v_3','v_4'});
 
 fig2plotly(gcf);
@@ -320,6 +406,8 @@ The ingredients data has 13 observations for 4 variables.
 Perform the principal component analysis and request the T-squared values. 
 
 ```{matlab}
+load hald
+
 [coeff,score,latent,tsquared] = pca(ingredients);
 tsquared
 ```
@@ -329,6 +417,8 @@ tsquared
 Request only the first two principal components and compute the T-squared values in the reduced space of requested principal components. 
 
 ```{matlab}
+load hald
+
 [coeff,score,latent,tsquared] = pca(ingredients,'NumComponents',2);
 tsquared
 ```
@@ -339,6 +429,9 @@ Note that even when you specify a reduced component space, `pca` computes the T-
 The T-squared value in the reduced space corresponds to the Mahalanobis distance in the reduced space. 
 
 ```{matlab}
+load hald
+[coeff,score,latent,tsquared] = pca(ingredients,'NumComponents',2);
+
 tsqreduced = mahal(score,score)
 ```
 
@@ -347,6 +440,10 @@ tsqreduced = mahal(score,score)
 Calculate the T-squared values in the discarded space by taking the difference of the T-squared values in the full space and Mahalanobis distance in the reduced space. 
 
 ```{matlab}
+load hald
+[coeff,score,latent,tsquared] = pca(ingredients,'NumComponents',2);
+tsqreduced = mahal(score,score);
+
 tsqdiscarded = tsquared - tsqreduced
 ```
 
@@ -368,8 +465,9 @@ Data matrix `X` has 13 continuous variables in columns 3 to 15: wheel-base, leng
 Find the percent variability explained by principal components of these variables. 
 
 ```{matlab}
-[coeff,score,latent,tsquared,explained] = pca(X(:,3:15));
+load imports-85
 
+[coeff,score,latent,tsquared,explained] = pca(X(:,3:15));
 explained
 ```
 
@@ -380,6 +478,9 @@ The first three components explain 99.95% of all variability.
 Visualize the data representation in the space of the first three principal components.
 
 ```{matlab}
+load imports-85
+[coeff,score,latent,tsquared,explained] = pca(X(:,3:15));
+
 scatter3(score(:,1),score(:,2),score(:,3))
 axis equal
 xlabel('1st Principal Component')
@@ -394,6 +495,8 @@ The data shows the largest variability along the first principal component axis.
 To skip any of the outputs, you can use `~` instead in the corresponding element. For example, if you don’t want to get the T-squared values, specify 
 
 ```{matlab}
+load imports-85
+
 [coeff,score,latent,~,explained] = pca(X(:,3:15));
 ```
 

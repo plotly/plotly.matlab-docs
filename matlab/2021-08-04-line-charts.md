@@ -48,14 +48,14 @@ fig2plotly(gcf);
 Define `Y` as the 4-by-4 matrix returned by the `magic` function. 
 
 ```{matlab}
-Y = magic(4)
+Y = magic(4);
 ```
 
 
 Create a 2-D line plot of `Y`. MATLAB® plots each matrix column as a separate line.
 
 ```{matlab}
-Y = magic(4)
+Y = magic(4);
 
 figure
 plot(Y)

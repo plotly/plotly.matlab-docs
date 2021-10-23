@@ -26,7 +26,7 @@ hold off
 fig2plotly(gcf);
 ```
 
-<!--------------------- EXAMPLE BREAK ------------------------->
+<!--------------------- EXAMPLE  BREAK ------------------------->
 
 ## Set Line Properties
 

@@ -52,7 +52,7 @@ X = rand(10,3);
 tree = linkage(X,'average');
 
 D = pdist(X);
-leafOrder = optimalleaforder(tree,D)
+leafOrder = optimalleaforder(tree,D);
 ```
 
 
@@ -65,7 +65,7 @@ X = rand(10,3);
 tree = linkage(X,'average');
 
 D = pdist(X);
-leafOrder = optimalleaforder(tree,D)
+leafOrder = optimalleaforder(tree,D);
 
 dendrogram(tree,'Reorder',leafOrder)
 
@@ -74,7 +74,7 @@ fig2plotly(gcf);
 
 The order of the leaf nodes in the dendrogram plot corresponds - from left to right - to the permutation in `leafOrder`.
 
-<!--------------------- EXAMPLE BREAK ------------------------->
+<!--------------------- EXAMPLE  BREAK ------------------------->
 
 ## Specify Number of Nodes in Dendrogram Plot
 

@@ -17,9 +17,9 @@ Create a parallel coordinates plot from a table of medical patient data.
 Load the `patients` data set, and create a table from a subset of the variables loaded into the workspace. Create a parallel coordinates plot using the table. The lines in the plot correspond to individual patients. Use the plot to observe trends in the data. For example, the plot indicates that smokers tend to have higher blood pressure values (both diastolic and systolic).
 
 ```{matlab}
-load patients
+load patients;
 tbl = table(Diastolic,Smoker,Systolic);
-p = parallelplot(tbl)
+p = parallelplot(tbl);
 
 fig2plotly(gcf);
 ```
@@ -30,9 +30,9 @@ By default, the software randomly jitters plot lines so that they are unlikely t
 To disable the default jittering, set the `Jitter` property to `0`.
 
 ```{matlab}
-load patients
+load patients;
 tbl = table(Diastolic,Smoker,Systolic);
-p = parallelplot(tbl)
+p = parallelplot(tbl);
 
 p.Jitter = 0;
 
@@ -57,7 +57,7 @@ Create a parallel coordinates plot using a subset of the variables in the table.
 ```{matlab}
 tsunamis = readtable('tsunamis.xlsx');
 
-figure('Units','normalized','Position',[0.3 0.3 0.45 0.4])
+figure('Units','normalized','Position',[0.3 0.3 0.45 0.4]);
 coordvars = {'Year','Validity','Cause','Country'};
 p = parallelplot(tsunamis,'CoordinateVariables',coordvars,'GroupVariable','Validity');
 
@@ -74,18 +74,18 @@ Create a parallel coordinates plot from a matrix containing medical patient data
 Load the `patients` data set, and create a matrix from the `Age`, `Height`, and `Weight` values. Create a parallel coordinates plot using the matrix data. Label the coordinate variables in the plot. The lines in the plot correspond to individual patients.
 
 ```{matlab}
-load patients
+load patients;
 X = [Age Height Weight];
-p = parallelplot(X)
+p = parallelplot(X);
 
 fig2plotly(gcf);
 ```
 
 
 ```{matlab}
-load patients
+load patients;
 X = [Age Height Weight];
-p = parallelplot(X)
+p = parallelplot(X);
 
 p.CoordinateTickLabels = {'Age (years)','Height (inches)','Weight (pounds)'};
 
@@ -94,29 +94,6 @@ fig2plotly(gcf);
 
 
 Create a new categorical variable that groups each patient into one of three categories: `short`, `average`, or `tall`. Set the bin edges such that they include the minimum and maximum `Height` values.
-
-```{matlab}
-load patients
-X = [Age Height Weight];
-p = parallelplot(X)
-
-p.CoordinateTickLabels = {'Age (years)','Height (inches)','Weight (pounds)'};
-
-min(Height)
-```
-
-
-```{matlab}
-load patients
-X = [Age Height Weight];
-p = parallelplot(X)
-
-p.CoordinateTickLabels = {'Age (years)','Height (inches)','Weight (pounds)'};
-
-max(Height)
-```
-
-
 
 ```{matlab}
 load patients
@@ -169,15 +146,7 @@ load patients
 X = [Age Height Weight];
 
 coorddata = [1 3];
-p = parallelplot(X,'CoordinateData',coorddata,'GroupData',Smoker)
-```
-
-```{matlab}
-load patients
-X = [Age Height Weight];
-
-coorddata = [1 3];
-p = parallelplot(X,'CoordinateData',coorddata,'GroupData',Smoker)
+p = parallelplot(X,'CoordinateData',coorddata,'GroupData',Smoker);
 
 p.CoordinateTickLabels = {'Age','Weight'};
 
@@ -191,26 +160,12 @@ load patients
 X = [Age Height Weight];
 
 coorddata = [1 3];
-p = parallelplot(X,'CoordinateData',coorddata,'GroupData',Smoker)
+p = parallelplot(X,'CoordinateData',coorddata,'GroupData',Smoker);
 
 p.CoordinateTickLabels = {'Age','Weight'};
 
 coorddata2 = [2 3];
-p2 = parallelplot(X,'CoordinateData',coorddata2,'GroupData',Gender)
-```
-
-
-```{matlab}
-load patients
-X = [Age Height Weight];
-
-coorddata = [1 3];
-p = parallelplot(X,'CoordinateData',coorddata,'GroupData',Smoker)
-
-p.CoordinateTickLabels = {'Age','Weight'};
-
-coorddata2 = [2 3];
-p2 = parallelplot(X,'CoordinateData',coorddata2,'GroupData',Gender)
+p2 = parallelplot(X,'CoordinateData',coorddata2,'GroupData',Gender);
 
 p2.CoordinateTickLabels = {'Height','Weight'};
 
@@ -451,7 +406,7 @@ load fisheriris
 labels = {'Sepal Length','Sepal Width','Petal Length','Petal Width'};
 
 h = parallelcoords(meas,'group',species,'labels',labels,... 
-               'quantile',.25)
+               'quantile',.25);
 
 fig2plotly(gcf);
 ```
@@ -466,7 +421,7 @@ load fisheriris
 labels = {'Sepal Length','Sepal Width','Petal Length','Petal Width'};
 
 h = parallelcoords(meas,'group',species,'labels',labels,... 
-               'quantile',.25)
+               'quantile',.25);
 
 h(1).LineWidth = 2;
 

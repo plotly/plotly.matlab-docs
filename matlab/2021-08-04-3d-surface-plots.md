@@ -17,14 +17,14 @@ Create three matrices of the same size. Then plot them as a surface. The surface
 ```{matlab}
 [X,Y] = meshgrid(1:0.5:10,1:20);
 Z = sin(X) + cos(Y);
-surf(X,Y,Z)
+surf(X,Y,Z);
 
-fig2plotly(gcf, 'TreatAs', 'surf')
+fig2plotly(gcf, 'TreatAs', 'surf');
 ```
 
 <!--------------------- EXAMPLE BREAK ------------------------->
 
-## Specify Colormap Colors for Surface Plot
+## Add Colormap
 
 Specify the colors for a surface plot by including a fourth matrix input, `C`. The surface plot uses `Z` for height and `C` for color. Specify the colors using a colormap, which uses single numbers to stand for colors on a spectrum. When you use a colormap, `C` is the same size as `Z`. Add a color bar to the graph to show how the data values in `C` correspond to the colors in the colormap.
 
@@ -32,10 +32,10 @@ Specify the colors for a surface plot by including a fourth matrix input, `C`. T
 [X,Y] = meshgrid(1:0.5:10,1:20);
 Z = sin(X) + cos(Y);
 C = X.*Y;
-surf(X,Y,Z,C)
-colorbar
+surf(X,Y,Z,C);
+colorbar;
 
-fig2plotly(gcf, 'TreatAs', 'surf')
+fig2plotly(gcf, 'TreatAs', 'surf');
 ```
 
 
@@ -50,9 +50,9 @@ Specify the colors for a surface plot by including a fourth matrix input, `CO`. 
 CO(:,:,1) = zeros(25); % red
 CO(:,:,2) = ones(25).*linspace(0.5,0.6,25); % green
 CO(:,:,3) = ones(25).*linspace(0,1,25); % blue
-surf(X,Y,Z,CO)
+surf(X,Y,Z,CO);
 
-fig2plotly(gcf, 'TreatAs', 'surf')
+fig2plotly(gcf, 'TreatAs', 'surf');
 ```
 
 <!--------------------- EXAMPLE BREAK ------------------------->
@@ -61,36 +61,17 @@ fig2plotly(gcf, 'TreatAs', 'surf')
 
 Create a semitransparent surface by specifying the `FaceAlpha` name-value pair with `0.5` as the value. To allow further modifications, assign the surface object to the variable `s`. 
 
+Use `s` to access and modify properties of the surface object after it is created. For example, hide the edges by setting the `EdgeColor` property. 
+
+
 ```{matlab}
 [X,Y] = meshgrid(-5:.5:5);
 Z = Y.*sin(X) - X.*cos(Y);
-s = surf(X,Y,Z,'FaceAlpha',0.5)
+s = surf(X,Y,Z,'FaceAlpha',0.5);
 
-fig2plotly(gcf, 'TreatAs', 'surf')
-```
-
-
-Use `s` to access and modify properties of the surface object after it is created. For example, hide the edges by setting the `EdgeColor` property. 
-
-```{matlab}
 s.EdgeColor = 'none';
 
-fig2plotly(gcf, 'TreatAs', 'surf')
-```
-
-
-<!--------------------- EXAMPLE BREAK ------------------------->
-
-## Create Surface Plot With Colormap-Based Lighting
-
-Create three matrices of the same size. Then plot them as a surface using colormap-based lighting. The surface uses `Z` for height and both `Z` and the light source for color.
-
-```{matlab}
-[X,Y] = meshgrid(1:0.5:10,1:20);
-Z = sin(X) + cos(Y);
-surfl(X,Y,Z)
-
-fig2plotly(gcf, 'TreatAs', 'surfl');
+fig2plotly(gcf, 'TreatAs', 'surf');
 ```
 
 <!--------------------- EXAMPLE BREAK ------------------------->
@@ -98,14 +79,6 @@ fig2plotly(gcf, 'TreatAs', 'surfl');
 ## Create Surface Plot With Light Object
 
 Create three matrices of the same size. Then plot them as a surface with highlights from a MATLAB® light object. The surface uses `Z` for height and both `Z` and the light object for color. The function returns an array containing a surface object and a lighting object. Assign it to the variable `sl`. 
-
-```{matlab}
-[X,Y] = meshgrid(1:0.5:10,1:20);
-Z = sin(X) + cos(Y);
-sl = surfl(X,Y,Z,'light');
-
-fig2plotly(gcf, 'TreatAs', 'surfl');
-```
 
 Index into `sl` to access and modify properties of the surface object and the light object after they are created. The surface plot is accessible as `sl(1)` and the light object as `sl(2)`. For example, change the color of the light by setting the `Color` property of the light object.
 
@@ -134,17 +107,6 @@ k = [.65 .4 .3 10];
 ```
 
 Plot the data using the source and reflectance vectors.
-
-```{matlab}
-[X,Y] = meshgrid(1:0.5:10,1:20);
-Z = sin(X) + cos(Y);
-s = [-45 20];
-k = [.65 .4 .3 10];
-
-sl = surfl(X,Y,Z,s,k);
-
-fig2plotly(gcf, 'TreatAs', 'surfl');
-```
 
 Use `sl` to access and modify properties of the surface object after it is created. For example, hide the edges by setting the `EdgeColor` property.
 

@@ -131,6 +131,11 @@ fig2plotly(gcf, 'TreatAs', 'compass');
 Note that 0 degrees points to the right. Rotate the theta-axis 90 degrees in a counterclockwise direction by calling `view` and specifying the first argument as -`90`. Maintain the 2-D view by specifying the second argument as `90`.
 
 ```{matlab}
+th = linspace(0,3*pi/2,10);
+r = linspace(5,20,10);
+[u,v] = pol2cart(th,r);
+compass(u,v)
+
 view(-90,90)
 
 fig2plotly(gcf, 'TreatAs', 'compass');

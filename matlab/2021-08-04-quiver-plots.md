@@ -38,7 +38,7 @@ fig2plotly(gcf);
 ```
 
 
-<!--------------------- EXAMPLE BREAK ------------------------->
+<!--------------------- EXAMPLE  BREAK ------------------------->
 
 ## Disable Automatic Scaling
 

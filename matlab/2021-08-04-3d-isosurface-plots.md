@@ -10,7 +10,28 @@ language: matlab
 page_type: u-guide
 ---
 
+## Basic Isosurface plot
 
+```{matlab}
+[x,y,z] = meshgrid([-3:0.25:3]); 
+V = x.*exp(-x.^2 -y.^2 -z.^2);
+isosurface(x,y,z,V,1e-4);
+
+fig2plotly(gcf, 'TreatAs', 'isosurface');
+```
+
+
+```{matlab}
+[x,y,z] = meshgrid([-3:0.25:3]); 
+V = x.*exp(-x.^2 -y.^2 -z.^2);
+[faces,verts,colors] = isosurface(x,y,z,V,1e-4,x);
+patch('Vertices',verts,'Faces',faces,'FaceVertexCData',colors,...
+    'FaceColor','interp','EdgeColor','interp')
+view(3) 
+colormap copper
+
+fig2plotly(gcf, 'TreatAs', 'isosurface');
+```
 ## Draw Isosurface with Lighting
 
 Load the flow data set, which represents the speed profile of a submerged jet within an infinite tank. Draw the isosurface at the data value of -3 and prepare the isosurface for lighting by:
@@ -32,10 +53,25 @@ axis tight
 camlight 
 lighting gouraud
 
-fig2plotly(gcf);
+fig2plotly(gcf, 'TreatAs', 'isosurface');
 ```
 
-<!--------------------- EXAMPLE BREAK ------------------------->
+```{matlab}
+[x,y,z] = meshgrid([-3:0.25:3]); 
+V = x.*exp(-x.^2 -y.^2 -z.^2);
+s = isosurface(x,y,z,V,1e-4);
+p = patch(s);
+isonormals(x,y,z,V,p)
+view(3);
+set(p,'FaceColor',[0.5 1 0.5]);  
+set(p,'EdgeColor','none');
+camlight;
+lighting gouraud;
+
+fig2plotly(gcf, 'TreatAs', 'isosurface');
+```
+
+<!--------------------- EXAMPLE  BREAK ------------------------->
 
 ## Set Isosurface Colors
 
@@ -50,7 +86,7 @@ view(30,-15)
 axis vis3d
 colormap copper
 
-fig2plotly(gcf);
+fig2plotly(gcf, 'TreatAs', 'isosurface');
 ```
 
 

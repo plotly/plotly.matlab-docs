@@ -48,7 +48,7 @@ polarhistogram(theta,25,'FaceColor','red','FaceAlpha',.3);
 fig2plotly(gcf, 'TreatAs', 'polarhistogram');
 ```
 
-<!--------------------- EXAMPLE BREAK ------------------------->
+<!--------------------- EXAMPLE  BREAK ------------------------->
 
 ## Modify Appearance of Histogram Chart After Creation
 
@@ -56,7 +56,7 @@ Create a histogram chart in polar coordinates. Assign the histogram object to th
 
 ```{matlab}
 theta = atan2(rand(100000,1)-0.5,2*(rand(100000,1)-0.5));
-h = polarhistogram(theta,25)
+h = polarhistogram(theta,25);
 
 fig2plotly(gcf, 'TreatAs', 'polarhistogram');
 ```
@@ -66,7 +66,7 @@ Use `h` to access and modify properties of the histogram object after it is crea
 
 ```{matlab}
 theta = atan2(rand(100000,1)-0.5,2*(rand(100000,1)-0.5));
-h = polarhistogram(theta,25)
+h = polarhistogram(theta,25);
 
 h.DisplayStyle = 'stairs';
 

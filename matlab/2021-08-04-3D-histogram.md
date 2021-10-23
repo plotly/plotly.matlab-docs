@@ -17,7 +17,7 @@ Generate 10,000 pairs of random numbers and create a bivariate histogram. The `h
 ```{matlab}
 x = randn(10000,1);
 y = randn(10000,1);
-h = histogram2(x,y)
+h = histogram2(x,y);
 
 fig2plotly(gcf);
 ```
@@ -27,10 +27,10 @@ fig2plotly(gcf);
 ```{matlab}
 x = randn(10000,1);
 y = randn(10000,1);
-h = histogram2(x,y)
+h = histogram2(x,y);
 
-xlabel('x')
-ylabel('y')
+xlabel('x');
+ylabel('y');
 
 fig2plotly(gcf);
 ```
@@ -43,10 +43,10 @@ Find the number of histogram bins in each dimension.
 ```{matlab}
 x = randn(10000,1);
 y = randn(10000,1);
-h = histogram2(x,y)
+h = histogram2(x,y);
 
-xlabel('x')
-ylabel('y')
+xlabel('x');
+ylabel('y');
 
 nXnY = h.NumBins
 ```
@@ -62,7 +62,7 @@ Plot a bivariate histogram of 1,000 pairs of random numbers sorted into 25 equal
 x = randn(1000,1);
 y = randn(1000,1);
 nbins = 5;
-h = histogram2(x,y,nbins)
+h = histogram2(x,y,nbins);
 
 fig2plotly(gcf);
 ```
@@ -75,9 +75,9 @@ Find the resulting bin counts.
 x = randn(1000,1);
 y = randn(1000,1);
 nbins = 5;
-h = histogram2(x,y,nbins)
+h = histogram2(x,y,nbins);
 
-counts = h.Values
+counts = h.Values;
 
 fig2plotly(gcf);
 ```
@@ -92,7 +92,7 @@ Generate 1,000 pairs of random numbers and create a bivariate histogram.
 ```{matlab}
 x = randn(1000,1);
 y = randn(1000,1);
-h = histogram2(x,y)
+h = histogram2(x,y);
 
 fig2plotly(gcf);
 ```
@@ -102,10 +102,10 @@ Use the `morebins` function to coarsely adjust the number of bins in the x dimen
 ```{matlab}
 x = randn(1000,1);
 y = randn(1000,1);
-h = histogram2(x,y)
+h = histogram2(x,y);
 
 nbins = morebins(h,'x');
-nbins = morebins(h,'x')
+nbins = morebins(h,'x');
 
 fig2plotly(gcf);
 ```
@@ -116,13 +116,13 @@ Use the `fewerbins` function to adjust the number of bins in the y dimension.
 ```{matlab}
 x = randn(1000,1);
 y = randn(1000,1);
-h = histogram2(x,y)
+h = histogram2(x,y);
 
 nbins = morebins(h,'x');
-nbins = morebins(h,'x')
+nbins = morebins(h,'x');
 
 nbins = fewerbins(h,'y');
-nbins = fewerbins(h,'y')
+nbins = fewerbins(h,'y');
 
 fig2plotly(gcf);
 ```
@@ -132,7 +132,7 @@ Adjust the number of bins at a fine grain level by explicitly setting the number
 ```{matlab}
 x = randn(1000,1);
 y = randn(1000,1);
-h = histogram2(x,y)
+h = histogram2(x,y);
 
 h.NumBins = [20 10];
 
@@ -147,7 +147,7 @@ Create a bivariate histogram using 1,000 normally distributed random numbers wit
 
 ```{matlab}
 h = histogram2(randn(1000,1),randn(1000,1),[12 12],'FaceColor','flat');
-colorbar
+colorbar;
 
 fig2plotly(gcf);
 ```
@@ -179,7 +179,7 @@ x = randn(1000,1);
 y = randn(1000,1);
 Xedges = [-Inf -2:0.4:2 Inf];
 Yedges = [-Inf -2:0.4:2 Inf];
-h = histogram2(x,y,Xedges,Yedges)
+h = histogram2(x,y,Xedges,Yedges);
 
 fig2plotly(gcf);
 ```
@@ -194,7 +194,7 @@ x = randn(1000,1);
 y = randn(1000,1);
 Xedges = [-Inf -2:0.4:2 Inf];
 Yedges = [-Inf -2:0.4:2 Inf];
-h = histogram2(x,y,Xedges,Yedges)
+h = histogram2(x,y,Xedges,Yedges);
 
 h.Normalization = 'countdensity';
 
@@ -210,7 +210,7 @@ Generate 1,000 pairs of random numbers and create a bivariate histogram using th
 ```{matlab}
 x = randn(1000,1);
 y = randn(1000,1);
-h = histogram2(x,y,'Normalization','probability')
+h = histogram2(x,y,'Normalization','probability');
 
 fig2plotly(gcf);
 ```
@@ -221,7 +221,7 @@ Compute the total sum of the bar heights. With this normalization, the height of
 ```{matlab}
 x = randn(1000,1);
 y = randn(1000,1);
-h = histogram2(x,y,'Normalization','probability')
+h = histogram2(x,y,'Normalization','probability');
 
 S = sum(h.Values(:))
 
@@ -238,7 +238,7 @@ Generate 1,000 pairs of random numbers and create a bivariate histogram. Return 
 ```{matlab}
 x = randn(1000,1);
 y = randn(1000,1);
-h = histogram2(x,y)
+h = histogram2(x,y);
 
 fig2plotly(gcf);
 ```
@@ -249,7 +249,7 @@ Color the histogram bars by height.
 ```{matlab}
 x = randn(1000,1);
 y = randn(1000,1);
-h = histogram2(x,y)
+h = histogram2(x,y);
 
 h.FaceColor = 'flat';
 
@@ -261,7 +261,7 @@ Change the number of bins in each direction.
 ```{matlab}
 x = randn(1000,1);
 y = randn(1000,1);
-h = histogram2(x,y)
+h = histogram2(x,y);
 
 h.FaceColor = 'flat';
 
@@ -276,14 +276,14 @@ Display the histogram as a tile plot.
 ```{matlab}
 x = randn(1000,1);
 y = randn(1000,1);
-h = histogram2(x,y)
+h = histogram2(x,y);
 
 h.FaceColor = 'flat';
 
 h.NumBins = [10 25];
 
 h.DisplayStyle = 'tile';
-view(2)
+view(2);
 
 fig2plotly(gcf);
 ```
@@ -298,7 +298,7 @@ Use the `savefig` function to save a `histogram2` figure.
 ```{matlab}
 histogram2(randn(100,1),randn(100,1));
 savefig('histogram2.fig');
-close gcf
+close gcf;
 ```
 
 Use `openfig` to load the histogram figure back into MATLAB. `openfig` also returns a handle to the figure, `h`.
@@ -311,7 +311,7 @@ Use the `findobj` function to locate the correct object handle from the figure h
 
 ```{matlab}
 h = openfig('histogram2.fig');
-y = findobj(h,'type','histogram2')
+y = findobj(h,'type','histogram2');
 
 fig2plotly(gcf);
 ```

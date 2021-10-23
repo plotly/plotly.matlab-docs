@@ -26,7 +26,7 @@ fig2plotly(gcf);
 
 
 
-<!--------------------- EXAMPLE BREAK ------------------------->
+<!--------------------- EXAMPLE  BREAK ------------------------->
 
 ## Specify Table Variable for Grouping Data
 

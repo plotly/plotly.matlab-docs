@@ -26,7 +26,7 @@ Data values are plotted as stems extending from the baseline and terminating at 
 
 
 
-<!--------------------- EXAMPLE BREAK ------------------------->
+<!--------------------- EXAMPLE  BREAK ------------------------->
 
 ## Plot Multiple Data Series
 
