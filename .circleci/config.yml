@@ -11,5 +11,4 @@ jobs:
       - checkout
       - matlab/install
       - matlab/run-command:
-          name: Convert raw docs to Jekyll-ready markdown
           command: evalMD

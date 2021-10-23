@@ -127,7 +127,8 @@ try
     res = evalc('temp');
 catch ME
     if isFig == true
-        jsonErr = loadjson('977.json');
+        %jsonErr = loadjson('977.json');
+        jsonErr = "To be inmplemented soon"
         res = sprintf('%s\n',jsonencode(jsonErr));
     else
         res = ['<font color="red">...ERROR...<br>',ME.message,'</font>'];
