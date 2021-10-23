@@ -8,13 +8,7 @@ jobs:
     machine:
       image: 'ubuntu-1604:201903-01'
     steps:
-      - run:
-        name: install MATLAB
-        command:
-          - checkout
-          - matlab/install
-      - run:
-        name: build the docs
-        command:
-          - matlab/run-command:
-              command: evalMD
+      - checkout
+      - matlab/install
+      - matlab/run-command:
+          command: evalMD
