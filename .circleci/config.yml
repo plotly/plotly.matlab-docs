@@ -31,5 +31,5 @@ jobs:
           command: |
             tree
       - store_artifacts:
-          path: /tempF/
+          path: tempF/
           destination: artifact-file
