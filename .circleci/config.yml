@@ -26,4 +26,4 @@ jobs:
             sudo apt-get install tree
             tree
       - matlab/run-command:
-          command: addpath("/project/plotly_matlab/plotly/"); addpath("/home/circleci/plotly_matlab/plotly/"); addpath("/home/circleci/project/plotly_matlab/plotly/"); evalMD;
+          command: evalMD;

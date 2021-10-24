@@ -2,7 +2,7 @@ function mdContents = evalMD()
 fclose all; clc;
 % Setup Plotly in Offline Mode
 % addpath(genpath('D:\Matlab_code\plotly_matlab\plotly'));
-addpath(genpath('..\plotly_matlab\plotly'));
+addpath(genpath('plotly_matlab\plotly'));
 
 % Let list of md files
 fileList = dir('matlab/*.md');
