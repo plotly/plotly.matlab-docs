@@ -16,8 +16,7 @@ jobs:
             - cache4
       - run: 
           name: Install dependencies
-          comnand: |
-            git clone https://github.com/plotly/plotly_matlab.git --branch=master --depth=1
+          git clone https://github.com/plotly/plotly_matlab.git --branch=master --depth=1
       - checkout
       - matlab/install
       - save_cache:
@@ -31,3 +30,6 @@ jobs:
             tree
       - matlab/run-command:
           command: evalMD;
+
+          command: |
+            sudo apt-get update -y
