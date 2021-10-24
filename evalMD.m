@@ -25,7 +25,7 @@ for i = 1%:length(fileList)
     if ~isfolder('tempF')
         mkdir('tempF');
     end
-
+    sprintf(mdContents)
     [~,a,b]=fileparts(fileName);
     f = fopen(fullfile('tempF',fileList(i).name),'wb','ieee-le','UTF-8');
     fwrite(f,mdContents);

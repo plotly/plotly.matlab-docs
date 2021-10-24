@@ -14,7 +14,10 @@ jobs:
       - restore_cache:
           keys:
             - cache4
-      - run: git clone https://github.com/plotly/plotly_matlab.git --branch=master --depth=1
+      - run: 
+          name: Install dependencies
+          comnand: |
+            git clone https://github.com/plotly/plotly_matlab.git --branch=master --depth=1
       - checkout
       - matlab/install
       - save_cache:
@@ -22,6 +25,7 @@ jobs:
           paths:
             - "/usr/local/lib/R/site-library"
       - run:
+          name: DEBUG - repo structure
           command: |
             sudo apt-get install tree
             tree
