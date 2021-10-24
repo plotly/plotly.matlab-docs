@@ -126,6 +126,7 @@ function res = callFile(isFig)
 try
     res = evalc('temp');
 catch ME
+    sprintf(ME.message)
     if isFig == true
         %jsonErr = loadjson('977.json');
         jsonErr = "To be inmplemented soon"
