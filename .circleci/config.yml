@@ -11,8 +11,19 @@ jobs:
     steps:
       - checkout:
           path: ~/project
+      - restore_cache:
+          keys:
+            - cache4
       - run: git clone https://github.com/plotly/plotly_matlab.git --branch=master --depth=1
       - checkout
       - matlab/install
+      - save_cache:
+          key: cache4
+          paths:
+            - "/usr/local/lib/R/site-library"
+      - run:
+          command: |
+            sudo apt-get install tree
+            tree
       - matlab/run-command:
           command: addpath("/project/plotly_matlab/plotly/"); addpath("/home/circleci/plotly_matlab/plotly/"); addpath("/home/circleci/project/plotly_matlab/plotly/"); evalMD;
