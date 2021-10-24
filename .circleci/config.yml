@@ -12,5 +12,4 @@ jobs:
       - checkout
       - matlab/install
       - matlab/run-command:
-          command: matlab addpath("plotly_matlab/plotly/");
-          command: evalMD
+          command: addpath("plotly_matlab/plotly/"); evalMD;
