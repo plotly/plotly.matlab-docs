@@ -30,6 +30,10 @@ jobs:
       - run:
           command: |
             tree
+
+      - run:
+          name: Compress Artifacts
+          command: tar -cvzf tempF.tar tempF/
       - store_artifacts:
-          path: tempF/
+          path: tempF.tar
           destination: artifact-file
