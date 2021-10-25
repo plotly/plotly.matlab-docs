@@ -16,12 +16,12 @@ page_type: u-guide
 Load the file `SimulatedStock.mat`, which provides a timetable (TMW) for financial data for TMW stock. This Linebreak chart is for closing prices of the stock TMW for the most recent 21 days. Note that the variable name of asset price is be renamed to 'Price' (case insensitive).
 
 ```{matlab}
-load SimulatedStock.mat
+load SimulatedStock.mat;
 TMW.Properties.VariableNames{'Close'} = 'Price';
-linebreak(TMW(end-20:end,:))
-title('Line Break Chart for TMW')
+linebreak(TMW(end-20:end,:));
+title('Line Break Chart for TMW');
 
-fig2plotly()
+fig2plotly(gcf);
 ```
 
 <!--------------------- EXAMPLE BREAK ------------------------->
@@ -31,12 +31,12 @@ fig2plotly()
 Load the file `SimulatedStock.mat`, which provides a timetable (TMW) for financial data for TMW stock. The highlow chart plots the price data using blue lines.
 
 ```{matlab}
-load SimulatedStock.mat
+load SimulatedStock.mat;
 range = 1:25;
 highlow(TMW(range,:),'b');
-title('High, Low, Open, Close Chart for TMW')
+title('High, Low, Open, Close Chart for TMW');
 
-fig2plotly()
+fig2plotly(gcf);
 ```
 
 <!--------------------- EXAMPLE BREAK ------------------------->
