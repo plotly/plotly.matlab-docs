@@ -8,6 +8,7 @@ thumnail_github: bubblecloud.png
 layout: base
 language: matlab
 page_type: u-guide
+published: false
 ---
 
 ## Create Bubble Cloud with Table Data

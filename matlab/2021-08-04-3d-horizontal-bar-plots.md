@@ -14,11 +14,6 @@ page_type: u-guide
 
 Load the data set `count.dat`, which returns a three-column matrix, `count`. Store `Y` as the first ten rows of `count`.
 
-```{matlab}
-load count.dat
-Y = count(1:10,:);
-```
-
 Create a 3-D horizontal bar graph of `Y`. By default, the style is `detached`.
 
 ```{matlab}
@@ -37,11 +32,6 @@ fig2plotly(gcf, 'TreatAs', 'bar3h');
 ## Specify Bar Width for 3-D Horizontal Bar Graph
 
 Load the data set `count.dat`, which returns a three-column matrix, `count`. Store `Y` as the first ten rows of `count`.
-
-```{matlab}
-load count.dat;
-Y = count(1:10,:);
-```
 
 Create a 3-D horizontal bar graph of `Y` and set the bar width to 0.5.
 
@@ -64,11 +54,6 @@ fig2plotly(gcf, 'TreatAs', 'bar3h');
 
 Load the data set `count.dat`, which returns a three-column matrix, `count`. Store `Y` as the first ten rows of `count`.
 
-```{matlab}
-load count.dat
-Y = count(1:10,:);
-```
-
 Create a 3-D horizontal bar graph of Y and specify the style option as `grouped`.
 
 ```{matlab}
@@ -88,11 +73,6 @@ fig2plotly(gcf, 'TreatAs', 'bar3h');
 ## 3-D Horizontal Bar Graph with Stacked Option
 
 Load the data set `count.dat`, which returns a three-column matrix, `count`. Store `Y` as the first ten rows of `count`.
-
-```{matlab}
-load count.dat
-Y = count(1:10,:);
-```
 
 Create a 3-D horizontal bar graph of Y and specify the style option as `stacked`.
 

@@ -15,7 +15,7 @@ page_type: u-guide
 
 
 ```{matlab}
-plotly([1, 2], [1, 2], struct('filename', 'name-of-my-plotly-file'))
+plotly([1, 2], [1, 2], struct('filename', 'name-of-my-plotly-file'));
 ```
 
 <img src="http://i.imgur.com/VuobuN3.gif">
@@ -27,7 +27,7 @@ plotly([1, 2], [1, 2], struct('filename', 'name-of-my-plotly-file'))
 
 
 ```{matlab}
-plotly([1, 2], [1, 2], struct('filename', 'name-of-my-plotly-file', <b>'fileopt', 'extend'</b>))
+plotly([1, 2], [1, 2], struct('filename', 'name-of-my-plotly-file', <b>'fileopt', 'extend'</b>));
 ```
 
 <img src="http://i.imgur.com/2LhVSX6.gif">
@@ -38,7 +38,7 @@ plotly([1, 2], [1, 2], struct('filename', 'name-of-my-plotly-file', <b>'fileopt'
 
 
 ```{matlab}
-plotly([1, 2], [1, 2], struct('filename', 'name-of-my-plotly-file', <b>'fileopt', 'append'</b>))
+plotly([1, 2], [1, 2], struct('filename', 'name-of-my-plotly-file', <b>'fileopt', 'append'</b>));
 ```
 
 <img src="http://i.imgur.com/RzrURdn.gif">

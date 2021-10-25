@@ -8,6 +8,7 @@ thumnail_github: gauge-charts.png
 layout: base
 language: matlab
 page_type: u-guide
+published: false
 ---
 
 ## Create Circular Gauge

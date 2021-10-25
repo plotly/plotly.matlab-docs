@@ -10,8 +10,7 @@ language: matlab
 page_type: u-guide
 ---
 
-To make this plot, you'll need the the boundedline package<br>
-from the MATLAB<sup>&reg;</sup> <a href="https://uk.mathworks.com/matlabcentral/fileexchange/27485-boundedline-m">File exchange</a>
+To make this plot, you'll need the the boundedline package from the MATLAB<sup>&reg;</sup> <a href="https://uk.mathworks.com/matlabcentral/fileexchange/27485-boundedline-m">File exchange</a>
 
 ## Plotting lines using various syntax options
 

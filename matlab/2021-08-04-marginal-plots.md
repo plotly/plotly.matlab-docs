@@ -8,6 +8,7 @@ thumnail_github: marginal-plots.png
 layout: base
 language: matlab
 page_type: u-guide
+published: false
 ---
 
 ## Create a scatterhist Plot

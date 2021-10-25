@@ -232,6 +232,8 @@ geoplot([latSeattle latAnchorage],[lonSeattle lonAnchorage])
 geolimits([45 62],[-149 -123])
 
 geobasemap colorterrain
+
+fig2plotly(gcf);
 ```
 
 

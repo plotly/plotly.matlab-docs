@@ -17,7 +17,7 @@ This example shows how to perform simple linear regression using the accidents d
 
 Linear regression models the relation between a dependent, or response, variable y and one or more independent, or predictor, variables x<sub>1</sub>,...,x<sub>n</sub>. Simple linear regression considers only one independent variable using the relation
 
-<code>y=β<sub>0</sub>+β<sub>1</sub>x+ϵ,</code>
+* <code>y=β<sub>0</sub>+β<sub>1</sub>x+ϵ,</code>
 
 where β<sub>0</sub> is the y-intercept, β<sub>1</sub> is the slope (or regression coefficient), and ϵ is the error term. This can be simplified to `Y=XB`
 
@@ -28,7 +28,7 @@ load accidents
 x = hwydata(:,14); %Population of states
 y = hwydata(:,4); %Accidents per state
 format long
-b1 = x\y;
+b1 = x\y
 ```
 
 

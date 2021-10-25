@@ -14,15 +14,6 @@ page_type: u-guide
 
 Generate 10,000 pairs of random numbers and create a bivariate histogram. The `histogram2` function automatically chooses an appropriate number of bins to cover the range of values in `x` and `y` and show the shape of the underlying distribution.
 
-```{matlab}
-x = randn(10000,1);
-y = randn(10000,1);
-h = histogram2(x,y);
-
-fig2plotly(gcf);
-```
-
-
 
 ```{matlab}
 x = randn(10000,1);
@@ -32,21 +23,20 @@ h = histogram2(x,y);
 xlabel('x');
 ylabel('y');
 
+nXnY = h.NumBins
+
 fig2plotly(gcf);
 ```
-
 
 When you specify an output argument to the `histogram2` function, it returns a histogram2 object. You can use this object to inspect the properties of the histogram, such as the number of bins or the width of the bins.
 
-Find the number of histogram bins in each dimension.
+Find the number of histogram bins in each dimension using `h.NumBins`.
+
 
 ```{matlab}
 x = randn(10000,1);
 y = randn(10000,1);
 h = histogram2(x,y);
-
-xlabel('x');
-ylabel('y');
 
 nXnY = h.NumBins
 ```
@@ -77,9 +67,7 @@ y = randn(1000,1);
 nbins = 5;
 h = histogram2(x,y,nbins);
 
-counts = h.Values;
-
-fig2plotly(gcf);
+counts = h.Values
 ```
 
 
@@ -92,9 +80,6 @@ Generate 1,000 pairs of random numbers and create a bivariate histogram.
 ```{matlab}
 x = randn(1000,1);
 y = randn(1000,1);
-h = histogram2(x,y);
-
-fig2plotly(gcf);
 ```
 
 Use the `morebins` function to coarsely adjust the number of bins in the x dimension.
@@ -104,7 +89,6 @@ x = randn(1000,1);
 y = randn(1000,1);
 h = histogram2(x,y);
 
-nbins = morebins(h,'x');
 nbins = morebins(h,'x');
 
 fig2plotly(gcf);
@@ -118,10 +102,6 @@ x = randn(1000,1);
 y = randn(1000,1);
 h = histogram2(x,y);
 
-nbins = morebins(h,'x');
-nbins = morebins(h,'x');
-
-nbins = fewerbins(h,'y');
 nbins = fewerbins(h,'y');
 
 fig2plotly(gcf);
@@ -224,8 +204,6 @@ y = randn(1000,1);
 h = histogram2(x,y,'Normalization','probability');
 
 S = sum(h.Values(:))
-
-fig2plotly(gcf);
 ```
 
 

@@ -8,6 +8,7 @@ thumnail_github: candlestick-charts.png
 layout: base
 language: matlab
 page_type: u-guide
+published: false
 ---
 
 ## Generate a Candlestick Chart for a Data Series for a Stock

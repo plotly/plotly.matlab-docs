@@ -8,6 +8,7 @@ thumnail_github: 3d-bubble-charts.png
 layout: base
 language: matlab
 page_type: u-guide
+published: false
 ---
 
 ## Plot Random Bubbles

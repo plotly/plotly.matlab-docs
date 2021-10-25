@@ -2,7 +2,7 @@
 description: How to make Mixed Subplots in MATLAB<sup>&reg;</sup> with Plotly.
 name: Mixed Subplots
 display_as: multiple_axes
-order: 1
+order: 2
 permalink: matlab/mixed-subplots/
 thumnail_github: mixed-subplots.png
 layout: base

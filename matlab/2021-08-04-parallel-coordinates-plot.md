@@ -8,6 +8,7 @@ thumnail_github: parallel-coordinates-plot.png
 layout: base
 language: matlab
 page_type: u-guide
+published: false
 ---
 
 ## Parallel Coordinates Plot with Tabular Data
@@ -98,7 +99,7 @@ Create a new categorical variable that groups each patient into one of three cat
 ```{matlab}
 load patients
 X = [Age Height Weight];
-p = parallelplot(X)
+p = parallelplot(X);
 
 p.CoordinateTickLabels = {'Age (years)','Height (inches)','Weight (pounds)'};
 

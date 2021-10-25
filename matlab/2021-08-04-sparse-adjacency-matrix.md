@@ -22,20 +22,20 @@ fig2plotly(gcf);
 ```
 
 
-Specify the color and marker.
+# Specify Color and Marker
 
 ```{matlab}
 B = bucky;
-spy(B,'ro')
+spy(B,'green')
 
 fig2plotly(gcf);
 ```
 
-Also specify the marker size.
+# Specify Marker Size
 
 ```{matlab}
 B = bucky;
-spy(B,'ro',2)
+spy(B,'red',2)
 
 fig2plotly(gcf);
 ```

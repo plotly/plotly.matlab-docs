@@ -138,10 +138,6 @@ To specify only two of the three `LineSpec` options, omit the third option from 
 
 
 
-<!--------------------- EXAMPLE BREAK ------------------------->
-
-## Line Style, Marker Symbol, and Color Options
-
 Create a 3-D stem plot and specify the stem locations along a circle. Set the stem to a dotted line style, the marker symbols to stars, and the color to magenta. 
 
 ```{matlab}

@@ -8,6 +8,7 @@ thumnail_github: static-image-export.png
 layout: base
 language: matlab
 page_type: u-guide
+published: false
 ---
 
 <p>You can save static images using the following syntax :</p>

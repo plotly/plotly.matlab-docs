@@ -8,6 +8,7 @@ thumnail_github: 3d-streamline-plots.png
 layout: base
 language: matlab
 page_type: u-guide
+published: false
 ---
 
 ## Create 3-D Quiver Plot
@@ -224,11 +225,7 @@ fig2plotly(gcf);
 ```
 
 
-<!--------------------- EXAMPLE BREAK ------------------------->
-
-## Indicate Flow Using Precalculated Data
-
-Use precalculated vertex data, curl average velocity, and speed to indicate flow. 
+You can also use precalculated vertex data, curl average velocity, and speed to indicate flow. 
 
 ```{matlab}
 load wind
@@ -236,14 +233,6 @@ load wind
 verts = stream3(x,y,z,u,v,w,sx,sy,sz);
 cav = curl(x,y,z,u,v,w);
 spd = sqrt(u.^2 + v.^2 + w.^2).*.1;
-streamribbon(verts,x,y,z,cav,spd);
-axis tight
-shading interp
-view(3);
-camlight; 
-lighting gouraud
-
-fig2plotly(gcf);
 ```
 
 Using precalculated data enables you to use values other than those calculated from the single data source. In this case, the speed is reduced by a factor of 10 compared to the previous example.

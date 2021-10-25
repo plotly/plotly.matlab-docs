@@ -157,7 +157,6 @@ rng default; % for reproducibility
 [Y,loss] = tsne(meas,'Algorithm','exact');
 rng default % for fair comparison
 [Y2,loss2] = tsne(meas,'Algorithm','exact','NumDimensions',3);
-fprintf('2-D embedding has loss %g, and 3-D embedding has loss %g.\n',loss,loss2)
 
 gscatter(Y(:,1),Y(:,2),species,eye(3))
 title('2-D Embedding')
@@ -169,14 +168,12 @@ rng default % for reproducibility
 [Y,loss] = tsne(meas,'Algorithm','exact');
 rng default % for fair comparison
 [Y2,loss2] = tsne(meas,'Algorithm','exact','NumDimensions',3);
-fprintf('2-D embedding has loss %g, and 3-D embedding has loss %g.\n',loss,loss2)
 
 figure
 v = double(categorical(species));
 c = full(sparse(1:numel(v),v,ones(size(v)),numel(v),3));
 scatter3(Y2(:,1),Y2(:,2),Y2(:,3),15,c,'filled')
 title('3-D Embedding')
-view(-50,8)
 
 fig2plotly(gcf);
 ```

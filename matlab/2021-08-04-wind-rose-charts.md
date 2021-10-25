@@ -42,7 +42,7 @@ fig2plotly(gcf, 'TreatAs', 'polarhistogram');
 Create a histogram chart in polar coordinates, and then change its appearance. Specify the bar colors by setting the `FaceColor` property to a character vector of a color name, such as `'red'`, or an RGB triplet. Specify the transparency by setting the `FaceAlpha` property to a value between 0 and 1.
 
 ```{matlab}
-theta = atan2(rand(100000,1)-0.5,2*(rand(100000,1)-0.5));
+theta = atan2(rand(10000,1)-0.3,2*(rand(10000,1)-0.2));
 polarhistogram(theta,25,'FaceColor','red','FaceAlpha',.3);
 
 fig2plotly(gcf, 'TreatAs', 'polarhistogram');
