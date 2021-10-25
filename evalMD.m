@@ -1,14 +1,11 @@
 function mdContents = evalMD()
 fclose all; clc;
-% Setup Plotly in Offline Mode
-% addpath(genpath('D:\Matlab_code\plotly_matlab\plotly'));
-addpath(genpath('plotly_matlab/plotly/'));
 
 % Let list of md files
 fileList = dir('matlab/*.md');
 
 % Loop over all files
-for i = 44%1 :length(fileList)
+for i = 45%1 :length(fileList)
     fileName = fullfile(fileList(i).folder,fileList(i).name);
     fprintf('Evaluating (%03d): %s\n',i,['matlab/',fileList(i).name]);
     mdContents = readlines(fileName,'Encoding','UTF-8');
