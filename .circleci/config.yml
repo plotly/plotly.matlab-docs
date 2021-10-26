@@ -24,21 +24,8 @@ jobs:
           key: cache4
           paths:
             - "/usr/local/lib/R/site-library"
-      - run:
-          command: |
-            sudo apt-get install tree
-            tree
       - matlab/run-command:
           command: addpath(genpath('plotly_matlab/plotly/')); addpath(genpath('boundedline-pkg/')); addpath(genpath('ternplot/')); addpath(genpath('jdata/')); evalMD;
-      - run:
-          command: |
-            tree
-      - run:
-          name: Compress Artifacts
-          command: tar -cvzf tempF.tar tempF/
-      - store_artifacts:
-          path: tempF.tar
-          destination: artifact-file
       - run:
           name: build site and perform front-matter checks
           command: |
@@ -47,14 +34,14 @@ jobs:
             . venv/bin/activate
             pip3 install python-frontmatter
             curl https://raw.githubusercontent.com/plotly/graphing-library-docs/master/front-matter-ci.py > front-matter-ci.py
-            python front-matter-ci.py matlab
+            python front-matter-ci.py built
             curl https://raw.githubusercontent.com/plotly/graphing-library-docs/master/check-or-enforce-order.py > check-or-enforce-order.py
-            python check-or-enforce-order.py matlab enforce
+            python check-or-enforce-order.py built enforce
       - run:
           name: deploy to plotly/plotly.matlab-docs:built
           command: |
             if [ "${CIRCLE_BRANCH}" == "update-ci" ]; then
-              cd matlab
+              cd built
               git init
               git config user.name plotlydocbot
               git config user.email accounts@plot.ly
