@@ -7,7 +7,7 @@ jobs:
   build:
     working_directory: ~/project
     machine:
-      image: 'ubuntu-1604:201903-01'
+      image: 'ubuntu-2004:202107-02'
     steps:
       - checkout:
           path: ~/project
@@ -53,7 +53,7 @@ jobs:
       - run:
           name: deploy to plotly/plotly.matlab-docs:built
           command: |
-            if [ "${CIRCLE_BRANCH}" == "master" ]; then
+            if [ "${CIRCLE_BRANCH}" == "update-ci" ]; then
               cd matlab
               git init
               git config user.name plotlydocbot
