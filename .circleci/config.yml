@@ -9,6 +9,9 @@ jobs:
     machine:
       image: 'ubuntu-2004:202107-02'
     steps:
+      - add_ssh_keys:
+          fingerprints:
+            - "dc:5f:39:48:00:b4:72:34:e1:d2:c4:e1:1f:d1:e2:ce" #plotlydocbot
       - checkout:
           path: ~/project
       - restore_cache:
