@@ -13,18 +13,18 @@ for i = 1 :length(fileList)
     mdContents = arrayfun(@(x) replace(x,"```","&&&E"), mdContents);
 
     mdContents = formCBs(mdContents);
-    
+
     mdContents = arrayfun(@(x) replace(x,'&&&S','```{matlab}'), mdContents);
     mdContents = arrayfun(@(x) replace(x,'&&&E','```'), mdContents);
-    
+
     mdContents = join(mdContents,newline);
-    
-    if ~isfolder('tempF')
-        mkdir('tempF');
+
+    if ~isfolder('built')
+        mkdir('built');
     end
-    
+
     [~,a,b]=fileparts(fileName);
-    f = fopen(fullfile('tempF',fileList(i).name),'wb','ieee-le','UTF-8');
+    f = fopen(fullfile('built',fileList(i).name),'wb','ieee-le','UTF-8');
     fwrite(f,mdContents,'char');
     fclose(f);
     close all force;
@@ -55,21 +55,21 @@ for i = 1:length(st)
     tempStr = arrayfun(@(x) regexprep(x,"^plotly *\( *data *\)","pf=plotly(data,struct('writeFile',false))"), tempStr);
     tempStr = arrayfun(@(x) regexprep(x,"^plotly *\( *data *, *struct *\(","pf=plotly(data,struct('writeFile',false,"), tempStr);
     tempStr = arrayfun(@(x) regexprep(x,"p *= *plotlyfig *\( *gcf *","p=plotlyfig(gcf,'writeFile',false,'open',false"), tempStr);
-    
+
     ss = strfind(tempStr,'plotly(','ForceCellOutput',true);
     ss = find(cellfun(@(x) ~isempty(x), ss, 'UniformOutput', true), 1);
 
     ss2 = strfind(tempStr,'p.plotly','ForceCellOutput',true);
     ss2 = find(cellfun(@(x) ~isempty(x), ss2, 'UniformOutput', true), 1);
-    
+
     if isempty(ss) && ~isempty(ss2)
         insTxt = "json = m2json(struct('data',{p.data},'layout',p.layout,'frames',{p.frames})); fprintf('%s\n',json); close all force;";
     else
         insTxt = "json = m2json(struct('data',{pf.data},'layout',pf.layout,'frames',{pf.frames})); fprintf('%s\n',json); close all force;";
     end
-    
+
     ss=[ss,ss2];
-    
+
     if ~isempty(ss)
         for j = 1:length(ss)
             if j>1

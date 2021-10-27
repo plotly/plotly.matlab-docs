@@ -7,8 +7,11 @@ jobs:
   build:
     working_directory: ~/project
     machine:
-      image: 'ubuntu-1604:201903-01'
+      image: 'ubuntu-2004:202107-02'
     steps:
+      - add_ssh_keys:
+          fingerprints:
+            - "dc:5f:39:48:00:b4:72:34:e1:d2:c4:e1:1f:d1:e2:ce" #plotlydocbot
       - checkout:
           path: ~/project
       - restore_cache:
@@ -24,19 +27,46 @@ jobs:
           key: cache4
           paths:
             - "/usr/local/lib/R/site-library"
-      - run:
-          command: |
-            sudo apt-get install tree
-            tree
       - matlab/run-command:
           command: addpath(genpath('plotly_matlab/plotly/')); addpath(genpath('boundedline-pkg/')); addpath(genpath('ternplot/')); addpath(genpath('jdata/')); evalMD;
       - run:
+          name: build site and perform front-matter checks
           command: |
-            tree
-
+            echo ${mapbox_token} > .mapbox_token
+            python3 -m venv venv
+            . venv/bin/activate
+            pip3 install python-frontmatter
+            curl https://raw.githubusercontent.com/plotly/graphing-library-docs/master/front-matter-ci.py > front-matter-ci.py
+            python front-matter-ci.py built
+            curl https://raw.githubusercontent.com/plotly/graphing-library-docs/master/check-or-enforce-order.py > check-or-enforce-order.py
+            python check-or-enforce-order.py built enforce
       - run:
-          name: Compress Artifacts
-          command: tar -cvzf tempF.tar tempF/
-      - store_artifacts:
-          path: tempF.tar
-          destination: artifact-file
+          name: deploy to plotly/plotly.matlab-docs:built
+          command: |
+            if [ "${CIRCLE_BRANCH}" == "main" ]; then
+              cd built
+              git init
+              git config user.name plotlydocbot
+              git config user.email accounts@plot.ly
+              rm -rf *.html
+              sed -i.bkp 's/<!--.*-->//g' *md && rm *.bkp # remove html comments
+              sed -z -i.bkp 's/```{=html}\n<div/<div/g' *md && rm *.bkp # remove html backticks
+              sed -z -i.bkp 's/script>\n```/script>/g' *md && rm *.bkp # remove html backticks
+              git add *
+              git commit -m "build of https://github.com/plotly/plotly.matlab-docs/commit/${CIRCLE_SHA1}"
+              git push --force git@github.com:plotly/plotly.matlab-docs.git master:built
+              rm -rf .git
+            fi
+      - run:
+          name: trigger plotly/graphing-library-docs build
+          command: |
+            if [ "${CIRCLE_BRANCH}" == "main" ]; then
+              git clone --depth=1 git@github.com:plotly/graphing-library-docs.git
+              cd graphing-library-docs
+              git config user.name plotlydocbot
+              git config user.email accounts@plot.ly
+              git commit --allow-empty -m "deploying https://github.com/plotly/plotly.matlab-docs/commit/${CIRCLE_SHA1}"
+              git push
+              cd ..
+              rm -rf graphing-library-docs
+            fi
