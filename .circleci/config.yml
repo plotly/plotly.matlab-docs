@@ -40,33 +40,33 @@ jobs:
             python front-matter-ci.py built
             curl https://raw.githubusercontent.com/plotly/graphing-library-docs/master/check-or-enforce-order.py > check-or-enforce-order.py
             python check-or-enforce-order.py built enforce
-      # - run:
-      #     name: deploy to plotly/plotly.matlab-docs:built
-      #     command: |
-      #       if [ "${CIRCLE_BRANCH}" == "main" ]; then
-      #         cd built
-      #         git init
-      #         git config user.name plotlydocbot
-      #         git config user.email accounts@plot.ly
-      #         rm -rf *.html
-      #         sed -i.bkp 's/<!--.*-->//g' *md && rm *.bkp # remove html comments
-      #         sed -z -i.bkp 's/```{=html}\n<div/<div/g' *md && rm *.bkp # remove html backticks
-      #         sed -z -i.bkp 's/script>\n```/script>/g' *md && rm *.bkp # remove html backticks
-      #         git add *
-      #         git commit -m "build of https://github.com/plotly/plotly.matlab-docs/commit/${CIRCLE_SHA1}"
-      #         git push --force git@github.com:plotly/plotly.matlab-docs.git master:built
-      #         rm -rf .git
-      #       fi
-      # - run:
-      #     name: trigger plotly/graphing-library-docs build
-      #     command: |
-      #       if [ "${CIRCLE_BRANCH}" == "main" ]; then
-      #         git clone --depth=1 git@github.com:plotly/graphing-library-docs.git
-      #         cd graphing-library-docs
-      #         git config user.name plotlydocbot
-      #         git config user.email accounts@plot.ly
-      #         git commit --allow-empty -m "deploying https://github.com/plotly/plotly.matlab-docs/commit/${CIRCLE_SHA1}"
-      #         git push
-      #         cd ..
-      #         rm -rf graphing-library-docs
-      #       fi
+      - run:
+          name: deploy to plotly/plotly.matlab-docs:built
+          command: |
+            if [ "${CIRCLE_BRANCH}" == "main" ]; then
+              cd built
+              git init
+              git config user.name plotlydocbot
+              git config user.email accounts@plot.ly
+              rm -rf *.html
+              sed -i.bkp 's/<!--.*-->//g' *md && rm *.bkp # remove html comments
+              sed -z -i.bkp 's/```{=html}\n<div/<div/g' *md && rm *.bkp # remove html backticks
+              sed -z -i.bkp 's/script>\n```/script>/g' *md && rm *.bkp # remove html backticks
+              git add *
+              git commit -m "build of https://github.com/plotly/plotly.matlab-docs/commit/${CIRCLE_SHA1}"
+              git push --force git@github.com:plotly/plotly.matlab-docs.git master:built
+              rm -rf .git
+            fi
+      - run:
+          name: trigger plotly/graphing-library-docs build
+          command: |
+            if [ "${CIRCLE_BRANCH}" == "main" ]; then
+              git clone --depth=1 git@github.com:plotly/graphing-library-docs.git
+              cd graphing-library-docs
+              git config user.name plotlydocbot
+              git config user.email accounts@plot.ly
+              git commit --allow-empty -m "deploying https://github.com/plotly/plotly.matlab-docs/commit/${CIRCLE_SHA1}"
+              git push
+              cd ..
+              rm -rf graphing-library-docs
+            fi
