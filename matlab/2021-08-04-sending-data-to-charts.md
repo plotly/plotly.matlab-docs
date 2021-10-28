@@ -14,9 +14,9 @@ page_type: u-guide
 ## Overwrite chart data with new data
 
 
-```{matlab}
+<pre>
 plotly([1, 2], [1, 2], struct('filename', 'name-of-my-plotly-file'));
-```
+</pre>
 
 <img src="http://i.imgur.com/VuobuN3.gif">
 
@@ -26,9 +26,9 @@ plotly([1, 2], [1, 2], struct('filename', 'name-of-my-plotly-file'));
 ## Add data to an existing trace
 
 
-```{matlab}
+<pre>
 plotly([1, 2], [1, 2], struct('filename', 'name-of-my-plotly-file', <b>'fileopt', 'extend'</b>));
-```
+</pre>
 
 <img src="http://i.imgur.com/2LhVSX6.gif">
 
@@ -37,9 +37,9 @@ plotly([1, 2], [1, 2], struct('filename', 'name-of-my-plotly-file', <b>'fileopt'
 ## Add new traces to a chart
 
 
-```{matlab}
+<pre>
 plotly([1, 2], [1, 2], struct('filename', 'name-of-my-plotly-file', <b>'fileopt', 'append'</b>));
-```
+</pre>
 
 <img src="http://i.imgur.com/RzrURdn.gif">
 
