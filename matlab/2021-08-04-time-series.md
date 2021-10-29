@@ -8,7 +8,6 @@ thumnail_github: time-series.png
 layout: base
 language: matlab
 page_type: u-guide
-published: false
 ---
 
 ## Plot Timetable Variables

@@ -8,7 +8,6 @@ thumnail_github: feather-plot.png
 layout: base
 language: matlab
 page_type: u-guide
-published: false
 ---
 
 ## Create Compass Plot Using Cartesian Coordinates
